@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 7: Who gets paid first</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">DAY 7 · Friday 2 October</div>
+  <h1>Who gets paid first</h1>
+  <p class="lede">One pot of money, three claims on it. The order of payment decides everything.</p>
+
+  <!-- ============ RECALL: DAY 4 ============ -->
+  <div class="preq">
+    <div class="tag">Five minutes: recall</div>
+    <p><b>Day 4 was the perpetuity.</b> Answer both on paper before you open anything.</p>
+    <p><b>1.</b> A contract pays 45 at the end of every year, forever. Nothing changes and nothing stops.
+       The required rate of return is 9 percent. What is it worth today?</p>
+    <p><b>2.</b> A share pays 7 at the end of next year. After that the payment grows by 4 percent every
+       year, forever. The required rate of return is 10 percent. What is the share worth today?
+       And what goes wrong if the required rate of return is 4 percent instead?</p>
+    <p class="do">Write your two answers down, then check.</p>
+    <button class="reveal-btn" type="button" data-reveal="rc1">Show the answer</button>
+    <div class="reveal" id="rc1">
+      <p class="p"><b>1.</b> Plain perpetuity: <span class="math">PV = CF / r = 45 / 0.09 = 500.00</span></p>
+      <p class="p">Forever does not mean an endless value. Each later payment is worth less today, and the
+        whole run adds up to a number you can write down.</p>
+      <p class="p"><b>2.</b> Growing perpetuity:
+        <span class="math">PV = CF<sub>1</sub> / (r − g) = 7 / (0.10 − 0.04) = 7 / 0.06 = 116.67</span></p>
+      <p class="p">The top of that formula is the payment at the <b>end of year 1</b>, not the payment made
+        today.</p>
+      <p class="p">If r is 4 percent, then r − g = 0. You would divide by zero. The growing perpetuity formula
+        only works when <b>r is bigger than g</b>. If r is not bigger than g, the formula gives nothing usable
+        and the right exam answer is that the value cannot be found this way.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRETEST ============ -->
+  <div class="preq">
+    <div class="tag">Guess first</div>
+    <p>At the date the debt matures, a firm's assets are worth 80. The firm owes 50 to its senior lender
+       and 45 to its junior lender on that same date.</p>
+    <p>A classmate writes down the three payments: senior 50, junior 45, equity −15.
+       <b>Without doing any long sums, how can you tell that at least one of those three numbers is wrong?</b></p>
+    <p class="do">Guess now. No answer is shown here. This is a guess, not a test. The whole page answers it.</p>
+  </div>
+
+  <!-- ============ PANEL 1 ============ -->
+  <div class="panel">
+    <h3>1 · The waterfall: senior, then junior, then equity</h3>
+
+    <p class="p">A firm borrows money in more than one way, and the ways are not equal. This is the Merton
+      (1974) structure your course uses. One firm, one asset, one date when all the debt is due.</p>
+
+    <p class="partlab">The three claims</p>
+    <table class="dtable">
+      <tr><th style="width:30%">Claim</th><th>What it is</th></tr>
+      <tr><td class="lab">Senior debt</td><td style="text-align:left">Money the firm borrowed that must be repaid
+        first. <b>F<sub>S</sub></b> is the amount promised to this lender on the maturity date, which is the
+        face value plus any coupon due on that date.</td></tr>
+      <tr><td class="lab">Junior debt</td><td style="text-align:left">Also called <b>subordinated</b> debt.
+        Subordinated means it stands behind. It is paid only after the senior lender has been paid in full.
+        <b>F<sub>J</sub></b> is the amount promised to it.</td></tr>
+      <tr><td class="lab">Equity</td><td style="text-align:left">The owners, also called stockholders or
+        shareholders. They are last. They receive what is left over, and often that is nothing.</td></tr>
+    </table>
+
+    <p class="partlab">APR means Absolute Priority Rule</p>
+    <p class="p">In this course, and on this exam, <b>APR stands for Absolute Priority Rule</b>. It does not
+      mean annual percentage rate. When a question says "assume APR holds at debt maturity", it is telling you
+      that the order above holds. Senior in full first, then junior, then equity. Nothing else.</p>
+
+    <p class="p">Read this part of any exam question slowly. Those three letters cost marks every year.</p>
+
+    <p class="partlab">The picture that makes it stick</p>
+    <p class="p">Picture one tap and three containers, one below the other. The senior bucket is at the top.
+      The junior bucket sits below it. The equity pool sits at the bottom. The tap is the firm's assets, and it
+      pours into the senior bucket first.</p>
+    <p class="p">The junior bucket is fed only by water going over the top edge of the senior one. The pool is
+      fed only by water going over the top edge of the junior one. A bucket that is not full passes nothing
+      down. Each bucket has a top edge, so it holds a fixed amount. The pool has no top edge at all.</p>
+
+    <div class="svg-wrap">
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:flex-start">
+
+        <svg viewBox="0 0 190 318" style="width:100%;max-width:184px;height:auto" role="img" aria-label="State one. The assets are worth 40. The senior bucket, whose top edge is at 60, holds 40 and is not full. Nothing goes over that edge, so the junior bucket and the equity pool are both empty.">
+          <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="9.5" fill="#211c33">
+            <text x="92" y="14" text-anchor="middle" font-weight="700" font-size="13">V_T = 40</text>
+            <text x="92" y="29" text-anchor="middle" font-size="10" fill="#6f6886">State I · below 60</text>
+            <rect x="6" y="28" width="7" height="22" fill="#6f6886"/>
+            <rect x="13" y="36" width="27" height="8" fill="#6f6886"/>
+            <rect x="22" y="30" width="9" height="6" fill="#6f6886"/>
+            <rect x="32" y="44" width="8" height="10" fill="#6f6886"/>
+            <text x="44" y="42" font-size="9" fill="#6f6886">assets</text>
+            <rect x="33" y="54" width="6" height="32" fill="#6b4ef0"/>
+            <path d="M14 62 L14 134 L86 134 L86 62" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="8" y1="62" x2="20" y2="62" stroke="#5238c4" stroke-width="3"/>
+            <line x1="80" y1="62" x2="92" y2="62" stroke="#5238c4" stroke-width="3"/>
+            <text x="96" y="58" font-size="9.5" font-weight="700" fill="#5238c4">F_S = 60</text>
+            <rect x="15" y="86" width="70" height="48" fill="#6b4ef0"/>
+            <text x="50" y="114.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">40</text>
+            <text x="14" y="148" font-size="10" fill="#6f6886">Senior</text>
+            <path d="M62 154 L62 202 L134 202 L134 154" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="56" y1="154" x2="68" y2="154" stroke="#b6791f" stroke-width="3"/>
+            <line x1="128" y1="154" x2="140" y2="154" stroke="#b6791f" stroke-width="3"/>
+            <text x="144" y="151" font-size="9.5" font-weight="700" fill="#b6791f">F_J = 40</text>
+            <text x="98" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#6f6886">0</text>
+            <text x="98" y="193" text-anchor="middle" font-size="9.5" fill="#6f6886">empty</text>
+            <text x="62" y="216" font-size="10" fill="#6f6886">Junior</text>
+            <path d="M26 224 L26 274 L170 274 L170 224" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="26" y1="224" x2="26" y2="208" stroke="#6f6886" stroke-width="2" stroke-dasharray="3 3"/>
+            <line x1="170" y1="224" x2="170" y2="208" stroke="#6f6886" stroke-width="2" stroke-dasharray="3 3"/>
+            <text x="98" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#6f6886">0</text>
+            <text x="98" y="265" text-anchor="middle" font-size="9.5" fill="#6f6886">empty</text>
+            <!-- the equity pool has no top edge: nothing holds the water back, so it can never overflow -->
+            <text x="26" y="288" font-size="10" fill="#6f6886">Equity pool · no top edge</text>
+            <text x="92" y="306" text-anchor="middle" font-size="10" fill="#6f6886">40 + 0 + 0 = 40</text>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 190 318" style="width:100%;max-width:184px;height:auto" role="img" aria-label="State two. The assets are worth 85. The senior bucket is full at 60 and spills over its top edge into the junior bucket, which holds 25 of its 40 and is not full. The equity pool is empty.">
+          <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="9.5" fill="#211c33">
+            <text x="92" y="14" text-anchor="middle" font-weight="700" font-size="13">V_T = 85</text>
+            <text x="92" y="29" text-anchor="middle" font-size="10" fill="#6f6886">State II · 60 to 100</text>
+            <rect x="6" y="28" width="7" height="22" fill="#6f6886"/>
+            <rect x="13" y="36" width="27" height="8" fill="#6f6886"/>
+            <rect x="22" y="30" width="9" height="6" fill="#6f6886"/>
+            <rect x="32" y="44" width="8" height="10" fill="#6f6886"/>
+            <text x="44" y="42" font-size="9" fill="#6f6886">assets</text>
+            <rect x="33" y="54" width="6" height="8" fill="#6b4ef0"/>
+            <path d="M14 62 L14 134 L86 134 L86 62" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="8" y1="62" x2="20" y2="62" stroke="#5238c4" stroke-width="3"/>
+            <line x1="80" y1="62" x2="92" y2="62" stroke="#5238c4" stroke-width="3"/>
+            <text x="96" y="58" font-size="9.5" font-weight="700" fill="#5238c4">F_S = 60</text>
+            <rect x="15" y="62" width="70" height="72" fill="#6b4ef0"/>
+            <text x="50" y="102.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">60</text>
+            <text x="14" y="148" font-size="10" fill="#6f6886">Senior</text>
+            <path d="M86 63 L94 73 L94 172" fill="none" stroke="#b6791f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M62 154 L62 202 L134 202 L134 154" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="56" y1="154" x2="68" y2="154" stroke="#b6791f" stroke-width="3"/>
+            <line x1="128" y1="154" x2="140" y2="154" stroke="#b6791f" stroke-width="3"/>
+            <text x="144" y="151" font-size="9.5" font-weight="700" fill="#b6791f">F_J = 40</text>
+            <rect x="63" y="172" width="70" height="30" fill="#b6791f"/>
+            <text x="98" y="191.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">25</text>
+            <text x="62" y="216" font-size="10" fill="#6f6886">Junior</text>
+            <path d="M26 224 L26 274 L170 274 L170 224" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="26" y1="224" x2="26" y2="208" stroke="#6f6886" stroke-width="2" stroke-dasharray="3 3"/>
+            <line x1="170" y1="224" x2="170" y2="208" stroke="#6f6886" stroke-width="2" stroke-dasharray="3 3"/>
+            <text x="98" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#6f6886">0</text>
+            <text x="98" y="265" text-anchor="middle" font-size="9.5" fill="#6f6886">empty</text>
+            <!-- the equity pool has no top edge: nothing holds the water back, so it can never overflow -->
+            <text x="26" y="288" font-size="10" fill="#6f6886">Equity pool · no top edge</text>
+            <text x="92" y="306" text-anchor="middle" font-size="10" fill="#6f6886">60 + 25 + 0 = 85</text>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 190 318" style="width:100%;max-width:184px;height:auto" role="img" aria-label="State three. The assets are worth 130. The senior bucket is full at 60 and the junior bucket is full at 40. Both spill over their top edges, and 30 of water stands in the equity pool.">
+          <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="9.5" fill="#211c33">
+            <text x="92" y="14" text-anchor="middle" font-weight="700" font-size="13">V_T = 130</text>
+            <text x="92" y="29" text-anchor="middle" font-size="10" fill="#6f6886">State III · above 100</text>
+            <rect x="6" y="28" width="7" height="22" fill="#6f6886"/>
+            <rect x="13" y="36" width="27" height="8" fill="#6f6886"/>
+            <rect x="22" y="30" width="9" height="6" fill="#6f6886"/>
+            <rect x="32" y="44" width="8" height="10" fill="#6f6886"/>
+            <text x="44" y="42" font-size="9" fill="#6f6886">assets</text>
+            <rect x="33" y="54" width="6" height="8" fill="#6b4ef0"/>
+            <path d="M14 62 L14 134 L86 134 L86 62" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="8" y1="62" x2="20" y2="62" stroke="#5238c4" stroke-width="3"/>
+            <line x1="80" y1="62" x2="92" y2="62" stroke="#5238c4" stroke-width="3"/>
+            <text x="96" y="58" font-size="9.5" font-weight="700" fill="#5238c4">F_S = 60</text>
+            <rect x="15" y="62" width="70" height="72" fill="#6b4ef0"/>
+            <text x="50" y="102.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">60</text>
+            <text x="14" y="148" font-size="10" fill="#6f6886">Senior</text>
+            <path d="M86 63 L94 73 L94 154" fill="none" stroke="#b6791f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M62 154 L62 202 L134 202 L134 154" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="56" y1="154" x2="68" y2="154" stroke="#b6791f" stroke-width="3"/>
+            <line x1="128" y1="154" x2="140" y2="154" stroke="#b6791f" stroke-width="3"/>
+            <text x="144" y="151" font-size="9.5" font-weight="700" fill="#b6791f">F_J = 40</text>
+            <rect x="63" y="154" width="70" height="48" fill="#b6791f"/>
+            <text x="98" y="182.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">40</text>
+            <text x="62" y="216" font-size="10" fill="#6f6886">Junior</text>
+            <path d="M134 155 L142 165 L142 238" fill="none" stroke="#1f9d63" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26 224 L26 274 L170 274 L170 224" fill="none" stroke="#6f6886" stroke-width="2"/>
+            <line x1="26" y1="224" x2="26" y2="208" stroke="#6f6886" stroke-width="2" stroke-dasharray="3 3"/>
+            <line x1="170" y1="224" x2="170" y2="208" stroke="#6f6886" stroke-width="2" stroke-dasharray="3 3"/>
+            <rect x="27" y="238" width="142" height="36" fill="#1f9d63"/>
+            <text x="98" y="260.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">30</text>
+            <!-- the equity pool has no top edge: nothing holds the water back, so it can never overflow -->
+            <text x="26" y="288" font-size="10" fill="#6f6886">Equity pool · no top edge</text>
+            <text x="92" y="306" text-anchor="middle" font-size="10" fill="#6f6886">60 + 40 + 30 = 130</text>
+          </g>
+        </svg>
+      </div>
+      <p class="cap">The same stack at three asset values. F<sub>S</sub> 60 and F<sub>J</sub> 40 are drawn at
+        1.2 pixels for every 1 of money in all three panels, so you can compare the water levels.</p>
+    </div>
+
+    <p class="partlab">The three formulas from the sheet</p>
+    <p class="p">V<sub>T</sub> is the value of the firm's assets on the maturity date. It is an asset value,
+      not a cash flow, so nothing here is discounted. You are splitting one pot on one date.</p>
+
+    <table class="dtable">
+      <tr><th style="width:30%">Who</th><th>Payoff at maturity</th></tr>
+      <tr><td class="lab">Senior debt</td><td style="text-align:left">Min(V<sub>T</sub>, F<sub>S</sub>)</td></tr>
+      <tr><td class="lab">Junior debt</td><td style="text-align:left">0 if V<sub>T</sub> &lt; F<sub>S</sub>,
+        otherwise Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>)</td></tr>
+      <tr><td class="lab">Equity</td><td style="text-align:left">Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0)</td></tr>
+    </table>
+
+    <p class="p">The formula sheet writes the equity payoff as Max(V<sub>T</sub> − F<sub>S</sub>, 0). That
+      line is the right one for a firm with only one class of debt. When the firm has senior <b>and</b> junior debt,
+      equity is what is left after both, which is Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0). Your
+      class slides and the class Excel model both use the second form. The course files win, so use them.</p>
+
+    <div class="rule">Senior takes the smaller of what it is owed and what exists. Junior takes what is left
+      after senior, capped at what it is owed. Equity takes what is left after both, and never less than zero.</div>
+
+    <p class="sub">A ceiling for the lenders, no ceiling for the owners</p>
+
+    <p class="p">A bucket has a top edge, so it fills and then it stops. Pour in twice as much water and the
+      senior debt holders still take exactly what they were promised, the face value of their debt, and no
+      more. A good year and an amazing year pay them the same amount. The junior debt holders have a top
+      edge too.</p>
+
+    <p class="p">The pool has no top edge. Everything above the two promises belongs to the shareholders,
+      however large it gets. And the pool cannot hold less than nothing, so in a bad year the shareholders
+      get zero and nobody can ask them for more. That is the whole difference between lending to a firm and
+      owning one.</p>
+
+    <div class="rule">The lenders are capped. The owners are not, in either direction: they can receive any
+      amount above the promises, or nothing at all.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A firm holds one asset, worth 100 today. It is financed with 20 of equity, 40 of senior debt and 40 of
+      junior debt. Both debts mature in one year. The senior debt pays a coupon rate of 8 percent, so on the
+      maturity date the firm owes it 40 + 3.2 = 43.2. The junior debt pays a coupon rate of 20 percent, so the
+      firm owes it 40 + 8 = 48. One year later the asset is worth 70. What does each of the three claim holders
+      receive?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Write down the two promised amounts and add them.</span>
+      <div class="math">F<sub>S</sub> = 43.2 &nbsp;·&nbsp; F<sub>J</sub> = 48 &nbsp;·&nbsp; F<sub>S</sub> + F<sub>J</sub> = 91.2</div>
+      <div class="p">These two numbers are the only borders you need. Everything else follows from where
+        V<sub>T</sub> sits against them.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Compare V<sub>T</sub> with F<sub>S</sub>.</span>
+      <div class="math">70 &gt; 43.2, so the senior lender is paid in full: Min(70, 43.2) = 43.2</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Compare V<sub>T</sub> with F<sub>S</sub> + F<sub>J</sub>.</span>
+      <div class="math">70 &lt; 91.2, so there is not enough for both debts. Equity gets nothing.</div>
+      <div class="math">Equity = Max(70 − 91.2, 0) = Max(−21.2, 0) = 0</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Give the junior lender what is left.</span>
+      <div class="math">Junior = Min(70 − 43.2, 48) = Min(26.8, 48) = 26.8</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Check that the three payments add back to V<sub>T</sub>.</span>
+      <div class="math">43.2 + 26.8 + 0 = 70</div>
+    </div></div>
+
+    <div class="ans">Senior 43.2, junior 26.8, equity 0.</div>
+
+    <p class="p" style="margin-top:10px"><b>What this feels like for each holder.</b> The senior lender paid 40
+      and gets 43.2 back, a return of (43.2 − 40) / 40 = +8 percent, exactly the promised coupon rate. The
+      junior lender paid 40 and gets 26.8 back, a return of (26.8 − 40) / 40 = −33 percent. The owners paid 20
+      and get 0, a return of −100 percent. Same firm, same year, three very different outcomes.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. Same firm, same two debts. One year later the asset is worth 120 instead.
+        What does each holder receive, and what return do the owners earn on their 20?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1">Show the answer</button>
+      <div class="reveal" id="t1">
+        <p class="p">120 is above 43.2, so senior gets 43.2 in full.</p>
+        <p class="p">120 is above 91.2, so both debts are paid in full. Junior gets Min(120 − 43.2, 48) =
+          Min(76.8, 48) = <b>48</b>.</p>
+        <p class="p">Equity = Max(120 − 91.2, 0) = <b>28.8</b>.</p>
+        <p class="p">Check: 43.2 + 48 + 28.8 = <b>120</b>. Correct.</p>
+        <p class="p">Owners' return: (28.8 − 20) / 20 = <b>+44 percent</b>. The asset rose 20 percent and the
+          owners gained 44 percent. That gap is leverage, the effect of borrowed money. The debt payments are fixed, so every extra 1
+          of asset value goes straight to the owners.</p>
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it. Same firm again. This time the asset is worth only 30 at maturity.
+        What does each holder receive?</div>
+      <button class="reveal-btn" type="button" data-reveal="t2">Show the answer</button>
+      <div class="reveal" id="t2">
+        <p class="p">30 is below 43.2, so the senior lender takes everything there is:
+          Min(30, 43.2) = <b>30</b>.</p>
+        <p class="p">Junior: V<sub>T</sub> is below F<sub>S</sub>, so junior gets <b>0</b>.</p>
+        <p class="p">Equity = Max(30 − 91.2, 0) = <b>0</b>.</p>
+        <p class="p">Check: 30 + 0 + 0 = <b>30</b>. Correct.</p>
+        <p class="p">The senior lender paid 40 and receives 30, a return of (30 − 40) / 40 = −25 percent. Even
+          the first in line can lose money. Being senior caps your loss, it does not remove it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 2 ============ -->
+  <div class="panel">
+    <h3>2 · The method: find the state, then make the numbers add up</h3>
+
+    <p class="p">Most exam questions on this topic give you V<sub>T</sub>, F<sub>S</sub> and F<sub>J</sub>, then
+      offer four sets of three payments. You do not have to value anything. You have to place V<sub>T</sub> on
+      the line and then test the options.</p>
+
+    <p class="partlab">Two comparisons, three states</p>
+    <div class="tscroll">
+      <table class="dtable">
+        <tr><th>State</th><th>Where V<sub>T</sub> sits</th><th>Senior</th><th>Junior</th><th>Equity</th></tr>
+        <tr><td class="lab">I</td><td>V<sub>T</sub> &lt; F<sub>S</sub></td><td>V<sub>T</sub></td><td>0</td><td>0</td></tr>
+        <tr><td class="lab">II</td><td>F<sub>S</sub> ≤ V<sub>T</sub> &lt; F<sub>S</sub> + F<sub>J</sub></td>
+          <td>F<sub>S</sub></td><td>V<sub>T</sub> − F<sub>S</sub></td><td>0</td></tr>
+        <tr><td class="lab">III</td><td>V<sub>T</sub> ≥ F<sub>S</sub> + F<sub>J</sub></td>
+          <td>F<sub>S</sub></td><td>F<sub>J</sub></td><td>V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub></td></tr>
+      </table>
+    </div>
+    <p class="given">This table is from your class slides on the Merton structure.</p>
+
+    <p class="p">Notice the borders. At exactly V<sub>T</sub> = F<sub>S</sub> you are in state II, and the
+      junior lender receives V<sub>T</sub> − F<sub>S</sub>, which is zero. State I and state II meet there and
+      give the same three numbers, so a value sitting exactly on the border is never in doubt.</p>
+
+    <p class="partlab">The two checks that do most of the work</p>
+    <p class="p"><b>Check one: the three payments must add up to exactly V<sub>T</sub>.</b> The firm has one pot
+      and it is fully shared out. Nothing is created and nothing disappears. In most exam questions this single
+      test kills two or three of the four options before you work anything out.</p>
+    <p class="p"><b>Check two: equity can never be negative.</b> A corporation has limited liability, which means the
+      owners can lose only the money they put in. If the assets are not enough, the owners walk away with zero. They are not asked to pay the rest out of their own
+      pocket. An option showing equity as a minus number is wrong, even when the three numbers happen to add up
+      to V<sub>T</sub>.</p>
+    <p class="p">Two more limits sit underneath those checks. The senior payment can never be more than
+      F<sub>S</sub>. The junior payment can never be more than F<sub>J</sub>. A lender cannot collect more
+      than it was promised.</p>
+
+    <div class="rule">Compare V<sub>T</sub> with F<sub>S</sub>. Then compare it with F<sub>S</sub> +
+      F<sub>J</sub>. That gives you the state. Then check that the three payments add to exactly V<sub>T</sub>
+      and that equity is zero or more.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A firm owes 60 to its senior lender and 45 to its junior lender at maturity. APR holds. After the assets
+      are shared out, the junior lender reports that it received 18. What was the value of the firm's assets at
+      maturity, and what did the owners receive?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Read what the junior payment tells you.</span>
+      <div class="p">The junior lender received 18. That is more than nothing and less than the 45 it was
+        promised. A part payment to the junior lender only happens in state II.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">In state II the senior lender is paid in full.</span>
+      <div class="math">Senior = F<sub>S</sub> = 60</div>
+      <div class="p">The junior lender received something, so the senior lender must already be full. That is
+        what the priority order means.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">In state II the owners receive nothing.</span>
+      <div class="math">Equity = 0</div>
+      <div class="p">Money only reaches the owners once both debts are full. The junior debt is not full.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Use the adding-up rule backwards to find V<sub>T</sub>.</span>
+      <div class="math">V<sub>T</sub> = 60 + 18 + 0 = 78</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Check the answer against the borders.</span>
+      <div class="math">F<sub>S</sub> = 60 &nbsp;·&nbsp; F<sub>S</sub> + F<sub>J</sub> = 105</div>
+      <div class="p">78 sits between 60 and 105, which is state II. That matches the part payment we started
+        from.</div>
+    </div></div>
+
+    <div class="ans">The assets were worth 78 at maturity. The owners received 0.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A firm owes 80 to its senior lender and 40 to its junior lender at maturity. The
+        assets turn out to be worth exactly 80. What does each holder receive?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3">Show the answer</button>
+      <div class="reveal" id="t3">
+        <p class="p">Senior = Min(80, 80) = <b>80</b>. The senior lender is paid in full, and not one unit more.</p>
+        <p class="p">Junior = Min(80 − 80, 40) = Min(0, 40) = <b>0</b>. There is nothing left over for it.</p>
+        <p class="p">Equity = Max(80 − 120, 0) = <b>0</b>.</p>
+        <p class="p">Check: 80 + 0 + 0 = <b>80</b>. Correct.</p>
+        <p class="p">This is the border case. V<sub>T</sub> lands exactly on F<sub>S</sub>. The senior lender gets back
+          exactly what it is owed, and everyone behind it gets zero. One unit less and the senior lender would also be
+          short.</p>
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it. A firm owes 60 to its senior lender and 40 to its junior lender. Its assets at
+        maturity are worth 90. A classmate answers: senior 60, junior 40, equity −10. Say what is wrong and give
+        the right three numbers.</div>
+      <button class="reveal-btn" type="button" data-reveal="t4">Show the answer</button>
+      <div class="reveal" id="t4">
+        <p class="p">Two things are wrong. Equity is negative, which limited liability does not allow. And the
+          three numbers add to 60 + 40 − 10 = 90, which looks right, so the adding-up check alone would let this
+          pass. That is why you run both checks.</p>
+        <p class="p">The right answer: 90 is above 60, so senior gets <b>60</b> in full. 90 is below 60 + 40 =
+          100, so the firm is short. Junior gets Min(90 − 60, 40) = <b>30</b>. Equity gets Max(90 − 100, 0) =
+          <b>0</b>.</p>
+        <p class="p">Check: 60 + 30 + 0 = <b>90</b>. Correct.</p>
+        <p class="p">The junior lender is 10 short of its 40. That gap is the junior lender's loss. It is
+          not a debt the owners owe anyone.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 3 ============ -->
+  <div class="panel">
+    <h3>3 · What happens when the waterfall actually runs</h3>
+
+    <p class="p">The formulas above describe one moment: the maturity date, with the money already counted. The
+      exam also asks concept questions about the real events around that moment. These are short marks. Learn
+      the words.</p>
+
+    <p class="partlab">Default and bankruptcy</p>
+    <table class="dtable">
+      <tr><th style="width:32%">Term</th><th>What it means</th></tr>
+      <tr><td class="lab">Default</td><td style="text-align:left">The firm does not pay what it promised on the
+        date it promised. In the waterfall, default is any case where a bucket is not filled.</td></tr>
+      <tr><td class="lab">Bankruptcy</td><td style="text-align:left">The legal process that follows when a firm
+        cannot pay. It decides who gets what, and in what order.</td></tr>
+      <tr><td class="lab">Chapter 11</td><td style="text-align:left">Reorganisation. The firm keeps trading
+        while a plan is agreed that changes the amounts and the dates of what it owes.</td></tr>
+      <tr><td class="lab">Chapter 7</td><td style="text-align:left">Liquidation. The firm stops. Its assets are
+        sold and the cash is shared out in priority order.</td></tr>
+      <tr><td class="lab">Out of court</td><td style="text-align:left">The firm and its lenders agree a new deal
+        privately, with no court. Faster and cheaper.</td></tr>
+      <tr><td class="lab">In court</td><td style="text-align:left">A court runs the process. It brings legal
+        fees, paperwork, advisers to pay and lost time. All of that comes out of the same pot that the claim
+        holders are waiting for.</td></tr>
+    </table>
+    <p class="given">Your class notes list Chapter 11 and Chapter 7 as exam topics but do not spell the two
+      chapters out. The two lines above give the standard meaning of each.</p>
+
+    <p class="p">Your class notes add one honest warning. In a real reorganisation, APR is sometimes bent. The
+      owners can slow the process down and destroy value while they do it, so lenders may agree to leave them
+      something to finish faster. On the exam this only matters when a question says APR holds or does
+      not hold. Read that line.</p>
+
+    <div class="rule">Equity stops at zero because a corporation has limited liability. The owners can lose
+      everything they put in. They cannot be made to pay the lenders from their own pocket.</div>
+
+    <p class="partlab">Who runs the firm, and for whom</p>
+    <p class="p">The owners do not usually manage the firm. They hire managers. The owners are the
+      <b>principal</b> and the managers are the <b>agent</b>. When the two want different things, that is the
+      <b>agency problem</b>.</p>
+
+    <table class="dtable">
+      <tr><th style="width:32%">Term</th><th>What it means</th></tr>
+      <tr><td class="lab">Direct agency cost</td><td style="text-align:left">Money spent on things the owners
+        would not choose, such as a corporate jet, plus the cost of watching the managers.</td></tr>
+      <tr><td class="lab">Indirect agency cost</td><td style="text-align:left">Value not created. A manager
+        turns down the better but riskier project to protect his or her own position.</td></tr>
+      <tr><td class="lab">Compensation</td><td style="text-align:left">Pay in shares and options, and the threat
+        of losing the job. It makes the manager's wealth move with the owners' wealth.</td></tr>
+      <tr><td class="lab">Corporate control</td><td style="text-align:left">The threat of a takeover. If the
+        share price falls, an outside buyer can take the firm and replace the managers.</td></tr>
+      <tr><td class="lab">Effect of outsiders</td><td style="text-align:left">Large outside investors and
+        analysts watch and push. Your class names CalPERS, the California state workers' fund, as this kind of
+        corporate police.</td></tr>
+    </table>
+
+    <p class="p">There is a link between this panel and the waterfall. Equity gains when the assets rise and
+      loses nothing more once they fall below the debt. That shape makes the owners keen to take risk, and it
+      is one reason lenders write terms and watch the managers.</p>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A firm owes 120 in total to its lenders at maturity. Its assets are worth 95. Before any court date, the
+      lenders and the owners meet. The lenders offer to leave the owners a small stake in the firm if the deal
+      is signed quickly. Under strict APR, what should the owners receive, and why might the lenders still make
+      that offer?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Apply APR to the numbers given.</span>
+      <div class="math">Equity = Max(95 − 120, 0) = Max(−25, 0) = 0</div>
+      <div class="p">Under strict APR the owners receive nothing. The lenders are 25 short.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Name what the lenders are buying.</span>
+      <div class="p">A court process costs money and takes time, and those costs come out of the 95. The
+        owners can drag the process out. Paying them a little can leave the lenders with more than a long
+        fight would.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Name the event.</span>
+      <div class="p">This is an out-of-court deal, and APR has been broken here. Your topic list calls that a
+        deviation from APR. Both terms are on the list.</div>
+    </div></div>
+
+    <div class="ans">Under strict APR the owners receive 0. The lenders may still pay them something to avoid
+      the cost and delay of an in-court process.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A chief executive turns down the project with the higher NPV because it is riskier
+        and a bad outcome could cost her the job. Name the problem in course words, and name two tools the
+        owners have against it.</div>
+      <button class="reveal-btn" type="button" data-reveal="t5">Show the answer</button>
+      <div class="reveal" id="t5">
+        <p class="p">This is the <b>agency problem</b>, and this form of it is an <b>indirect agency
+          cost</b>. No money is spent wrongly. Value is simply not created.</p>
+        <p class="p">Two tools. First, <b>compensation</b>: pay her in shares or options, so that her wealth
+          rises and falls with the owners' wealth. Second, <b>corporate control</b>: the threat that an outside
+          buyer takes the firm and replaces her. Pressure from large outside investors is a third.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick. Every miss is saved to your error log.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-06.html">← Day 6: Bonds</a>
+    <a class="navbtn primary" href="day-08.html">Day 8: Stocks →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 7,
+  topic: "Payoff structure",
+  items: [
+    {
+      q: "At maturity a firm's assets are worth 55. The firm owes 70 to its senior lender and 50 to its junior lender on that date. APR holds. What does each holder receive?",
+      opts: [
+        "Senior 55, junior 0, equity 0",
+        "Senior 70, junior 0, equity −15",
+        "Senior 5, junior 50, equity 0",
+        "Senior 27.5, junior 27.5, equity 0"
+      ],
+      correct: 0,
+      tag: "Payoff structure",
+      exp: "Formula: senior = Min(V_T, F_S); junior = 0 when V_T < F_S; equity = Max(V_T − F_S − F_J, 0).<br><br>Inputs from the stem: V_T = 55, F_S = 70, F_J = 50, so F_S + F_J = 120.<br><br>1. Compare V_T with F_S: 55 < 70. The pot is smaller than what the senior lender alone is owed. This is state I.<br>2. Senior = Min(55, 70) = 55. The senior lender takes everything and is still 15 short.<br>3. Junior = 0, because V_T is below F_S.<br>4. Equity = Max(55 − 120, 0) = Max(−65, 0) = 0.<br>5. Check: 55 + 0 + 0 = 55, which is exactly V_T.<br><br>Why the others are wrong. <b>Senior 70, junior 0, equity −15</b> pays the senior lender 70 when only 55 exists, and then writes the hole as negative equity. Limited liability stops equity at zero, and 70 + 0 − 15 only adds to 55 because the error was hidden in the minus sign. <b>Senior 5, junior 50, equity 0</b> fills the junior bucket first and leaves the senior lender only what is left over. That is the priority order upside down. <b>Senior 27.5, junior 27.5, equity 0</b> splits the 55 equally. It adds up to V_T, which is why it is tempting, but APR is not a fair share. The senior lender is paid first and in full before the junior lender receives anything."
+    },
+    {
+      q: "At maturity a firm's assets are worth 64. The firm owes 45 to its senior lender and 35 to its junior lender on that date. APR holds. What does each holder receive?",
+      opts: [
+        "Senior 29, junior 35, equity 0",
+        "Senior 45, junior 19, equity 0",
+        "Senior 45, junior 35, equity −16",
+        "Senior 45, junior 35, equity 0"
+      ],
+      correct: 1,
+      tag: "Payoff structure",
+      exp: "Formula: senior = Min(V_T, F_S); junior = Min(V_T − F_S, F_J) once V_T is at or above F_S; equity = Max(V_T − F_S − F_J, 0).<br><br>Inputs from the stem: V_T = 64, F_S = 45, F_J = 35, so F_S + F_J = 80.<br><br>1. Compare V_T with F_S: 64 > 45, so the senior lender is paid in full. Senior = 45.<br>2. Compare V_T with F_S + F_J: 64 < 80, so there is not enough for both debts. This is state II.<br>3. Junior = Min(64 − 45, 35) = Min(19, 35) = 19. The junior lender is 16 short of its 35.<br>4. Equity = Max(64 − 80, 0) = 0.<br>5. Check: 45 + 19 + 0 = 64, which is exactly V_T.<br><br>Why the others are wrong. <b>Senior 29, junior 35, equity 0</b> pays the junior lender its full 35 first and gives the senior lender the remaining 29. It adds to 64, so the adding-up test does not catch it, but it reverses the priority order. <b>Senior 45, junior 35, equity −16</b> pays both debts in full out of a pot that only holds 64, then writes the missing 16 as negative equity. Equity can never be negative. <b>Senior 45, junior 35, equity 0</b> adds to 80, which is more money than the firm has. The adding-up check alone rules it out."
+    },
+    {
+      q: "At maturity a firm shares out its assets under APR. The senior lender was paid in full and received 30. The junior lender was also paid in full and received 25. The owners received 41. What were the firm's assets worth at maturity?",
+      opts: [
+        "55",
+        "66",
+        "96",
+        "41"
+      ],
+      correct: 2,
+      tag: "Payoff structure",
+      exp: "This is the adding-up rule used backwards. The three payoffs always sum to exactly V_T, because one pot is shared out completely and nothing is created or lost.<br><br>Inputs from the stem: senior 30, junior 25, equity 41.<br><br>1. V_T = senior + junior + equity.<br>2. V_T = 30 + 25 + 41 = 96.<br>3. Check the state. Both debts are full, so F_S = 30 and F_J = 25, giving F_S + F_J = 55. Since 96 is above 55, this is state III, where equity receives V_T − F_S − F_J.<br>4. Check that line: 96 − 30 − 25 = 41, which matches the equity payment in the stem.<br><br>Why the others are wrong. <b>55</b> is 30 + 25, the two debts only, and forgets that the owners were paid too. <b>66</b> is 41 + 25, which drops the senior payment. <b>41</b> is the equity payment on its own, not the value of the assets. Equity is the leftover, never the whole."
+    },
+    {
+      q: "At maturity a firm's assets are worth exactly 52. The firm owes 52 to its senior lender and 24 to its junior lender on that date. APR holds. What does each holder receive?",
+      opts: [
+        "Senior 52, junior 24, equity −24",
+        "Senior 26, junior 26, equity 0",
+        "Senior 28, junior 24, equity 0",
+        "Senior 52, junior 0, equity 0"
+      ],
+      correct: 3,
+      tag: "Payoff structure",
+      exp: "Formula: senior = Min(V_T, F_S); junior = Min(V_T − F_S, F_J); equity = Max(V_T − F_S − F_J, 0).<br><br>Inputs from the stem: V_T = 52, F_S = 52, F_J = 24, so F_S + F_J = 76.<br><br>1. Compare V_T with F_S: they are equal. The senior lender is paid in full and there is nothing over. Senior = Min(52, 52) = 52.<br>2. Junior = Min(52 − 52, 24) = Min(0, 24) = 0.<br>3. Equity = Max(52 − 76, 0) = Max(−24, 0) = 0.<br>4. Check: 52 + 0 + 0 = 52, which is exactly V_T.<br><br>This is the border case. At exactly V_T = F_S the senior lender gets back exactly what it is owed, and everyone behind receives nothing. One unit less and even the senior lender is short.<br><br>Why the others are wrong. <b>Senior 52, junior 24, equity −24</b> pays the junior lender from money that does not exist and hides the hole in negative equity. <b>Senior 26, junior 26, equity 0</b> splits the pot in half. APR is an order, not a fair share. <b>Senior 28, junior 24, equity 0</b> fills the junior bucket first with its full 24 and leaves the senior lender 28. It adds to 52, but the order of payment is reversed."
+    },
+    {
+      q: "An exam question ends with the line: \"Assume APR holds at debt maturity.\" In this course, what is that line telling you?",
+      opts: [
+        "The annual percentage rate on both debts is the same, so the two lenders earn equal returns",
+        "The Absolute Priority Rule holds: the senior lender is paid in full first, then the junior lender, then the owners",
+        "The Absolute Priority Rule holds: the owners are protected first, because they carry the most risk",
+        "The average payout ratio holds: the pot is shared between the three holders in proportion to what each is owed"
+      ],
+      correct: 1,
+      tag: "Concepts",
+      exp: "APR in this course means <b>Absolute Priority Rule</b>. It sets the order of payment at maturity: senior debt in full first, then junior debt up to what it is owed, then whatever is left to the owners.<br><br>Why the others are wrong. <b>Annual percentage rate</b> is the everyday meaning of those three letters outside this course, and it is the trap. Nothing in the payoff formulas is a rate. Reading APR as a rate makes the question look impossible to answer, because no rate is given. <b>Owners protected first</b> reverses the order. The owners are last because their claim is on what is left over. They get the leftovers, which is why their payoff can be zero. <b>Average payout ratio</b> invents a share worked out in proportion to what each is owed. APR is a line, not a split. A junior lender owed a large amount still receives nothing until the senior lender is whole."
+    },
+    {
+      q: "A firm cannot pay the money it owes. It files with the court, keeps its factories running and its staff employed, and agrees a plan with its lenders that changes how much it owes and when. In the US system, which name fits what this firm is doing?",
+      opts: [
+        "Chapter 7, because the firm has defaulted and default always ends in liquidation",
+        "An out-of-court deal, because the lenders agreed to the plan",
+        "Chapter 11, a reorganisation, with the firm still trading",
+        "A takeover, because control of the firm has moved to the lenders"
+      ],
+      correct: 2,
+      tag: "Concepts",
+      exp: "Two things are named in the stem: the firm went to court, and it is still trading while the debts are reshaped. That pair is Chapter 11, a reorganisation.<br><br>Why the others are wrong. <b>Chapter 7</b> is liquidation: the firm stops, the assets are sold, and the cash is shared out in priority order. This firm has not stopped. Default does not have to end in liquidation, which is the false step inside that option. <b>An out-of-court deal</b> is the case where the firm and its lenders agree privately with no court involved. It is faster and cheaper, and it is the real other road the firm could have taken, but the stem says the firm filed with the court. Agreement alone does not make a process out of court. <b>A takeover</b> is a change of owner in a working market for corporate control. That belongs to who controls a firm, not to bankruptcy law."
+    }
+  ]
+});
+</script>
+</body>
+</html>

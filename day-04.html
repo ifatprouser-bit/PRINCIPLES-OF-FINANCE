@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 4 · Perpetuity and growth</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+<a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+<div class="crumb">DAY 4 · Tuesday 29 September</div>
+<h1>Perpetuity and growth</h1>
+<p class="lede">A payment that never stops. A payment that grows. And the one rule that decides which formula you are allowed to use.</p>
+
+<!-- ============ RECALL: DAY 2 ============ -->
+<div class="preq">
+  <div class="tag">Five minutes: recall</div>
+  <p><b>1.</b> A dollar you get next year is worth less than a dollar today. Name two reasons why.</p>
+  <button class="reveal-btn" type="button" data-reveal="r1">Show the answer</button>
+  <div class="reveal" id="r1">
+    Any two of these three. <b>People prefer to spend now.</b> To give that up they want more money later.
+    <b>Inflation.</b> The same dollar buys less next year. <b>Risk.</b> The promised money may never arrive.
+    All three sit inside one number: the discount rate <i>r</i>.
+  </div>
+  <p style="margin-top:14px;"><b>2.</b> You will receive $5,000 in 4 years. The discount rate is 7%. What is it worth today?
+     Then say which way the answer moves if the rate goes up to 9%.</p>
+  <button class="reveal-btn" type="button" data-reveal="r2">Show the answer</button>
+  <div class="reveal" id="r2">
+    PV = 5,000 / 1.07<sup>4</sup> = <b>$3,814.48</b>.<br>
+    At 9%: PV = 5,000 / 1.09<sup>4</sup> = <b>$3,542.13</b>. It goes <b>down</b>.
+    A higher rate always pushes present value down. Today's page uses this fact a lot.
+  </div>
+</div>
+
+<!-- ============ PRETEST ============ -->
+<div class="preq">
+  <div class="tag">Guess first</div>
+  <p>A bond pays $50 every year and it never matures, so it never pays the money back. You will collect $50 a year, and so will your
+     children, and so will theirs. The required return is 5%.</p>
+  <p class="do">Guess: is this bond worth more or less than $2,000 today? Write your guess and one line saying why.
+     No answer here. This is a guess, not a test. You will know by the end of panel 1.</p>
+</div>
+
+<!-- ============ PANEL 1 ============ -->
+<div class="panel">
+  <h3>1 · The plain perpetuity: forever, but still a number you can name</h3>
+
+  <p class="p">A <b>perpetuity</b> is the same payment, arriving after the same gap in time, that never ends. The British
+     government once sold bonds like this, called consols. They paid a fixed coupon, which is the regular
+     interest payment, and never paid the borrowed money back. A company can also live forever, so a fixed dividend paid by a company is close to the same shape.</p>
+
+  <p class="p">"Never ends" sounds like it should be worth an endless amount of money. It is not. The reason is
+     discounting. A payment 60 years away is worth very little today. A payment 200 years away is worth
+     almost nothing. The payments keep coming, but the value you add for each new one keeps shrinking.
+     The running total climbs, slows, and settles on a ceiling.</p>
+
+  <div class="rule">
+    PV of a perpetuity = A / r.<br>
+    A is the payment, the same size every time. r is the required return per period. The first payment comes
+    <b>one period from now</b>, and the answer is the value <b>today</b>.
+  </div>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 560 262" role="img" aria-label="Running total of a 30 dollar yearly payment discounted at 5 percent, flattening at 600 dollars">
+      <line x1="56" y1="220" x2="540" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
+      <line x1="56" y1="26" x2="56" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
+      <line x1="56" y1="40" x2="540" y2="40" stroke="#d2453f" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="544" y="44" font-size="11" fill="#d2453f" font-weight="700" text-anchor="end" dy="-6">ceiling $600</text>
+      <line x1="56" y1="130" x2="60" y2="130" stroke="#6f6886"/>
+      <text x="50" y="134" font-size="11" fill="#6f6886" text-anchor="end">$300</text>
+      <text x="50" y="224" font-size="11" fill="#6f6886" text-anchor="end">$0</text>
+      <text x="50" y="44" font-size="11" fill="#6f6886" text-anchor="end">$600</text>
+      <polyline fill="none" stroke="#6b4ef0" stroke-width="2.6" stroke-linejoin="round" points="56,220.0 60,211.4 64,203.3 68,195.5 72,188.1 76,181.0 80,174.3 84,167.9 88,161.8 92,156.0 96,150.5 100,145.2 104,140.2 108,135.5 112,130.9 116,126.6 120,122.5 124,118.5 128,114.8 132,111.2 136,107.8 140,104.6 144,101.5 148,98.6 152,95.8 156,93.2 160,90.6 164,88.2 168,85.9 172,83.7 176,81.6 180,79.7 184,77.8 188,76.0 192,74.3 196,72.6 200,71.1 204,69.6 208,68.2 212,66.8 216,65.6 220,64.4 224,63.2 228,62.1 232,61.0 236,60.0 240,59.1 244,58.2 248,57.3 252,56.5 256,55.7 260,54.9 264,54.2 268,53.6 272,52.9 276,52.3 280,51.7 284,51.2 288,50.6 292,50.1 296,49.6 300,49.2 304,48.7 308,48.3 312,47.9 316,47.6 320,47.2 324,46.8 328,46.5 332,46.2 336,45.9 340,45.6 344,45.4 348,45.1 352,44.9 356,44.6 360,44.4 364,44.2 368,44.0 372,43.8 376,43.6 380,43.5 384,43.3 388,43.1 392,43.0 396,42.8 400,42.7 404,42.6 408,42.5 412,42.3 416,42.2 420,42.1 424,42.0 428,41.9 432,41.8 436,41.7 440,41.7 444,41.6 448,41.5 452,41.4 456,41.4 460,41.3 464,41.2 468,41.2 472,41.1 476,41.1 480,41.0 484,41.0 488,40.9 492,40.9 496,40.8 500,40.8 504,40.8 508,40.7 512,40.7 516,40.7 520,40.6 524,40.6 528,40.6 532,40.5 536,40.5"/>
+      <circle cx="156" cy="93.2" r="4" fill="#6b4ef0"/>
+      <text x="162" y="90" font-size="11" fill="#211c33" font-weight="700">year 25</text>
+      <circle cx="456" cy="41.4" r="4" fill="#6b4ef0"/>
+      <text x="450" y="58" font-size="11" fill="#211c33" font-weight="700" text-anchor="end">year 100</text>
+      <text x="56" y="238" font-size="11" fill="#6f6886">year 0</text>
+      <text x="296" y="238" font-size="11" fill="#6f6886" text-anchor="middle">year 60</text>
+      <text x="536" y="238" font-size="11" fill="#6f6886" text-anchor="end">year 120</text>
+      <text x="296" y="256" font-size="11.5" fill="#6f6886" text-anchor="middle">years counted so far</text>
+    </svg>
+    <div class="cap">Running total of $30 received every year, discounted at 5%. Each new year adds less than
+      the year before. The line never crosses $600.</div>
+  </div>
+
+  <p class="p">The table gives the same curve as numbers. Read the last two rows. Two hundred years of
+     payments are worth $599.97. Forever is worth $600.00. The difference is three cents. That is why a bond
+     with a 100 year life can be priced with the perpetuity formula and nobody complains.</p>
+
+  <table class="dtable">
+    <tr><th>Years counted</th><th>Running total</th><th>Share of the full value</th></tr>
+    <tr><td>10</td><td>$231.65</td><td>39%</td></tr>
+    <tr><td>25</td><td>$422.82</td><td>70%</td></tr>
+    <tr><td>50</td><td>$547.68</td><td>91%</td></tr>
+    <tr><td>100</td><td>$595.44</td><td>99%</td></tr>
+    <tr><td>200</td><td>$599.97</td><td>99.99%</td></tr>
+    <tr class="hl"><td>forever</td><td>$600.00</td><td>100%</td></tr>
+  </table>
+
+  <div class="datalab">Worked example</div>
+  <div class="question">
+    A university fund promises a scholarship of $9,000 at the end of every year. The promise has no end date.
+    The required return is 6%. What is the fund worth today?
+  </div>
+  <div class="step"><div class="stepn">1</div><div class="stepbody"><span class="lab">Pick the shape.</span>
+    Same amount every year, no growth, no end date. That is a plain perpetuity.
+    <div class="math">PV = A / r</div></div></div>
+  <div class="step"><div class="stepn">2</div><div class="stepbody"><span class="lab">Read the inputs.</span>
+    A = $9,000 a year. r = 6% = 0.06. There is no n, because there is no last year.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stepbody"><span class="lab">Divide.</span>
+    <div class="math">PV = 9,000 / 0.06 = 150,000</div></div></div>
+  <div class="step"><div class="stepn">4</div><div class="stepbody"><span class="lab">Check it backwards.</span>
+    If you had $150,000 and it earned 6%, it would pay you 150,000 × 0.06 = $9,000 a year and the
+    $150,000 would still be there. The answer survives the check.</div></div>
+  <div class="ans">The fund is worth $150,000 today.</div>
+
+  <div class="tryq">
+    <div class="q">Try it. A consol pays $75 every year forever. The required return is 5%.
+      What is it worth? Then the market's required return rises to 6%. What is it worth now?</div>
+    <button class="reveal-btn" type="button" data-reveal="t1a">Show the answer</button>
+    <div class="reveal" id="t1a">
+      At 5%: 75 / 0.05 = <b>$1,500</b>.<br>
+      At 6%: 75 / 0.06 = <b>$1,250</b>.<br>
+      The coupon did not move. The rate moved, so the price moved the other way. Rate up, price down.
+    </div>
+  </div>
+
+  <div class="tryq">
+    <div class="q">Try it. A perpetuity pays $600 a year. The required return falls from 8% to 6%.
+      By how much does the value rise?</div>
+    <button class="reveal-btn" type="button" data-reveal="t1b">Show the answer</button>
+    <div class="reveal" id="t1b">
+      At 8%: 600 / 0.08 = <b>$7,500</b>. At 6%: 600 / 0.06 = <b>$10,000</b>. The value rises by <b>$2,500</b>.<br>
+      A perpetuity has no maturity date, so there is no day when it is paid back. That is why it reacts
+      strongly to a rate change. No final repayment arrives at the end to hold the price steady.
+    </div>
+  </div>
+</div>
+
+<!-- ============ PANEL 2 ============ -->
+<div class="panel">
+  <h3>2 · The growing perpetuity: r must beat g</h3>
+
+  <p class="p">A <b>growing perpetuity</b> is a payment that never ends and gets bigger every period by the
+     same percentage. Call that percentage g. This is the normal shape for a share of stock. Many firms
+     raise their dividend by a few percent a year and keep doing it.</p>
+
+  <p class="p">One input needs care. The top of the formula is <b>CF1</b>, the cash flow at the end of the
+     first period, not the one just paid. If the question gives you last year's dividend, multiply it by
+     (1 + g) before you divide.</p>
+
+  <p class="p">Now the limit on this formula. It divides by (r − g). If g gets close to r, that gap gets tiny and
+     the value explodes. If g equals r the gap is zero and division is not possible. If g is bigger than r
+     the formula hands you a negative number, which is nonsense for a stream of positive payments. The honest
+     reading is this: a stream that grows forever at least as fast as you discount it is worth more than any
+     price. No real asset does that, so in an exam this is your signal that the growing perpetuity formula is
+     the wrong tool, or that the growth rate in the question cannot last forever.</p>
+
+  <div class="rule">
+    PV of a growing perpetuity = CF1 / (r − g), and you may only use it when <b>r &gt; g</b>.<br>
+    CF1 is the cash flow one period from now. If the question gives CF0, then CF1 = CF0 × (1 + g).
+  </div>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 560 262" role="img" aria-label="Share value rising steeply as the growth rate approaches the 9 percent required return">
+      <line x1="56" y1="220" x2="540" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
+      <line x1="56" y1="26" x2="56" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
+      <line x1="496" y1="26" x2="496" y2="220" stroke="#d2453f" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="492" y="40" font-size="11.5" fill="#d2453f" font-weight="700" text-anchor="end">g = r = 9%: wall</text>
+      <text x="50" y="224" font-size="11" fill="#6f6886" text-anchor="end">$0</text>
+      <text x="50" y="138" font-size="11" fill="#6f6886" text-anchor="end">$100</text>
+      <text x="50" y="56" font-size="11" fill="#6f6886" text-anchor="end">$200</text>
+      <line x1="56" y1="138" x2="540" y2="138" stroke="#f2effb" stroke-width="1"/>
+      <polyline fill="none" stroke="#6b4ef0" stroke-width="2.6" stroke-linejoin="round" points="56,201.8 61,201.6 66,201.4 71,201.1 76,200.9 80,200.7 85,200.4 90,200.1 95,199.9 100,199.6 105,199.3 110,199.1 115,198.8 120,198.5 124,198.2 129,197.9 134,197.5 139,197.2 144,196.9 149,196.5 154,196.2 159,195.8 164,195.4 168,195.0 173,194.6 178,194.2 183,193.8 188,193.3 193,192.9 198,192.4 203,191.9 208,191.4 212,190.9 217,190.3 222,189.8 227,189.2 232,188.6 237,188.0 242,187.3 247,186.7 252,186.0 256,185.2 261,184.5 266,183.7 271,182.9 276,182.0 281,181.1 286,180.2 291,179.2 296,178.1 300,177.0 305,175.9 310,174.7 315,173.4 320,172.1 325,170.7 330,169.2 335,167.6 340,165.9 344,164.1 349,162.2 354,160.1 359,157.9 364,155.6 369,153.0 374,150.3 379,147.3 384,144.1 388,140.6 393,136.7 398,132.5 403,127.8 408,122.5 413,116.7 418,110.2 423,102.7 428,94.2 432,84.4 437,73.0 442,59.5 447,45.0"/>
+      <circle cx="251" cy="186.0" r="4" fill="#6b4ef0"/>
+      <text x="258" y="184" font-size="11" fill="#211c33" font-weight="700">g = 4%: $41.60</text>
+      <circle cx="447" cy="43.3" r="4" fill="#6b4ef0"/>
+      <text x="441" y="41" font-size="11" fill="#211c33" font-weight="700" text-anchor="end">g = 8%: $216</text>
+      <text x="56" y="238" font-size="11" fill="#6f6886">g = 0%</text>
+      <text x="276" y="238" font-size="11" fill="#6f6886" text-anchor="middle">g = 4.5%</text>
+      <text x="496" y="238" font-size="11" fill="#6f6886" text-anchor="middle">g = 9%</text>
+      <text x="296" y="256" font-size="11.5" fill="#6f6886" text-anchor="middle">growth rate g, with r fixed at 9%</text>
+    </svg>
+    <div class="cap">Value of a share paying a $2.00 dividend now, growing at g forever, discounted at 9%.
+      Near the wall the price becomes wild. A small change in g moves the answer a very long way.</div>
+  </div>
+
+  <p class="p">Read the steep part of that curve as a warning about accuracy. When r and g are far apart, a
+     small error in g barely matters. When they are close, a change of half a percent in g can double the
+     answer. That is why an exam question with r just above g is testing whether you noticed how thin the gap
+     is, not whether you can divide.</p>
+
+  <table class="dtable">
+    <tr><th>g</th><th>r − g</th><th>Value of the share</th></tr>
+    <tr><td>0%</td><td>0.09</td><td>$22.22</td></tr>
+    <tr><td>4%</td><td>0.05</td><td>$41.60</td></tr>
+    <tr><td>7%</td><td>0.02</td><td>$107.00</td></tr>
+    <tr><td>8%</td><td>0.01</td><td>$216.00</td></tr>
+    <tr><td>9% or more</td><td>0 or negative</td><td>no value you can name</td></tr>
+  </table>
+
+  <div class="datalab">Worked example</div>
+  <div class="question">
+    A company has just paid a dividend of $2.00 per share. It plans to raise the dividend by 4% every year,
+    with no end date. Investors require 9% on shares of this risk. What is one share worth today?
+  </div>
+  <div class="step"><div class="stepn">1</div><div class="stepbody"><span class="lab">Pick the shape.</span>
+    Payments never end and they grow at a fixed percentage. That is a growing perpetuity.
+    <div class="math">PV = CF1 / (r − g)</div></div></div>
+  <div class="step"><div class="stepn">2</div><div class="stepbody"><span class="lab">Check the limit before anything else.</span>
+    r = 9%, g = 4%. r is bigger than g, so the formula is allowed.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stepbody"><span class="lab">Move the dividend forward one year.</span>
+    $2.00 was <i>just paid</i>, so it is CF0.
+    <div class="math">CF1 = 2.00 × 1.04 = 2.08</div></div></div>
+  <div class="step"><div class="stepn">4</div><div class="stepbody"><span class="lab">Find the gap.</span>
+    <div class="math">r − g = 0.09 − 0.04 = 0.05</div></div></div>
+  <div class="step"><div class="stepn">5</div><div class="stepbody"><span class="lab">Divide.</span>
+    <div class="math">PV = 2.08 / 0.05 = 41.60</div></div></div>
+  <div class="step"><div class="stepn">6</div><div class="stepbody"><span class="lab">Check it backwards.</span>
+    41.60 × 0.05 = 2.08, which is next year's dividend. Correct. If you had skipped the (1 + g) and used
+    2.00, you would have got 40.00, which is $1.60 too low.</div></div>
+  <div class="ans">One share is worth $41.60 today.</div>
+
+  <div class="tryq">
+    <div class="q">Try it. A firm paid a dividend of $1.50 per share yesterday. Dividends will grow 2% a year
+      with no end date. Investors require 8%. What is the share worth?</div>
+    <button class="reveal-btn" type="button" data-reveal="t2a">Show the answer</button>
+    <div class="reveal" id="t2a">
+      r = 8% is above g = 2%, so the formula is allowed.<br>
+      CF1 = 1.50 × 1.02 = 1.53. Gap = 0.08 − 0.02 = 0.06.<br>
+      PV = 1.53 / 0.06 = <b>$25.50</b>.
+    </div>
+  </div>
+
+  <div class="tryq">
+    <div class="q">Try it. Same firm, same $1.50 dividend, same 2% growth. Investors now require only 6%.
+      What is the share worth, and why did it move so much?</div>
+    <button class="reveal-btn" type="button" data-reveal="t2b">Show the answer</button>
+    <div class="reveal" id="t2b">
+      CF1 = 1.53 is unchanged. Gap = 0.06 − 0.02 = 0.04.<br>
+      PV = 1.53 / 0.04 = <b>$38.25</b>. That is 50% higher than $25.50.<br>
+      The required return fell by two points, but the gap (r − g) fell by a third, from 0.06 to 0.04.
+      The gap is the whole bottom of the fraction, so the price reacts to it hard.
+    </div>
+  </div>
+</div>
+
+<!-- ============ PANEL 3 ============ -->
+<div class="panel">
+  <h3>3 · The growing annuity: growth with a last payment</h3>
+
+  <p class="p">A <b>growing annuity</b> is the same idea as a growing perpetuity with one change. The payments
+     stop. There is a fixed number of them, n. A mining permit for 20 years, a lease that runs 8 years, a
+     patent with 12 years left: the cash flow grows, and then one day there is no more cash flow.</p>
+
+  <p class="p">The choice between the two formulas is not about how the cash flow behaves. Both grow. It is
+     about whether the stream has a last payment. Look for an end date in the question. A permit period, a
+     contract length, a remaining life. If you find one, you need n, and you need the growing annuity.</p>
+
+  <div class="rule">
+    PV of a growing annuity = CF1 × [ 1 − ((1 + g) / (1 + r))<sup>n</sup> ] / (r − g).<br>
+    Use it when the payments grow <b>and</b> there is a last payment. Use the growing perpetuity only when
+    nothing in the question ends the stream.
+  </div>
+
+  <p class="p">This formula has one special case, and the course notes state it directly. When r equals g,
+     you cannot divide by (r − g), but the present value still exists. Every payment grows at exactly the rate
+     you discount at, so every payment is worth the same amount today: this year's cash flow.
+     The answer is simply that amount multiplied by the number of payments.</p>
+
+  <div class="rule">
+    When r = g, PV of a growing annuity = n × A, where A is this year's cash flow (the one before the first
+    growth). No division at all.
+  </div>
+
+  <div class="datalab">Which tool, in one table</div>
+  <div class="tscroll">
+  <table class="dtable">
+    <tr><th>Does the payment grow?</th><th>Is there a last payment?</th><th>Tool</th><th>Formula</th></tr>
+    <tr><td>No</td><td>Yes, n of them</td><td class="lab">Annuity</td><td>A × [1 − (1 + r)<sup>−n</sup>] / r</td></tr>
+    <tr><td>No</td><td>No</td><td class="lab">Perpetuity</td><td>A / r</td></tr>
+    <tr><td>Yes, at g</td><td>Yes, n of them</td><td class="lab">Growing annuity</td><td>CF1 × [1 − ((1+g)/(1+r))<sup>n</sup>] / (r − g)</td></tr>
+    <tr><td>Yes, at g</td><td>No</td><td class="lab">Growing perpetuity</td><td>CF1 / (r − g), needs r &gt; g</td></tr>
+  </table>
+  </div>
+
+  <div class="datalab">Worked example</div>
+  <div class="question">
+    You hold the rights to a gold mine for the next 20 years. You plan to take out 5,000 ounces of gold every
+    year. The price today is $300 an ounce and it is expected to rise 3% a year. The right discount rate for
+    this project is 10%. What is the gold from this mine worth today?
+  </div>
+  <div class="step"><div class="stepn">1</div><div class="stepbody"><span class="lab">Pick the shape.</span>
+    The quantity is fixed at 5,000 ounces, but the price grows 3% a year, so the yearly income grows 3% a
+    year. The rights end after 20 years. Growth plus an end date means growing annuity.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stepbody"><span class="lab">Build CF1.</span>
+    Today's income would be 5,000 × 300 = $1,500,000. The first cash flow arrives one year from now, after
+    one year of growth.
+    <div class="math">CF1 = 1,500,000 × 1.03 = 1,545,000</div></div></div>
+  <div class="step"><div class="stepn">3</div><div class="stepbody"><span class="lab">Read the rest of the inputs.</span>
+    r = 0.10, g = 0.03, n = 20. Check the limit: r is above g, and r is not equal to g, so the main
+    formula works.</div></div>
+  <div class="step"><div class="stepn">4</div><div class="stepbody"><span class="lab">Do the bracket.</span>
+    <div class="math">(1.03 / 1.10)<sup>20</sup> = 0.268467</div>
+    <div class="math">1 − 0.268467 = 0.731533</div></div></div>
+  <div class="step"><div class="stepn">5</div><div class="stepbody"><span class="lab">Divide by the gap.</span>
+    <div class="math">0.731533 / 0.07 = 10.4505</div>
+    This number is the value today of $1 received one year from now and growing 3% a year for 20 years.</div></div>
+  <div class="step"><div class="stepn">6</div><div class="stepbody"><span class="lab">Multiply by CF1.</span>
+    <div class="math">1,545,000 × 10.4505 = 16,145,980</div></div></div>
+  <div class="ans">The gold is worth about $16,145,980 today, close to $16.15 million.</div>
+
+  <p class="p">Now the reason the choice matters. Take exactly the same cash flow and treat it as a growing
+     perpetuity by mistake, so 1,545,000 / 0.07. You get $22,071,429. That is $5.9 million too high, an
+     error of 37%. You would pay far too much for the mine. The formula you pick is worth more than the
+     arithmetic you do with it.</p>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 560 210" role="img" aria-label="Bar chart comparing 16.15 million dollars for twenty years of gold against 22.07 million dollars if the stream never ended">
+      <text x="14" y="42" font-size="12.5" fill="#211c33" font-weight="700">20 years (correct)</text>
+      <rect x="14" y="52" width="380" height="34" rx="7" fill="#6b4ef0"/>
+      <text x="404" y="74" font-size="13" fill="#211c33" font-weight="700">$16.15m</text>
+      <text x="14" y="124" font-size="12.5" fill="#211c33" font-weight="700">same stream treated as forever</text>
+      <rect x="14" y="134" width="520" height="34" rx="7" fill="#fae5e4" stroke="#d2453f" stroke-width="1.5"/>
+      <text x="24" y="156" font-size="13" fill="#d2453f" font-weight="700">$22.07m</text>
+      <text x="14" y="196" font-size="11.5" fill="#6f6886">Same payments, same growth, same discount rate. Only the end date changes.</text>
+    </svg>
+    <div class="cap">Dropping the 20 year limit adds $5.9 million of value that the contract never pays you.</div>
+  </div>
+
+  <div class="tryq">
+    <div class="q">Try it. A lease pays $10,000 at the end of year 1. Each later payment is 5% bigger than the
+      one before. The lease runs 8 years and then ends. The discount rate is 9%. What is the lease worth today?</div>
+    <button class="reveal-btn" type="button" data-reveal="t3a">Show the answer</button>
+    <div class="reveal" id="t3a">
+      Growth plus an end date, so growing annuity. CF1 = $10,000 is already the first payment, so do not
+      multiply by 1.05.<br>
+      (1.05 / 1.09)<sup>8</sup> = 0.741485. 1 − 0.741485 = 0.258515.<br>
+      0.258515 / 0.04 = 6.462873.<br>
+      PV = 10,000 × 6.462873 = <b>$64,628.73</b>.
+    </div>
+  </div>
+
+  <div class="tryq">
+    <div class="q">Try it. Same lease, same $10,000 first payment, same 5% growth, same 9% rate. This time the
+      lease has no end date. What is it worth, and how much of the value sits after year 8?</div>
+    <button class="reveal-btn" type="button" data-reveal="t3b">Show the answer</button>
+    <div class="reveal" id="t3b">
+      No end date, so growing perpetuity: 10,000 / (0.09 − 0.05) = 10,000 / 0.04 = <b>$250,000</b>.<br>
+      Value after year 8 = 250,000 − 64,628.73 = <b>$185,371.27</b>, which is 74% of the total.<br>
+      Compare this with panel 1. There, almost all the value sat in the first 50 years. Here it does not,
+      because growth of 5% cancels most of the 9% discounting. The closer g is to r, the more the far future
+      matters, and the more dangerous it is to guess at an end date.
+    </div>
+  </div>
+</div>
+
+<!-- ============ QUIZ ============ -->
+<div class="panel">
+  <h3>Quiz <span data-scorechip="quiz"></span></h3>
+  <p class="note">Six questions. The answer appears when you pick. Every miss is saved to your error log.</p>
+  <div id="quiz"></div>
+</div>
+
+<div class="navrow">
+  <a class="navbtn" href="day-03.html">← Day 3: Annuity</a>
+  <a class="navbtn primary" href="day-05.html">Day 5: Mixed streams →</a>
+</div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 4,
+  topic: "Perpetuity",
+  items: [
+    {
+      q: "A fund is on sale today for $260,000. It will pay the same amount of money at the end of every year, starting one year from now, and it never stops. Buyers of this kind of fund require a 5% return. How big is each yearly payment?",
+      opts: ["$5,200,000", "$13,650", "$13,000", "$1,300"],
+      correct: 2,
+      tag: "Perpetuity",
+      exp: "<b>Formula.</b> A perpetuity is priced PV = A / r. Here the price is given and the payment is missing, so turn the formula around: A = PV × r.<br><br><b>Inputs.</b> PV = $260,000. r = 5% = 0.05. There is no n, because the payments never stop.<br><br><b>Work.</b><br>1) A = 260,000 × 0.05<br>2) A = 13,000<br><br><b>Check.</b> Put it back in the original formula: 13,000 / 0.05 = 260,000, which is the price given. Correct.<br><br><b>The wrong answers.</b><br>$5,200,000 is 260,000 / 0.05. That is using the formula in the wrong direction, treating the price as if it were the payment.<br>$13,650 is 260,000 × 0.05 × 1.05. It grows the payment by one extra year, as if the first one arrived at the end of year 2. The perpetuity formula already places the first payment one period from now, so no extra year is needed.<br>$1,300 is 260,000 × 0.005. That is 0.5%, not 5%. Watch where the decimal point goes."
+    },
+    {
+      q: "A share will pay a dividend of $3.15 at the end of next year. After that the dividend is expected to grow 6.5% a year with no end date. Investors require 7% on shares of this risk. What is the share worth today?",
+      opts: ["$670.95", "$630.00", "$45.00", "$48.46"],
+      correct: 1,
+      tag: "Perpetuity",
+      exp: "<b>Formula.</b> Payments never end and grow at a fixed rate, so this is a growing perpetuity: PV = CF1 / (r − g).<br><br><b>Inputs.</b> CF1 = $3.15, and the question already places it at the end of next year. g = 0.065. r = 0.07. Check the limit first: r is above g, only barely, so the formula is allowed.<br><br><b>Work.</b><br>1) r − g = 0.07 − 0.065 = 0.005<br>2) PV = 3.15 / 0.005<br>3) PV = 630.00<br><br><b>Check.</b> 630 × 0.005 = 3.15, the first dividend. Correct. A gap of half a percentage point makes the price 14 times bigger than a 7% gap would, which is exactly the point of this question.<br><br><b>The wrong answers.</b><br>$670.95 is 3.15 × 1.065 / 0.005. It grows the dividend one more year, but the question already gave next year's dividend. Only multiply by (1 + g) when you are given the dividend just paid.<br>$45.00 is 3.15 / 0.07. That ignores growth and treats it as a plain perpetuity.<br>$48.46 is 3.15 / 0.065. That divides by g instead of by the gap (r − g)."
+    },
+    {
+      q: "A mine pays a royalty of $60,000 at the end of next year. A royalty is a payment for the right to take the ore. The ore is running out, so each later royalty is 3% smaller than the one before it, and the payments carry on with no end date. The required return is 9%. What is the royalty stream worth today?",
+      opts: ["$500,000", "$1,000,000", "$666,667", "$2,000,000"],
+      correct: 0,
+      tag: "Perpetuity",
+      exp: "<b>Formula.</b> Payments with no end date that change by a fixed percentage: growing perpetuity, PV = CF1 / (r − g). Shrinking just means g is negative.<br><br><b>Inputs.</b> CF1 = $60,000. g = −3% = −0.03. r = 0.09.<br><br><b>Work.</b><br>1) r − g = 0.09 − (−0.03)<br>2) Taking away a negative adds: 0.09 + 0.03 = 0.12<br>3) PV = 60,000 / 0.12 = 500,000<br><br><b>Check.</b> A shrinking stream must be worth less than the same stream held flat. Flat would be 60,000 / 0.09 = $666,667. Our answer of $500,000 is lower, as it should be.<br><br><b>The wrong answers.</b><br>$1,000,000 is 60,000 / 0.06. That takes 0.03 away from 0.09 instead of adding it. This is the single most common slip with a negative growth rate.<br>$666,667 is 60,000 / 0.09. It ignores the fall completely.<br>$2,000,000 is 60,000 / 0.03. It divides by g and forgets r."
+    },
+    {
+      q: "An analyst is valuing a share. The dividend one year from now is expected to be $2.00. The analyst assumes that dividend will grow 8% a year for ever. Investors require 6% on this share. Using the course formula sheet, what is the value of the share today?",
+      opts: ["$100.00", "−$100.00", "$33.33", "The growing perpetuity formula cannot be used here, because it needs r greater than g"],
+      correct: 3,
+      tag: "Perpetuity",
+      exp: "<b>What the question is testing.</b> Whether you check r against g before you compute.<br><br><b>Inputs.</b> CF1 = $2.00, g = 0.08, r = 0.06. Here g is larger than r.<br><br><b>Why there is no number.</b> PV = CF1 / (r − g) needs a positive gap. With r − g = 0.06 − 0.08 = −0.02 the formula returns a negative price for a stream of positive cash. That is the formula failing, not an answer. In plain words: a payment stream that grows for ever faster than you discount it has a present value larger than any amount you could name, so there is no price you could name. In practice this tells you the 8% growth assumption cannot last for ever, or that the required return is set too low.<br><br><b>The wrong answers.</b><br>$100.00 is 2.00 / 0.02, the gap with the minus sign quietly dropped. Dropping the sign hides the problem instead of fixing it.<br>−$100.00 is 2.00 / (−0.02) written out. A share cannot have a negative price, so this is a signal, not a value.<br>$33.33 is 2.00 / 0.06. That throws the growth away to make the numbers behave."
+    },
+    {
+      q: "A supply contract pays $12,000 at the end of year 1. Every later payment is 4% bigger than the one before. The contract runs for 15 years and then finishes. The discount rate is 10%. What is the contract worth today?",
+      opts: ["$200,000", "$91,273", "$113,774", "$180,000"],
+      correct: 2,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> The payments grow and there is a last one, so this is a growing annuity: PV = CF1 × [1 − ((1+g)/(1+r))^n] / (r − g).<br><br><b>Inputs.</b> CF1 = $12,000, already placed at the end of year 1. g = 0.04. r = 0.10. n = 15.<br><br><b>Work.</b><br>1) (1.04 / 1.10) = 0.945455<br>2) 0.945455^15 = 0.431131<br>3) 1 − 0.431131 = 0.568869<br>4) r − g = 0.10 − 0.04 = 0.06<br>5) 0.568869 / 0.06 = 9.481149<br>6) PV = 12,000 × 9.481149 = 113,773.69<br><br><b>Check.</b> The same stream running for ever would be 12,000 / 0.06 = $200,000. Fifteen years must be worth less than for ever, and $113,774 is less. It must also be more than the same 15 payments with no growth, which are worth $91,273, and it is. Growth pushes the value up, the end date pulls it down, and the answer sits between the two.<br><br><b>The wrong answers.</b><br>$200,000 is 12,000 / 0.06, the growing perpetuity. It ignores the words \"runs for 15 years and then finishes\".<br>$91,273 is 12,000 × [1 − 1.10^−15] / 0.10, the plain annuity formula. It discounts correctly but throws away the 4% growth.<br>$180,000 is 12,000 × 15. It adds up fifteen payments from fifteen different years with no discounting at all, which the first rule of this course does not allow."
+    },
+    {
+      q: "A forestry permit allows one harvest a year for the next 12 years, the first one year from now. A harvest is worth $25,000 at this year's timber price, and the timber price is expected to rise 5% a year. The discount rate is 5%. What is the permit worth today?",
+      opts: ["$315,000", "$300,000", "$500,000", "Nothing can be worked out, because the formula divides by zero"],
+      correct: 1,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> Growth plus a last payment means growing annuity. But check the inputs before writing anything: r = 5% and g = 5%, so r − g = 0. The main formula divides by zero and cannot be used.<br><br><b>The special case.</b> The course notes give the rule for exactly this situation: when r = g, PV = n × A, where A is the current cash flow. The reason is simple. Each payment grows by the same percentage you discount by, so every single payment has the same value today.<br><br><b>Work.</b><br>1) A = $25,000, the harvest at this year's price<br>2) n = 12 harvests<br>3) PV = 12 × 25,000 = 300,000<br><br><b>Check.</b> Take year 1: the harvest is 25,000 × 1.05 = 26,250, and its present value is 26,250 / 1.05 = 25,000. Take year 7: 25,000 × 1.05^7 discounted by 1.05^7 is again 25,000. Twelve payments worth $25,000 each today gives $300,000. Correct.<br><br><b>The wrong answers.</b><br>$315,000 is 26,250 × 12. It uses next year's harvest value as the flat amount, but the number that repeats after discounting is this year's $25,000, not next year's $26,250.<br>$500,000 is 25,000 / 0.05. That is the plain perpetuity formula, which ignores both the growth and the 12 year limit.<br>\"Nothing can be worked out\" is the trap. The main formula fails, but the present value is real and easy. Stopping at the division by zero loses the whole question."
+    }
+  ]
+});
+</script>
+</body>
+</html>

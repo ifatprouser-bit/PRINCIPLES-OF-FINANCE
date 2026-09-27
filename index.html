@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Principles of Finance: 15 day plan</title>
+<link rel="stylesheet" href="assets/theme.css">
+<style>
+  .hero{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin:18px 0;}
+  .count{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:0;}
+  .count small{display:block;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0;margin-top:2px;}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px;}
+  .fact{background:#faf9fe;border:1px solid var(--line);border-radius:11px;padding:11px 13px;}
+  .fact .k{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--brand-d);}
+  .fact .v{font-size:15px;font-weight:600;margin-top:3px;}
+  .phase{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-d);margin:26px 0 10px;}
+  .day{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+       border-radius:14px;padding:14px 16px;margin:9px 0;text-decoration:none;color:var(--ink);transition:.14s;}
+  .day:hover{border-color:var(--brand);box-shadow:0 2px 8px rgba(40,20,90,.07);}
+  .dnum{flex:0 0 44px;height:44px;border-radius:11px;background:var(--brand-soft);color:var(--brand-d);
+        font-weight:800;display:grid;place-items:center;font-size:17px;}
+  .day.test .dnum{background:var(--amber-soft);color:var(--amber);}
+  .day.calm .dnum{background:var(--good-soft);color:var(--good);}
+  .day.formula{border-color:var(--brand);background:linear-gradient(180deg,var(--brand-soft),var(--card));margin:18px 0 4px;}
+  .day.formula .dnum{background:var(--brand);color:#fff;font-style:italic;font-size:19px;}
+  .dbody{flex:1;min-width:0;}
+  .dtitle{font-weight:700;font-size:16px;}
+  .dmeta{color:var(--muted);font-size:13px;margin-top:2px;}
+  .pill{display:inline-block;border-radius:999px;padding:2px 9px;font-size:10.5px;font-weight:800;
+        text-transform:uppercase;letter-spacing:.04em;margin-left:7px;vertical-align:middle;}
+  .pill.learn{background:var(--brand-soft);color:var(--brand-d);}
+  .pill.mock{background:var(--amber-soft);color:var(--amber);}
+  .pill.calm{background:var(--good-soft);color:var(--good);}
+  @media (max-width:520px){ .dnum{flex-basis:38px;height:38px;font-size:15px;} .count{font-size:27px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="crumb">Principles of Finance · Prof. Alon Raviv</span>
+  <h1>15 days to the final</h1>
+  <p class="lede">Nine days to learn it, four papers to test it, one day to catch what you missed, one to warm up.</p>
+
+  <div class="hero">
+    <p class="count" id="count">&nbsp;<small>Exam: Sunday 11 October 2026</small></p>
+  </div>
+
+  <a class="day formula" href="formulas.html"><div class="dnum">fx</div><div class="dbody">
+    <div class="dtitle">Every formula, on one page</div>
+    <div class="dmeta">All of them, grouped, each with one line saying when it applies. Plus the things that make a formula wrong. Keep this open beside you while you work</div></div></a>
+
+  <div class="panel">
+    <h3>How to use this</h3>
+    <p class="p">A learn day takes about 45 minutes: five minutes going back over an older topic, fifteen learning
+      one new idea, twenty on six questions, five reading your mistakes. A mock day takes about three hours,
+      because it is the real paper plus the review afterwards.</p>
+    <p class="p">Every question you get wrong is saved in your <b>error log</b>, in this browser. At the bottom
+      of each mock, and on day 12, a button turns that log into a prompt you can paste into Claude, so it can test
+      you on exactly what you keep missing.</p>
+    <div class="rule">The formula sheet is given to you in the exam. Nothing here has to be learned by heart. What you
+      are practicing is knowing which formula applies, and why.</div>
+    <p class="note">The log lives in this browser on this device only. Clearing your browsing data erases it.
+      The prompt button is also the backup: copy the text out and it is safe anywhere.</p>
+  </div>
+
+  <div class="phase">Learn · 26 September to 4 October</div>
+
+  <a class="day" href="day-01.html"><div class="dnum">1</div><div class="dbody">
+    <div class="dtitle">What kind of thing is this number<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Sat 26 Sep · Real against financial assets, markets, what you know when you decide, and why equity is a size while a dividend is a move</div></div></a>
+
+  <a class="day" href="day-02.html"><div class="dnum">2</div><div class="dbody">
+    <div class="dtitle">A single cash flow<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Sun 27 Sep · Why we discount at all. Present value, future value, and the same move run in two directions</div></div></a>
+
+  <a class="day" href="day-03.html"><div class="dnum">3</div><div class="dbody">
+    <div class="dtitle">Annuity<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Mon 28 Sep · The same payment every period. Present value and future value, and getting the timing right</div></div></a>
+
+  <a class="day" href="day-04.html"><div class="dnum">4</div><div class="dbody">
+    <div class="dtitle">Perpetuity and growth<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Tue 29 Sep · Why forever still has a value you can put a number on. Growing perpetuity, growing annuity, and why r must beat g</div></div></a>
+
+  <a class="day" href="day-05.html"><div class="dnum">5</div><div class="dbody">
+    <div class="dtitle">Mixed streams<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Wed 30 Sep · The professor's most likely exam question. Cut the stream into pieces, and move a delayed annuity twice</div></div></a>
+
+  <a class="day" href="day-06.html"><div class="dnum">6</div><div class="dbody">
+    <div class="dtitle">Bonds, and the risks inside them<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Thu 1 Oct · Par, coupon, zero coupon. Premium against discount. Prices against rates. Credit risk and inflation risk</div></div></a>
+
+  <a class="day" href="day-07.html"><div class="dnum">7</div><div class="dbody">
+    <div class="dtitle">Who gets paid first<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Fri 2 Oct · The Merton waterfall: senior, then junior, then equity. And what happens when it actually runs</div></div></a>
+
+  <a class="day" href="day-08.html"><div class="dnum">8</div><div class="dbody">
+    <div class="dtitle">What the shareholder gets<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Sat 3 Oct · Holding period return, the dividend model with and without growth, and ROA against ROE</div></div></a>
+
+  <a class="day" href="day-09.html"><div class="dnum">9</div><div class="dbody">
+    <div class="dtitle">Projects: should we do this at all<span class="pill learn">Learn</span></div>
+    <div class="dmeta">Sun 4 Oct · NPV, IRR, the four ways IRR lets you down, and why it changes when you can pick only one project</div></div></a>
+
+  <div class="phase">Test · 5 October to 9 October</div>
+
+  <a class="day test" href="day-10.html"><div class="dnum">10</div><div class="dbody">
+    <div class="dtitle">Mock 1<span class="pill mock">Timed</span></div>
+    <div class="dmeta">Mon 5 Oct · 22 questions, 150 minutes, whole course, even spread. Then the review, same day</div></div></a>
+
+  <a class="day test" href="day-11.html"><div class="dnum">11</div><div class="dbody">
+    <div class="dtitle">Mock 2<span class="pill mock">Timed</span></div>
+    <div class="dmeta">Tue 6 Oct · Mostly time value of money. Eleven of the 22 questions</div></div></a>
+
+  <a class="day calm" href="day-12.html"><div class="dnum">12</div><div class="dbody">
+    <div class="dtitle">The sweep<span class="pill calm">Review</span></div>
+    <div class="dmeta">Wed 7 Oct · Every topic, one task each, about five minutes each. Then your error log, top to bottom</div></div></a>
+
+  <a class="day test" href="day-13.html"><div class="dnum">13</div><div class="dbody">
+    <div class="dtitle">Mock 3<span class="pill mock">Timed</span></div>
+    <div class="dmeta">Thu 8 Oct · Mostly bonds and the payoff waterfall</div></div></a>
+
+  <a class="day test" href="day-14.html"><div class="dnum">14</div><div class="dbody">
+    <div class="dtitle">Mock 4, the full practice run<span class="pill mock">Timed</span></div>
+    <div class="dmeta">Fri 9 Oct · The hardest paper. Sit it at the same hour as the real exam. A lower score here than Mock 1 is normal</div></div></a>
+
+  <div class="phase">Warm up · 10 October</div>
+
+  <a class="day calm" href="day-15.html"><div class="dnum">15</div><div class="dbody">
+    <div class="dtitle">Warm-up and the trap list<span class="pill calm">Calm</span></div>
+    <div class="dmeta">Sat 10 Oct · Three familiar tasks and the mistakes this course punishes. Read it again an hour before the exam. Nothing new</div></div></a>
+
+  <div class="panel" style="margin-top:26px">
+    <h3>Your error log</h3>
+    <p class="note">Built from every question you have missed so far, on this browser.</p>
+    <div id="errorlog"></div>
+  </div>
+
+  <div class="panel">
+    <h3>The paper itself</h3>
+    <p class="note">What you are walking into on Sunday 11 October.</p>
+    <div class="facts">
+      <div class="fact"><div class="k">Length</div><div class="v">2.5 hours</div></div>
+      <div class="fact"><div class="k">Questions</div><div class="v">About 22, all multiple choice</div></div>
+      <div class="fact"><div class="k">Pace</div><div class="v">6.8 minutes each</div></div>
+      <div class="fact"><div class="k">Formula sheet</div><div class="v">Given to you</div></div>
+      <div class="fact"><div class="k">Calculator</div><div class="v">Scientific only</div></div>
+      <div class="fact"><div class="k">Whole plan</div><div class="v">About 20 hours</div></div>
+    </div>
+    <div class="rule">No financial calculator, and none that can be programmed. Nothing that works out a bond
+      price, an annuity value or a yield on its own.</div>
+  </div>
+
+  <div class="panel">
+    <h3>Where this came from, and what it is not</h3>
+    <p class="p">Everything here is built from the course files: the syllabus, the formula sheet, the professor's
+      exam guide, the five class summaries, the class recordings, the notes, and the four Excel models.</p>
+    <p class="p"><b>There are no past exam papers in this pack.</b> Every question was written for it, except 19
+      that come from the professor's own two class quizzes and are marked <span class="examtag">From a course quiz</span>
+      where they appear. Nothing here is a real past final, and nothing claims to be.</p>
+    <p class="p">Every number on every page was worked out again in code before it shipped. Where a course file
+      says two different things, the page says so rather than picking a side quietly.</p>
+  </div>
+
+</div>
+<script src="assets/study.js"></script>
+<script>
+  (function () {
+    var exam = new Date(2026, 9, 11);            // 11 October 2026
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var days = Math.round((exam - today) / 86400000);
+    var line;
+    if (days > 1) line = days + ' days to go';
+    else if (days === 1) line = 'Tomorrow';
+    else if (days === 0) line = 'Today. Good luck.';
+    else line = 'The exam has passed';
+    var n = document.getElementById('count');
+    n.firstChild.nodeValue = line + ' ';
+    POF.mountErrorLog('errorlog');
+  })();
+</script>
+</body>
+</html>

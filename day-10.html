@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 10: Mock 1</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">DAY 10 · Monday 5 October</div>
+  <h1>Mock 1: the whole course, once through</h1>
+  <p class="lede">Twenty two questions in 150 minutes, spread across everything you have learned in days 1 to 9.</p>
+
+  <!-- ============ RULES ============ -->
+  <div class="panel">
+    <h3>How to sit this paper</h3>
+
+    <p class="p">Sit it like the real thing. That is the only way it tells you anything useful.</p>
+
+    <table class="dtable">
+      <tr><th style="width:30%">Rule</th><th>What it means here</th></tr>
+      <tr><td class="lab">22 questions</td><td style="text-align:left">Same count as the real exam. Every topic from days 1 to 9 appears.</td></tr>
+      <tr><td class="lab">150 minutes</td><td style="text-align:left">About 6.8 minutes per question. Press Start and the clock runs. At zero the paper submits itself.</td></tr>
+      <tr><td class="lab">Formula sheet</td><td style="text-align:left">Below this box. It is the same sheet the professor hands out. Keep it open.</td></tr>
+      <tr><td class="lab">Calculator</td><td style="text-align:left">A scientific calculator only. No financial calculator, and none that can be programmed.</td></tr>
+      <tr><td class="lab">Paper and pen</td><td style="text-align:left">Draw the timeline before you touch a formula. You have the time.</td></tr>
+      <tr><td class="lab">Nothing is shown</td><td style="text-align:left">No score, no answer, no hint until you submit. Guess rather than leave a blank.</td></tr>
+    </table>
+
+    <div class="rule">Do not stop to check one hard question. Pick your best option, move on, come back
+      if minutes are left. A blank scores the same as a wrong answer, so never leave one.</div>
+
+    <p class="p">When you submit, every question opens up with a full worked answer. That review is where
+      the learning happens on a mock day. Read every explanation, including the ones you got right.
+      Your misses are saved to the error log at the bottom.</p>
+  </div>
+
+  <!-- ============ FORMULA SHEET ============ -->
+  <div class="panel">
+    <h3>Formula sheet</h3>
+    <p class="note">The same content the exam gives you. You do not have to learn any of this by heart. You choose which one fits.</p>
+
+    <p class="partlab">Payoff at maturity: who gets what</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Holder</th><th>Payoff</th></tr>
+      <tr><td class="lab">Senior debt</td><td style="text-align:left"><span class="math">Min(V<sub>T</sub>, F<sub>S</sub>)</span></td></tr>
+      <tr><td class="lab">Junior debt</td><td style="text-align:left"><span class="math">0</span> if <span class="math">V<sub>T</sub> &lt; F<sub>S</sub></span>, otherwise <span class="math">Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>)</span></td></tr>
+      <tr><td class="lab">Equity</td><td style="text-align:left"><span class="math">Max(V<sub>T</sub> − F<sub>S</sub>, 0)</span> when senior debt is the only debt. With junior debt as well, equity is what is left after all of it: <span class="math">Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0)</span></td></tr>
+      <tr><td class="lab">Meaning</td><td style="text-align:left"><span class="math">V<sub>T</sub></span> is the value of the firm's assets at maturity. <span class="math">F<sub>S</sub></span> is the face value of the senior debt. <span class="math">F<sub>J</sub></span> is the face value of the junior debt.</td></tr>
+    </table>
+    <div class="rule">The three payoffs must add up to exactly <span class="math">V<sub>T</sub></span>, and equity can never be
+      below zero. Run both checks on every payoff answer.</div>
+
+    <p class="partlab">One cash flow</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Move</th><th>Formula</th></tr>
+      <tr><td class="lab">Discounting, find PV</td><td style="text-align:left"><span class="math">PV = CF<sub>t</sub> / (1 + r)<sup>t</sup></span></td></tr>
+      <tr><td class="lab">Compounding, find FV</td><td style="text-align:left"><span class="math">FV = PV × (1 + r)<sup>t</sup></span></td></tr>
+    </table>
+
+    <p class="partlab">The same payment every period</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Shape</th><th>Formula</th></tr>
+      <tr><td class="lab">PV of an annuity</td><td style="text-align:left"><span class="math">PV = A × (1 − (1 + r)<sup>−n</sup>) / r</span></td></tr>
+      <tr><td class="lab">FV of an annuity</td><td style="text-align:left"><span class="math">FV = A × ((1 + r)<sup>n</sup> − 1) / r</span></td></tr>
+      <tr><td class="lab">PV of a growing annuity</td><td style="text-align:left"><span class="math">PV = A / (r − g) × (1 − ((1 + g) / (1 + r))<sup>n</sup>)</span></td></tr>
+    </table>
+
+    <p class="partlab">Payments with no end date</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Shape</th><th>Formula</th></tr>
+      <tr><td class="lab">PV of a perpetuity</td><td style="text-align:left"><span class="math">PV = A / r</span></td></tr>
+      <tr><td class="lab">PV of a growing perpetuity</td><td style="text-align:left"><span class="math">PV = CF<sub>1</sub> / (r − g)</span>, and this needs <span class="math">r &gt; g</span></td></tr>
+    </table>
+
+    <p class="partlab">Stocks, streams and projects</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Item</th><th>Formula</th></tr>
+      <tr><td class="lab">Holding period return</td><td style="text-align:left"><span class="math">r = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></span></td></tr>
+      <tr><td class="lab">PV of a stream</td><td style="text-align:left"><span class="math">PV = CF<sub>1</sub>/(1+r)<sup>1</sup> + CF<sub>2</sub>/(1+r)<sup>2</sup> + … + CF<sub>N</sub>/(1+r)<sup>N</sup></span></td></tr>
+      <tr><td class="lab">Net present value</td><td style="text-align:left"><span class="math">NPV = Σ CF<sub>i</sub>/(1+r)<sup>i</sup> − I<sub>0</sub></span>, where <span class="math">I<sub>0</sub></span> is the cost today</td></tr>
+    </table>
+
+    <p class="note">In this course APR means the Absolute Priority Rule, not an annual percentage rate.</p>
+  </div>
+
+  <!-- ============ THE MOCK ============ -->
+  <div id="mock"></div>
+
+  <!-- ============ NAV ============ -->
+  <div class="navrow">
+    <a class="navbtn" href="day-09.html">← Day 9: NPV and IRR</a>
+    <a class="navbtn primary" href="day-11.html">Day 11: Mock 2 →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.mock({
+  mount: "mock",
+  day: 10,
+  topic: "Mock 1",
+  minutes: 150,
+  items: [
+
+    /* 1: Concepts, course quiz */
+    {
+      q: "You are choosing between a fixed rate mortgage and an adjustable rate mortgage for a new home. Which kind of finance is this decision?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 0,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The test.</b> Ask one question: whose money is being decided about. A household, a firm, or a government.<br><br>1. The person borrowing is you, a household, buying a home for yourself.<br>2. No firm is deciding how to use the firm's money here, so it is not corporate finance.<br>3. No government body is raising or spending public money here, so it is not public finance.<br>4. One decision maker, a household. So the answer is personal finance alone.<br><br><b>Why the other options are wrong.</b> Corporate finance would need the firm itself to be the borrower. Public finance would need a government to be the one borrowing, or the one raising the tax. The bank on the other side of your mortgage is a firm, but the question asks about your decision, not the bank's. Any paired option adds a second decision maker that is not in the story.<br><br><b>The habit.</b> Name the decision maker out loud before you look at the options. That alone settles most of these."
+    },
+
+    /* 2: Single cash flow */
+    {
+      q: "A buyer has signed a contract to pay you 72,000 in one single payment at the end of year 6. Nothing is paid before then. Your required rate of return is 9 percent a year. What is that contract worth to you today?",
+      opts: ["46,795.06", "46,753.25", "42,931.25", "120,751.21"],
+      correct: 2,
+      tag: "Single cash flow",
+      exp: "<b>Formula.</b> One payment, one date, so the single cash flow rule: PV = CF / (1 + r)^t.<br><br><b>Inputs from the stem.</b> CF = 72,000. t = 6, because the payment lands at the end of year 6. r = 0.09.<br><br>1. 1.09^2 = 1.1881<br>2. 1.09^3 = 1.295029<br>3. 1.09^6 = 1.295029 × 1.295029 = 1.677100<br>4. PV = 72,000 / 1.677100 = 42,931.25<br><br><b>Check.</b> Push the answer forward again: 42,931.25 × 1.677100 = 72,000.00. It returns to the promised payment, so the discounting was done the right number of times.<br><br><b>The wrong options.</b> 46,795.06 is 72,000 / 1.09^5, which discounts five years instead of six. This is the classic off by one: a payment at the end of year 6 is discounted six times, not five. 46,753.25 uses simple interest, 72,000 / (1 + 0.09 × 6), which is not the rule this course teaches. 120,751.21 is 72,000 × 1.09^6, which compounds forward when the question asks for value today. If your answer is bigger than the future payment, you have multiplied where you should have divided."
+    },
+
+    /* 3: Payoff structure */
+    {
+      q: "A firm's debts all mature today. It owes 250 million to its senior lender and 120 million to its junior lender. The firm's assets are worth 310 million on that date. APR holds. What does each of the three holders receive, in millions?",
+      opts: ["Senior 250, junior 120, equity −60", "Senior 250, junior 60, equity 0", "Senior 190, junior 120, equity 0", "Senior 250, junior 60, equity 60"],
+      correct: 1,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior = Min(V_T, F_S). Junior = 0 if V_T is below F_S, otherwise Min(V_T − F_S, F_J). Equity = what is left after all the debt, so Max(V_T − F_S − F_J, 0).<br><br><b>Inputs from the stem.</b> V_T = 310. F_S = 250. F_J = 120. All in millions. APR means the Absolute Priority Rule: senior first, then junior, then the owners.<br><br>1. Find the band before any arithmetic. F_S = 250 and F_S + F_J = 370. V_T = 310 sits between the two, so the senior lender is paid in full and the junior lender is paid in part.<br>2. Senior = Min(310, 250) = 250.<br>3. What is left after the senior lender: 310 − 250 = 60.<br>4. Junior = Min(60, 120) = 60. The junior lender is owed 120 and receives 60, so it loses 60.<br>5. Equity = Max(310 − 250 − 120, 0) = Max(−60, 0) = 0.<br><br><b>Check.</b> 250 + 60 + 0 = 310, which is exactly V_T. The pot is shared out and nothing is created or lost. Equity is not below zero. Both checks pass.<br><br><b>The wrong options.</b> Senior 250, junior 120, equity −60 pays the junior lender the full 120 out of money that does not exist, then hides the hole as negative equity. A corporation has limited liability, so equity stops at zero and the loss falls on the junior lender. Senior 190, junior 120, equity 0 fills the junior bucket first and leaves the senior lender short. That is the priority order upside down, and it is the trap this topic is built on. Senior 250, junior 60, equity 60 adds up to 370, which is F_S + F_J, not V_T. It pays out 60 million that the firm does not have."
+    },
+
+    /* 4: Annuity */
+    {
+      q: "A landlord has signed an 11 year lease. It pays 7,500 at the end of each year for 11 years and nothing after that. The required rate of return is 6 percent a year. What is the lease worth today?",
+      opts: ["55,200.65", "82,500.00", "125,000.00", "59,151.56"],
+      correct: 3,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> The same amount, at the end of every year, for a fixed number of years. That is an annuity: PV = A × (1 − (1 + r)^−n) / r.<br><br><b>Inputs from the stem.</b> A = 7,500. n = 11, because there are 11 payments. r = 0.06. The first payment is at the end of year 1, which is what this formula assumes.<br><br>1. 1.06^11 = 1.898299<br>2. 1 / 1.898299 = 0.526788, which is 1.06^−11<br>3. 1 − 0.526788 = 0.473212<br>4. Annuity factor = 0.473212 / 0.06 = 7.886875<br>5. PV = 7,500 × 7.886875 = 59,151.56<br><br><b>Check.</b> The factor 7.886875 must sit below 11, because 11 payments discounted are worth less than 11 payments today. It must also sit below 1/0.06 = 16.667, the factor for the same payment lasting forever. 7.89 is inside both limits, so the factor makes sense.<br><br><b>The wrong options.</b> 55,200.65 uses n = 10, dropping one of the eleven payments. Count the payments, not the gaps between them. 82,500.00 is 7,500 × 11, the raw cash added up with no discounting at all. Money from eleven different years cannot be added. 125,000.00 is 7,500 / 0.06, the perpetuity formula. That treats the lease as if it never ended, and it is the single most common mix up on this topic. This lease stops after 11 years, so it must be worth less."
+    },
+
+    /* 5: Concepts, course quiz */
+    {
+      q: "A city must decide whether to issue bonds or raise property taxes to build a wastewater plant. Which kind of finance is this decision?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 2,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The test.</b> Name the decision maker and whose money is at stake.<br><br>1. The decision maker is a city, which is a government body.<br>2. The money is public money, raised either by borrowing from the market or by taxing residents.<br>3. A government deciding how to raise and spend public money is public finance.<br><br><b>Note on the shape of the question.</b> Both options in front of the city are financing choices, bonds or taxes. The label does not come from the tool they pick. A bond issue is not corporate finance just because firms also issue bonds. The label comes from who is deciding.<br><br><b>Why the other options are wrong.</b> Personal finance needs a household. Corporate finance needs a firm deciding about the firm's money. The residents pay the tax, but they are not the decision maker, so Personal and Public is still wrong. A construction firm may be hired later, but that is not in the decision described."
+    },
+
+    /* 6: Bonds, premium */
+    {
+      q: "A bond has a par value of 1,000 and 6 years left to maturity. Its coupon rate is 8 percent, paid once a year, and the par value comes back with the last coupon. Investors buying bonds of this risk today ask for 6 percent. What is the bond worth today?",
+      opts: ["1,000.00", "1,098.35", "1,480.00", "704.96"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> A coupon bond is two things you already know: the coupons are an annuity, and the par value is a single cash flow. Price = A × (1 − (1 + r)^−n) / r + Par / (1 + r)^n.<br><br><b>Inputs from the stem.</b> Par = 1,000. Coupon rate 8 percent, so the cash coupon is 0.08 × 1,000 = 80 every year. n = 6. The required return, the yield, is r = 0.06. The coupon rate sets the payment. The yield does the discounting. They are two different numbers here.<br><br>1. 1.06^6 = 1.418519<br>2. 1 / 1.418519 = 0.704961<br>3. Annuity factor = (1 − 0.704961) / 0.06 = 4.917324<br>4. Coupons: 80 × 4.917324 = 393.39<br>5. Par value: 1,000 / 1.418519 = 704.96<br>6. Price = 393.39 + 704.96 = 1,098.35<br><br><b>Check.</b> The coupon rate of 8 percent is above the yield of 6 percent, so this bond pays more than the market now demands. It must trade above par. 1,098.35 is above 1,000, which is what a premium bond looks like. If the price had come out below 1,000, the arithmetic would be wrong.<br><br><b>The wrong options.</b> 1,000.00 comes from discounting at 8 percent, the coupon rate, instead of at 6 percent, the yield. Using the coupon rate as the discount rate always returns par, which is why this answer is so tempting. 1,480.00 is 80 × 6 + 1,000, all the cash added up with no discounting. 704.96 is the par value alone, pulled back to today, with the six coupons forgotten."
+    },
+
+    /* 7: Mixed stream */
+    {
+      q: "A license pays 6,000 at the end of year 1. It then pays 4,000 at the end of each of years 2, 3, 4, 5 and 6. Last, it pays a single 20,000 at the end of year 7, and nothing after that. The required rate of return is 8 percent a year. What is the license worth today?",
+      opts: ["33,196.20", "30,917.78", "32,013.18", "50,000.00"],
+      correct: 2,
+      tag: "Mixed stream",
+      exp: "<b>Method.</b> Cut the stream into pieces you already know, value each piece, then add. Here there are three pieces: a single 6,000 at year 1, a five year annuity of 4,000 running from year 2 to year 6, and a single 20,000 at year 7.<br><br><b>Inputs from the stem.</b> r = 0.08 throughout. The annuity has A = 4,000 and n = 5, because years 2, 3, 4, 5 and 6 are five payments.<br><br>1. Piece one: 6,000 / 1.08 = 5,555.56<br>2. Piece two, the annuity factor: 1.08^5 = 1.469328, so (1 − 1/1.469328) / 0.08 = 3.992710<br>3. 4,000 × 3.992710 = 15,970.84. This is the value of the annuity <b>one period before its first payment</b>. Its first payment is at the end of year 2, so this number sits at the end of year 1, not today.<br>4. Move it back one more year: 15,970.84 / 1.08 = 14,787.81<br>5. Piece three: 1.08^7 = 1.713824, so 20,000 / 1.713824 = 11,669.81<br>6. Add: 5,555.56 + 14,787.81 + 11,669.81 = 32,013.18<br><br><b>Check.</b> Discount all seven payments one at a time: 6,000/1.08 + 4,000/1.08^2 + 4,000/1.08^3 + 4,000/1.08^4 + 4,000/1.08^5 + 4,000/1.08^6 + 20,000/1.08^7 = 32,013.18. The two routes agree. Second check: the raw cash is 6,000 + 20,000 + 20,000 = 46,000, so a present value of 32,013 is about the right size.<br><br><b>The wrong options.</b> 33,196.20 leaves the annuity value of 15,970.84 sitting at today instead of moving it back the one extra year. That is the single biggest trap in mixed stream questions, and it always makes the answer too large. 30,917.78 moves the annuity back two years instead of one, dividing by 1.08 twice. 50,000.00 adds the raw cash flows and rounds, with no discounting anywhere."
+    },
+
+    /* 8: Concepts, course quiz */
+    {
+      q: "A company needs a new machine and must choose between buying it or signing a lease with a finance company. Which kind of finance is this decision?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 1,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The test.</b> Whose money is being decided about. Here it is a company's money, so the label is corporate finance.<br><br>1. The decision maker is a firm.<br>2. The subject is a real asset the firm wants to use, a machine, and how to pay for it.<br>3. Buy or lease is a financing choice inside the firm. Both are corporate finance.<br><br><b>Why the other options are wrong.</b> The finance company on the other side of the lease is also a firm, but it is not the one deciding in this story, and adding it would not change the label anyway, since both sides are firms. Personal finance would need a household. Public finance would need a government. No paired option applies, because only one kind of decision maker appears.<br><br><b>The point behind it.</b> The same deal can carry a different label if the buyer changes. A ministry buying the same machine for a state hospital would be public finance. The task does not change. The decision maker does."
+    },
+
+    /* 9: NPV */
+    {
+      q: "A project needs 45,000 today. It brings in 18,000 at the end of year 1, 22,000 at the end of year 2 and 16,000 at the end of year 3, and nothing after that. The required rate of return is 11 percent a year. What is the NPV, and what is the decision?",
+      opts: ["NPV = 11,000.00, so accept the project", "NPV = 45,770.97, so accept the project", "NPV = −770.97, so reject the project", "NPV = 770.97, so accept the project"],
+      correct: 3,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> NPV = Σ CF_i / (1 + r)^i − I0. The three inflows are all different, so there is no annuity here. Discount each one on its own.<br><br><b>Inputs from the stem.</b> I0 = 45,000, paid today, so it is not discounted. CF1 = 18,000, CF2 = 22,000, CF3 = 16,000. r = 0.11.<br><br>1. 1.11 = 1.11, 1.11^2 = 1.2321, 1.11^3 = 1.367631<br>2. 18,000 / 1.11 = 16,216.22<br>3. 22,000 / 1.2321 = 17,855.69<br>4. 16,000 / 1.367631 = 11,699.06<br>5. Present value of the inflows: 16,216.22 + 17,855.69 + 11,699.06 = 45,770.97<br>6. NPV = 45,770.97 − 45,000 = 770.97<br>7. NPV is above zero, so accept.<br><br><b>Check.</b> The rate that makes NPV exactly zero for these cash flows is 12.00 percent. The required return of 11 percent is below that, so NPV must be positive, and only just, since 11 and 12 are close. A small positive NPV of 770.97 fits.<br><br><b>The wrong options.</b> 11,000.00 is 18,000 + 22,000 + 16,000 − 45,000, the raw cash added with no discounting. Cash from four different dates cannot be added. 45,770.97 is the present value of the inflows with the 45,000 cost never subtracted. NPV is always net: what it is worth minus what it costs. −770.97 has the right size but the wrong sign, which usually comes from writing the cost as an inflow and the inflows as costs. Read the sign before you read the number, because the sign is the decision."
+    },
+
+    /* 10: Perpetuity */
+    {
+      q: "A royalty agreement will pay 5,000 at the end of next year. After that the payment grows by the same fixed percentage every year and never stops. Investors ask for 10 percent a year on agreements of this risk, and the agreement is priced today at 125,000. What growth rate does that price point to?",
+      opts: ["4 percent", "6 percent", "14 percent", "2.5 percent"],
+      correct: 1,
+      tag: "Perpetuity",
+      exp: "<b>Formula.</b> The payment repeats forever and grows at a fixed rate, so it is a growing perpetuity: PV = CF1 / (r − g). Here PV is given and g is the unknown, so turn it around: r − g = CF1 / PV, and then g = r − CF1 / PV.<br><br><b>Inputs from the stem.</b> CF1 = 5,000, the payment at the end of year 1. PV = 125,000, the price today. r = 0.10.<br><br>1. CF1 / PV = 5,000 / 125,000 = 0.04<br>2. That 0.04 is the whole gap r − g, not g itself.<br>3. g = r − 0.04 = 0.10 − 0.04 = 0.06, so 6 percent.<br><br><b>Check.</b> Put 6 percent back into the forward formula: 5,000 / (0.10 − 0.06) = 5,000 / 0.04 = 125,000. That is the price in the question, so 6 percent is right. Also check the one thing the formula needs: r = 10 percent is above g = 6 percent, so the value can be worked out. Good.<br><br><b>The wrong options.</b> 4 percent stops at the first line and reports the gap r − g as if it were g. That is the most common slip on the backwards version of this formula. 14 percent adds the gap to r instead of subtracting it, giving 0.10 + 0.04. It also fails the r &gt; g test at once, because when the growth rate is above the required return the value cannot be worked out at all, so it cannot be 125,000. 2.5 percent divides 125,000 into 5,000 the wrong way round, or reads the payment as the price."
+    },
+
+    /* 11: Bonds, par */
+    {
+      q: "A bond has a par value of 1,000 and 4 years left to maturity. It pays 90 in cash at the end of each year, and the par value comes back with the last payment. It trades today at exactly 1,000. Which statement about this bond is right?",
+      opts: ["Its yield is 9 percent and it is a premium bond, because the coupon of 90 is large", "Its yield must be below 9 percent, because the price has not fallen", "Its yield is 9 percent, the same as its coupon rate, and it is a par bond", "Its yield cannot be worked out without knowing the yield on other bonds"],
+      correct: 2,
+      tag: "Bonds",
+      exp: "<b>The rule being tested.</b> A bond's price sits above par when its coupon rate is above the yield, below par when the coupon rate is below the yield, and exactly at par only when the two are equal. Price tells you the comparison without any arithmetic.<br><br><b>Inputs from the stem.</b> Par = 1,000. Cash coupon = 90, so the coupon rate is 90 / 1,000 = 9 percent. n = 4. Price = 1,000, which is exactly par.<br><br>1. Price equals par, so coupon rate equals yield.<br>2. Coupon rate = 9 percent, so the yield is 9 percent.<br>3. A bond trading at its par value is called a par bond.<br><br><b>Check by pricing it.</b> Discount the coupons and the par at 9 percent. 1.09^4 = 1.411582. Annuity factor = (1 − 1/1.411582) / 0.09 = 3.239720. Coupons: 90 × 3.239720 = 291.57. Par: 1,000 / 1.411582 = 708.43. Price = 291.57 + 708.43 = 1,000.00. It lands exactly on par, so the yield really is 9 percent.<br><br><b>The wrong options.</b> Calling it a premium bond confuses a large coupon with a high price. A premium bond is one priced above par, and 1,000 is not above 1,000. Saying the yield must be below 9 percent applies the seesaw in the wrong direction: a yield below the coupon rate would push the price above par, not leave it at par. Saying the yield cannot be found is wrong because the price already contains it. Price, coupon and maturity are enough."
+    },
+
+    /* 12: Single cash flow, inverse */
+    {
+      q: "You put 12,500 into an account today and add nothing more. Seven years later the account holds 20,000. What annual rate of return did the account earn, in annual effective terms?",
+      opts: ["8.57 percent", "60.00 percent", "7.50 percent", "6.94 percent"],
+      correct: 3,
+      tag: "Single cash flow",
+      exp: "<b>Formula.</b> One amount in, one amount out, so the single cash flow rule: FV = PV × (1 + r)^t. Here r is the unknown, so turn it around: r = (FV / PV)^(1/t) − 1.<br><br><b>Inputs from the stem.</b> PV = 12,500 today. FV = 20,000 at the end of year 7. t = 7.<br><br>1. FV / PV = 20,000 / 12,500 = 1.6<br>2. Take the seventh root: 1.6^(1/7). On a scientific calculator this is 1.6 raised to the power 1 ÷ 7, which gives 1.069449<br>3. r = 1.069449 − 1 = 0.069449, so 6.94 percent<br><br><b>Check.</b> Push 12,500 forward at that rate for seven years: 12,500 × 1.069449^7 = 20,000.00. It lands on the amount in the question, so the rate is right.<br><br><b>The wrong options.</b> 8.57 percent is the simple interest answer, (20,000 / 12,500 − 1) / 7 = 0.6 / 7. It spreads the total 60 percent evenly over seven years and ignores that interest also earns interest, so it always comes out too high. 60.00 percent is the total growth over the whole seven years, not the rate per year. 7.50 percent looks close but comes from rounding the seventh root badly, and it fails the check: 12,500 x 1.075^7 = 20,738, which is more than 20,000."
+    },
+
+    /* 13: Concepts, fresh */
+    {
+      q: "The owners of a large firm do not run it. They hire a chief executive. She holds spare cash and has no project worth putting it in. She uses the cash to buy a second head office building and to hire a larger personal staff, instead of paying the cash out to the owners. Which statement matches this course?",
+      opts: ["The owners and the manager want different things, and this is a direct cost to the owners. Their tools are pay tied to the share price, a board that can dismiss her, and the threat of a takeover", "This is an indirect cost to the owners, because the money was spent on real buildings and real staff rather than lost", "There is no conflict here. The chief executive is hired to decide how the firm's cash is used, so the use she picks is the use the owners want", "This is the absolute priority rule at work, because the manager is paid before the owners are"],
+      correct: 0,
+      tag: "Concepts",
+      exp: "<b>The idea being tested.</b> The owners are the principal. The manager is the agent. When the two want different things, the course calls it the agency problem. It appears the moment ownership and control sit with different people, and that is the price a corporation pays for the good things it gets in return.<br><br><b>Reading the stem.</b> Two facts settle it. The cash had no project worth funding, so the owners' use for it was to receive it. The manager instead bought something she enjoys running. She picks the spending and the owners pay for it.<br><br><b>Direct or indirect.</b> The course splits the cost in two. A <b>direct</b> cost is money actually spent on things the owners would not choose, plus the cost of watching the manager. An <b>indirect</b> cost is value that is never created, such as a manager turning down a good but risky project to protect her own job. Cash spent on a second building is money out of the door, so it is direct.<br><br><b>The owners' tools, as the course names them.</b> Pay in shares and options, so her wealth moves with theirs. A board that can fire her. Large outside investors who watch and push. And corporate control: if the share price falls far enough, an outside buyer can take the firm and replace her.<br><br><b>The wrong options.</b> Calling it indirect reverses the two definitions. Real cash left the firm, so nothing here is value that was simply never created. Saying there is no conflict is exactly the mistake this whole topic exists to correct: a manager is paid to act for the owners, and you cannot just assume she did. The absolute priority rule is the payment order at debt maturity, senior lender then junior lender then owners. It has nothing to do with how a manager spends cash while the firm is healthy, and reading APR as anything other than Absolute Priority Rule is a trap this course sets more than once."
+    },
+
+    /* 14: Stocks */
+    {
+      q: "An investor bought one share a year ago for 40.00. During the year the company paid a dividend of 2.40 a share. The share now trades at 43.00. What was the holding period return over the year?",
+      opts: ["7.50 percent", "6.00 percent", "13.50 percent", "12.56 percent"],
+      correct: 2,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> Holding period return, straight off the formula sheet: r = (P1 − P0 + D1) / P0.<br><br><b>Inputs from the stem.</b> P0 = 40.00, the price paid a year ago. P1 = 43.00, the price now. D1 = 2.40, the dividend paid during the year.<br><br>1. The price gain: 43.00 − 40.00 = 3.00<br>2. Add the dividend: 3.00 + 2.40 = 5.40. This is everything the share gave you in the year.<br>3. Divide by what you paid: 5.40 / 40.00 = 0.135<br>4. So the return is 13.50 percent.<br><br><b>Check.</b> Work backwards. 40.00 × 1.135 = 45.40, and the investor did end the year holding 43.00 of share plus 2.40 of cash, which is 45.40. The two agree.<br><br><b>Why we divide by P0.</b> A return always answers the question: for every unit I put in, how much came back. What you put in was 40.00, the price at the start.<br><br><b>The wrong options.</b> 7.50 percent is 3.00 / 40.00, the price move alone, with the dividend forgotten. A share pays you in two ways and both count. 6.00 percent is 2.40 / 40.00, the dividend alone, with the price move forgotten. 12.56 percent is 5.40 / 43.00, which divides by the ending price instead of the starting price. It is always slightly too small when the price has risen."
+    },
+
+    /* 15: Annuity, inverse */
+    {
+      q: "A firm borrows 84,000 today to buy a fleet of vans. It will repay the loan with one equal payment at the end of each of the next 7 years, and nothing else. The interest rate on the loan is 7 percent a year. How large is each payment?",
+      opts: ["12,000.00", "9,706.47", "14,067.29", "15,586.47"],
+      correct: 3,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> Seven equal payments, one at the end of every year, so an annuity. The loan amount today is the present value of those payments: PV = A × (1 − (1 + r)^−n) / r. Here A is the unknown, so A = PV / annuity factor.<br><br><b>Inputs from the stem.</b> PV = 84,000, the money received today. n = 7. r = 0.07. Note that the present value is the given here and the payment is the unknown. That is the reverse of the usual direction.<br><br>1. 1.07^7 = 1.605781<br>2. 1 / 1.605781 = 0.622750<br>3. 1 − 0.622750 = 0.377250<br>4. Annuity factor = 0.377250 / 0.07 = 5.389289<br>5. A = 84,000 / 5.389289 = 15,586.47<br><br><b>Check.</b> Run it forwards: 15,586.47 × 5.389289 = 84,000.00. Seven payments of 15,586.47, discounted at 7 percent, are worth exactly the 84,000 borrowed today. The loan balances.<br><br><b>A quick test before the arithmetic.</b> 84,000 / 7 = 12,000 would repay only the money, with no interest at all. The real payment must be larger than 12,000, and 15,586.47 is.<br><br><b>The wrong options.</b> 12,000.00 is 84,000 / 7, the loan split evenly with the interest ignored. 9,706.47 uses the future value annuity formula, 84,000 × 0.07 / (1.07^7 − 1), which answers a different question: how much to save each year to end up with 84,000 in seven years. Here the 84,000 is already in hand today. 14,067.29 divides by a factor built with n = 8 instead of n = 7, which is 84,000 / 5.971299. It spreads the loan over a payment that does not exist."
+    },
+
+    /* 16: Bonds, discount */
+    {
+      q: "A bond has a par value of 1,000 and 5 years left to maturity. Its coupon rate is 4 percent, paid once a year, and the par value comes back with the last coupon. Investors buying bonds of this risk now ask for 7 percent. What is the bond worth today, and what is this kind of bond called?",
+      opts: ["1,000.00, a par bond", "876.99, a discount bond", "898.38, a discount bond", "1,133.55, a premium bond"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> Coupons are an annuity, the par value is a single cash flow: Price = A × (1 − (1 + r)^−n) / r + Par / (1 + r)^n.<br><br><b>Inputs from the stem.</b> Par = 1,000. Cash coupon = 0.04 × 1,000 = 40 a year. n = 5. Yield r = 0.07. The coupon rate of 4 percent fixes the payment. The 7 percent does the discounting.<br><br>1. Say the answer before computing it. The coupon rate of 4 percent is below the required 7 percent, so this bond pays less than the market demands. The only way it can compete is a lower price. The answer must be below 1,000.<br>2. 1.07^5 = 1.402552<br>3. 1 / 1.402552 = 0.712986<br>4. Annuity factor = (1 − 0.712986) / 0.07 = 4.100197<br>5. Coupons: 40 × 4.100197 = 164.01<br>6. Par value: 1,000 / 1.402552 = 712.99<br>7. Price = 164.01 + 712.99 = 876.99<br>8. Below par, so it is a discount bond.<br><br><b>Check.</b> Line 1 said the price would be below 1,000, and 876.99 is below 1,000. The gap of 123.01 is roughly five years of the 30 a year shortfall between the 40 coupon paid and the 70 a 7 percent buyer wants, brought back to today. The size looks right.<br><br><b>The wrong options.</b> 1,000.00 discounts at the coupon rate of 4 percent instead of the yield of 7 percent. That always returns par, and it is the coupon rate against yield trap. 898.38 is the right method with n = 4, one year short. 1,133.55 swaps the two percentages: it pays a coupon of 70 and discounts at 4 percent, so it prices a bond that pays more than the market wants instead of less. Which number is the payment and which is the discount rate decides everything here."
+    },
+
+    /* 17: Concepts, course quiz */
+    {
+      q: "Parliament considers increasing the value added tax to close a budget gap. Which kind of finance is this decision?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 2,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The test.</b> Name the decision maker and whose money is at stake.<br><br>1. The decision maker is a parliament, the law making body of a government.<br>2. The money is public money: a tax raised to close a government budget gap.<br>3. A government raising money to fund its own spending is public finance.<br><br><b>Why the other options are wrong.</b> Households and firms will both pay more value added tax if the change passes, but living with the outcome of a decision is not the same as making it. The question asks which kind of finance the decision is, not who feels it. On that test, only one decision maker appears, and it is a government. So neither Personal and Public nor Corporate and Public fits.<br><br><b>Compare with the 401(k) question in this paper.</b> There the answer is a pair, because two parties each make a real decision: the employee chooses the contribution and the firm sets the match. Here only parliament decides."
+    },
+
+    /* 18: Mixed stream, deferred annuity */
+    {
+      q: "A grant pays 3,000 at the end of each year from year 5 to year 9. It pays nothing in years 1 to 4 and nothing after year 9. The required rate of return is 7 percent a year. What is the grant worth today?",
+      opts: ["12,300.59", "8,770.15", "9,384.06", "15,000.00"],
+      correct: 2,
+      tag: "Mixed stream",
+      exp: "<b>Method.</b> This is one annuity that starts late. Value it with the annuity formula first, then move that value back to today with the single cash flow rule. Two moves, not one.<br><br><b>Inputs from the stem.</b> A = 3,000. The payments are at the end of years 5, 6, 7, 8 and 9, so n = 5. r = 0.07.<br><br>1. 1.07^5 = 1.402552<br>2. Annuity factor = (1 − 1/1.402552) / 0.07 = 4.100197<br>3. 3,000 × 4.100197 = 12,300.59<br>4. Now the key point. The annuity formula always lands its answer <b>one period before the first payment</b>. The first payment is at the end of year 5, so 12,300.59 sits at the end of year 4. It is not a value at today.<br>5. Move it back four years: 1.07^4 = 1.310796, so 12,300.59 / 1.310796 = 9,384.06<br><br><b>Check.</b> Discount the five payments one at a time: 3,000/1.07^5 + 3,000/1.07^6 + 3,000/1.07^7 + 3,000/1.07^8 + 3,000/1.07^9 = 9,384.06. The two routes agree.<br><br><b>The rule to carry into the exam.</b> If the first payment is at the end of year k, the annuity formula gives you a value at the end of year k − 1, and you then divide by (1 + r)^(k − 1). Here k = 5, so divide by 1.07^4. Not 1.07^5.<br><br><b>The wrong options.</b> 12,300.59 is the annuity value left sitting at year 4 and reported as if it were today's value. 8,770.15 divides by 1.07^5 instead of 1.07^4, which is the same off by one error in the other direction. 15,000.00 is 3,000 × 5, the raw cash with no discounting at all."
+    },
+
+    /* 19: Payoff structure */
+    {
+      q: "A firm's debts all mature today. It owes 90 to its senior lender and 60 to its junior lender. The firm's assets are worth 175 on that date. APR holds. What does each of the three holders receive?",
+      opts: ["Senior 90, junior 85, equity 0", "Senior 90, junior 60, equity 85", "Senior 115, junior 60, equity 0", "Senior 90, junior 60, equity 25"],
+      correct: 3,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior = Min(V_T, F_S). Junior = 0 if V_T is below F_S, otherwise Min(V_T − F_S, F_J). Equity is what is left once every debt is paid, so with both debts present that is Max(V_T − F_S − F_J, 0).<br><br><b>Inputs from the stem.</b> V_T = 175. F_S = 90. F_J = 60. APR means the Absolute Priority Rule: senior lender first, junior lender second, owners last.<br><br>1. Find the band first. F_S = 90. F_S + F_J = 150. V_T = 175 is above both, so there is enough to pay everybody and something is left over.<br>2. Senior = Min(175, 90) = 90, paid in full.<br>3. What is left: 175 − 90 = 85.<br>4. Junior = Min(85, 60) = 60, also paid in full. The junior lender can never receive more than its face value of 60, no matter how much is left.<br>5. Equity = Max(175 − 90 − 60, 0) = 25.<br><br><b>Check.</b> 90 + 60 + 25 = 175, which is exactly V_T. Equity is not below zero. Both checks pass.<br><br><b>Why equity subtracts both debts here.</b> The formula sheet writes equity as Max(V_T − F_S, 0) for a firm whose only debt is senior. The rule underneath is the same in both cases: the owners get whatever is left after every lender is paid. With a junior lender in the story, that means subtracting F_J as well. The adding up test settles it: 90 + 60 + 25 = 175.<br><br><b>The wrong options.</b> Senior 90, junior 85, equity 0 hands the junior lender all 85 that is left, forgetting that a lender is owed a fixed face value and no more. Debt has a ceiling. Equity, not the lender, gets the extra. Senior 90, junior 60, equity 85 subtracts only the senior debt when working out equity, so the junior debt is paid twice and the three numbers add to 235, not 175. Senior 115, junior 60, equity 0 pays the senior lender more than the 90 it is owed, which the Min in the formula does not allow."
+    },
+
+    /* 20: Bonds, zero coupon, rate rise */
+    {
+      q: "A zero coupon bond will pay 1,000 at the end of year 8 and pays nothing before then. It was priced when buyers of this risk asked for 5 percent a year. Buyers now ask for 7 percent a year instead. By how much does the price change?",
+      opts: ["It rises by 94.83, from 582.01 to 676.84", "It falls by 94.83, from 676.84 to 582.01", "It falls by 20.00, because the required return rose by 2 points on a face value of 1,000", "It does not change, because a zero coupon bond pays a fixed 1,000 whatever rates do"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> A zero coupon bond pays once, so it is a single cash flow: Price = Face / (1 + r)^t. Price it at each rate and compare.<br><br><b>Inputs from the stem.</b> Face = 1,000. t = 8. The old r = 0.05, the new r = 0.07. The promised 1,000 does not move. Only the rate moves.<br><br>1. 1.05^8 = 1.477455<br>2. Old price: 1,000 / 1.477455 = 676.84<br>3. 1.07^8 = 1.718186<br>4. New price: 1,000 / 1.718186 = 582.01<br>5. Change: 582.01 − 676.84 = −94.83, a fall of 94.83<br><br><b>Check.</b> Push the new price forward at the new rate: 582.01 × 1.718186 = 1,000.00. The buyer still collects the same 1,000 at the end of year 8. Nothing about the bond changed. Only the price of waiting did.<br><br><b>The direction, said in words.</b> Rates up, price down. The payment is fixed, so the price is the only thing that can move, and it has to fall until a buyer paying today earns the 7 percent the market now demands.<br><br><b>The wrong options.</b> The rising version has the seesaw backwards: a higher required return cannot make a fixed payment worth more. Falling by 20.00 treats the 2 point rate move as 2 percent of the face value, which is not how discounting works, and it also ignores the eight years of compounding that make the effect much larger. Saying the price does not change confuses the payment with the value. The 1,000 is fixed. What a buyer will pay today for that fixed 1,000 is not."
+    },
+
+    /* 21: Concepts, course quiz */
+    {
+      q: "You decide how much to contribute to a 401(k) to receive the full employer match offered by your firm. Which kind of finance is this decision?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 3,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The test.</b> Count the decision makers. If two different kinds of party each make a real decision here, the answer is a pair.<br><br>1. You are a household deciding how much of your own pay to save. That is personal finance.<br>2. The firm is also deciding something: it offers a match, which is part of how it pays and keeps its staff. Choosing the pay package is a firm decision about the firm's money, which is corporate finance.<br>3. Two kinds of decision maker, a household and a firm. So the answer is the pair, Personal and Corporate. This is the professor's own key for this question.<br><br><b>Why the other options are wrong.</b> Personal finance alone drops the firm's side of the deal, the match, which is the part that makes this question different from a plain savings decision. Corporate finance alone drops you. No government body is raising or spending public money here, so every option containing Public is out.<br><br><b>The habit.</b> When a story names two sides and both are really choosing something, look at the paired options before the single ones."
+    },
+
+    /* 22: NPV, reject */
+    {
+      q: "A machine costs 24,000 today. It returns 7,000 at the end of each of the next 4 years and is then worthless. The required rate of return is 8 percent a year. What is the NPV, and what is the decision?",
+      opts: ["NPV = 4,000.00, so buy the machine", "NPV = 255.74, so buy the machine", "NPV = −815.11, so reject the machine", "NPV = 23,184.89, so buy the machine"],
+      correct: 2,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> Four equal amounts, one at the end of each year, so the inflows are an annuity: PV = A × (1 − (1 + r)^−n) / r. Then NPV = PV − I0.<br><br><b>Inputs from the stem.</b> A = 7,000. n = 4. r = 0.08. I0 = 24,000, paid today, so it is not discounted.<br><br>1. 1.08^4 = 1.360489<br>2. 1 / 1.360489 = 0.735030<br>3. Annuity factor = (1 − 0.735030) / 0.08 = 3.312127<br>4. Present value of the inflows: 7,000 × 3.312127 = 23,184.89<br>5. NPV = 23,184.89 − 24,000 = −815.11<br>6. NPV is below zero, so reject.<br><br><b>Check with the IRR.</b> The rate that makes NPV exactly zero here is 6.46 percent. The firm asks for 8 percent, which is above 6.46 percent, so NPV must be negative. The two tools agree, which is what you expect from a normal project with one sign change.<br><br><b>What the answer means.</b> The machine does return more cash than it costs, 28,000 against 24,000. It just does not return it fast enough to be worth 8 percent a year. Raw cash bigger than cost is not the test. The test is cash bigger than cost after discounting.<br><br><b>The wrong options.</b> 4,000.00 is 7,000 × 4 − 24,000, the raw cash with no discounting, and it is exactly the mistake the paragraph above describes. 255.74 is the NPV at 6 percent, not at the 8 percent the question gives. The discount rate is handed to you, not chosen by you. 23,184.89 is the present value of the inflows with the 24,000 cost never subtracted, so it is not a net figure at all."
+    }
+
+  ]
+});
+</script>
+</body>
+</html>

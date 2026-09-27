@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 1 · What kind of thing is this number</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">DAY 1 · SATURDAY 26 SEPTEMBER 2026</div>
+  <h1>What kind of thing is this number</h1>
+  <p class="lede">Before you work out any numbers, decide what you are looking at. A thing, or a claim on a thing. A size, or a move. And how much you really know when you choose.</p>
+
+  <div class="preq">
+    <span class="tag">Five minutes: recall</span>
+    <p>This is the first day, so there is nothing to recall yet. Go straight to the guess below.</p>
+  </div>
+
+  <div class="preq">
+    <span class="tag">Guess first</span>
+    <p>A firm owns assets worth $700,000. It owes $450,000. Today the board pays $70,000 in cash to the shareholders. Nothing else changes.</p>
+    <p>Straight after the payment, are the shareholders richer, poorer, or exactly as rich as before?</p>
+    <p class="do">Write your guess and one line of why. Do not work it out. This is a guess, not a test. You will check it in panel 3.</p>
+  </div>
+
+
+  <!-- ============================ PANEL 1 ============================ -->
+  <div class="panel">
+    <h3>1. A thing, or a claim on a thing</h3>
+
+    <p class="p">The course splits every asset into two kinds.</p>
+
+    <p class="p"><b>Real assets</b> set how much the economy can make, and how much income it earns. Land, machines, buildings. They make things.</p>
+
+    <p class="p"><b>Financial assets</b> are claims on real assets. Shares and bonds. They do not add directly to what the economy can produce. A share is a claim on what a firm owns after its debts. A bond is a claim on a borrower. A bank deposit is a claim on the bank.</p>
+
+    <p class="p">A claim always has two sides. It is an asset for the person who holds it, and a debt for the person who owes it. A machine has no other side. It just sits there and works.</p>
+
+    <div class="rule">Ask one question: does it produce, or is it a promise from someone else? Produces = real. Promise = financial.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+            <path d="M0,0 L7,3.2 L0,6.4 z" fill="#6b4ef0"/>
+          </marker>
+        </defs>
+        <text x="280" y="14" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">REAL ASSETS: they produce goods and income</text>
+        <rect x="20" y="24" width="150" height="46" rx="10" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="205" y="24" width="150" height="46" rx="10" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="390" y="24" width="150" height="46" rx="10" fill="#ece7fd" stroke="#6b4ef0"/>
+        <text x="95"  y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Land</text>
+        <text x="280" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Machines</text>
+        <text x="465" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Buildings</text>
+
+        <line x1="95"  y1="152" x2="95"  y2="76" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar1)"/>
+        <line x1="280" y1="152" x2="280" y2="76" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar1)"/>
+        <line x1="465" y1="152" x2="465" y2="76" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar1)"/>
+        <text x="280" y="120" text-anchor="middle" font-size="12" fill="#6f6886">each box below is a claim on the row above</text>
+
+        <rect x="20" y="158" width="150" height="46" rx="10" fill="#faf9fe" stroke="#e7e3f2"/>
+        <rect x="205" y="158" width="150" height="46" rx="10" fill="#faf9fe" stroke="#e7e3f2"/>
+        <rect x="390" y="158" width="150" height="46" rx="10" fill="#faf9fe" stroke="#e7e3f2"/>
+        <text x="95"  y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Shares</text>
+        <text x="280" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Bonds</text>
+        <text x="465" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Bank deposit</text>
+        <text x="280" y="228" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">FINANCIAL ASSETS: claims, they do not produce</text>
+      </svg>
+      <p class="cap">Burn the top row and the economy can produce less. Tear up the bottom row and the machines still run. Only the owner of the claim has changed.</p>
+    </div>
+
+    <p class="datalab">Worked example</p>
+    <div class="question">
+      A small shop chain owns its shop buildings, worth $400,000, and its delivery scooters and fridges, worth $100,000. It has borrowed $300,000 from a bank. The owners hold all the shares.
+      <br><br>What are the real assets worth, and what is the owners' claim worth?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Sort each number.</span>
+      <div>Buildings and scooters and fridges are things that produce. They are real assets. The bank loan is a claim, so it is a financial asset for the bank and a debt for the shop.</div>
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Add the real assets.</span>
+      <div class="math">400,000 + 100,000 = 500,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Take out the claim that comes first.</span>
+      <div>The bank is owed $300,000. Whatever is left belongs to the owners.</div>
+      <div class="math">500,000 − 300,000 = 200,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Check that the claims add back up.</span>
+      <div class="math">300,000 + 200,000 = 500,000</div>
+      <div>The two claims together are worth exactly the real assets they sit on. That is always true, and it comes back on day 7.</div>
+    </div></div>
+    <div class="ans">Real assets $500,000. The owners' claim is worth $200,000.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. Sort these five into real and financial: a tractor, a wheat field, 50 shares in a food company, a loan agreement held by the bank that lent the money, a grain silo.</div>
+      <button class="reveal-btn" data-reveal="t1a">Show the answer</button>
+      <div class="reveal" id="t1a">
+        Real: the tractor, the wheat field, the grain silo. All three produce.<br>
+        Financial: the 50 shares, and the loan agreement. Both are claims on someone else.<br>
+        The loan is the one people get wrong. To the farmer it is a debt. To the bank that holds it, it is an asset, and a financial one.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================ PANEL 2 ============================ -->
+  <div class="panel">
+    <h3>2. Where the money goes, and where it only changes hands</h3>
+
+    <p class="p">Three kinds of player take part: households, corporations (companies) and government. Each one can be on either side. A household saves and also borrows. A government builds roads and also issues bonds.</p>
+
+    <p class="p">Money flows in a loop. Investors hand cash to the firm. The firm buys real assets. The real assets throw off cash. The firm then chooses: keep the cash and put it back to work, or pay it out to investors.</p>
+
+    <p class="p">There are two places where shares and bonds change hands, and they are not the same place.</p>
+
+    <table class="dtable">
+      <tr><th>Market</th><th style="text-align:left">What happens</th><th>Does the firm get cash?</th></tr>
+      <tr><td class="lab">Primary</td><td style="text-align:left">The firm sells new shares or new bonds. An IPO is the first time a firm sells shares to the public.</td><td>Yes. This is the only way.</td></tr>
+      <tr><td class="lab">Secondary</td><td style="text-align:left">One investor sells to another investor, on an exchange such as the NYSE or NASDAQ.</td><td>No. Nothing at all.</td></tr>
+    </table>
+
+    <div class="rule">New paper sold by the firm = primary, and the cash goes into the firm. Old paper changing owner = secondary, and the firm is not in the room.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+            <path d="M0,0 L7,3.2 L0,6.4 z" fill="#6b4ef0"/>
+          </marker>
+          <marker id="ar2g" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+            <path d="M0,0 L7,3.2 L0,6.4 z" fill="#1f9d63"/>
+          </marker>
+        </defs>
+
+        <rect x="10"  y="95" width="120" height="58" rx="11" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="220" y="95" width="120" height="58" rx="11" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="430" y="95" width="120" height="58" rx="11" fill="#e4f6ec" stroke="#1f9d63"/>
+        <text x="70"  y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Investors</text>
+        <text x="280" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">The firm</text>
+        <text x="490" y="123" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">Real</text>
+        <text x="490" y="139" text-anchor="middle" font-size="14" font-weight="700" fill="#211c33">assets</text>
+
+        <line x1="132" y1="115" x2="214" y2="115" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar2)"/>
+        <text x="173" y="88" text-anchor="middle" font-size="11.5" fill="#5238c4" font-weight="700">cash in</text>
+        <text x="173" y="77" text-anchor="middle" font-size="11" fill="#6f6886">primary market</text>
+
+        <line x1="342" y1="115" x2="424" y2="115" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar2)"/>
+        <text x="383" y="88" text-anchor="middle" font-size="11.5" fill="#5238c4" font-weight="700">the firm buys</text>
+        <text x="383" y="77" text-anchor="middle" font-size="11" fill="#6f6886">real assets</text>
+
+        <path d="M490,155 L490,196 L300,196 L300,157" fill="none" stroke="#1f9d63" stroke-width="1.6" marker-end="url(#ar2g)"/>
+        <text x="400" y="190" text-anchor="middle" font-size="11.5" fill="#1f9d63" font-weight="700">cash comes back</text>
+
+        <path d="M250,155 L250,240 L70,240 L70,157" fill="none" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar2)"/>
+        <text x="163" y="234" text-anchor="middle" font-size="11.5" fill="#5238c4" font-weight="700">paid out: dividends or interest</text>
+
+        <path d="M250,93 L250,58 L312,58 L312,91" fill="none" stroke="#6b4ef0" stroke-width="1.6" marker-end="url(#ar2)"/>
+        <text x="281" y="48" text-anchor="middle" font-size="11.5" fill="#5238c4" font-weight="700">or kept and put back to work</text>
+
+        <line x1="20" y1="262" x2="540" y2="262" stroke="#e7e3f2" stroke-width="1"/>
+        <text x="280" y="276" text-anchor="middle" font-size="11.5" fill="#6f6886">Secondary market: one investor sells to another. None of these arrows moves.</text>
+      </svg>
+      <p class="cap">The loop is the whole investment process on one picture. The secondary market sits outside it: it changes who holds the claim, and nothing else.</p>
+    </div>
+
+    <p class="datalab">Worked example</p>
+    <div class="question">
+      A firm sells 2,000,000 new shares at $18 each in its first public offering. Ignore all fees.
+      <br>The next week, Dana buys 100 of those shares from Ron on the exchange at $20 each.
+      <br><br>How much cash reaches the firm from each of the two events?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name each event.</span>
+      <div>The firm is selling paper it has just created, so the offering is a primary market event. Dana and Ron are trading paper that already exists, so that is a secondary market event.</div>
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Cash from the offering.</span>
+      <div class="math">2,000,000 × 18 = 36,000,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Cash from the trade between Dana and Ron.</span>
+      <div class="math">100 × 20 = 2,000</div>
+      <div>That $2,000 goes from Dana to Ron. The firm is not part of the deal, so the firm receives $0.</div>
+    </div></div>
+    <div class="ans">The firm receives $36,000,000 from the offering, and $0 from the trade between Dana and Ron.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A firm issues 300,000 new shares at $25 each. Ignore fees. How much new money reaches the firm? A month later, 50,000 of those shares change hands between two funds. Which market is each of the two events?</div>
+      <button class="reveal-btn" data-reveal="t2a">Show the answer</button>
+      <div class="reveal" id="t2a">
+        300,000 × 25 = $7,500,000 reaches the firm.<br>
+        The issue is the primary market, because the shares are new and the firm is the seller.<br>
+        The trade between the two funds is the secondary market. The firm receives nothing from it.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================ PANEL 3 ============================ -->
+  <div class="panel">
+    <h3>3. Equity is a size. A dividend is a move.</h3>
+
+    <p class="p">This is the confusion that costs the most marks, so read it slowly.</p>
+
+    <p class="p"><b>Equity</b> is what the shareholders' claim is worth. It is pure leftover: the value of the assets, minus what the debt holders are owed. Nobody sets it. Nobody votes on it. It is whatever is left.</p>
+
+    <p class="p"><b>A dividend</b> is cash moving out of the firm and into the shareholder's pocket. Somebody does decide it: the board. It changes where the value sits. It does not change how much value there is.</p>
+
+    <p class="p">Think of a bank account. The balance is the value. A withdrawal is the dividend. Taking $100 out of your account does not make you $100 richer. The money is in your hand instead of in the account, and your total is the same.</p>
+
+    <p class="p">So when the firm pays a dividend, two things move together. The firm's assets fall by the cash that left, which pulls the equity down. The shareholder's pocket rises by the same cash. Add the two and the shareholder is exactly where they started.</p>
+
+    <div class="rule">Before you answer, ask: is this question about how big, or about how much moved? Equity, value, worth = a size. Dividend, payment, payout = a move.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 272" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+            <path d="M0,0 L7,3.2 L0,6.4 z" fill="#b6791f"/>
+          </marker>
+        </defs>
+        <text x="85"  y="18" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">BEFORE</text>
+        <text x="325" y="18" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">AFTER THE $80,000 DIVIDEND</text>
+
+        <rect x="30" y="35" width="110" height="105" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="30" y="140" width="110" height="75" fill="#faf9fe" stroke="#6f6886"/>
+        <text x="85" y="82"  text-anchor="middle" font-size="11.5" font-weight="700" fill="#5238c4">Equity</text>
+        <text x="85" y="97"  text-anchor="middle" font-size="12" font-weight="700" fill="#211c33">350,000</text>
+        <text x="85" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6f6886">Debt</text>
+        <text x="85" y="187" text-anchor="middle" font-size="12" font-weight="700" fill="#211c33">250,000</text>
+        <text x="85" y="231" text-anchor="middle" font-size="11.5" fill="#6f6886">assets 600,000</text>
+
+        <rect x="270" y="59" width="110" height="81" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="270" y="140" width="110" height="75" fill="#faf9fe" stroke="#6f6886"/>
+        <text x="325" y="94"  text-anchor="middle" font-size="11.5" font-weight="700" fill="#5238c4">Equity</text>
+        <text x="325" y="109" text-anchor="middle" font-size="12" font-weight="700" fill="#211c33">270,000</text>
+        <text x="325" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6f6886">Debt</text>
+        <text x="325" y="187" text-anchor="middle" font-size="12" font-weight="700" fill="#211c33">250,000</text>
+        <text x="325" y="231" text-anchor="middle" font-size="11.5" fill="#6f6886">assets 520,000</text>
+
+        <line x1="386" y1="200" x2="424" y2="200" stroke="#b6791f" stroke-width="1.6" marker-end="url(#ar3)"/>
+        <text x="405" y="193" text-anchor="middle" font-size="10.5" fill="#b6791f" font-weight="700">cash</text>
+
+        <rect x="430" y="191" width="110" height="24" fill="#fcf3e3" stroke="#b6791f"/>
+        <text x="485" y="183" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b6791f">In the pocket</text>
+        <text x="485" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#211c33">80,000</text>
+
+        <text x="280" y="258" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f9d63">350,000 before. 270,000 + 80,000 = 350,000 after. Same wealth.</text>
+      </svg>
+      <p class="cap">The purple block shrinks and the amber block appears. The two together never change. That is what a move looks like.</p>
+    </div>
+
+    <p class="datalab">Worked example</p>
+    <div class="question">
+      A firm's assets are worth $600,000. It owes debt with face value $250,000. Face value is the amount the firm promised to pay back. Today the board pays a cash dividend of $80,000. Nothing else changes that day.
+      <br><br>What is the equity worth before, what is it worth after, and are the shareholders better off?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Equity before. Assets minus what the debt holders are owed.</span>
+      <div class="math">600,000 − 250,000 = 350,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">The cash leaves the firm, so the assets fall.</span>
+      <div class="math">600,000 − 80,000 = 520,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">The debt does not change, so work out the leftover again.</span>
+      <div class="math">520,000 − 250,000 = 270,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Add what the shareholders now hold in their hand.</span>
+      <div class="math">270,000 + 80,000 = 350,000</div>
+      <div>Same as line 1. The dividend moved value from inside the firm to outside it.</div>
+    </div></div>
+    <div class="ans">Equity falls from $350,000 to $270,000. Shareholder wealth stays at $350,000. The dividend is a move, not a gain.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A firm's assets are worth $900,000 and it owes senior debt with face value $350,000. The firm uses $150,000 of cash to repay part of that debt. Nothing else changes. What is the equity worth now, and why is the answer different in kind from the dividend case above?</div>
+      <button class="reveal-btn" data-reveal="t3a">Show the answer</button>
+      <div class="reveal" id="t3a">
+        Equity before: 900,000 − 350,000 = 550,000.<br>
+        Assets after the repayment: 900,000 − 150,000 = 750,000.<br>
+        Debt after: 350,000 − 150,000 = 200,000.<br>
+        Equity after: 750,000 − 200,000 = 550,000. Unchanged.<br>
+        Both sides fell by the same $150,000, so the leftover is the same. A dividend takes cash out and gives nothing back to the firm, so equity falls. A debt repayment takes cash out and cancels an equal claim, so equity stands still. Both are moves. Neither creates value.
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it, the other way round. After a cash dividend, a firm's equity is worth $220,000. The shareholders also hold the dividend cash, and their total wealth is unchanged at $280,000. How big was the dividend?</div>
+      <button class="reveal-btn" data-reveal="t3b">Show the answer</button>
+      <div class="reveal" id="t3b">
+        Wealth after = equity after + cash in the pocket, and wealth did not change.<br>
+        280,000 − 220,000 = 60,000.<br>
+        The dividend was $60,000. When you are given the total and one part, the move is just the gap.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================ PANEL 4 ============================ -->
+  <div class="panel">
+    <h3>4. The tasks, the form of the firm, and whose decision it is</h3>
+
+    <p class="p">Everything a finance manager does falls into one of three tasks. The names matter because exam questions often just ask which task a story is about.</p>
+
+    <table class="dtable">
+      <tr><th>Task</th><th style="text-align:left">The question it answers</th></tr>
+      <tr><td class="lab">Investment, or capital budgeting</td><td style="text-align:left">Which real assets should we own?</td></tr>
+      <tr><td class="lab">Financing</td><td style="text-align:left">Where does the money come from: shares, senior debt (paid back first), junior debt (paid back after)?</td></tr>
+      <tr><td class="lab">Payout</td><td style="text-align:left">Cash has come back. Put it back to work, or pay it out?</td></tr>
+    </table>
+
+    <p class="p">Before any of that, somebody chose what kind of firm to build. The course sets three forms against each other.</p>
+
+    <table class="dtable">
+      <tr><th>Form</th><th style="text-align:left">What you get</th><th style="text-align:left">What it costs you</th></tr>
+      <tr><td class="lab">Sole proprietorship</td><td style="text-align:left">A one-person business. Easy to start. The profit is taxed once and it is all yours.</td><td style="text-align:left">If the firm cannot pay a debt, they come after your own money. The firm ends with you. Raising money is hard.</td></tr>
+      <tr><td class="lab">Partnership</td><td style="text-align:left">More owners, so more money to start with. The profit is still taxed once.</td><td style="text-align:left">General partners must pay the firm's debts out of their own money. A stake is hard to pass on. The firm breaks up easily.</td></tr>
+      <tr><td class="lab">Corporation</td><td style="text-align:left">Limited liability: if the firm cannot pay, your own money is safe. The firm can live on after its owners. A stake changes hands without ending the firm, so money can be raised from strangers.</td><td style="text-align:left">The profit is taxed twice. Owners and managers are no longer the same people.</td></tr>
+    </table>
+
+    <p class="p">Taxed twice means this. The company pays tax on its profit. What is left can go out as a dividend, and the shareholder pays tax on that dividend too. The same money is taxed leaving the firm and again entering the pocket. The owner of a one-person business, and a partner, pay tax once.</p>
+
+    <div class="rule">Limited liability, a life longer than the owners, and shares a stranger can buy: only the corporation gives all three. The bill for them is double taxation.</div>
+
+    <p class="p">One more label sits on top of every story: whose money and whose choice it is.</p>
+
+    <table class="dtable">
+      <tr><th>Label</th><th style="text-align:left">Who is deciding</th></tr>
+      <tr><td class="lab">Personal</td><td style="text-align:left">A household, about its own money. Borrow, save, invest.</td></tr>
+      <tr><td class="lab">Corporate</td><td style="text-align:left">A firm, about the firm's money. Which assets, how to pay for them, what to pay out.</td></tr>
+      <tr><td class="lab">Public</td><td style="text-align:left">A government or a city, about public money. Tax, issue bonds, pay subsidies: money that helps an industry.</td></tr>
+    </table>
+
+    <p class="p">A story can carry two labels when two kinds of decision maker each make a real choice. In this course's own answer keys, a private bank simply lending you money does not make a case corporate, because the bank is only the other side of the deal. A government subsidy or a tax rule does make it public.</p>
+
+    <div class="rule">Two questions, in this order. Which task: buy an asset, raise money, or pay cash out? Then: who is actually choosing, a household, a firm, a government, or two of them?</div>
+
+    <p class="datalab">Worked example</p>
+    <div class="question">
+      Three friends are starting a coffee chain. They want to open 4 branches at $250,000 each, paid for by a bank loan or by new shares. They also want to sell a stake to outsiders later, with none of them personally liable.
+      <br><br>How much is at stake, which tasks are these, which form fits, and which label?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Size the decision.</span>
+      <div class="math">4 × 250,000 = 1,000,000</div>
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Sort the two choices into tasks.</span>
+      <div>Branches are more real assets: capital budgeting. Loan or new shares is where the money comes from: the financing decision.</div>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Match the form to what they asked for.</span>
+      <div>A sole proprietorship has one owner, who must pay for everything. A partnership leaves the general partners liable and a stake hard to pass on. Only the corporation gives both of the things they asked for.</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Name the price, and put the label on.</span>
+      <div>Their profit will be taxed at the company and again as a dividend in each friend's hands. As a partnership it would be taxed once. A firm is deciding about the firm's money, so the label is corporate finance.</div>
+    </div></div>
+    <div class="ans">$1,000,000 at stake. Capital budgeting, then financing. Form: a corporation, paid for with double taxation. Label: corporate finance.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. (a) A hospital owned by a private company decides whether to buy a new scanner. Which task, and which label? (b) The same scanner, but a government ministry buys it for a state hospital. What changes? (c) A woman opens a small repair shop with her own savings and wants no company paperwork. Which form, and what does she give up?</div>
+      <button class="reveal-btn" data-reveal="t4a">Show the answer</button>
+      <div class="reveal" id="t4a">
+        (a) Capital budgeting: which real asset to own. Corporate finance, because a firm is deciding about the firm's money.<br>
+        (b) The task does not change. Only the label does, to public finance, because a government is now spending public money.<br>
+        (c) A sole proprietorship. Taxed once, hers to keep, open tomorrow. She gives up limited liability, so her own savings stand behind every debt of the shop, and the business ends when she stops.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================ PANEL 5 ============================ -->
+  <div class="panel">
+    <h3>5. What you know when you decide</h3>
+
+    <p class="p">One more sorting question, and it changes which tools you are allowed to use. How much do you actually know at the moment you choose?</p>
+
+    <p class="p">The course quiz uses three labels: certainty, uncertainty and ambiguity. The slides give the labels and the answer for each case, but they never write out a definition. The three meanings below are the standard split used in finance. They fit the way the course answers mark each case. If the professor words it differently in class, his wording wins.</p>
+
+    <table class="dtable">
+      <tr><th>Environment</th><th style="text-align:left">What you know</th><th style="text-align:left">A small example</th></tr>
+      <tr><td class="lab">Certainty</td><td style="text-align:left">The amount is fixed before the event happens.</td><td style="text-align:left">A bakery has already sold 1,000 cakes for next month at $12 each, paid in advance. The $12,000 is settled.</td></tr>
+      <tr><td class="lab">Uncertainty</td><td style="text-align:left">The outcome is not known, but you can put odds on it that you can trust, from real data or a tested model.</td><td style="text-align:left">A taxi firm has five years of its own daily sales. From them: a good day 60 percent of the time, an average day 30 percent, a bad day 10 percent.</td></tr>
+      <tr><td class="lab">Ambiguity</td><td style="text-align:left">The outcome is not known, and nobody can work out odds you could trust.</td><td style="text-align:left">A farmer is offered a contract to grow a crop that has never been grown in that soil, in a season for which nobody holds records.</td></tr>
+    </table>
+
+    <div class="rule">Two questions, in this order. Is the amount fixed before the event? If yes, certainty. If no, can anyone put odds you could trust on the outcomes? If yes, uncertainty. If no, ambiguity.</div>
+
+    <p class="p">Most real decisions hold a fixed part and an open part. The label follows the part you cannot pin down. A price you have locked, sitting next to a quantity nobody can name, is still not certainty.</p>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 212" xmlns="http://www.w3.org/2000/svg">
+        <text x="100" y="16" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">CERTAINTY</text>
+        <text x="280" y="16" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">UNCERTAINTY</text>
+        <text x="460" y="16" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5238c4">AMBIGUITY</text>
+
+        <text x="100" y="33" text-anchor="middle" font-size="11" fill="#6f6886">the amount is</text>
+        <text x="100" y="45" text-anchor="middle" font-size="11" fill="#6f6886">known in advance</text>
+        <text x="280" y="33" text-anchor="middle" font-size="11" fill="#6f6886">outcomes unknown,</text>
+        <text x="280" y="45" text-anchor="middle" font-size="11" fill="#6f6886">you can find the odds</text>
+        <text x="460" y="33" text-anchor="middle" font-size="11" fill="#6f6886">outcomes unknown,</text>
+        <text x="460" y="45" text-anchor="middle" font-size="11" fill="#6f6886">you cannot find the odds</text>
+
+        <rect x="80" y="78" width="40" height="100" fill="#e4f6ec" stroke="#1f9d63"/>
+        <text x="100" y="70" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1f9d63">100%</text>
+
+        <rect x="220" y="118" width="32" height="60" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="264" y="148" width="32" height="30" fill="#ece7fd" stroke="#6b4ef0"/>
+        <rect x="308" y="168" width="32" height="10" fill="#ece7fd" stroke="#6b4ef0"/>
+        <text x="236" y="112" text-anchor="middle" font-size="10.5" font-weight="700" fill="#5238c4">60%</text>
+        <text x="280" y="142" text-anchor="middle" font-size="10.5" font-weight="700" fill="#5238c4">30%</text>
+        <text x="324" y="162" text-anchor="middle" font-size="10.5" font-weight="700" fill="#5238c4">10%</text>
+
+        <rect x="400" y="78" width="32" height="100" fill="none" stroke="#b6791f" stroke-dasharray="4 3"/>
+        <rect x="444" y="78" width="32" height="100" fill="none" stroke="#b6791f" stroke-dasharray="4 3"/>
+        <rect x="488" y="78" width="32" height="100" fill="none" stroke="#b6791f" stroke-dasharray="4 3"/>
+        <text x="416" y="136" text-anchor="middle" font-size="16" font-weight="700" fill="#b6791f">?</text>
+        <text x="460" y="136" text-anchor="middle" font-size="16" font-weight="700" fill="#b6791f">?</text>
+        <text x="504" y="136" text-anchor="middle" font-size="16" font-weight="700" fill="#b6791f">?</text>
+
+        <line x1="20" y1="178" x2="540" y2="178" stroke="#e7e3f2" stroke-width="1.4"/>
+        <text x="100" y="196" text-anchor="middle" font-size="11" fill="#6f6886">one outcome, fixed</text>
+        <text x="280" y="196" text-anchor="middle" font-size="11" fill="#6f6886">odds from data or a model</text>
+        <text x="460" y="196" text-anchor="middle" font-size="11" fill="#6f6886">no data, no odds to trust</text>
+      </svg>
+      <p class="cap">The bars are the chance of each outcome. In the middle you can draw them. On the right you cannot, and that is the whole difference between uncertainty and ambiguity.</p>
+    </div>
+
+    <p class="datalab">Worked example</p>
+    <div class="question">
+      A hotel is deciding whether to heat its pool this winter. The gas for the whole winter is already fixed by a signed contract at $8,000. Guest numbers are not fixed, but the hotel holds its own guest records for the last eight winters, and they show a clear pattern.
+      <br><br>Which environment is this decision in?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Split the decision into its parts.</span>
+      <div>The cost side is the gas. The benefit side is the guests who use the pool.</div>
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Test the cost side.</span>
+      <div>The $8,000 is fixed by contract before the winter starts. On its own, that part is certainty.</div>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Test the benefit side.</span>
+      <div>Guest numbers are not known. But eight winters of the hotel's own records let somebody write down odds you can trust. That is uncertainty, not ambiguity.</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Take the label from the part you cannot pin down.</span>
+      <div>One part is fixed and one part is open, so the decision as a whole is not certain.</div>
+    </div></div>
+    <div class="ans">Uncertainty. The fixed $8,000 does not make the decision certain, because the side that decides the answer is still open.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. (a) A farmer is offered $40,000 today for his whole harvest, to be paid whatever the weather does. (b) An insurer is asked to cover a brand new kind of machine that has never been built before, so nobody holds any record of how often such a machine breaks. Which environment is each one?</div>
+      <button class="reveal-btn" data-reveal="t5a">Show the answer</button>
+      <div class="reveal" id="t5a">
+        (a) Certainty. The amount the farmer receives is fixed before the harvest. The weather is still open, but it no longer touches his money, because he sold the risk with the crop.<br>
+        (b) Ambiguity. The outcome is open and there is no record to build odds from. Uncertainty would need a source of odds you can trust, and a machine that has never existed has none.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================ QUIZ ============================ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick. Anything you miss is saved to your error log.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <span></span>
+    <a class="navbtn primary" href="day-02.html">Day 2: a single cash flow →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 1,
+  topic: "Concepts",
+  items: [
+    {
+      q: "Which one of these is a real asset?",
+      opts: [
+        "A corporate bond you hold",
+        "A warehouse the firm uses to store its goods",
+        "200 shares in a listed company",
+        "A savings deposit at a bank"
+      ],
+      correct: 1,
+      tag: "Concepts",
+      exp: "A real asset produces goods or income. The warehouse does that: it holds stock so the business can trade.<br><br>"
+         + "<b>Why the others are wrong.</b> The other three are financial assets, because each one is a claim on somebody else.<br>"
+         + "A bond is a promise from a borrower to pay you.<br>"
+         + "A share is a claim on what the firm owns after its debts.<br>"
+         + "A deposit is a claim on the bank.<br><br>"
+         + "<b>Quick test.</b> If the item disappeared, could the economy still produce as much? Lose the warehouse and it could not. Lose the bond, the shares or the deposit and the machines and buildings keep working. Only the owner of the claim has changed."
+    },
+    {
+      q: "An investor is offered a share of the profits of a film. The film has not been shot yet, the director has never made one before, and there is no record of how films from that studio by a first time director have done. Which decision environment is this?",
+      opts: [
+        "Certainty, because the amount the investor pays today is already known",
+        "Uncertainty, because the outcomes are unknown but you can put odds on them that you can trust",
+        "Ambiguity, because even the odds cannot be worked out",
+        "Uncertainty, because films usually make a profit in the end"
+      ],
+      correct: 2,
+      tag: "Concepts",
+      exp: "<b>Run the two questions.</b><br>"
+         + "1. Is the amount fixed before the event? No, the investor is paid a share of profits that do not exist yet.<br>"
+         + "2. Can anyone put odds you could trust on the outcomes? There is no record of anything close enough to build them from, so no.<br>"
+         + "That is ambiguity.<br><br>"
+         + "<b>Why the others are wrong.</b><br>"
+         + "Calling it certainty because the amount paid today is known confuses a known cost with a known outcome. What you pay is fixed in almost every investment, and it never settles the environment on its own.<br>"
+         + "Calling it uncertainty needs a real source of odds, such as a long run of similar films, and the question says there is none.<br>"
+         + "Calling it uncertainty because films usually make a profit invents odds out of a feeling about the industry. That is exactly the move the word ambiguity exists to stop: a guess dressed up as a real chance is still a guess."
+    },
+    {
+      q: "Shares of a company already trade on an exchange. Today one investor buys 5,000 of these shares from another investor at $34 each. How much cash does the company itself receive from this trade?",
+      opts: [
+        "$0",
+        "$170,000",
+        "$170,000 minus what the seller first paid for the shares",
+        "It depends on whether the price has risen since the company issued the shares"
+      ],
+      correct: 0,
+      tag: "Concepts",
+      exp: "This is a secondary market trade: one investor sells to another. The cash goes from the buyer to the seller and stops there. The company is not part of the deal, so it receives nothing.<br>"
+         + "A company only receives cash when it sells new shares or bonds itself, which is the primary market.<br><br>"
+         + "<b>Why the others are wrong.</b><br>"
+         + "$170,000 is 5,000 times $34, which is the size of the trade, but that money lands in the selling investor's account.<br>"
+         + "Taking off what the seller first paid works out the seller's gain, which is the seller's business and still never touches the firm.<br>"
+         + "Making it depend on the price since issue imagines that a rising price feeds cash back to the firm, and it does not: a share price can double and the firm receives $0 from that."
+    },
+    {
+      q: "A firm wants to raise exactly $9,000,000 of new money by issuing new shares at $45 each. Ignore all fees. How many new shares must it issue?",
+      opts: [
+        "200,000",
+        "2,000,000",
+        "20,000",
+        "180,000"
+      ],
+      correct: 0,
+      tag: "Concepts",
+      exp: "<b>Formula.</b> Number of shares = money wanted divided by the price of one share.<br>"
+         + "1. 9,000,000 / 45 = 200,000.<br>"
+         + "<b>Check.</b> Go back the other way: 200,000 × 45 = 9,000,000. This is a primary market event, so the cash does reach the firm.<br><br>"
+         + "<b>Why the others are wrong.</b><br>"
+         + "2,000,000 comes from dividing by 4.5 instead of 45, a decimal slip.<br>"
+         + "20,000 comes from dividing by 450, the same slip in the other direction.<br>"
+         + "180,000 is 200,000 less 10 percent, as if fees had been taken out, but the question told you to ignore fees.<br>"
+         + "If your answer is off by a factor of ten, redo the division before you look at the options again."
+    },
+    {
+      q: "A firm owes one debt with face value $180,000. The board has just paid a cash dividend of $40,000. Straight after that payment, the shareholders' claim on the firm is worth $85,000. What were the firm's assets worth before the dividend was paid?",
+      opts: [
+        "$265,000",
+        "$305,000",
+        "$225,000",
+        "$125,000"
+      ],
+      correct: 1,
+      tag: "Payoff structure",
+      exp: "Work backwards along the same chain, one link at a time.<br>"
+         + "1. Equity is the leftover, so assets after = equity after + debt: 85,000 + 180,000 = 265,000.<br>"
+         + "2. The dividend is cash that left the firm, so the assets were bigger before it went: 265,000 + 40,000 = 305,000.<br>"
+         + "<b>Check.</b> Equity before = 305,000 − 180,000 = 125,000. After the dividend the shareholders hold 85,000 of equity plus 40,000 of cash, which is 125,000. Wealth is unchanged, so the chain holds together.<br><br>"
+         + "<b>Why the others are wrong.</b><br>"
+         + "$265,000 is the value of the assets after the dividend, one link short of the question.<br>"
+         + "$225,000 takes the dividend off instead of putting it back. The cash left the firm, so going backwards you add it.<br>"
+         + "$125,000 is the equity before the dividend, not the assets. It never adds the debt holders' claim, and assets have to cover both claims."
+    },
+    {
+      q: "A manager is deciding whether to replace the delivery vans this year or run the old ones for one more year. Which task of corporate finance is this?",
+      opts: [
+        "The investment decision, also called capital budgeting",
+        "The financing decision",
+        "The payout decision",
+        "A secondary market decision"
+      ],
+      correct: 0,
+      tag: "Concepts",
+      exp: "The question on the table is which real assets the firm should own. That is the investment decision, the one the course calls capital budgeting.<br><br>"
+         + "<b>Why the others are wrong.</b><br>"
+         + "The financing decision is about where the money comes from, such as new shares, senior debt or junior debt, and nobody has asked that yet.<br>"
+         + "The payout decision applies to cash that has already come back to the firm: keep it and put it back to work, or pay it to shareholders.<br>"
+         + "A secondary market decision is not a task of the firm at all, because there investors trade with each other and the firm is not involved.<br><br>"
+         + "<b>A useful order.</b> First decide which asset, then how to pay for it, then what to do with the cash it earns."
+    }
+  ]
+});
+</script>
+</body>
+</html>

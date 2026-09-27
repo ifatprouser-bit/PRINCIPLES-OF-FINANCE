@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 6: Bonds, and the risks inside them</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">DAY 6 · Thursday 1 October</div>
+  <h1>Bonds, and the risks inside them</h1>
+  <p class="lede">A bond is a loan with its payment dates printed on it. Read the dates, price the pieces, then ask what can go wrong.</p>
+
+  <!-- ============ RECALL: DAY 2 ============ -->
+  <div class="preq">
+    <div class="tag">Five minutes: recall</div>
+    <p><b>Day 2 was the single cash flow.</b> Answer both on paper before you open anything.</p>
+    <p><b>1.</b> The course gives three reasons why money you receive later is worth less to you today. Name them.</p>
+    <p><b>2.</b> You will receive 5,000 at the end of year 4. The rate is 7 percent. What is that worth today?
+       And if you instead put 5,000 in the bank today at 7 percent, what do you hold at the end of year 4?</p>
+    <p class="do">Write your two answers down, then check.</p>
+    <button class="reveal-btn" type="button" data-reveal="rc1">Show the answer</button>
+    <div class="reveal" id="rc1">
+      <p class="p"><b>1.</b> People would rather spend now than later, so they must be paid to wait.
+        Inflation eats the buying power of money over time. And future cash flows are uncertain, so investors
+        ask for more when the payment is less sure.</p>
+      <p class="p"><b>2.</b> Value today, discounting:
+        <span class="math">5,000 / 1.07<sup>4</sup> = 5,000 / 1.310796 = 3,814.48</span></p>
+      <p class="p">Value at the end of year 4, compounding:
+        <span class="math">5,000 × 1.07<sup>4</sup> = 6,553.98</span></p>
+      <p class="p">Check: 3,814.48 × 1.07<sup>4</sup> = 5,000.00. Discounting and compounding are the same
+        move in opposite directions. Today you will use both on one security.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRETEST ============ -->
+  <div class="preq">
+    <div class="tag">Guess first</div>
+    <p>A bond was issued with a par value of 1,000. It pays 60 at the end of every year until it matures,
+       and it repays the 1,000 at the end. Today, buyers of bonds with this risk will not hand over
+       their money for less than 8 percent a year.</p>
+    <p><b>Is this bond trading above 1,000, below 1,000, or at exactly 1,000?</b></p>
+    <p class="do">Guess now. No answer is shown here. This is a guess, not a test. Panel 2 settles it.</p>
+  </div>
+
+  <!-- ============ PANEL 1 ============ -->
+  <div class="panel">
+    <h3>1. Value the bond: zero coupon, coupon bond, perpetuity</h3>
+
+    <p class="partlab">What a debt security is</p>
+    <p class="p">A debt security, also called a fixed income security, is a loan you can buy and sell.
+      You hand money to the borrower today. The borrower promises you fixed payments later. Those payments
+      are written in the contract before you buy. That is why this group is called fixed income.</p>
+    <p class="p">From the buyer's side the cash moves twice. Cash goes <b>out</b> once, when you pay the price
+      today. Cash comes <b>in</b> later, as coupons along the way and as the par value at the end.</p>
+
+    <table class="dtable">
+      <tr><th style="width:26%">Word</th><th>What it means</th></tr>
+      <tr><td class="lab">Par value</td><td style="text-align:left">The amount the borrower repays at maturity. Also called face value, or the principal, which is the sum first borrowed. Usually 1,000 on a corporate or Treasury bond.</td></tr>
+      <tr><td class="lab">Coupon rate</td><td style="text-align:left">A percentage printed on the bond. It never changes. It exists only to fix the size of the payment.</td></tr>
+      <tr><td class="lab">Coupon payment</td><td style="text-align:left">Coupon rate × par value. A 6 percent coupon rate on a par of 1,000 pays 60 every year.</td></tr>
+      <tr><td class="lab">Maturity</td><td style="text-align:left">The date the par value comes back. The last year pays the coupon and the par together, so 60 + 1,000 = 1,060.</td></tr>
+      <tr><td class="lab">Yield</td><td style="text-align:left">The return buyers ask for today to hold this bond. The course also calls it the required rate of return or the discount rate. All three are the same number.</td></tr>
+    </table>
+
+    <p class="partlab">Three shapes, and you already own all three</p>
+    <p class="p">A bond is priced the same way as anything else: the present value of what it pays.
+      Which formula you reach for depends only on the shape of the payments.</p>
+
+    <table class="dtable">
+      <tr><th style="width:26%">Bond</th><th>Payments</th><th style="width:30%">Tool</th></tr>
+      <tr><td class="lab">Zero coupon</td><td style="text-align:left">Nothing until maturity, then the par value once</td><td style="text-align:left">Single cash flow, day 2</td></tr>
+      <tr><td class="lab">Coupon bond</td><td style="text-align:left">The same coupon every year, plus the par value at the end</td><td style="text-align:left">Annuity plus a single cash flow, which is the mixed stream of day 5</td></tr>
+      <tr><td class="lab">Perpetuity bond</td><td style="text-align:left">The same coupon every year forever, and the principal never comes back</td><td style="text-align:left">Perpetuity, day 4</td></tr>
+    </table>
+
+    <p class="p">So a coupon bond is not a new object. It is the day 5 lesson in new clothes: one annuity and
+      one single cash flow, valued one at a time and then added. The professor prices it exactly that way in class.</p>
+
+    <div class="rule">Before you do any sums, say out loud which of the three shapes is in front of you.
+      Zero coupon means one payment. Coupon bond means annuity plus one payment. Perpetuity means the
+      principal never returns.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 190" role="img" aria-label="Timeline of a coupon bond: money paid out today, a coupon of 60 received at the end of each year, and 1,060 received in the final year">
+        <line x1="40" y1="110" x2="530" y2="110" stroke="#211c33" stroke-width="2"/>
+        <g stroke="#211c33" stroke-width="2">
+          <line x1="40" y1="104" x2="40" y2="116"/><line x1="130" y1="104" x2="130" y2="116"/>
+          <line x1="220" y1="104" x2="220" y2="116"/><line x1="310" y1="104" x2="310" y2="116"/>
+          <line x1="490" y1="104" x2="490" y2="116"/>
+        </g>
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12" fill="#6f6886" text-anchor="middle">
+          <text x="40" y="130">year 0</text><text x="130" y="130">1</text>
+          <text x="220" y="130">2</text><text x="310" y="130">3</text><text x="490" y="130">20</text>
+          <text x="400" y="115">· · ·</text>
+        </g>
+        <g stroke="#1f9d63" stroke-width="2">
+          <line x1="130" y1="100" x2="130" y2="72"/><line x1="220" y1="100" x2="220" y2="72"/>
+          <line x1="310" y1="100" x2="310" y2="72"/><line x1="490" y1="100" x2="490" y2="58"/>
+          <g fill="#1f9d63" stroke="none">
+            <polygon points="130,66 126,74 134,74"/><polygon points="220,66 216,74 224,74"/>
+            <polygon points="310,66 306,74 314,74"/><polygon points="490,52 486,60 494,60"/>
+          </g>
+        </g>
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#1f9d63" text-anchor="middle" font-weight="700">
+          <text x="130" y="60">60</text><text x="220" y="60">60</text><text x="310" y="60">60</text>
+          <text x="490" y="44">1,060</text>
+        </g>
+        <line x1="40" y1="120" x2="40" y2="150" stroke="#d2453f" stroke-width="2"/>
+        <polygon points="40,156 36,148 44,148" fill="#d2453f"/>
+        <text x="40" y="172" font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#d2453f" text-anchor="middle" font-weight="700">price you pay</text>
+      </svg>
+      <div class="cap">A 20 year coupon bond. Green arrows come in to you, the red arrow goes out.
+        Years 1 to 20 are one annuity of 60. The extra 1,000 in year 20 is one single cash flow.</div>
+    </div>
+
+    <p class="partlab">Worked example: the bond the professor prices in class</p>
+    <div class="question">A plain coupon bond has a par value of 1,000 and matures in 20 years.
+      It promises interest of 6 percent each year. Bonds of this risk yield 5 percent a year.
+      What is the bond worth today?</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name the shape and the inputs.</span>
+      Coupon bond, so annuity plus single cash flow. Coupon payment = 0.06 × 1,000 = 60, paid at the end of
+      years 1 to 20. Par value 1,000 arrives at the end of year 20. The discount rate is the yield, 5 percent,
+      not the 6 percent.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Value the 20 coupons as an annuity.</span>
+      <span class="math">60 × (1 − 1.05<sup>−20</sup>) / 0.05 = 60 × 12.462210 = 747.73</span>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Value the par value as a single cash flow.</span>
+      <span class="math">1,000 / 1.05<sup>20</sup> = 1,000 / 2.653298 = 376.89</span>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Add. Both pieces now sit at year 0, so adding is allowed.</span>
+      <span class="math">747.73 + 376.89 = 1,124.62</span>
+    </div></div>
+    <div class="ans">The bond is worth 1,124.62 today. That is 124.62 above its par value of 1,000.</div>
+    <p class="p">Sense check: buyers only need 5 percent, and this bond hands them 6 percent of 1,000 every
+      year. They will pay more than 1,000 to get it. The answer being above par is the expected direction,
+      not a surprise.</p>
+
+    <p class="partlab">The perpetuity case</p>
+    <p class="p">Some debt pays a coupon forever and never returns the principal. The course calls this a
+      perpetuity, and the notes give the example of a consol, an old British bond with no end date. There is no par value to discount, because it
+      never comes back. So the whole price is the perpetuity formula. A bond paying 50 a year forever, when
+      buyers ask for 8 percent, is worth <span class="math">50 / 0.08 = 625.00</span>.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A zero coupon bond repays 1,000 at the end of year 6 and pays nothing before that.
+        Buyers ask for 6 percent. What is it worth today?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1a">Show the answer</button>
+      <div class="reveal" id="t1a">
+        <p class="p">One payment, so one single cash flow. No annuity anywhere.</p>
+        <p class="p"><span class="math">1,000 / 1.06<sup>6</sup> = 1,000 / 1.418519 = 704.96</span></p>
+        <p class="p">A zero coupon bond always trades below its par value. The only thing it gives you is one
+          payment in the future, and the future is discounted. This is why the course says T-bills
+          are sold at a discount.</p>
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it. A bond has a par value of 5,000, a coupon rate of 4.5 percent and 8 years to
+        maturity. How much cash do you receive at the end of year 3, and how much at the end of year 8?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1b">Show the answer</button>
+      <div class="reveal" id="t1b">
+        <p class="p">Coupon payment = 0.045 × 5,000 = <b>225</b>. That arrives at the end of every year,
+          including year 3.</p>
+        <p class="p">Year 8 is the last year, so it carries the coupon and the par value together:
+          225 + 5,000 = <b>5,225</b>.</p>
+        <p class="p">Notice what the coupon rate did here. It sized the payment. It said nothing about what
+          the bond is worth or what you earn. That job belongs to the yield.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 2 ============ -->
+  <div class="panel">
+    <h3>2. Price against rates, and the coupon rate trap</h3>
+
+    <p class="partlab">Two percentages that look alike and do different jobs</p>
+    <p class="p">This is the single place where marks are lost on bonds. Two numbers on the page are both
+      percentages. They are not the same thing and they almost never have the same value.</p>
+
+    <table class="dtable">
+      <tr><th style="width:24%"> </th><th>Coupon rate</th><th>Yield</th></tr>
+      <tr><td class="lab">Who sets it</td><td style="text-align:left">The borrower who sells the bond, once, on the day it is born</td><td style="text-align:left">The market, every day it trades</td></tr>
+      <tr><td class="lab">Does it change</td><td style="text-align:left">Never</td><td style="text-align:left">All the time</td></tr>
+      <tr><td class="lab">What it does</td><td style="text-align:left">Fixes the size of the coupon payment</td><td style="text-align:left">Is the rate you discount with</td></tr>
+      <tr><td class="lab">In the formula</td><td style="text-align:left">Sits on top, inside the payment</td><td style="text-align:left">Sits underneath, in (1 + r)</td></tr>
+    </table>
+
+    <p class="p">If you discount with the coupon rate, you will always get exactly the par value back, whatever
+      the question said. That is the trap. Your answer will be a neat, round 1,000, and it will be wrong.</p>
+
+    <p class="partlab">Premium, discount, and par</p>
+    <p class="p">Compare the two rates and the price follows. The professor puts it in one line in class:
+      when the required rate of return is lower than the coupon rate, the bond trades in premium. When the
+      coupon rate is smaller than the required rate of return, it trades in discount. When both are equal,
+      it trades at par and the price is exactly 1,000.</p>
+
+    <table class="dtable">
+      <tr><th>Test</th><th>Name</th><th>Price</th></tr>
+      <tr><td class="lab">Coupon rate above the yield</td><td>Premium bond</td><td>Above par</td></tr>
+      <tr><td class="lab">Coupon rate below the yield</td><td>Discount bond</td><td>Below par</td></tr>
+      <tr><td class="lab">Coupon rate equal to the yield</td><td>Trading at par</td><td>Exactly par</td></tr>
+    </table>
+
+    <p class="partlab">The seesaw</p>
+    <p class="p">Bond prices and interest rates move in opposite directions. Always. The reason is not a rule
+      to learn by heart. It is the formula. The promised payments are fixed by contract, so when the discount
+      rate under them rises, their present value has to fall.</p>
+    <p class="p">The professor's own story: a government issues a bond with a 5 percent coupon at a time when
+      buyers require 5 percent, so it trades at 1,000. Then people start to expect more inflation. They will
+      no longer accept 5 percent. They still receive the same promised money, so the only way for them to earn
+      more is to pay less. The price slides to, say, 900, and now the bond is a discount bond.</p>
+
+    <div class="rule">Rates up, price down. Rates down, price up. The coupon never moves, so the price has
+      to do all the moving.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 250" role="img" aria-label="A falling curve of bond price against yield, crossing the par value of 1,000 at a yield of 6 percent, with the premium region above and the discount region below">
+        <line x1="70" y1="30" x2="70" y2="200" stroke="#211c33" stroke-width="1.5"/>
+        <line x1="70" y1="200" x2="520" y2="200" stroke="#211c33" stroke-width="1.5"/>
+        <line x1="70" y1="123.3" x2="520" y2="123.3" stroke="#6f6886" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <polyline points="70.0,44.8 123.8,66.1 177.5,86.2 231.2,105.3 285.0,123.3 338.8,140.4 392.5,156.6 446.2,172.0 500.0,186.5"
+                  fill="none" stroke="#6b4ef0" stroke-width="3"/>
+        <circle cx="177.5" cy="86.2" r="4.5" fill="#1f9d63"/>
+        <circle cx="285.0" cy="123.3" r="4.5" fill="#211c33"/>
+        <circle cx="392.5" cy="156.6" r="4.5" fill="#d2453f"/>
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="11.5" fill="#6f6886">
+          <text x="64" y="127" text-anchor="end">1,000</text>
+          <text x="64" y="48" text-anchor="end">1,189</text>
+          <text x="64" y="190" text-anchor="end">848</text>
+          <text x="70" y="216" text-anchor="middle">2%</text>
+          <text x="177.5" y="216" text-anchor="middle">4%</text>
+          <text x="285" y="216" text-anchor="middle">6%</text>
+          <text x="392.5" y="216" text-anchor="middle">8%</text>
+          <text x="500" y="216" text-anchor="middle">10%</text>
+          <text x="295" y="238" text-anchor="middle">yield required by buyers</text>
+        </g>
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">
+          <text x="180" y="72" fill="#1f9d63" text-anchor="middle">premium, 1,089</text>
+          <text x="300" y="112" fill="#211c33">at par, 1,000</text>
+          <text x="400" y="176" fill="#d2453f" text-anchor="middle">discount, 920</text>
+        </g>
+      </svg>
+      <div class="cap">One bond, five years, coupon rate 6 percent, par 1,000. Only the yield changes along
+        the bottom. The line never turns upward.</div>
+    </div>
+
+    <p class="partlab">Worked example: a discount bond</p>
+    <div class="question">A bond has a par value of 1,000 and 10 years left to maturity. Its coupon rate is
+      4 percent, paid once a year. Investors buying bonds of this risk now ask for 6 percent.
+      What is the bond worth today?</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Sort the two percentages before touching the calculator.</span>
+      4 percent is the coupon rate, so it sizes the payment: 0.04 × 1,000 = 40 a year.
+      6 percent is the yield, so it is the discount rate. Coupon rate is below the yield, so expect a price
+      below 1,000.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">The 10 coupons of 40 are an annuity.</span>
+      <span class="math">40 × (1 − 1.06<sup>−10</sup>) / 0.06 = 40 × 7.360087 = 294.40</span>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">The par value is a single cash flow at year 10.</span>
+      <span class="math">1,000 / 1.06<sup>10</sup> = 1,000 / 1.790848 = 558.39</span>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Add the two pieces.</span>
+      <span class="math">294.40 + 558.39 = 852.80</span>
+    </div></div>
+    <div class="ans">852.80. It is a discount bond, trading 147.20 below par.</div>
+    <p class="p">Check the direction, not just the digits. You predicted below par in move 1 and you landed
+      below par. If your answer had come out above 1,000, something went in the wrong slot.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. One bond: par 1,000, coupon rate 6 percent, 5 years to maturity. Price it three
+        times, at a yield of 4 percent, then 6 percent, then 8 percent. Name each result.</div>
+      <button class="reveal-btn" type="button" data-reveal="t2">Show the answer</button>
+      <div class="reveal" id="t2">
+        <p class="p">The coupon is 60 every year in all three cases. Only the discount rate changes.</p>
+        <p class="p">At 4 percent:
+          <span class="math">60 × (1 − 1.04<sup>−5</sup>) / 0.04 + 1,000 / 1.04<sup>5</sup> = 1,089.04</span>
+          Premium bond.</p>
+        <p class="p">At 6 percent:
+          <span class="math">60 × (1 − 1.06<sup>−5</sup>) / 0.06 + 1,000 / 1.06<sup>5</sup> = 1,000.00</span>
+          Trading at par, exactly. Coupon rate equals yield.</p>
+        <p class="p">At 8 percent:
+          <span class="math">60 × (1 − 1.08<sup>−5</sup>) / 0.08 + 1,000 / 1.08<sup>5</sup> = 920.15</span>
+          Discount bond.</p>
+        <p class="p">Three prices, one bond, one direction. Keep the middle line in your head. When the two
+          rates are equal the price is exactly par, and you do not need a calculator to say so.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 3 ============ -->
+  <div class="panel">
+    <h3>3. The government ladder: bills, notes, bonds</h3>
+
+    <p class="p">The United States Treasury is the borrower here, not the Federal Reserve. It borrows at three
+      lengths, and the length decides the shape of the security.</p>
+
+    <table class="dtable">
+      <tr><th style="width:20%">Name</th><th style="width:26%">Maturity</th><th>Shape</th></tr>
+      <tr><td class="lab">T-bill</td><td>Up to 1 year</td><td style="text-align:left">Zero coupon. Pays no coupon at all. Sold below 100 and paid back at 100.</td></tr>
+      <tr><td class="lab">T-note</td><td>1 to 10 years</td><td style="text-align:left">Coupon bond. Pays a coupon and repays the par value at the end.</td></tr>
+      <tr><td class="lab">T-bond</td><td>More than 10 years, usually 20 or 30</td><td style="text-align:left">Coupon bond, same shape as a T-note, longer wait.</td></tr>
+      <tr><td class="lab">TIPS</td><td>Long dated</td><td style="text-align:left">The coupon and the principal are linked to inflation, so inflation risk is removed.</td></tr>
+    </table>
+
+    <p class="p">The Israeli version of the T-bill is the makam. Same idea: short, zero coupon, sold below its
+      face value.</p>
+
+    <p class="partlab">Where a T-bill's interest actually comes from</p>
+    <p class="p">A T-bill pays no coupon, so at first it looks like it pays no interest. It does. You buy it
+      below 100 and you are repaid 100. The gap is the interest. That is the whole idea.</p>
+
+    <p class="partlab">What moves the yield of a T-bill</p>
+    <p class="p">The three month bill is used as the standard for the risk free rate. The Treasury has never
+      failed to pay, and it can make the currency its own debt is written in. So default, which means failure
+      to pay, is not what moves this yield. Three things do.</p>
+
+    <table class="dtable">
+      <tr><th style="width:34%">What moves it</th><th>How it works</th></tr>
+      <tr><td class="lab">Expected inflation</td><td style="text-align:left">The main driver in the course. Buyers price what they expect prices to do over the next months, not what inflation already was. When expected inflation rose in 2022 and 2023, short rates rose with it.</td></tr>
+      <tr><td class="lab">The real interest rate</td><td style="text-align:left">The payment people demand simply for waiting, before inflation is counted at all.</td></tr>
+      <tr><td class="lab">Daily trading</td><td style="text-align:left">Bills change hands every day in the secondary market, where bonds that were sold long ago are traded again. The price is set there, and the yield is read back out of the price, so it can move day to day.</td></tr>
+    </table>
+
+    <div class="rule">A T-bill's yield is not printed anywhere. It is worked backwards out of the price the
+      market paid. Price and yield are two views of the same trade.</div>
+
+    <p class="partlab">Worked example: reading the yield out of the price</p>
+    <div class="question">A one year T-bill will pay 100 at maturity. It trades today at 95.60.
+      What yield is the buyer earning? And if worries about inflation push buyers to demand 6 percent instead,
+      what happens to the price?</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name the shape.</span>
+      A T-bill pays once, at maturity. It is a zero coupon bond, so it is a single cash flow. Price today
+      95.60, payment 100 one year out.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Turn the price into a rate.</span>
+      Price × (1 + r) = 100, so r = (100 / 95.60) − 1.
+      <span class="math">100 / 95.60 = 1.046025, so r = 4.60 percent</span>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Read it in money.</span>
+      You put in 95.60 and get back 100. The gain is 4.40, and 4.40 on 95.60 is the same 4.60 percent.
+      No coupon was ever paid.
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Now push the required yield up to 6 percent.</span>
+      The promise of 100 does not change. Only the discount does.
+      <span class="math">100 / 1.06 = 94.34</span>
+    </div></div>
+    <div class="ans">The yield today is 4.60 percent. If buyers start demanding 6 percent, the price falls from
+      95.60 to 94.34, a fall of 1.26. Higher yield, lower price, on a bill just as on a bond.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A one year bill promises 100 at maturity. What do you pay if buyers ask for
+        3.5 percent? What if they ask for 5 percent? Which of T-bill, T-note and T-bond pay coupons?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3">Show the answer</button>
+      <div class="reveal" id="t3">
+        <p class="p">At 3.5 percent: <span class="math">100 / 1.035 = 96.62</span></p>
+        <p class="p">At 5 percent: <span class="math">100 / 1.05 = 95.24</span></p>
+        <p class="p">Both are below 100, which is what a zero coupon security always does. The higher required
+          yield gives the lower price, the seesaw again.</p>
+        <p class="p">T-notes and T-bonds pay coupons. T-bills do not.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 4 ============ -->
+  <div class="panel">
+    <h3>4. The risks inside a bond, and the bank case</h3>
+
+    <p class="partlab">Risk free debt against risky debt</p>
+    <p class="p">In this course, risk free debt means government debt issued in the government's own currency.
+      The state can tax, and it can create the currency the debt is written in, so failure to pay is close to
+      impossible. That is why the short Treasury bill is used as the standard risk free rate.</p>
+    <p class="p">Risky debt is everything where the promised money might not arrive. A company has no printing
+      press. If its assets are worth less than what it owes, the payment is simply not there. The course
+      notes are clear about the limit of the word. Risk free means free of default risk, not free of every
+      risk. Inflation and currency risk stay.</p>
+
+    <p class="partlab">The two risks the exam guide names</p>
+    <table class="dtable">
+      <tr><th style="width:22%"> </th><th>Inflation risk</th><th>Credit risk</th></tr>
+      <tr><td class="lab">The worry</td><td style="text-align:left">The money arrives in full but buys less than you hoped</td><td style="text-align:left">The money does not arrive in full, or at all</td></tr>
+      <tr><td class="lab">Also called</td><td style="text-align:left">Purchasing power risk</td><td style="text-align:left">Default risk</td></tr>
+      <tr><td class="lab">Who has it</td><td style="text-align:left">Almost every bond, government ones included. TIPS are the course's exception</td><td style="text-align:left">Corporate borrowers, and governments borrowing in a currency they cannot print</td></tr>
+      <tr><td class="lab">Where you see it</td><td style="text-align:left">In the gap between the nominal rate, the one printed on the bond, and the real rate, the one left after inflation</td><td style="text-align:left">In the yield spread over a government bond of the same length</td></tr>
+    </table>
+
+    <p class="p">So corporate against government is not a question of who promises more. It is a question
+      of who is more likely to keep the promise. Two bonds can promise the very same cash and trade at
+      different prices, because buyers discount the shakier promise harder. The extra yield the corporate has
+      to offer is what the course calls the credit spread, or yield spread, and it is a measure of risk.</p>
+
+    <div class="rule">Same promise, different borrower, different price. The riskier bond is always the cheaper
+      one, because cheap is how the market pays you for carrying the risk.</div>
+
+    <p class="partlab">Worked example: what credit risk costs</p>
+    <div class="question">Two bonds each promise a single payment of 1,000 in one year and nothing before it.
+      One is issued by the government, and buyers ask for 4 percent. The other is issued by a company, and
+      buyers ask for 7 percent from that borrower. Price both. If inflation over the year turns out to be
+      3 percent, what does the government bond really earn?</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Both are zero coupon, so both are single cash flows.</span>
+      Only the discount rate differs.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">The government bond.</span>
+      <span class="math">1,000 / 1.04 = 961.54</span>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">The company bond.</span>
+      <span class="math">1,000 / 1.07 = 934.58</span>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Read the difference.</span>
+      The company bond costs 26.96 less for the same promise. The credit spread is 7 − 4 = 3 percentage
+      points, and 26.96 is what those 3 points are worth in cash today.
+    </div></div>
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Now the inflation part.</span>
+      The course uses a close enough rule: real = nominal − inflation.
+      <span class="math">4 − 3 = 1 percent real</span>
+      The government bond removed credit risk. It did not remove inflation risk.
+    </div></div>
+    <div class="ans">Government bond 961.54, company bond 934.58. The gap of 26.96 is the price of credit risk.
+      The 3 percent inflation then takes most of what the safe bond earned. That is inflation risk at work on
+      a bond with no default risk at all.</div>
+
+    <p class="partlab">Commercial banks: deposits, subordinated debt, deposit insurance</p>
+    <p class="p">A commercial bank is a borrower like any other, and the course uses it as the clearest case
+      of a debt ladder. It borrows from the public in the form of deposits, and it lends that money out.
+      Deposits are its main debt. On top of deposits many banks also issue subordinated debt. That is the
+      same thing as junior debt. It is paid only after the bank's other debt has been paid in full. Then come
+      the shareholders, who are paid last and only from what is left.</p>
+    <p class="p">Deposit insurance is a government promise to pay insured depositors back if the bank fails.
+      It does not make the bank safe. It moves the depositor's risk onto the state. The holder of
+      subordinated debt gets no such promise. That is exactly why subordinated debt has to offer a higher return.</p>
+    <p class="p">The course files list deposit insurance as an exam topic. They give no coverage limit and no
+      scheme name, so do not try to remember a number for it.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A small bank fails. It owes 100 to insured depositors and 20 to holders of its
+        subordinated debt. Everything it owns is sold and raises 105. Who receives what, and who carries
+        the loss?</div>
+      <button class="reveal-btn" type="button" data-reveal="t4">Show the answer</button>
+      <div class="reveal" id="t4">
+        <p class="p">Pay in order, never out of order.</p>
+        <p class="p">Depositors are first in line and are owed 100. There is 105, so they are paid in
+          full: <b>100</b>. Their insurance is not even needed here.</p>
+        <p class="p">Subordinated debt is next, owed 20, and only 105 − 100 = 5 is left: <b>5</b>.
+          They lose 15.</p>
+        <p class="p">Shareholders are last and nothing remains: <b>0</b>.</p>
+        <p class="p">Check: 100 + 5 + 0 = 105, exactly what the assets raised. The pieces always add back to
+          the assets. Day 7 turns this line of claims into the formulas you will use on the exam.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-05.html">← Day 5: Mixed streams</a>
+    <a class="navbtn primary" href="day-07.html">Day 7: Who gets paid first →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 6,
+  topic: "Bonds",
+  items: [
+    {
+      q: "A bond has a par value of 1,000 and pays a fixed coupon of 70 at the end of each year until it matures. Investors buying bonds of this risk today ask for 5 percent. Before you do any sums, what must be true about its market price?",
+      opts: ["Above 1,000", "Below 1,000", "Exactly 1,000", "It cannot be decided without knowing the years left to maturity"],
+      correct: 0,
+      tag: "Bonds",
+      exp: "<b>The test.</b> Compare the coupon rate with the yield.<br><br><b>Inputs from the stem.</b> The coupon is 70 on a par of 1,000, so the coupon rate is 70 / 1,000 = 7 percent. The yield buyers ask for is 5 percent.<br><br>1. Coupon rate 7 percent is above the yield 5 percent.<br>2. So the bond hands over more each year than buyers need to be paid.<br>3. They bid its price up until the return they actually get falls back to 5 percent. That means a price above par.<br><br><b>Check.</b> Price the same bond for 10 years at 5 percent and you get 1,154.43, above par as predicted. The exact number is not needed to answer, only the direction.<br><br><b>The wrong options.</b> Below 1,000 is the discount case, which needs the coupon rate under the yield, the reverse of this stem. Exactly 1,000 happens only when the two rates are equal. The maturity option is tempting. Maturity does change how far above par the price sits. But it can never flip the side. As long as the coupon rate stays above the yield, the price stays above par."
+    },
+    {
+      q: "A bond has a par value of 1,000, a coupon rate of 5 percent paid once a year, and 4 years left to maturity. Investors now ask for 9 percent on bonds of this risk. What is the bond worth today?",
+      opts: ["1,000.00", "984.69", "870.41", "161.99"],
+      correct: 2,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> A coupon bond is an annuity of coupons plus a single cash flow of par. PV = C × (1 − (1+r)^−n) / r + F / (1+r)^n.<br><br><b>Inputs from the stem.</b> C = 0.05 × 1,000 = 50 a year for 4 years. F = 1,000 at year 4. r is the yield, 9 percent, not the 5 percent coupon rate. n = 4.<br><br>1. Growth factor: 1.09^4 = 1.411582<br>2. Annuity factor: (1 − 1 / 1.411582) / 0.09 = 3.239720<br>3. PV of the coupons: 50 × 3.239720 = 161.99<br>4. PV of the par value: 1,000 / 1.411582 = 708.43<br>5. Price: 161.99 + 708.43 = 870.41<br><br><b>Check.</b> The coupon rate 5 percent is below the yield 9 percent, so this has to be a discount bond, priced under 1,000. 870.41 is under 1,000. The direction agrees before the digits are trusted.<br><br><b>The wrong options.</b> 1,000.00 is what you get if you discount at the coupon rate of 5 percent instead of the yield. Discounting at the coupon rate always returns exactly par, whatever the question said, so a clean 1,000 is a warning sign, not a result. 984.69 discounts the coupons correctly at 9 percent but the par value at 5 percent, which mixes the two rates in one answer. 161.99 is the coupons alone, with the 1,000 par value forgotten."
+    },
+    {
+      q: "A zero coupon bond will pay 1,000 at the end of year 3 and pays nothing before then. It trades today at 816.30. What annual yield is a buyer at that price earning?",
+      opts: ["7.50 percent", "7.00 percent", "6.12 percent", "22.50 percent"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula, run backwards.</b> Price × (1 + r)^n = face value, so r = (F / P)^(1/n) − 1. This is the day 2 single cash flow solved for the rate instead of for the value.<br><br><b>Inputs from the stem.</b> P = 816.30, F = 1,000, n = 3. No coupon exists, so there is no annuity anywhere in this question.<br><br>1. F / P = 1,000 / 816.30 = 1.225040<br>2. Take the cube root: 1.225040^(1/3) = 1.0700<br>3. Take away 1: r = 0.0700, that is 7.00 percent<br><br><b>Check.</b> Put it back: 1,000 / 1.07^3 = 816.30, the price in the stem. It closes.<br><br><b>The wrong options.</b> 22.50 percent is the whole three year gain, (1,000 − 816.30) / 816.30, never turned into a yearly rate. 7.50 percent takes that 22.50 percent and divides it by 3, which is simple interest and ignores that the money compounds. 6.12 percent makes the same division by 3 and also measures the gain against the face value of 1,000 instead of against the 816.30 actually invested."
+    },
+    {
+      q: "A one year government bill promises 100 at maturity and trades this morning at 96.15, a yield of about 4.0 percent. At noon, new figures are published and investors begin to expect much higher inflation over the coming year. What happens to this bill in the market?",
+      opts: ["Its price rises and its yield falls", "Its price does not move, because the 100 payment at maturity is fixed by contract", "Its price falls and its yield falls with it", "Its price falls and its yield rises"],
+      correct: 3,
+      tag: "Bonds",
+      exp: "<b>What changed.</b> Expected inflation is the main driver of a short government bill's yield in this course. Higher expected inflation means buyers will not hand over money for 4 percent any more. They demand more.<br><br><b>Why the price must move.</b> The bill still promises exactly 100 and nothing else. The only thing a buyer can change is what they pay for that promise. Paying less is the only way to earn more from a fixed payment.<br><br>1. Required yield rises, say to 5 percent.<br>2. New price: 100 / 1.05 = 95.24, down from 96.15.<br>3. So the price fell and the yield rose in the same move.<br><br><b>Check.</b> Price and yield are two readings of one trade. They cannot both rise.<br><br><b>The wrong options.</b> Price up with yield down is the seesaw run the wrong way, which is what happens when expected inflation falls. No movement treats the fixed 100 as if it fixed the price too, but the contract fixes the payment, never the price. Price down and yield down together is impossible. A lower price on the same promised 100 has to mean a higher return."
+    },
+    {
+      q: "A perpetual bond promises 45 at the end of every year forever. The principal is never repaid. Investors ask for 6 percent. What is it worth today?",
+      opts: ["750.00", "795.00", "42.45", "1,000.00"],
+      correct: 0,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> Payments that are equal, spaced one period apart and never stop are a perpetuity: PV = C / r. There is no par value term, because the principal never comes back.<br><br><b>Inputs from the stem.</b> C = 45, first payment at the end of year 1. r = 0.06. No maturity, so no single cash flow to add.<br><br>1. PV = 45 / 0.06<br>2. = 750.00, and that value already sits at year 0, because the formula lands one period before the first payment.<br><br><b>Check.</b> 750 at 6 percent earns 45 a year. You could collect the 45 forever and never touch the 750. That is what makes 750 the right price.<br><br><b>The wrong options.</b> 795.00 is 750 × 1.06, pushing the answer forward a year when the perpetuity formula already gave a year 0 value. 42.45 is 45 / 1.06, treating the endless stream as one single payment at year 1. 1,000.00 assumes every bond is worth its par value, but this bond has no par value to return, so par cannot be the answer."
+    },
+    {
+      q: "Two bonds mature in 10 years, promise the same yearly coupon and the same face value of 1,000. One is issued by the United States Treasury in dollars. The other is issued by a manufacturing company in dollars. Which statement matches this course?",
+      opts: ["The two trade at the same price, because the promised payments are the same", "The company bond trades at a lower price, because buyers require a higher return for the chance that the company cannot pay", "The Treasury bond carries no risk of any kind, so nothing can reduce what its holder really earns", "The company bond removes inflation risk, because its coupon is fixed by a private contract"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>The idea.</b> Price follows the discount rate, and the discount rate follows the risk. The Treasury can tax and can create the dollars its own debt is written in, so default is close to impossible. A company can do neither. So buyers ask for more from the company, and asking for more means paying less for the same promise.<br><br><b>The number behind it.</b> The extra yield the company must offer over a government bond of the same length is the credit spread, which the course names as a measure of risk.<br><br><b>Why the other options are wrong.</b> Same price for the same promises ignores that a promise is only as good as the borrower. A promise is priced by how likely it is to be kept. No risk of any kind claims too much: in this course risk free means free of default risk only. The Treasury bond still carries inflation risk, and inflation is exactly what eats the real return. You cannot remove inflation risk with a private contract. The course's inflation protected security is TIPS, issued by the Treasury, where the coupon and the principal are linked to inflation. A fixed private coupon does the opposite, because a fixed payment is exactly what inflation eats away."
+    }
+  ]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula page</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a>
+  <div class="crumb">REFERENCE · EVERY FORMULA IN THE PACK</div>
+  <h1>Every formula, in one place</h1>
+  <p class="lede">Keep this open beside you while you work. Read it quickly before the exam.</p>
+
+  <!-- ============ OPENING ============ -->
+  <div class="panel">
+    <p class="p">Every formula below is copied from the day pages of this pack, in the same form those
+      pages teach it. The real exam hands you its own formula sheet, so nothing here has to be learned
+      by heart. The line under each formula is the part worth reading twice. It says when you reach
+      for that formula and not another one.</p>
+  </div>
+
+  <!-- ============ PAYOFF AT MATURITY ============ -->
+  <div class="panel">
+    <h3>1 · Payoff at maturity: who gets what</h3>
+    <p class="note">Day 7. <span class="math">V<sub>T</sub></span> is the value of the firm's assets at
+      maturity. <span class="math">F<sub>S</sub></span> is the face value of the senior debt.
+      <span class="math">F<sub>J</sub></span> is the face value of the junior debt.</p>
+
+    <p class="partlab">Senior debt</p>
+    <div class="math">Min(V<sub>T</sub>, F<sub>S</sub>)</div>
+    <p class="given">Use it when the debt comes due and you are asked what the senior lender collects.
+      The senior lender is paid first, and never more than the face value.</p>
+
+    <p class="partlab">Junior debt, also called subordinated debt</p>
+    <div class="math">0</div>
+    <p class="given">Use this when <span class="math">V<sub>T</sub> &lt; F<sub>S</sub></span>. The senior
+      lender is not yet paid in full, so the junior lender gets nothing at all.</p>
+    <div class="math">Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>)</div>
+    <p class="given">Use this once the senior lender is paid in full. The junior lender takes what is
+      left, but never more than his own face value.</p>
+
+    <p class="partlab">Equity</p>
+    <div class="math">Max(V<sub>T</sub> − F<sub>S</sub>, 0)</div>
+    <p class="given">Use it when senior debt is the only debt. The owners take what is left after the
+      lender, and they can never be asked to pay in.</p>
+    <div class="math">Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0)</div>
+    <p class="given">Use it when there is junior debt as well. The owners are paid after all of it.
+      See the last panel on this page for why both lines are the same rule.</p>
+
+    <div class="rule">Two checks on every payoff answer. The three payoffs must add up to exactly
+      <span class="math">V<sub>T</sub></span>. Equity is never below zero.</div>
+  </div>
+
+  <!-- ============ ONE CASH FLOW ============ -->
+  <div class="panel">
+    <h3>2 · One cash flow</h3>
+    <p class="note">Day 2. One amount, one date.</p>
+
+    <p class="partlab">Present value, coming back</p>
+    <div class="math">PV = FV / (1 + r)<sup>N</sup></div>
+    <p class="given">Use it when one amount sits on a future date and you want its value today.</p>
+
+    <p class="partlab">Future value, going forward</p>
+    <div class="math">FV = PV &times; (1 + r)<sup>N</sup></div>
+    <p class="given">Use it when one amount sits today and you want what it grows to by date N.</p>
+
+    <p class="partlab">The rate, when both ends are known</p>
+    <div class="math">r = (FV / PV)<sup>1/N</sup> &minus; 1</div>
+    <p class="given">Use it when the question gives you both amounts and the number of years, and asks
+      for the rate of return.</p>
+
+    <p class="given">The mock pages write these two with different letters: PV = CF<sub>t</sub> / (1 + r)<sup>t</sup>
+      for the first and FV = CF<sub>0</sub> × (1 + r)<sup>n</sup> for the second. Only the letter for the
+      amount changes. The formulas are the same ones.</p>
+  </div>
+
+  <!-- ============ MANY EQUAL CASH FLOWS ============ -->
+  <div class="panel">
+    <h3>3 · Many cash flows that end</h3>
+    <p class="note">Days 3 and 4. A is the payment. n is how many payments there are.</p>
+
+    <p class="partlab">Present value of an annuity</p>
+    <div class="math">PV = A × [ 1 − 1 / (1 + r)<sup>n</sup> ] / r</div>
+    <p class="given">Use it when the same amount arrives every period, the gaps are equal, the count is
+      fixed, and you want one value today.</p>
+
+    <p class="partlab">Future value of an annuity</p>
+    <div class="math">FV = A × [ (1 + r)<sup>n</sup> − 1 ] / r</div>
+    <p class="given">Use it when the same amount is paid in every period and you want the pile on the
+      day of the last payment. Saving plans and pension questions.</p>
+
+    <p class="partlab">Present value of a growing annuity</p>
+    <div class="math">PV = CF1 × [ 1 − ((1 + g) / (1 + r))<sup>n</sup> ] / (r − g)</div>
+    <p class="given">Use it when the payment grows at a steady rate g and the stream still has a last
+      payment. Look for an end date: a license period, a lease length, a remaining life.</p>
+
+    <p class="partlab">Growing annuity, the case where r equals g</p>
+    <div class="math">PV = n × A</div>
+    <p class="given">Use it when r and g are the same number, so the formula above would divide by zero.
+      A is the current cash flow, the one before the first growth. Day 4 takes this from the course notes.</p>
+  </div>
+
+  <!-- ============ FOREVER ============ -->
+  <div class="panel">
+    <h3>4 · Cash flows that never end</h3>
+    <p class="note">Day 4. Nothing in the question stops the stream.</p>
+
+    <p class="partlab">Present value of a perpetuity</p>
+    <div class="math">PV = A / r</div>
+    <p class="given">Use it when the same amount arrives every period and there is no end date and no
+      growth. One division, nothing else.</p>
+
+    <p class="partlab">Present value of a growing perpetuity</p>
+    <div class="math">PV = CF1 / (r − g)</div>
+    <p class="given">Use it when the payment grows at a steady rate for ever. The top line is next
+      period's cash flow, not the payment made now. It needs <span class="math">r &gt; g</span>.</p>
+  </div>
+
+  <!-- ============ STOCKS ============ -->
+  <div class="panel">
+    <h3>5 · Stocks</h3>
+    <p class="note">Day 8. P is a price. D is a dividend. The number below the letter is the date.</p>
+
+    <p class="partlab">Holding period return</p>
+    <div class="math">r = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></div>
+    <p class="given">Use it when you are told what you paid, what the share is worth one period later,
+      and the dividend you collected, and you are asked what you earned.</p>
+
+    <p class="partlab">Dividend model, no growth</p>
+    <div class="math">P<sub>0</sub> = D / r</div>
+    <p class="given">Use it when the dividend is the same amount every year for ever. This is the
+      perpetuity formula under a different name. Preferred shares behave this way.</p>
+
+    <p class="partlab">Dividend model, constant growth</p>
+    <div class="math">P<sub>0</sub> = D<sub>1</sub> / (r − g)</div>
+    <p class="given">Use it when the dividend grows at a steady rate for ever. This is the growing
+      perpetuity, so it also needs r bigger than g.</p>
+
+    <p class="partlab">Next year's dividend, from the one just paid</p>
+    <div class="math">D<sub>1</sub> = D<sub>0</sub> × (1 + g)</div>
+    <p class="given">Use it first whenever the question gives you the dividend just paid. The model
+      above wants next year's dividend on top, never the one already in your hand.</p>
+  </div>
+
+  <!-- ============ PROJECTS ============ -->
+  <div class="panel">
+    <h3>6 · Projects</h3>
+    <p class="note">Days 5 and 9. A list of dated amounts, and a decision to make.</p>
+
+    <p class="partlab">Present value of a stream</p>
+    <div class="math">PV = CF<sub>1</sub>/(1+r)<sup>1</sup> + CF<sub>2</sub>/(1+r)<sup>2</sup> + … + CF<sub>N</sub>/(1+r)<sup>N</sup></div>
+    <p class="given">Use it when the amounts are different from year to year, so no single shape covers
+      them. Value each piece on its own date and add. A run of equal amounts inside the list can still
+      be done with an annuity formula.</p>
+
+    <p class="partlab">Net present value</p>
+    <div class="math">NPV = Σ CF<sub>i</sub> / (1+r)<sup>i</sup> − I<sub>0</sub></div>
+    <p class="given">Use it when a project costs money today and pays later, and you must say yes or no.
+      <span class="math">I<sub>0</sub></span> is the cost today. Take the project above zero, reject it below zero.</p>
+
+    <p class="partlab">Internal rate of return</p>
+    <p class="given">The IRR is not a formula on the sheet. It is the discount rate that makes NPV
+      exactly zero, and day 9 defines it in those words. Use it when the question wants the answer as a
+      percent instead of in money. Take the project when IRR is above the required return r.</p>
+    <p class="given">In the one case the exam can ask you to solve by hand, one amount out today and one
+      amount in at date N, the IRR is the single cash flow rate formula from group 2:
+      <span class="math">r = (FV / PV)<sup>1/N</sup> &minus; 1</span>. With more than one inflow you compare
+      the rates you are given instead, because the equation cannot be turned around by hand.</p>
+  </div>
+
+  <!-- ============ BONDS ============ -->
+  <div class="panel">
+    <h3>7 · Bonds</h3>
+    <p class="note">Day 6. A bond has no formula of its own. It is priced from the pieces above.</p>
+
+    <p class="partlab">The coupon payment</p>
+    <div class="math">Coupon rate × par value</div>
+    <p class="given">Work this out first, before any discounting. The coupon rate only fixes the size of
+      the payment. It is never the rate you discount at. You discount at the yield.</p>
+
+    <div class="datalab">Which pieces each bond needs</div>
+    <table class="dtable">
+      <tr><th style="width:26%">Bond</th><th>What it pays</th><th style="width:34%">Formula to use</th></tr>
+      <tr><td class="lab">Zero coupon</td><td style="text-align:left">Nothing until maturity, then the par value once</td><td style="text-align:left">One cash flow, group 2</td></tr>
+      <tr><td class="lab">Coupon bond</td><td style="text-align:left">The same coupon every year, plus the par value at the end</td><td style="text-align:left">Annuity for the coupons, group 3, plus one cash flow for the par value, group 2. Add the two answers</td></tr>
+      <tr><td class="lab">Perpetuity bond</td><td style="text-align:left">The same coupon every year for ever, and the principal never comes back</td><td style="text-align:left">Perpetuity, group 4</td></tr>
+    </table>
+    <div class="rule">Price and yield move in opposite directions. The coupon never moves, so the price
+      has to do all the moving. Coupon above yield gives a premium price, above par. Coupon below yield
+      gives a discount price, below par. Coupon equal to yield gives exactly par.</div>
+  </div>
+
+  <!-- ============ NOT ON THE SHEET ============ -->
+  <div class="panel">
+    <h3>8 · Used in the pack, not printed on the exam formula sheet</h3>
+    <p class="note">These two are taught in the pack but do not appear on the sheet the professor gives you.
+      Know them.</p>
+
+    <p class="partlab">Return on assets and return on equity</p>
+    <div class="math">ROA = net income / total assets</div>
+    <div class="math">ROE = net income / equity</div>
+    <p class="given">Use them when a question compares two firms, or asks what borrowing did to a firm's
+      profit. Same profit on top, a different number on the bottom. Debt is the only reason the two numbers are not equal.</p>
+    <p class="given">Day 8 makes an honest note about these, and it is repeated here. The class notes in
+      this course describe ROA and ROE in words but do not print a formula for either. The two lines above
+      are the standard course book ones. Some books use operating profit instead of net income in ROA. If
+      your lecturer wrote one version on the board, that version wins.</p>
+
+    <p class="partlab">Nominal rate and real rate</p>
+    <div class="math">R = real rate + expected inflation</div>
+    <p class="given">Use it when a question gives a rate and an inflation figure and asks what you really
+      earned. Take the inflation away from the stated rate to get the real rate.</p>
+  </div>
+
+  <!-- ============ DECISION AID ============ -->
+  <div class="panel">
+    <h3>Which one do I reach for</h3>
+    <p class="note">Read the question for two things only: does the amount repeat, and does it stop.</p>
+
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><th>What the question gives you</th><th>Does it grow?</th><th>Tool</th><th>Formula</th></tr>
+      <tr><td style="text-align:left">One single amount on one date</td><td>No</td><td class="lab">Single cash flow</td><td>PV = FV / (1 + r)<sup>N</sup></td></tr>
+      <tr><td style="text-align:left">The same amount every period, n of them</td><td>No</td><td class="lab">Annuity</td><td>A × [ 1 − 1 / (1 + r)<sup>n</sup> ] / r</td></tr>
+      <tr><td style="text-align:left">The same amount every period, no end date</td><td>No</td><td class="lab">Perpetuity</td><td>A / r</td></tr>
+      <tr><td style="text-align:left">An amount that grows at g, n of them</td><td>Yes, at g</td><td class="lab">Growing annuity</td><td>CF1 × [ 1 − ((1 + g) / (1 + r))<sup>n</sup> ] / (r − g)</td></tr>
+      <tr><td style="text-align:left">An amount that grows at g, no end date</td><td>Yes, at g</td><td class="lab">Growing perpetuity</td><td>CF1 / (r − g), needs r &gt; g</td></tr>
+      <tr><td style="text-align:left">Different amounts on different dates</td><td>Either</td><td class="lab">Stream</td><td>Value each one on its own date and add</td></tr>
+    </table>
+    </div>
+
+    <div class="rule">If one of the three annuity tests fails, same amount, same gap, fixed count, then
+      this is not one annuity. Split the stream into parts and value each part on its own.</div>
+  </div>
+
+  <!-- ============ TRAPS ============ -->
+  <div class="panel">
+    <h3>What makes a right formula give a wrong answer</h3>
+    <p class="note">Every row below is a mark this course actually takes off people.</p>
+
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><th style="width:32%">Check</th><th>What goes wrong if you skip it</th></tr>
+      <tr><td class="lab">r must be bigger than g</td><td style="text-align:left">A growing perpetuity with r at or below g has no value you can work out. The formula still hands you a number, and that number tells you nothing, or it is negative.</td></tr>
+      <tr><td class="lab">Where the annuity answer is dated</td><td style="text-align:left">An annuity formula gives a value one period before the first payment. If the first payment is not at the end of period 1, that answer sits in the future and needs a second discounting move back to today.</td></tr>
+      <tr><td class="lab">Where the FV answer is dated</td><td style="text-align:left">The future value of an annuity is dated on the day of the last payment. The last payment earns no interest. Give it a year of interest and your answer is too big, by (1 + r) times.</td></tr>
+      <tr><td class="lab">Count the years from today</td><td style="text-align:left">A payment at the end of year 1 is divided by (1 + r) once. It is not left alone. This one error moves every later number.</td></tr>
+      <tr><td class="lab">The payoffs add to V<sub>T</sub></td><td style="text-align:left">Senior plus junior plus equity must come to exactly V<sub>T</sub>. If they do not, one of the three is wrong, and it is usually the junior one.</td></tr>
+      <tr><td class="lab">Equity stops at zero</td><td style="text-align:left">Owners can lose everything they put in and no more. A negative equity payoff is always a wrong answer.</td></tr>
+      <tr><td class="lab">Senior before junior</td><td style="text-align:left">The junior lender sees nothing until the senior lender is paid in full. Paying them in the wrong order is the classic trap on this topic.</td></tr>
+      <tr><td class="lab">APR means Absolute Priority Rule</td><td style="text-align:left">In this course APR is the rule that sets who gets paid first. It never means annual percentage rate.</td></tr>
+      <tr><td class="lab">Next period's cash flow on top</td><td style="text-align:left">A growing perpetuity and the constant growth dividend model both want next period's amount. If the question gives you the one just paid, grow it by (1 + g) first.</td></tr>
+      <tr><td class="lab">Discount at the yield, not the coupon</td><td style="text-align:left">The coupon rate only sets the size of the payment. Discounting at the coupon rate always gives you par back, which is the wrong answer for every bond except one priced at par.</td></tr>
+      <tr><td class="lab">Never add across dates</td><td style="text-align:left">Two amounts on two different dates cannot be added until both sit on the same date. Draw the timeline before any formula.</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- ============ THE DISAGREEMENT ============ -->
+  <div class="panel">
+    <h3>The one place the sources disagree</h3>
+    <p class="p">The formula sheet writes equity as
+      <span class="math">Max(V<sub>T</sub> − F<sub>S</sub>, 0)</span> and the class slides write it as
+      <span class="math">Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0)</span>. This pack treats
+      them as one rule seen in two cases. The owners are paid last, so equity gets what is left after
+      all the debt. With senior debt only, all the debt is
+      <span class="math">F<sub>S</sub></span>. With junior debt as well, all the debt is
+      <span class="math">F<sub>S</sub></span> plus <span class="math">F<sub>J</sub></span>. The check
+      that settles which line you need is the same in both cases: your three payoffs must add up to
+      exactly <span class="math">V<sub>T</sub></span>. If they do not, you used the wrong line.</p>
+
+    <div class="datalab">Small changes in wording across the pack</div>
+    <table class="dtable">
+      <tr><th style="width:36%">Written one way</th><th>And another way</th></tr>
+      <tr><td style="text-align:left">PV = A × [ 1 − 1 / (1 + r)<sup>n</sup> ] / r</td><td style="text-align:left">PV = A × (1 − (1 + r)<sup>−n</sup>) / r. The two are the same, because 1 / (1 + r)<sup>n</sup> is (1 + r)<sup>−n</sup>.</td></tr>
+      <tr><td style="text-align:left">Growing annuity, the bracket multiplied first and the gap divided last</td><td style="text-align:left">Growing annuity, the gap divided first and the bracket multiplied last. Multiplying then dividing gives the same number as dividing then multiplying.</td></tr>
+      <tr><td style="text-align:left">A for the repeating payment</td><td style="text-align:left">C or CF for the same thing. Day 13 uses C where days 3 and 4 use A. The letter carries no meaning of its own.</td></tr>
+    </table>
+    <p class="given">None of these change an answer. They are listed so a different layout on the exam
+      sheet does not stop you.</p>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn primary" href="index.html">All 15 days →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+</body>
+</html>

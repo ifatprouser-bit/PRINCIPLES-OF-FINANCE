@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 3 · Annuity</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">DAY 3 · Monday 28 September</div>
+  <h1>Annuity: the same payment every period</h1>
+  <p class="lede">One formula replaces a long column of divisions. Today you learn when you are allowed to use it.</p>
+
+  <!-- ============ RECALL (day 1) ============ -->
+  <div class="preq">
+    <div class="tag">Five minutes: recall</div>
+    <p><b>1.</b> Give one real asset and one financial asset. What is the link between the two?</p>
+    <p><b>2.</b> One of these is a size, the other is a move: the equity of a firm, and a dividend it pays. Which is which?</p>
+    <p class="do">Say both answers out loud before you press the button.</p>
+    <button class="reveal-btn" type="button" data-reveal="r-recall">Show the answer</button>
+    <div class="reveal" id="r-recall">
+      <p class="p"><b>1.</b> A real asset is a thing that produces: land, a machine, a building. A financial asset is a claim on a real asset: a share, a bond. The financial asset does not add to the output of the economy by itself. It only says who owns the output of the real asset.</p>
+      <p class="p"><b>2.</b> Equity is a <b>size</b>. It is what is left of the firm at one moment in time, after the debt is covered. A dividend is a <b>move</b>. It is cash leaving the firm and going to the shareholders. Paying a dividend makes the equity smaller. It does not create value.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRETEST ============ -->
+  <div class="preq">
+    <div class="tag">Guess first</div>
+    <p>You will be paid 1,000 at the end of each year for 3 years. The rate is 10%.</p>
+    <p>Is the value of that promise today above 3,000, exactly 3,000, or below 3,000? Write your guess and one line saying why.</p>
+    <p class="do">This is a guess, not a test. No answer is shown. You will know by the end of the page.</p>
+  </div>
+
+  <!-- ============ PANEL 1 ============ -->
+  <div class="panel">
+    <h3>1. Three tests for an annuity</h3>
+
+    <p class="p">An annuity is the same payment, arriving after the same gap in time, for a fixed number of periods. That one sentence hides three separate tests, and a stream has to pass all three.</p>
+
+    <table class="dtable">
+      <tr><th>Test</th><th>What it asks</th><th>Fails when</th></tr>
+      <tr><td class="lab">Same amount</td><td>Is every payment the same number?</td><td>The payment grows, shrinks, or jumps once</td></tr>
+      <tr><td class="lab">Same gap</td><td>Is the time between payments always equal?</td><td>A year is skipped</td></tr>
+      <tr><td class="lab">Fixed count</td><td>Does it stop after a known number of payments?</td><td>It runs forever. That is a perpetuity, a stream that never stops. Day 4</td></tr>
+    </table>
+
+    <p class="p">In this course the payments arrive at the <b>end</b> of each period unless the question says otherwise. Every class example and every formula on the exam sheet is built that way, so read a question as end of period unless the words say start of period.</p>
+
+    <p class="p">End of period is where students lose marks. The first payment arrives at the end of year 1, so it is one full year away. It is divided by (1 + r) one time, not zero times. The payment at the end of year 3 is divided three times.</p>
+
+    <div class="rule">Before you reach for any annuity formula, run the three tests: same amount, same gap, fixed count. If one test fails, this is not one annuity. Split the stream into parts and value each part on its own.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 210" role="img" aria-label="Timeline showing three payments of 500 at the end of years 1, 2 and 3, each discounted back to time 0">
+        <line x1="40" y1="120" x2="530" y2="120" stroke="#6f6886" stroke-width="2"/>
+        <g font-size="12" fill="#6f6886" text-anchor="middle">
+          <line x1="60" y1="113" x2="60" y2="127" stroke="#6f6886" stroke-width="2"/><text x="60" y="145">0 (today)</text>
+          <line x1="200" y1="113" x2="200" y2="127" stroke="#6f6886" stroke-width="2"/><text x="200" y="145">end yr 1</text>
+          <line x1="340" y1="113" x2="340" y2="127" stroke="#6f6886" stroke-width="2"/><text x="340" y="145">end yr 2</text>
+          <line x1="480" y1="113" x2="480" y2="127" stroke="#6f6886" stroke-width="2"/><text x="480" y="145">end yr 3</text>
+        </g>
+        <g font-size="14" font-weight="700" fill="#211c33" text-anchor="middle">
+          <text x="200" y="103">500</text><text x="340" y="103">500</text><text x="480" y="103">500</text>
+        </g>
+        <g stroke="#6b4ef0" stroke-width="2" fill="none">
+          <path d="M196 90 Q128 50 64 88" marker-end="url(#ah3)"/>
+          <path d="M336 78 Q198 20 64 76" marker-end="url(#ah3)"/>
+          <path d="M476 66 Q270 -8 64 64" marker-end="url(#ah3)"/>
+        </g>
+        <defs><marker id="ah3" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0 0 L8 4 L0 8 z" fill="#6b4ef0"/></marker></defs>
+        <g font-size="11.5" fill="#5238c4" text-anchor="middle">
+          <text x="130" y="46">÷ 1.06 once</text>
+          <text x="200" y="14">÷ 1.06 twice</text>
+          <text x="270" y="182">÷ 1.06 three times</text>
+        </g>
+        <g font-size="12" fill="#6f6886"><text x="40" y="200">Each arrow lands on today. Nothing is added until every arrow has landed.</text></g>
+      </svg>
+      <div class="cap">Three payments of 500, a rate of 6%. The count of divisions equals the year number.</div>
+    </div>
+
+    <p class="partlab">Worked example</p>
+    <div class="question">A cleaning contract pays you 500 at the end of each year for the next 3 years. Your discount rate is 6%. What is the stream worth today? Do it the long way, one payment at a time.</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <div class="lab">Name the tool.</div>
+      Three single cash flows discounted back to time 0, then added. Cash flows from different dates cannot be added until they sit on the same date.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <div class="lab">The payment at the end of year 1.</div>
+      <div class="math">500 / 1.06 = 471.70</div>
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <div class="lab">The payment at the end of year 2.</div>
+      <div class="math">500 / 1.06<sup>2</sup> = 500 / 1.1236 = 445.00</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <div class="lab">The payment at the end of year 3.</div>
+      <div class="math">500 / 1.06<sup>3</sup> = 500 / 1.191016 = 419.81</div>
+    </div></div>
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <div class="lab">Add the three, now that they all sit on today.</div>
+      <div class="math">471.70 + 445.00 + 419.81 = 1,336.51</div>
+    </div></div>
+    <div class="ans">Answer: 1,336.51. It is below 1,500, which is what you would get by adding the raw payments. Waiting costs value.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A bond pays 40 at the end of each year for 10 years, and also returns 1,000 at the end of year 10. Is this whole stream one annuity?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1a">Show the answer</button>
+      <div class="reveal" id="t1a">No. The 40 payments pass all three tests, so they are an annuity of 10 payments. The 1,000 at year 10 is a single cash flow that arrives once. Value the two parts separately and add them. You meet this exact shape again on day 6.</div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it. A payment of 800 arrives at the end of year 4. The rate is 6%. How many times is it divided by 1.06, and what is it worth today?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1b">Show the answer</button>
+      <div class="reveal" id="t1b">Four times, because it sits at the end of year 4. 800 / 1.06<sup>4</sup> = 800 / 1.262477 = 633.67. A common slip is three divisions, which gives 671.70 and is too high.</div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 2 ============ -->
+  <div class="panel">
+    <h3>2. Present value of an annuity</h3>
+
+    <p class="p">The long way works, but on a 20 year stream it is 20 divisions with a scientific calculator and no room for a mistake. The annuity formula does the whole column in one line.</p>
+
+    <div class="math">PV = A × [ 1 − 1 / (1 + r)<sup>n</sup> ] / r</div>
+
+    <p class="p">A is the payment, the same size every time. r is the rate per period. n is the number of payments. The part in the brackets, divided by r, is called the annuity factor. It is the value today of 1 received at the end of every period for n periods. You then multiply it by the real payment.</p>
+
+    <p class="p">The answer sits at time 0, which is one full period before the first payment. That is built into the formula. You do not discount the result again.</p>
+
+    <div class="rule">Use PV of an annuity when a fixed number of equal payments starts at the end of the next period. The answer is dated one period before the first payment, so it is already today's value.</div>
+
+    <p class="datalab">The annuity factor: what 1 per year is worth today</p>
+    <table class="dtable">
+      <tr><th>Payments (n)</th><th>r = 4%</th><th>r = 8%</th><th>r = 12%</th></tr>
+      <tr><td class="lab">5</td><td>4.4518</td><td>3.9927</td><td>3.6048</td></tr>
+      <tr><td class="lab">10</td><td>8.1109</td><td>6.7101</td><td>5.6502</td></tr>
+      <tr><td class="lab">20</td><td>13.5903</td><td>9.8181</td><td>7.4694</td></tr>
+    </table>
+    <p class="given">Read across a row: a higher rate makes the same stream worth less. Read down a column: more payments are worth more, but each extra one adds less than the one before. You will not get this table in the exam, so work the factor out yourself. The table is here to show the shape.</p>
+
+    <p class="partlab">Worked example</p>
+    <div class="question">Your firm can buy a copier for 10,000 cash today, or pay 3,000 at the end of each year for 5 years. Your opportunity cost, the rate you could earn elsewhere, is 12%. Which should you choose?</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <div class="lab">Name the formula.</div>
+      The yearly payments are 5 equal payments, one year apart, ending after year 5. All three tests pass, so it is an annuity. Use PV = A × [1 − 1/(1+r)<sup>n</sup>] / r.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <div class="lab">Take each input out of the question.</div>
+      A = 3,000. r = 0.12. n = 5. The 10,000 is not an input. It is the price you compare against.
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <div class="lab">Raise 1 + r to the power n.</div>
+      <div class="math">1.12<sup>5</sup> = 1.762342</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <div class="lab">Take one over that, then take it away from 1.</div>
+      <div class="math">1 / 1.762342 = 0.567427 &nbsp;→&nbsp; 1 − 0.567427 = 0.432573</div>
+    </div></div>
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <div class="lab">Divide by r. This is the annuity factor.</div>
+      <div class="math">0.432573 / 0.12 = 3.604776</div>
+    </div></div>
+    <div class="step"><div class="stepn">6</div><div class="stepbody">
+      <div class="lab">Multiply by the payment.</div>
+      <div class="math">3,000 × 3.604776 = 10,814.33</div>
+    </div></div>
+    <div class="step"><div class="stepn">7</div><div class="stepbody">
+      <div class="lab">Check the answer the long way.</div>
+      <div class="math">2,678.57 + 2,391.58 + 2,135.34 + 1,906.55 + 1,702.28 = 10,814.33</div>
+      The five separate divisions give the same number, so the factor was right.
+    </div></div>
+    <div class="ans">Answer: paying year by year costs 10,814.33 in today's money. That is more than 10,000, so pay the 10,000 cash now.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. A client will pay you 4,000 at the end of each year for 6 years. Your rate is 7%. What is the stream worth today? Then the rate falls to 4%. What is it worth now, and did it rise or fall?</div>
+      <button class="reveal-btn" type="button" data-reveal="t2a">Show the answer</button>
+      <div class="reveal" id="t2a">At 7%: factor = (1 − 1/1.07<sup>6</sup>) / 0.07 = 4.766540, so PV = 4,000 × 4.766540 = 19,066.16.<br>
+      At 4%: factor = (1 − 1/1.04<sup>6</sup>) / 0.04 = 5.242137, so PV = 4,000 × 5.242137 = 20,968.55.<br>
+      It rose by 1,902.39. A lower rate means waiting costs you less, so the same promise is worth more today.</div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it, the other way round. You borrow 25,000 today and repay it with one equal payment at the end of each of the next 5 years. The rate is 8%. How big is each payment?</div>
+      <button class="reveal-btn" type="button" data-reveal="t2b">Show the answer</button>
+      <div class="reveal" id="t2b">Here the PV is given and A is unknown, so divide instead of multiply. Factor = (1 − 1/1.08<sup>5</sup>) / 0.08 = 3.992710. A = 25,000 / 3.992710 = 6,261.41 a year. Check: 6,261.41 × 3.992710 = 25,000.</div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 3 ============ -->
+  <div class="panel">
+    <h3>3. Future value of an annuity</h3>
+
+    <p class="p">Sometimes you do not want today's value. You want the pile of money at the end, after saving the same amount every year. That is the future value of an annuity.</p>
+
+    <div class="math">FV = A × [ (1 + r)<sup>n</sup> − 1 ] / r</div>
+
+    <p class="p">Timing works the same way, but in the other direction. The formula lands on the date of the last payment. The payment made at the end of year 1 has n − 1 years left to earn interest. The final payment has just arrived, so it earns nothing at all.</p>
+
+    <div class="rule">FV of an annuity is dated on the day of the last payment. The last payment earns no interest. If you give it a year of interest you get an answer that is too high by a factor of (1 + r).</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 200" role="img" aria-label="Three savings of 2000 at the end of years 1, 2 and 3 compounded forward to the end of year 3">
+        <line x1="40" y1="60" x2="530" y2="60" stroke="#6f6886" stroke-width="2"/>
+        <g font-size="12" fill="#6f6886" text-anchor="middle">
+          <line x1="70" y1="53" x2="70" y2="67" stroke="#6f6886" stroke-width="2"/><text x="70" y="45">0</text>
+          <line x1="210" y1="53" x2="210" y2="67" stroke="#6f6886" stroke-width="2"/><text x="210" y="45">end yr 1</text>
+          <line x1="350" y1="53" x2="350" y2="67" stroke="#6f6886" stroke-width="2"/><text x="350" y="45">end yr 2</text>
+          <line x1="490" y1="53" x2="490" y2="67" stroke="#6f6886" stroke-width="2"/><text x="490" y="45">end yr 3</text>
+        </g>
+        <g font-size="13" font-weight="700" fill="#211c33" text-anchor="middle">
+          <text x="210" y="84">2,000</text><text x="350" y="84">2,000</text><text x="490" y="84">2,000</text>
+        </g>
+        <g stroke="#6b4ef0" stroke-width="2" fill="none">
+          <path d="M216 96 Q350 130 484 100" marker-end="url(#ah3b)"/>
+          <path d="M356 96 Q420 118 484 100" marker-end="url(#ah3b)"/>
+        </g>
+        <defs><marker id="ah3b" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0 0 L8 4 L0 8 z" fill="#6b4ef0"/></marker></defs>
+        <g font-size="11.5" fill="#5238c4" text-anchor="middle">
+          <text x="290" y="146">× 1.08 twice → 2,332.80</text>
+          <text x="418" y="130">× 1.08 once → 2,160.00</text>
+          <text x="496" y="120" text-anchor="end">no interest → 2,000.00</text>
+        </g>
+        <g font-size="13" font-weight="700" fill="#1f9d63"><text x="330" y="180">Total at the end of year 3: 6,492.80</text></g>
+      </svg>
+      <div class="cap">Saving 2,000 at the end of each year for 3 years at 8%. The last 2,000 has had no time to grow.</div>
+    </div>
+
+    <p class="partlab">Worked example</p>
+    <div class="question">A saver puts 2,000 into a retirement account at the end of every year. She starts at age 25 and stops at age 65, so she makes 40 payments. The account earns 8% a year. How much is in it on the day of the last payment?</div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <div class="lab">Name the formula.</div>
+      Forty equal payments, one year apart, a known end date, and we want the value at the end. Use FV = A × [(1+r)<sup>n</sup> − 1] / r.
+    </div></div>
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <div class="lab">Take each input out of the question.</div>
+      A = 2,000. r = 0.08. n = 40. Her age is only there to tell you n.
+    </div></div>
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <div class="lab">Raise 1 + r to the power n.</div>
+      <div class="math">1.08<sup>40</sup> = 21.724521</div>
+    </div></div>
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <div class="lab">Take away 1, then divide by r.</div>
+      <div class="math">21.724521 − 1 = 20.724521 &nbsp;→&nbsp; 20.724521 / 0.08 = 259.056519</div>
+    </div></div>
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <div class="lab">Multiply by the payment.</div>
+      <div class="math">2,000 × 259.056519 = 518,113.04</div>
+    </div></div>
+    <div class="step"><div class="stepn">6</div><div class="stepbody">
+      <div class="lab">Check that the size is believable.</div>
+      <div class="math">40 × 2,000 = 80,000 paid in. 518,113.04 − 80,000 = 438,113.04 of interest.</div>
+      Over 40 years at 8% the interest should be much bigger than the deposits, and it is. If your answer had been near 80,000 you forgot to compound, that is, to earn interest on top of earlier interest.
+    </div></div>
+    <div class="ans">Answer: 518,113.04 on the day of the last payment.</div>
+
+    <div class="tryq">
+      <div class="q">Try it. You save 1,500 at the end of each year for 10 years at 5%. How much is there right after the tenth payment?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3a">Show the answer</button>
+      <div class="reveal" id="t3a">1.05<sup>10</sup> = 1.628895. Take away 1 to get 0.628895, divide by 0.05 to get 12.577893. Then 1,500 × 12.577893 = 18,866.84. You paid in 15,000, so 3,866.84 is interest.</div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it, the other way round. You need 60,000 in 8 years. The account pays 6%. How much must you put in at the end of each year?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3b">Show the answer</button>
+      <div class="reveal" id="t3b">The FV is given and A is unknown, so divide. Factor = (1.06<sup>8</sup> − 1) / 0.06 = 9.897468. A = 60,000 / 9.897468 = 6,062.16 a year. Check: 6,062.16 × 9.897468 = 60,000.</div>
+    </div>
+
+    <div class="takeaway">
+      <b>The one thing to carry into tomorrow</b>
+      <ul>
+        <li>PV of an annuity is dated one period <i>before</i> the first payment.</li>
+        <li>FV of an annuity is dated <i>on</i> the last payment.</li>
+        <li>Both formulas assume the payment lands at the end of each period.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-02.html">← Day 2</a>
+    <a class="navbtn primary" href="day-04.html">Day 4 →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 3,
+  topic: "Annuity",
+  items: [
+    {
+      q: "A shop signs a supply deal. It pays 2,400 at the end of year 1, 2,400 at the end of year 2 and 2,600 at the end of year 3, then nothing. Can the present value be found with one single use of the annuity present value formula?",
+      opts: [
+        "No. The payments are not all the same size, so it is not one annuity.",
+        "Yes. The gap between payments is one year every time, and that is what the formula needs.",
+        "Yes. The number of payments is fixed at three, and that is what the formula needs.",
+        "No. The payments arrive at the end of each year instead of the start of each year."
+      ],
+      correct: 0,
+      tag: "Annuity",
+      exp: "<b>The three tests.</b> Same amount, same gap, fixed count. This stream passes same gap (one year each time) and fixed count (three payments). It fails same amount: 2,400, 2,400, 2,600.<br><br><b>What you do instead.</b> Split it. Either value three single cash flows, or value an annuity of 2,400 for 3 years and then add one extra 200 arriving at the end of year 3.<br><br><b>Why the other options are wrong.</b> Same gap alone is not enough, so the option that stops at the one year gap fails. Fixed count alone is not enough either, so the option that stops at three payments fails too. The option about end of year timing names a real thing, but end of period is exactly what the standard formula is built for, so that is not the problem here."
+    },
+    {
+      q: "A service contract pays you 900 at the end of each year for 4 years. When it was signed the discount rate was 10%. The rate has now fallen to 6%. What is the contract worth today?",
+      opts: [
+        "3,600.00",
+        "3,118.60",
+        "2,852.88",
+        "3,305.71"
+      ],
+      correct: 1,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> PV = A × [1 − 1/(1+r)^n] / r.<br><b>Inputs.</b> A = 900. r = 0.06, because value today uses the rate today, not the rate on the signing day. n = 4.<br>1. 1.06^4 = 1.262477<br>2. 1 / 1.262477 = 0.792094<br>3. 1 − 0.792094 = 0.207906<br>4. 0.207906 / 0.06 = 3.465106<br>5. 900 × 3.465106 = <b>3,118.60</b><br><b>Check.</b> The long way: 849.06 + 801.00 + 755.66 + 712.88 = 3,118.60.<br><br><b>The wrong answers.</b> 2,852.88 is 900 × 3.169865, the factor at the old 10% rate. The rate that matters is the one used today. 3,305.71 is 3,118.60 × 1.06, which is what you get if you treat the first payment as arriving today instead of at the end of year 1. 3,600.00 is 900 × 4 with no discounting, which adds cash from four different dates as if they were the same date."
+    },
+    {
+      q: "A bank lends 40,000 today. The borrower repays it with one equal payment at the end of each of the next 9 years. The rate is 5%. How large is each payment?",
+      opts: [
+        "4,444.44",
+        "3,627.60",
+        "5,627.60",
+        "2,000.00"
+      ],
+      correct: 2,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> The 40,000 is the present value and the payment is unknown, so turn the annuity formula round: A = PV ÷ annuity factor.<br><b>Inputs.</b> PV = 40,000. r = 0.05. n = 9.<br>1. 1.05^9 = 1.551328<br>2. 1 / 1.551328 = 0.644609<br>3. 1 − 0.644609 = 0.355391<br>4. 0.355391 / 0.05 = 7.107822 (the annuity factor)<br>5. 40,000 / 7.107822 = <b>5,627.60</b><br><b>Check.</b> 5,627.60 × 7.107822 = 40,000, which is the amount lent.<br><br><b>The wrong answers.</b> 4,444.44 is 40,000 / 9, which charges no interest at all. 3,627.60 comes from dividing by the future value factor (1.05^9 − 1)/0.05 = 11.026564 instead of the present value factor. That factor belongs to a savings plan, not a loan taken today. 2,000.00 is 40,000 × 0.05, the payment on a perpetuity, a stream that never stops and never repays the 40,000. A 9 year loan has to give back the amount borrowed as well as the interest, so its payment must be larger."
+    },
+    {
+      q: "You pay 3,200 into a savings plan at the end of each year for 7 years. The plan earns 4% a year. How much is in the plan on the day you make the seventh payment?",
+      opts: [
+        "22,400.00",
+        "19,206.57",
+        "26,285.52",
+        "25,274.54"
+      ],
+      correct: 3,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> We want the value at the end, so FV = A × [(1+r)^n − 1] / r.<br><b>Inputs.</b> A = 3,200. r = 0.04. n = 7.<br>1. 1.04^7 = 1.315932<br>2. 1.315932 − 1 = 0.315932<br>3. 0.315932 / 0.04 = 7.898294<br>4. 3,200 × 7.898294 = <b>25,274.54</b><br><b>Check.</b> You paid in 7 × 3,200 = 22,400, so the interest is 2,874.54. Seven years at 4% should add only a small amount, and it does.<br><br><b>The wrong answers.</b> 26,285.52 is 25,274.54 × 1.04. That gives the seventh payment a year of interest it never earned, because it arrives on the day we are measuring. 22,400.00 is the raw deposits with no interest. 19,206.57 is the present value of the same stream, 3,200 × 6.002055. It is the value today, not the value in 7 years, so it answers a different question."
+    },
+    {
+      q: "A pension promises 5,000 at the end of each year for the next 12 years. Until now it was valued with a discount rate of 6%. The rate used is raised to 8%. What happens to the value of the promise?",
+      opts: [
+        "It falls by about 4,240.",
+        "It rises by about 4,240.",
+        "It falls by about 1,200.",
+        "It does not change, because the payments are fixed by contract."
+      ],
+      correct: 0,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> PV = A × [1 − 1/(1+r)^n] / r, computed twice.<br><b>At 6%.</b> 1.06^12 = 2.012196, so the factor is (1 − 0.496969)/0.06 = 8.383844 and PV = 5,000 × 8.383844 = 41,919.22.<br><b>At 8%.</b> 1.08^12 = 2.518170, so the factor is (1 − 0.397114)/0.08 = 7.536078 and PV = 5,000 × 7.536078 = 37,680.39.<br><b>Difference.</b> 41,919.22 − 37,680.39 = <b>4,238.83</b>, a fall of about 4,240.<br><br><b>The wrong answers.</b> A rise is the wrong direction: a higher rate means waiting costs more, so a promise of future cash is worth less today. 1,200 is 5,000 × 2% × 12, which treats the extra 2% as a flat yearly charge on each payment. Interest compounds, so the effect on the later payments is much larger than that. Saying the value does not change confuses the cash flow with the value. The payments really are fixed, but what you would pay today for those fixed payments moves with the rate."
+    },
+    {
+      q: "A contract pays a single amount of 6,000 at the end of year 1 and nothing after that. The discount rate is 9%. A student puts A = 6,000, r = 9% and n = 1 into the annuity present value formula. What does he get?",
+      opts: [
+        "6,000.00, because with only one period there is nothing to discount.",
+        "66,666.67",
+        "5,504.59, the same result as discounting the single payment once.",
+        "5,050.08"
+      ],
+      correct: 2,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> PV = A × [1 − 1/(1+r)^n] / r with n = 1.<br>1. 1.09^1 = 1.09<br>2. 1 / 1.09 = 0.917431<br>3. 1 − 0.917431 = 0.082569<br>4. 0.082569 / 0.09 = 0.917431 (the annuity factor for n = 1)<br>5. 6,000 × 0.917431 = <b>5,504.59</b><br><b>Check.</b> Discount the single payment directly: 6,000 / 1.09 = 5,504.59. The same number. With n = 1 the annuity factor becomes 1/(1+r), so the annuity formula already covers the single cash flow case. The two do not disagree.<br><br><b>The wrong answers.</b> 6,000.00 treats an end of year 1 payment as if it arrived today. It is one year away, so it is divided by 1.09 once. 66,666.67 is 6,000 / 0.09, the perpetuity value. A perpetuity never stops, so that formula assumes the 6,000 keeps arriving forever, and here it arrives once. 5,050.08 is 6,000 / 1.09², which discounts a year 1 payment twice."
+    }
+  ]
+});
+</script>
+</body>
+</html>

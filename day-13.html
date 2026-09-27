@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 13: Mock 3</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">DAY 13 · Thursday 8 October</div>
+  <h1>Mock 3</h1>
+  <p class="lede">Twenty two questions in 150 minutes. Sit it in one go, with a clock running.</p>
+
+  <!-- ============ RULES ============ -->
+  <div class="panel">
+    <h3>How this paper works</h3>
+    <table class="dtable">
+      <tr><th style="width:34%">Rule</th><th>What it means here</th></tr>
+      <tr><td class="lab">Questions</td><td style="text-align:left">22, all multiple choice, same as the real paper.</td></tr>
+      <tr><td class="lab">Time</td><td style="text-align:left">150 minutes. Press Start and leave the clock running. That is 6.8 minutes a question.</td></tr>
+      <tr><td class="lab">Formula sheet</td><td style="text-align:left">The panel below. It is the same sheet the professor hands out. Nothing needs to be learned by heart.</td></tr>
+      <tr><td class="lab">Calculator</td><td style="text-align:left">Scientific only. Nothing that prices a bond or an annuity for you.</td></tr>
+      <tr><td class="lab">Feedback</td><td style="text-align:left">Nothing is shown while the paper runs. No score, no answers, no hints. Everything opens when you submit or when the time ends.</td></tr>
+      <tr><td class="lab">Where the weight is</td><td style="text-align:left">This paper puts most of its weight on bonds and the payoff waterfall on purpose, so the two topics that cost the most marks get the most practice.</td></tr>
+      <tr><td class="lab">Blank answers</td><td style="text-align:left">A question left blank counts as a miss and goes into your error log. Guess rather than skip.</td></tr>
+    </table>
+    <p class="p">Work on paper. Write the timeline or the two borders before you touch the calculator.
+      When you finish, read every explanation, including the ones you got right.</p>
+  </div>
+
+  <!-- ============ FORMULA SHEET ============ -->
+  <div class="panel">
+    <h3>Formula sheet</h3>
+    <p class="note">The sheet you are given with the exam. Your job is picking the right line, not remembering it.</p>
+
+    <p class="partlab">Payoff at maturity</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Who</th><th>Payoff</th></tr>
+      <tr><td class="lab">Senior debt</td><td style="text-align:left">Min(V<sub>T</sub>, F<sub>S</sub>)</td></tr>
+      <tr><td class="lab">Junior debt</td><td style="text-align:left">0 if V<sub>T</sub> &lt; F<sub>S</sub>, otherwise Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>)</td></tr>
+      <tr><td class="lab">Equity</td><td style="text-align:left">Max(V<sub>T</sub> − F<sub>S</sub>, 0) with senior debt only. Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0) when there is junior debt too.</td></tr>
+    </table>
+    <p class="given">F<sub>S</sub> is the amount promised to the senior lender on the maturity date. F<sub>J</sub> is
+      the amount promised to the junior lender. V<sub>T</sub> is the value of the firm's assets on that date.
+      Equity is always what is left after every debt. The two lines above are the same rule seen in two cases,
+      and the test that settles it is that the payoffs add to exactly V<sub>T</sub>.</p>
+
+    <p class="partlab">One cash flow</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Move</th><th>Formula</th></tr>
+      <tr><td class="lab">Discounting</td><td style="text-align:left">PV = CF<sub>n</sub> / (1 + r)<sup>n</sup></td></tr>
+      <tr><td class="lab">Compounding</td><td style="text-align:left">FV = CF<sub>0</sub> × (1 + r)<sup>n</sup></td></tr>
+    </table>
+
+    <p class="partlab">Many equal cash flows</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Shape</th><th>Formula</th></tr>
+      <tr><td class="lab">Annuity, present value</td><td style="text-align:left">PV = C × (1 − (1 + r)<sup>−n</sup>) / r</td></tr>
+      <tr><td class="lab">Annuity, future value</td><td style="text-align:left">FV = C × ((1 + r)<sup>n</sup> − 1) / r</td></tr>
+      <tr><td class="lab">Growing annuity</td><td style="text-align:left">PV = C<sub>1</sub> / (r − g) × (1 − ((1 + g) / (1 + r))<sup>n</sup>)</td></tr>
+      <tr><td class="lab">Perpetuity</td><td style="text-align:left">PV = C / r</td></tr>
+      <tr><td class="lab">Growing perpetuity</td><td style="text-align:left">PV = C<sub>1</sub> / (r − g), and it only works when r is bigger than g</td></tr>
+      <tr><td class="lab">Stream of cash flows</td><td style="text-align:left">PV = sum of CF<sub>i</sub> / (1 + r)<sup>i</sup></td></tr>
+    </table>
+
+    <p class="partlab">Stocks and projects</p>
+    <table class="dtable">
+      <tr><th style="width:34%">Item</th><th>Formula</th></tr>
+      <tr><td class="lab">Holding period return</td><td style="text-align:left">r = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></td></tr>
+      <tr><td class="lab">Net present value</td><td style="text-align:left">NPV = sum of CF<sub>i</sub> / (1 + r)<sup>i</sup> − I<sub>0</sub></td></tr>
+      <tr><td class="lab">Internal rate of return</td><td style="text-align:left">The rate r that makes NPV equal to zero</td></tr>
+    </table>
+    <p class="given">APR on this paper means Absolute Priority Rule. It never means annual percentage rate.</p>
+  </div>
+
+  <!-- ============ THE PAPER ============ -->
+  <div id="mock"></div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-12.html">← Day 12: The sweep</a>
+    <a class="navbtn primary" href="day-14.html">Day 14: Mock 4 →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.mock({
+  mount: "mock",
+  day: 13,
+  topic: "Mock 3",
+  minutes: 150,
+  items: [
+
+    /* 1. Bonds, premium, coupon-rate trap */
+    {
+      q: "A bond has a par value of 2,000 and 6 years left to maturity. It pays interest of 7 percent of par once a year. Investors buying bonds of this risk now ask for 5 percent a year. What is the bond worth today?",
+      opts: ["2,203.03", "2,000.00", "1,492.43", "710.60"],
+      correct: 0,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> A coupon bond is an annuity of coupons plus one single cash flow of par. Price = C × (1 − (1+r)^−n) / r + F / (1+r)^n.<br><br><b>Inputs from the stem.</b> The 7 percent is the coupon rate, so it only sizes the payment: C = 0.07 × 2,000 = 140 at the end of each of years 1 to 6. F = 2,000 at the end of year 6. The 5 percent is the yield, so it is the discount rate. n = 6.<br><br>1. Growth factor: 1.05^6 = 1.340096<br>2. Annuity factor: (1 − 1 / 1.340096) / 0.05 = 5.075692<br>3. Coupons: 140 × 5.075692 = 710.60<br>4. Par value: 2,000 / 1.340096 = 1,492.43<br>5. Price: 710.60 + 1,492.43 = 2,203.03<br><br><b>Check.</b> The coupon rate 7 percent is above the yield 5 percent, so this has to be a premium bond, priced above its par of 2,000. 2,203.03 is above 2,000. The direction agrees before the digits are trusted.<br><br><b>The wrong options.</b> <b>2,000.00</b> is what you get by discounting at the 7 percent coupon rate instead of the 5 percent yield. Discounting at the coupon rate always hands back exactly par, whatever the question said, so a clean round number equal to par is a warning sign and not an answer. <b>1,492.43</b> is the par value alone, with the six coupons forgotten. <b>710.60</b> is the six coupons alone, with the 2,000 par value forgotten."
+    },
+
+    /* 2. Concepts, professor's quiz Q6 */
+    {
+      q: "A student selects between a government subsidized loan and a private bank loan for tuition. Which kind of financial decision is this?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 4,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The method.</b> Ask who is making a decision about money in this sentence. There can be more than one.<br><br>A student borrowing for tuition is a household making a choice about its own money, so <b>personal finance</b> is in. The subsidized loan exists because a government decided to pay part of the cost of student borrowing, so <b>public finance</b> is in too. That pair is option E.<br><br><b>The wrong options.</b> <b>Personal finance alone</b> misses that one of the two loans on offer is a government program. <b>Public finance alone</b> misses the student, who is the one actually choosing. <b>Corporate finance</b> in any pairing is wrong here: a private bank appears in the story, but only as the seller of one of the two loans. Nobody is deciding anything about the bank's own investment or funding, and selling a product to a customer is not a corporate finance decision."
+    },
+
+    /* 3. Payoff, state II, junior-first and negative-equity distractors */
+    {
+      q: "At maturity a firm's assets are worth 118. On that same date the firm owes 85 to its senior lender and 60 to its junior lender. APR holds. What does each of the three claim holders receive?",
+      opts: [
+        "Senior 58, junior 60, equity 0",
+        "Senior 85, junior 33, equity 0",
+        "Senior 85, junior 60, equity −27",
+        "Senior 85, junior 60, equity 0"
+      ],
+      correct: 1,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior = Min(V_T, F_S). Junior = Min(V_T − F_S, F_J) once V_T reaches F_S. Equity = Max(V_T − F_S − F_J, 0).<br><br><b>Inputs from the stem.</b> V_T = 118, F_S = 85, F_J = 60. The two borders are 85 and 85 + 60 = 145.<br><br>1. Compare V_T with F_S: 118 is above 85, so the senior lender is paid in full. Senior = 85.<br>2. Compare V_T with F_S + F_J: 118 is below 145, so there is not enough for both debts. The owners get nothing.<br>3. Equity = Max(118 − 145, 0) = Max(−27, 0) = 0.<br>4. Junior takes what is left: Min(118 − 85, 60) = Min(33, 60) = 33. It is 27 short of its 60.<br>5. Check: 85 + 33 + 0 = 118, exactly V_T.<br><br><b>The wrong options.</b> <b>Senior 58, junior 60, equity 0</b> fills the junior bucket first with its full 60 and hands the senior lender the 58 that is left. It adds to 118, so the adding-up test alone lets it through, but the payment order is reversed. The senior lender is paid first and in full. <b>Senior 85, junior 60, equity −27</b> pays both debts out of a pot that does not hold enough and writes the hole as negative equity. A corporation has limited liability, so equity stops at zero and the missing money is the junior lender's loss. <b>Senior 85, junior 60, equity 0</b> adds to 145, which is more money than the firm has. The adding-up check kills it on its own."
+    },
+
+    /* 4. Single cash flow, two dates */
+    {
+      q: "A supplier offers two ways to settle the same account. Offer A pays 12,000 at the end of year 3. Offer B pays 16,000 at the end of year 6. Nothing is paid in any other year. Money is worth 9 percent a year to you. Which offer is worth more today, and by roughly how much?",
+      opts: [
+        "Offer B, by 4,000, the gap between 16,000 and 12,000",
+        "Offer A, by about 274",
+        "Offer B, by about 274",
+        "Offer A, because a payment in year 3 is always worth more than a payment in year 6"
+      ],
+      correct: 2,
+      tag: "Single cash flow",
+      exp: "<b>Formula.</b> Each offer is one single cash flow: PV = CF_n / (1 + r)^n. Two amounts at two different dates cannot be compared until both are brought to the same date, and today is the easiest one.<br><br><b>Inputs from the stem.</b> Offer A: 12,000 at n = 3. Offer B: 16,000 at n = 6. r = 0.09 for both.<br><br>1. 1.09^3 = 1.295029<br>2. PV of offer A = 12,000 / 1.295029 = 9,266.20<br>3. 1.09^6 = 1.677100<br>4. PV of offer B = 16,000 / 1.677100 = 9,540.28<br>5. The gap: 9,540.28 − 9,266.20 = 274.08, so B is ahead<br><br><b>Check.</b> 1.09^6 is the square of 1.09^3, so offer B is divided by 1.295029 twice. 16,000 is only 1.333 times 12,000, while the extra discounting divides by about 1.295. The first number is a little bigger, so B wins by a little. The answer is close, which is exactly why it has to be computed.<br><br><b>The wrong options.</b> <b>Offer A by about 274</b> has the right size and the wrong sign, which is what happens if the two present values are subtracted the other way round. <b>By 4,000</b> compares 16,000 with 12,000 as they stand, adding and subtracting money from different years with no discounting at all. <b>Offer A because earlier is always better</b> is a quick rule pushed past where it works. Earlier is better only when the amounts are equal. Here the later amount is a third bigger, and that is enough to win."
+    },
+
+    /* 5. Bonds, discount, rates rose */
+    {
+      q: "A bond has a par value of 1,000 and 7 years left to maturity. Its coupon rate is 3 percent, paid once a year. When it was issued, buyers of bonds of this risk were happy with 3 percent. They now ask for 6.5 percent. What is the bond worth today?",
+      opts: ["643.51", "830.56", "1,000.00", "808.04"],
+      correct: 3,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> Price = C × (1 − (1+r)^−n) / r + F / (1+r)^n.<br><br><b>Inputs from the stem.</b> The coupon rate 3 percent never changes, so C = 0.03 × 1,000 = 30 a year for 7 years. F = 1,000 at year 7. The rate buyers ask for today is 6.5 percent, so r = 0.065. n = 7. What buyers wanted when the bond was first sold is history and is not used anywhere in the arithmetic.<br><br>1. Growth factor: 1.065^7 = 1.553987<br>2. Annuity factor: (1 − 1 / 1.553987) / 0.065 = 5.484520<br>3. Coupons: 30 × 5.484520 = 164.536<br>4. Par value: 1,000 / 1.553987 = 643.506<br>5. Price: 164.536 + 643.506 = 808.04<br><br><b>Check.</b> The coupon rate 3 percent is below the yield 6.5 percent, so this is a discount bond and the price must be under 1,000. It is. The rate buyers ask for went up and the price went down, which is the seesaw.<br><br><b>The wrong options.</b> <b>830.56</b> runs the whole calculation with 6 years instead of 7, the classic off by one on the count of payments. <b>1,000.00</b> discounts at the 3 percent coupon rate rather than at the 6.5 percent yield, which always returns par exactly. <b>643.51</b> is the par value on its own, with the seven coupons of 30 left out."
+    },
+
+    /* 6. Payoff, state III, promised amounts built from face plus coupon */
+    {
+      q: "A firm has senior debt with a face value of 200 and a coupon rate of 5 percent, and junior debt with a face value of 90 and a coupon rate of 10 percent. Both debts mature on the same date one year from now, and on that date each lender is owed its face value plus one year of coupon. At maturity the firm's assets are worth 340. APR holds. What does each claim holder receive?",
+      opts: [
+        "Senior 200, junior 90, equity 50",
+        "Senior 210, junior 99, equity 31",
+        "Senior 210, junior 130, equity 0",
+        "Senior 340, junior 0, equity 0"
+      ],
+      correct: 1,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior = Min(V_T, F_S). Junior = Min(V_T − F_S, F_J). Equity = Max(V_T − F_S − F_J, 0).<br><br><b>Inputs from the stem.</b> The face values are not the promised amounts here. Build each one first.<br>F_S = 200 + 0.05 × 200 = 200 + 10 = 210.<br>F_J = 90 + 0.10 × 90 = 90 + 9 = 99.<br>V_T = 340. The two borders are 210 and 210 + 99 = 309.<br><br>1. Compare V_T with F_S: 340 is above 210, so the senior lender is paid in full. Senior = 210.<br>2. Compare V_T with F_S + F_J: 340 is above 309, so both debts are paid in full. Junior = Min(340 − 210, 99) = Min(130, 99) = 99.<br>3. Equity = Max(340 − 309, 0) = 31.<br>4. Check: 210 + 99 + 31 = 340, exactly V_T.<br><br><b>The wrong options.</b> <b>Senior 200, junior 90, equity 50</b> pays each lender its bare face value and forgets the coupon that falls due on the same date. The lenders are then underpaid by 19 in total and the owners are overpaid by the same 19. <b>Senior 210, junior 130, equity 0</b> hands the junior lender the whole 130 that is left after the senior lender. A lender can never collect more than it was promised, and 99 is the limit. The extra 31 belongs to the owners. <b>Senior 340, junior 0, equity 0</b> lets the senior lender take the entire pot. Min(340, 210) is 210, not 340. Priority decides the order of payment, never the size of the claim."
+    },
+
+    /* 7. Concepts, professor's quiz Q7 */
+    {
+      q: "A founder chooses whether to register a new venture as an LLC or remain a sole proprietor for tax and liability reasons. Which kind of financial decision is this?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 3,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The method.</b> Ask whose money is at stake. Here it is two parties at once, and they happen to be the same human being wearing two hats.<br><br>The legal form of the business is a decision about the firm: how it is owned, how it is taxed, and who has to pay its debts. That is <b>corporate finance</b>. The same choice also decides whether the founder's own house and savings can be taken to pay the business debts, which is a decision about the founder's own wealth, so <b>personal finance</b> is in as well. That pair is option D.<br><br><b>The wrong options.</b> <b>Corporate finance alone</b> misses the side where the founder's own money is at risk, which is half of the reason given in the sentence. <b>Personal finance alone</b> misses that the thing being registered is a business. <b>Public finance</b> in any pairing is wrong. Tax law is written by a government, but obeying a tax rule is not a public finance decision. Public finance is a government deciding how it raises and spends its own money."
+    },
+
+    /* 8. Bonds, at par */
+    {
+      q: "A bond has a par value of 5,000 and 9 years left to maturity. It pays a coupon of 320 at the end of every year and repays the 5,000 at the end of year 9. Investors buying bonds of this risk ask for 6.4 percent a year. What is the bond worth today?",
+      opts: ["2,139.15", "5,320.00", "5,000.00", "2,860.85"],
+      correct: 2,
+      tag: "Bonds",
+      exp: "<b>The shortcut, and why it is allowed.</b> Read the two percentages first. The coupon of 320 on a par of 5,000 is a coupon rate of 320 / 5,000 = 6.4 percent. Buyers ask for 6.4 percent. The two rates are equal, so the bond trades at par and the price is exactly 5,000. No calculator is needed.<br><br><b>The long way, to prove it.</b> Price = C × (1 − (1+r)^−n) / r + F / (1+r)^n with C = 320, r = 0.064, n = 9, F = 5,000.<br>1. Growth factor: 1.064^9 = 1.747731<br>2. Annuity factor: (1 − 1 / 1.747731) / 0.064 = 6.684838<br>3. Coupons: 320 × 6.684838 = 2,139.15<br>4. Par value: 5,000 / 1.747731 = 2,860.85<br>5. Price: 2,139.15 + 2,860.85 = 5,000.00<br><br><b>Check.</b> The bond pays exactly what buyers ask for, every year, and then returns the principal, the amount borrowed. There is no reason to pay more or less than that amount.<br><br><b>The wrong options.</b> <b>5,320.00</b> is par plus one coupon, as if the last year's coupon sat outside the discounting. Every coupon is discounted, including the last one. <b>2,139.15</b> is the nine coupons alone. <b>2,860.85</b> is the par value alone. Those two are the halves of the right answer, and each is wrong on its own because a coupon bond is both pieces added together."
+    },
+
+    /* 9. Mixed stream */
+    {
+      q: "A licensing deal pays 1,500 at the end of each of years 1 to 5. It pays nothing in years 6 and 7. It then pays a single 20,000 at the end of year 8 and stops. The required rate of return is 6 percent. What is the deal worth today?",
+      opts: ["17,253.84", "21,862.94", "27,500.00", "18,866.79"],
+      correct: 3,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Two shapes, valued separately and added, because both answers land on the same date. Annuity: PV = C × (1 − (1+r)^−n) / r. Single cash flow: PV = CF_n / (1 + r)^n.<br><br><b>Inputs from the stem.</b> Piece one is 1,500 at the end of years 1 to 5, so C = 1,500 and n = 5. The run starts at year 1, so the annuity formula lands the value at year 0 with no extra move. Piece two is 20,000 at the end of year 8, so n = 8. Years 6 and 7 are empty and add nothing. r = 0.06.<br><br>1. 1.06^5 = 1.338226<br>2. Annuity factor: (1 − 1 / 1.338226) / 0.06 = 4.212364<br>3. Piece one: 1,500 × 4.212364 = 6,318.546<br>4. 1.06^8 = 1.593848<br>5. Piece two: 20,000 / 1.593848 = 12,548.247<br>6. Total: 6,318.546 + 12,548.247 = 18,866.79<br><br><b>Check.</b> The deal hands over 27,500 in cash in total. Every unit of it arrives later than today, so the value today has to be under 27,500 and well above the 12,548 that the single payment alone is worth. 18,866.79 sits between them.<br><br><b>The wrong options.</b> <b>21,862.94</b> runs the annuity for 8 years instead of 5, paying 1,500 in years 6 and 7 when the stem says nothing arrives then. <b>27,500.00</b> is 5 × 1,500 + 20,000, the raw cash added with no discounting, which treats money in year 8 as worth the same as money today. <b>17,253.84</b> takes that same 27,500 and discounts the whole of it back from year 8, which pushes the five early payments far later than they really arrive, and so makes them look worth less than they are."
+    },
+
+    /* 10. Payoff, state I, statement form */
+    {
+      q: "At maturity a firm's assets are worth 38. On that date the firm owes 62 to its senior lender and 30 to its junior lender. APR holds. Which statement describes what happens?",
+      opts: [
+        "The senior lender receives 38 and takes a loss of 24. The junior lender and the owners receive nothing",
+        "The senior lender and the junior lender share the 38 in proportion to what each is owed, so senior 25.61 and junior 12.39",
+        "The owners must pay in 54 so that both lenders can be repaid in full",
+        "The junior lender receives its 30 first because subordinated debt is protected, and the senior lender receives the remaining 8"
+      ],
+      correct: 0,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior = Min(V_T, F_S). Junior = 0 when V_T is below F_S. Equity = Max(V_T − F_S − F_J, 0).<br><br><b>Inputs from the stem.</b> V_T = 38, F_S = 62, F_J = 30. The borders are 62 and 92.<br><br>1. Compare V_T with F_S: 38 is below 62. The pot is smaller than what the senior lender alone is owed, so nothing can reach anyone behind it.<br>2. Senior = Min(38, 62) = 38. It was promised 62, so it is short by 62 − 38 = 24. That 24 is its loss.<br>3. Junior = 0.<br>4. Equity = Max(38 − 92, 0) = 0.<br>5. Check: 38 + 0 + 0 = 38, exactly V_T.<br><br><b>The wrong options.</b> <b>Sharing in proportion</b> treats priority as a fair split. It is not. It is a line, and the first in the line is paid in full before the second receives anything at all. <b>The owners must pay in 54</b> breaks limited liability. The owners can lose everything they put in and no more. They are never asked to fund the lenders out of their own pocket, which is also why equity stops at zero rather than going negative. <b>The junior lender first</b> reverses the order. Subordinated means it stands behind, so it is the last of the two to be paid and the first of the two to lose."
+    },
+
+    /* 11. Bonds, perpetual, inverse */
+    {
+      q: "A perpetual bond pays 84 at the end of every year and never stops. Its principal is never repaid. It trades today at 1,200. What annual return is a buyer at that price earning?",
+      opts: ["8.40 percent", "7.00 percent", "6.54 percent", "The return cannot be found, because the bond never repays its principal"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula, run backwards.</b> A payment that is equal, yearly and endless is a perpetuity: PV = C / r. Solve it for the rate: r = C / PV.<br><br><b>Inputs from the stem.</b> C = 84, first payment at the end of year 1. PV = 1,200, the price paid today. There is no par value term anywhere, because nothing is ever repaid.<br><br>1. r = 84 / 1,200<br>2. r = 0.07, which is 7.00 percent<br><br><b>Check.</b> Put it back into the forward formula: 84 / 0.07 = 1,200, the price in the stem. It closes.<br><br><b>The wrong options.</b> <b>8.40 percent</b> is 84 / 1,000, which measures the coupon against a par value of 1,000 that this bond does not have. The return is always measured against what you actually paid. <b>6.54 percent</b> is 84 / 1,284, adding the first coupon to the price before dividing. The 84 is what you receive, not part of what you hand over. <b>Cannot be found</b> is the tempting concept trap. The principal never coming back is not a problem, it is what this kind of bond is. The endless stream of 84 is the whole of what you own, and it is enough to price."
+    },
+
+    /* 12. Concepts, professor's quiz Q8 */
+    {
+      q: "A town negotiates a public private partnership with a construction firm to build a toll road and share future toll revenue. Which kind of financial decision is this?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 5,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The method.</b> Count the decision makers. There are two here, and both are deciding about their own money.<br><br>The town is a government body deciding how to fund a road and how to share the revenue it produces, which is <b>public finance</b>. The construction firm is a company deciding whether to put its own capital into a long project in exchange for a share of future tolls, which is <b>corporate finance</b>. That pair is option F.<br><br><b>The wrong options.</b> <b>Public finance alone</b> drops the firm, which is not a seller being paid a fixed price here but a partner taking a share of the money coming in and of the risk. <b>Corporate finance alone</b> drops the town, which is the body raising and committing public money. <b>Personal finance</b> in any pairing is wrong. Drivers will pay the tolls, but paying a price that someone else has set is not a money decision of their own. No household in this sentence is choosing anything."
+    },
+
+    /* 13. Stocks, holding period return */
+    {
+      q: "An investor buys one share for 150. During the year the company pays a dividend of 3.00 a share. At the end of the year she sells the share for 168. What is her holding period return for the year?",
+      opts: ["12.5 percent", "12.0 percent", "14.0 percent", "2.0 percent"],
+      correct: 2,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> r = (P1 − P0 + D1) / P0. The top is everything the year gave you, both the price move and the cash. The bottom is what you had to put in at the start.<br><br><b>Inputs from the stem.</b> P0 = 150, the price paid at the start. P1 = 168, the price at the end. D1 = 3.00, the dividend received during the year.<br><br>1. Price gain: 168 − 150 = 18<br>2. Add the dividend: 18 + 3.00 = 21<br>3. Divide by the starting price: 21 / 150 = 0.14<br>4. That is 14.0 percent<br><br><b>Check.</b> 150 × 1.14 = 171, and 171 is exactly the 168 she holds plus the 3.00 she has already been paid. The two readings agree.<br><br><b>The wrong options.</b> <b>12.0 percent</b> is 18 / 150, the price move only, with the dividend dropped. The dividend is cash she keeps and it counts. <b>12.5 percent</b> is 21 / 168, measuring the gain against the end price. The return has to be measured against the money that was actually tied up, which is the 150 she paid. <b>2.0 percent</b> is 3.00 / 150, the dividend yield only, which ignores the 18 the price gained."
+    },
+
+    /* 14. Payoff, boundary exactly at F_S */
+    {
+      q: "A firm owes 96 to its senior lender and 40 to its junior lender on the same maturity date. APR holds. After the assets are shared out, the senior lender reports that it was paid in full and lost nothing, and the junior lender reports that it received nothing at all. What can be said about the value of the firm's assets at maturity?",
+      opts: [
+        "They were worth somewhere between 0 and 96",
+        "They were worth somewhere between 96 and 136",
+        "They were worth 136 or more",
+        "They were worth exactly 96"
+      ],
+      correct: 3,
+      tag: "Payoff structure",
+      exp: "<b>The method.</b> Each report gives you one limit. Two limits that push in from opposite sides pin the number down exactly.<br><br><b>Inputs from the stem.</b> F_S = 96, F_J = 40, so the second border is 96 + 40 = 136.<br><br>1. The senior lender was paid in full, so Min(V_T, 96) = 96, which means V_T is at least 96.<br>2. The junior lender received nothing, so Min(V_T − 96, 40) = 0, which means V_T − 96 is at most 0, so V_T is at most 96.<br>3. At least 96 and at most 96 leaves one value: V_T = 96.<br>4. Check the three payoffs at 96: senior Min(96, 96) = 96, junior Min(96 − 96, 40) = 0, equity Max(96 − 136, 0) = 0. They add to 96, exactly V_T.<br><br>This is the border case. One unit less and the senior lender is short. One unit more and the junior lender receives something. Both reports can only be true at the single point where V_T sits exactly on F_S.<br><br><b>The wrong options.</b> <b>Between 96 and 136</b> is the range where the senior lender is full, but anywhere above 96 the junior lender receives V_T − 96, which is more than nothing, so its report would be false. <b>136 or more</b> pays the junior lender its whole 40 and starts paying the owners, which goes against the junior lender's report twice over. <b>Between 0 and 96</b> is the range where the senior lender takes everything there is and is still short, which goes against the senior lender's report that it lost nothing."
+    },
+
+    /* 15. Bonds, zero coupon, inverse to face value */
+    {
+      q: "A zero coupon bond pays one single amount at the end of year 5 and pays nothing before that. It trades today at 6,268.21, and buyers of bonds of this risk ask for 5 percent a year. What amount does the bond repay at maturity?",
+      opts: ["8,000.00", "6,581.62", "7,835.26", "4,911.31"],
+      correct: 0,
+      tag: "Bonds",
+      exp: "<b>Formula, run backwards.</b> For a single cash flow, PV = F / (1 + r)^n. Turned around, F = PV × (1 + r)^n. The price is known and the face value is the unknown, so this time the move is compounding forward, not discounting back.<br><br><b>Inputs from the stem.</b> PV = 6,268.21, the price today. r = 0.05. n = 5. There is no coupon, so there is no annuity anywhere in this question.<br><br>1. Growth factor: 1.05^5 = 1.276282<br>2. F = 6,268.21 × 1.276282<br>3. F = 8,000.00<br><br><b>Check.</b> Run it the normal way: 8,000 / 1.276282 = 6,268.21, the price in the stem. It closes.<br><br><b>The wrong options.</b> <b>6,581.62</b> is 6,268.21 × 1.05, compounding for one year when the bond has five to run. <b>7,835.26</b> is 6,268.21 × 1.25, using simple interest of 5 percent × 5 years and so missing the interest that the earlier interest itself earns. <b>4,911.31</b> divides by 1.05^5 instead of multiplying. That is the right factor pointed the wrong way, and the giveaway is that a zero coupon bond always trades below the amount it repays, so any answer smaller than the price cannot be the face value."
+    },
+
+    /* 16. Growing perpetuity */
+    {
+      q: "A warehouse is let out on a lease that has no end date. The rent paid at the end of next year will be 48,000, and every later rent is expected to be 3 percent bigger than the one before it, with no end date. Investors in property of this kind ask for 8 percent a year. What is the lease worth today?",
+      opts: ["600,000", "960,000", "436,363.64", "988,800"],
+      correct: 1,
+      tag: "Perpetuity",
+      exp: "<b>Formula.</b> Payments that never stop and rise by the same percentage each year are a growing perpetuity: PV = C1 / (r − g). It only works when r is bigger than g, and here 8 percent is bigger than 3 percent, so it works.<br><br><b>Inputs from the stem.</b> C1 = 48,000, the payment at the end of year 1, which is exactly the number the formula wants on top. g = 0.03. r = 0.08.<br><br>1. r − g = 0.08 − 0.03 = 0.05<br>2. PV = 48,000 / 0.05<br>3. PV = 960,000, and that value already sits at year 0, because the formula lands one period before the first payment.<br><br><b>Check.</b> A plain perpetuity of 48,000 at 8 percent would be worth 600,000. This one is worth more, which is right, because its payments keep rising. The growth cuts the bottom of the fraction from 8 percent down to 5 percent.<br><br><b>The wrong options.</b> <b>600,000</b> is 48,000 / 0.08, which uses the plain perpetuity formula and throws the growth away. <b>436,363.64</b> is 48,000 / 0.11, adding g to r instead of subtracting it. Growth makes a stream more valuable, so anything that makes the answer smaller than the no growth case is pointing the wrong way. <b>988,800</b> grows the first payment once more, using 48,000 × 1.03 on top. The 48,000 in the stem is already the year 1 payment and must not be grown again."
+    },
+
+    /* 17. Concepts, professor's quiz Q9 */
+    {
+      q: "A firm decides whether to pay a cash dividend this year or retain earnings to fund a new product line. Which kind of financial decision is this?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 1,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The method.</b> Ask who is making the decision, not who feels the effect.<br><br>A firm is choosing what to do with money it has already earned: hand it to the shareholders now, or keep it and invest it in a new product line. That is a company deciding about its own money, so it is <b>corporate finance</b> and nothing else.<br><br><b>The wrong options.</b> <b>Personal finance</b>, on its own or in a pair, is the tempting one, because shareholders are people and the dividend lands in their pockets. Receiving money is not a decision. No household in this sentence is choosing anything, and the choice would still be corporate if every shareholder were a pension fund. <b>Public finance</b> in any pairing is wrong. No government body appears in the sentence at all."
+    },
+
+    /* 18. Bonds, inflation risk vs credit risk */
+    {
+      q: "An investor holds a 10 year bond issued by the United States Treasury in dollars, with a fixed coupon. Over the 10 years inflation turns out to be far higher than anyone expected. The Treasury pays every coupon and the full par value on time. Which statement matches this course?",
+      opts: [
+        "The investor was hit by neither risk, because a Treasury bond in its own currency is free of every kind of risk",
+        "The investor was hit by credit risk, because the payments were worth less than promised",
+        "The investor was hit by inflation risk but not by credit risk. Every promised payment arrived, and each one bought less than expected",
+        "The investor was hit by inflation risk, and holding a fixed coupon corporate bond instead would have removed it"
+      ],
+      correct: 2,
+      tag: "Bonds",
+      exp: "<b>The two risks, kept apart.</b> Credit risk, also called default risk, is the worry that the money does not arrive. Inflation risk, also called purchasing power risk, is the worry that the money arrives in full and buys less than you hoped.<br><br><b>Reading the stem.</b> Every coupon and the full par value were paid on time, so nothing was missed and there was no default. What changed is what those fixed amounts buy. That is inflation risk on its own.<br><br><b>Why the Treasury does not help here.</b> The Treasury can tax and it can create the dollars its own debt is written in, so default is close to impossible, which is why the course treats it as risk free. In this course risk free means free of default risk only. It never meant free of inflation.<br><br><b>The wrong options.</b> <b>Credit risk</b> is wrong because nothing was left unpaid. The promise was kept exactly, and a kept promise cannot be a default. <b>Neither risk</b> stretches the words risk free past what they mean in this course. Inflation and currency risk stay on a government bond. <b>A corporate bond would have removed it</b> is backwards twice over. A fixed coupon from a company is exactly what inflation eats away, and swapping a government borrower for a company adds credit risk on top. The course's inflation protected security is TIPS, issued by the Treasury, where the coupon and the principal are both adjusted to inflation."
+    },
+
+    /* 19. Payoff, inverse to the senior face value */
+    {
+      q: "At maturity a firm's assets are worth 140. APR holds. The senior lender is paid in full. The junior lender is owed 50 and receives 32. The owners receive nothing. What amount was the senior lender promised on that date?",
+      opts: ["58", "90", "140", "108"],
+      correct: 3,
+      tag: "Payoff structure",
+      exp: "<b>The method.</b> The three payoffs always add to exactly V_T, because one pot is shared out completely. When one of the three is the unknown, that rule solves it.<br><br><b>Inputs from the stem.</b> V_T = 140. Junior payoff = 32. Equity payoff = 0. F_J = 50. F_S is the unknown.<br><br>1. Senior + junior + equity = V_T, so senior + 32 + 0 = 140.<br>2. Senior payoff = 140 − 32 = 108.<br>3. The stem says the senior lender was paid in full, and a lender paid in full receives exactly what it was promised. So F_S = 108.<br>4. Check the state. F_S + F_J = 108 + 50 = 158. V_T = 140 sits between 108 and 158, which is the middle state: senior full, junior part paid, owners nothing.<br>5. Check the junior line: Min(140 − 108, 50) = Min(32, 50) = 32, the number in the stem. It closes.<br><br><b>The wrong options.</b> <b>90</b> is 140 − 50, which assumes the junior lender was paid its whole 50. The stem says it received 32, so it was 18 short. <b>140</b> gives the senior lender the entire pot and leaves the junior lender's 32 unexplained. <b>58</b> is 140 − 50 − 32, subtracting the junior lender's promise and its payment, which counts the same claim twice."
+    },
+
+    /* 20. NPV and IRR */
+    {
+      q: "A project costs 12,000 today. It returns 4,500 at the end of each of the next 4 years and nothing after that. The required rate of return is 9 percent. What is the NPV, and what does it say about the internal rate of return?",
+      opts: [
+        "NPV is 2,578.74, so accept the project, and its IRR is above 9 percent",
+        "NPV is 2,578.74, but reject the project, because its IRR must be below the required 9 percent",
+        "NPV is 6,000.00, so accept the project",
+        "NPV is 14,578.74, so accept the project"
+      ],
+      correct: 0,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> NPV = sum of CF_i / (1 + r)^i − I0. The four returns are equal, yearly and start at year 1, so they are an annuity and can be valued in one move: PV = C × (1 − (1+r)^−n) / r.<br><br><b>Inputs from the stem.</b> I0 = 12,000 at year 0. C = 4,500 at the end of each of years 1 to 4. r = 0.09. n = 4.<br><br>1. Growth factor: 1.09^4 = 1.411582<br>2. Annuity factor: (1 − 1 / 1.411582) / 0.09 = 3.239720<br>3. PV of what comes in: 4,500 × 3.239720 = 14,578.74<br>4. NPV = 14,578.74 − 12,000 = 2,578.74<br>5. NPV is above zero, so the project is worth more than it costs. Accept it.<br><br><b>The IRR part.</b> The IRR is the rate that would push the NPV down to exactly zero. At 9 percent the NPV is still positive, so the rate has to rise before the NPV reaches zero. So the IRR is above 9 percent. Positive NPV at the required return and an IRR above the required return are two ways of saying the same thing for an ordinary project like this one.<br><br><b>The wrong options.</b> <b>Accept but the IRR is below 9 percent</b> gets the arithmetic right and the link backwards. A project cannot have a positive NPV at 9 percent and an IRR under 9 percent at the same time. <b>6,000.00</b> is 4 × 4,500 − 12,000, adding cash from four different years with no discounting at all. <b>14,578.74</b> is the present value of what comes in, with the 12,000 cost never subtracted. That is a PV, not an NPV. The N stands for net."
+    },
+
+    /* 21. Bonds, rate falls, premium again */
+    {
+      q: "A bond has a par value of 1,000, a coupon rate of 5 percent paid once a year, and 8 years left to maturity. Until this morning buyers of bonds of this risk asked for 7 percent. News of falling inflation now drops what they ask for to 4 percent. What is the bond worth at the new rate?",
+      opts: ["880.57", "1,067.33", "1,000.00", "336.64"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> Price = C × (1 − (1+r)^−n) / r + F / (1+r)^n.<br><br><b>Inputs from the stem.</b> C = 0.05 × 1,000 = 50, fixed by contract and unchanged by any news. F = 1,000 at year 8. n = 8. The rate to discount with is the one buyers ask for now, r = 0.04. The old 7 percent is history.<br><br>1. Growth factor: 1.04^8 = 1.368569<br>2. Annuity factor: (1 − 1 / 1.368569) / 0.04 = 6.732745<br>3. Coupons: 50 × 6.732745 = 336.64<br>4. Par value: 1,000 / 1.368569 = 730.69<br>5. Price: 336.64 + 730.69 = 1,067.33<br><br><b>Check.</b> Two ways in. The coupon rate 5 percent is now above the yield 4 percent, so this must be a premium bond, priced above 1,000. And the rate buyers ask for fell, so the price had to rise. At 7 percent the same bond was worth 880.57. It is now worth 1,067.33. Both readings point the same way.<br><br><b>The wrong options.</b> <b>880.57</b> is the price at the old 7 percent, which is the answer to the question the market has stopped asking. <b>1,000.00</b> discounts at the 5 percent coupon rate rather than at the 4 percent yield, and discounting at the coupon rate always returns par. <b>336.64</b> is the eight coupons alone, with the 1,000 par value at year 8 forgotten."
+    },
+
+    /* 22. Concepts, professor's quiz Q10 */
+    {
+      q: "A household investor considers buying municipal bonds to receive tax exempt interest while supporting local projects. Which kind of financial decision is this?",
+      opts: ["Personal finance", "Corporate finance", "Public finance", "Personal and Corporate", "Personal and Public", "Corporate and Public"],
+      correct: 4,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>The method.</b> Ask who is deciding about money, and remember that a bond has two ends: someone buys it and someone issued it.<br><br>A household is choosing where to put its savings, which is <b>personal finance</b>. A municipal bond is debt issued by a local government to pay for public projects, and the tax exemption, meaning the interest is not taxed, is a government policy choice, so <b>public finance</b> is in as well. That pair is option E.<br><br><b>The wrong options.</b> <b>Personal finance alone</b> treats the bond as just another asset and misses that the thing being bought is a piece of public borrowing. <b>Public finance alone</b> drops the investor, who is the one actually deciding here. <b>Corporate finance</b> in any pairing is wrong. No company appears in the sentence. A municipal bond is issued by a town or a city, not by a firm."
+    }
+
+  ]
+});
+</script>
+</body>
+</html>
