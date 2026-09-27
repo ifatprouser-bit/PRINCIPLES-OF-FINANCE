@@ -1,0 +1,15 @@
+NOA: One question first. You own a small piece of a company. During the year it hands you cash, and by the end of the year the piece itself is worth a different amount than when you bought it. Which of those two did you earn? Take a moment.
+
+TOM: My first thought is the cash. That's the part I can spend.
+
+NOA: Hold that first thought, because today takes it apart. Names first. Cash a company hands its shareholders is a dividend. The change in price has its own pair of names: a capital gain when it rises, a capital loss when it falls. Both together, against what you paid, is the holding period return.
+
+TOM: One word for the whole year's reward.
+
+NOA: Then we turn it around and ask what a share is worth today. That method is the dividend discount model, in two sizes: a dividend that stays flat, and one that rises by the same percent every year. That percent keeps its letter, g, for growth. The return investors want keeps r.
+
+TOM: The same two letters as the perpetuities.
+
+NOA: Not an accident, and that's the best news of the day. Two last words. A preferred share. And two ways to measure profit: return on assets, return on equity.
+
+NOA: Take a breath and hold one word. Dividend. Cash in your hand, and only half of what a share gives you.

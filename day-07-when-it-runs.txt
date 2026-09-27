@@ -1,0 +1,31 @@
+NOA: A firm misses the payment it promised. Tomorrow morning, is the firm gone? Take a moment.
+
+TOM: I'd assume gone. Doors locked.
+
+NOA: Usually not. Missing the payment on the day is default, and default is only a bucket that didn't fill. Bankruptcy is something else. It's the legal process that follows, and decides who gets what, in what order.
+
+TOM: Default is the event. Bankruptcy is the process that follows.
+
+NOA: And you've lived that gap already. Miss a rent payment and the locks don't change that afternoon. A letter comes. Then another one. Something starts moving, and it moves at its own speed.
+
+TOM: Same with a phone bill I forgot about. Nobody cut me off at lunchtime. The missed date was one thing. What came after it was a machine with steps in it.
+
+NOA: Two routes in the American system, and both are named on your exam. Chapter eleven is reorganisation. The firm keeps trading while a plan is agreed that changes how much is owed and when. Chapter seven is liquidation. The firm stops, the assets are sold, the cash goes out in priority order.
+
+TOM: Eleven, the firm lives. Seven, it doesn't.
+
+NOA: Keep it to exactly that much. Your course names the two routes and goes no further, so neither do we. A question here asks which route leaves the firm alive, never the law inside it.
+
+TOM: And a court is slow and expensive, so I'd expect both sides to try to stay out of one.
+
+NOA: They do, and they can. Out of court, the firm and its lenders agree a new deal privately. Faster and cheaper. In court there are legal costs, costs for advisers, and time. And here's the part people miss. Those costs come out of the same pot everyone is standing in line for.
+
+TOM: Which I've watched over something tiny. Two people sharing a home, arguing over a deposit, each one bringing somebody in to fight her side, and the fees came out of the deposit itself. One of them won. There was less left to win.
+
+NOA: That's the whole shape. The fight spills the water. So the pot the three claim holders are measured against is smaller than it was the day the firm stopped paying.
+
+TOM: And nobody pays for the process from outside.
+
+NOA: Nobody does. Which explains one odd thing. Under strict priority the owners get nothing once the buckets fall short, but they can drag it out, so lenders sometimes hand them a little just to finish. On the exam that only matters when the question tells you whether the rule holds, so read that line slowly.
+
+NOA: Take a breath and recall one thing. Default is the missed payment. Everything after it is a process, and the process is paid for out of the same pot.

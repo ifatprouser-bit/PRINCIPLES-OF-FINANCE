@@ -1,0 +1,35 @@
+NOA: Someone owes you a payment. They ask to push it out by five more years. Before you work anything out, just guess. Does that cost you a little, or a lot?
+
+NOA: Take a moment with it.
+
+TOM: My gut says a little. The amount doesn't change.
+
+NOA: The amount doesn't change. What it's worth today changes a lot, and that gap is bigger than anyone guesses.
+
+TOM: Because every extra year of waiting has to be paid for.
+
+NOA: Right. So we do one move. We take a payment sitting on a future date and pull it back to today. The move is called discounting. What comes out is the present value.
+
+TOM: So discounting is the move, and the present value is what comes out. Where have I already met this without noticing?
+
+NOA: A savings plan at work. You can't touch it, and it pays out in one go in ten years. Somebody tells you the figure at the end.
+
+TOM: And that figure isn't what the plan is worth to me today. The figure and the value are two different things.
+
+NOA: Second setting. Your company wins a job that pays one lump when the work is done. In two years, or in four.
+
+TOM: Not the same win, though. The four year one is worth less the day you sign it.
+
+NOA: Now the one your exam will use. A zero coupon bond. A coupon is an interest payment along the way, and this one pays none. Just one payment at the end, and that amount is called the face value.
+
+TOM: So it's a single payment with a date on it. Which means its price today is just its present value.
+
+NOA: Nothing else to compute.
+
+TOM: And that's why it sells for less than the figure printed on it.
+
+NOA: Exactly why. And two things push that value down, each on its own. Hold the wait steady and raise the rate, the value falls. Hold the rate steady and push the date out, it falls again.
+
+TOM: So a far off payment at a high rate gets hit from both sides.
+
+NOA: Hit hard. Take a breath and recall one thing. A future payment is not worth its own number. It's worth what you'd hand over today to own it.

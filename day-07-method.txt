@@ -1,0 +1,23 @@
+NOA: Four sets of three payments in front of you, one of them right. You are given the value of the assets and the two promised amounts. Take a moment. What's the fastest thing you could test?
+
+TOM: I'd work out all three payments. Which takes time I don't have.
+
+NOA: There's a shorter road, and it's the real method. Two comparisons, then two checks. First comparison: is the asset value below what the senior lender alone is owed? If it is, the senior lender takes everything there is and is still short, and the junior lender and the owners get nothing.
+
+TOM: The top bucket never fills. Nothing goes over the top edge.
+
+NOA: Second comparison: is the asset value below the two promised amounts added together? If it is, the senior lender is whole, the junior lender gets only what came over that top edge, and the owners still get nothing. If it isn't, both lenders are paid in full and the owners take the rest.
+
+TOM: So I'm not working out three payments. I'm placing one number between two borders, and where it lands tells me the shape of the answer.
+
+NOA: Then the checks, and the first does most of the work. The three payments have to add back to exactly the asset value. One pot, shared out completely. Nothing appears and nothing disappears.
+
+TOM: Like a dinner bill split three ways. If the shares don't add up to the bill, somebody miscounted. I don't need to know who to know it's wrong.
+
+NOA: That check alone kills most wrong options. The second catches what it misses: the owners can never be a minus number. Some options hide a hole by writing the missing money as negative equity, and then the three do add up.
+
+TOM: So always both. Adding up can be right for the wrong reason.
+
+NOA: Two quiet limits sit underneath. No lender collects more than it was promised. A bucket can never hold more water than its top edge allows.
+
+NOA: Take a breath and recall one thing. Find the state with two comparisons. Then make the three payments add to the whole, and throw out any answer where the owners are negative.

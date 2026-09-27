@@ -1,0 +1,37 @@
+NOA: A friend tells you their money grew by a third last year. Are they rich? Take a moment with that.
+
+TOM: I can't tell. I'd need to know how much they started with.
+
+NOA: You just found the crack in today's second tool. A percent is a speed. It never tells you the size of anything.
+
+TOM: So a percent on its own is half a sentence. It needs the amount standing beside it.
+
+NOA: Hold that, because the tool now arriving is a percent. The internal rate of return. It's the rate that would make the net present value exactly zero. The rate at which the project only just breaks even. Nothing is looked up. The cash flows decide it on their own, and that's what internal means.
+
+TOM: Then I read it against what I could earn elsewhere at the same risk. Above that bar, the project earns more. Below it, less.
+
+NOA: And the curve says the same. It slopes down, because a higher rate shrinks future money. Where it crosses the zero line the value is zero, and that crossing is the rate.
+
+TOM: And read that way it's honest. A speed I can hold against the speed of anything else I could do with the money.
+
+NOA: It is, until you mistake the speed for the prize. A market stall. A few items at a big markup look great, and the woman selling plain bread all day takes more home.
+
+TOM: Or a sale. Half off something cheap saves me less than a small discount on something expensive. The percent is louder and the money is smaller.
+
+NOA: So a project can have a very big rate and still be the poorer choice. And the rate can lose its footing in two other ways.
+
+TOM: The first has to be the direction changing more than once.
+
+NOA: It is. Money leaves, comes back, then leaves again. You pay to start, you earn, then you pay to clear the site and close it down. More than one rate now makes the value zero. Two crossings, two answers.
+
+TOM: So asking whether the rate beats my bar has no answer. A question with two answers is not a question. I'd go back to the value in money at my own rate.
+
+NOA: Now flip the order. Money comes to you first and you pay it out later.
+
+TOM: That's a loan. I'm the borrower, so I want the rate low, not high. The same number I was chasing a minute ago.
+
+NOA: And a high rate only holds if you can put every payment straight back into something just as good, year after year. You usually cannot.
+
+TOM: So it's a summary, and every summary throws something away.
+
+NOA: Recall one thing. The internal rate of return is a speed, not a size. When it argues with the value in money, the money wins.

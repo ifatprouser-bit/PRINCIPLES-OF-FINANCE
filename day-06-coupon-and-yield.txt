@@ -1,0 +1,41 @@
+NOA: You buy a gift voucher from someone you work with. The front says one hundred, in big print. She let you have it cheap, because she needed cash that day. Which of those two numbers is your business?
+
+NOA: Take a moment. Two numbers, two different jobs.
+
+TOM: What I paid. The printed hundred is what the shop owes. What I paid decides whether I did well.
+
+NOA: Hold that, because it's the whole day. On a bond the printed number is the coupon rate. Set once, on the day the paper was born, and it never moves again. Its only job is to size the payment.
+
+TOM: So it isn't a return at all. It's an order. Pay this much every year, to whoever holds this.
+
+NOA: And the yield is the other one. What a buyer earns, given what they paid. The market sets that, and it moves every day. The print on your voucher never notices.
+
+TOM: So the same paper is a good deal or a bad one depending only on the price I got it for.
+
+NOA: Now what happens next, and it's obvious the moment you feel it. You opened a fixed savings account last year, locked at last year's rate. Rates have gone up since. New accounts pay more. If you could sell yours to a stranger, what would she pay?
+
+TOM: Less than I put in. Otherwise she'd walk past me and open a new account instead.
+
+NOA: You just worked out the most famous rule in bonds on your own. Rates up, price down.
+
+TOM: Because my paper can't pay me more. It's frozen. The only thing left that can move is what somebody will pay me for it.
+
+NOA: Third setting, same machine. A landlord signs a tenant to a fixed rent for five years. Then rents in the street climb, and a buyer comes for the building.
+
+TOM: He pays less than for the same building next door. He's stuck with the old rent for years.
+
+NOA: And it runs the other way. If street rents fall, that locked-in high rent makes her building the one everybody wants, and it sells for more than the neighbour's.
+
+TOM: So above face value or below isn't about the bond being good or bad. It's whether the promise on the paper beats what's on offer today.
+
+NOA: Make that your test and you never get it backwards. Printed rate better than what buyers now ask for, worth more than face value, and that's premium. Printed rate worse, worth less, discount. The two equal, exactly face value.
+
+TOM: And I can see the mistake waiting for me. Discount those payments with the printed rate, and I've thrown away the only number that moves.
+
+NOA: Do that and you land on exactly the face value, beautifully round, and wrong every time. An answer that is too round is an alarm, not a result.
+
+TOM: Picture one falling line. On the left buyers ask for very little and the price sits high. Walk right, they ask for more, and the line slides down, crossing face value once on the way past.
+
+NOA: And it never once turns upward.
+
+NOA: Take a breath and recall one thing. The coupon is what the paper promises. The yield is what you earn for what you paid. The promise cannot move, so the price does all the moving.

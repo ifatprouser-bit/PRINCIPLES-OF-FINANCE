@@ -1,0 +1,33 @@
+NOA: Someone offers you the same amount at the end of every year for the next ten years, and wants one number back. What's that whole promise worth to you right now? Take a moment.
+
+TOM: My honest first move would be to add the ten payments up.
+
+NOA: And that number is always too big. You can't add payments from ten different dates as if they all landed this morning.
+
+TOM: So I pull each one back and then add. Ten divisions, nowhere to hide a mistake.
+
+NOA: Which is why the present value of an annuity exists. It does the whole column in one line.
+
+TOM: Doing what, underneath?
+
+NOA: Building one small number, the annuity factor. It's what one unit a period is worth today, over that many periods, at that rate. You then multiply by the real payment.
+
+TOM: So it's a price tag on the pattern, and the payment just scales it.
+
+NOA: Exactly. And that factor always comes out smaller than the number of payments, because each one has been shrunk by the wait.
+
+TOM: So if my answer beats the raw payments added up, I've gone wrong somewhere.
+
+NOA: Now the rate. A landlord weighing twelve months of rent against one payment up front.
+
+TOM: Or someone offered a lump sum today instead of a pension paid out yearly.
+
+NOA: Or a business paying a supplier monthly instead of clearing it in one go. Same question every time. A higher rate means waiting costs you more, so the promise is worth less today.
+
+TOM: And a lower rate makes it worth more. Same payments, different value.
+
+NOA: One last thing, the quiet one. The number this gives you already sits one period before the first payment.
+
+TOM: Which is today, when the first payment is at the end of the first period. So I stop there.
+
+NOA: Take a breath. One thing to keep. The present value of an annuity is already today's money. Don't pull it back again for luck.

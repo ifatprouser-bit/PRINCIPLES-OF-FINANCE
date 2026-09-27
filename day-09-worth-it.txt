@@ -1,0 +1,29 @@
+NOA: You're about to pay for a training course out of your own pocket. What would make it worth the money? Take a moment.
+
+TOM: The fee has to be smaller than what I get out of it afterwards.
+
+NOA: There's a date hiding in that sentence. The fee you pay now. What you get out of it comes later.
+
+TOM: So I can't line them up as they are. Later money is worth less than the same money today. That was day two.
+
+NOA: So you pull every later piece back to today, each from its own year, add them up, and only then set the total against the fee. What's left over is the net present value. The professor's guide says it in four words. Excess of market value over cost. In plain words, how much the value beats the price.
+
+TOM: Two bars, then. The top one is the future cash valued at today, the bottom one is the price, and the piece of the top bar sticking out past the bottom one is what I keep.
+
+NOA: That piece is the lesson. Same shape as a washing machine. You pay once, and it saves you the laundry shop every week for years. Real money, arriving slowly, so you carry it back to today before you set it against the price on the box.
+
+TOM: Or a supplier who wants a fee now to hold a lower price for two years. The saving turns up month by month. The fee turns up today.
+
+NOA: And in all three the answer is an amount of money, in today's money. Not a score, not a percent. Positive, take it. Negative, walk away.
+
+TOM: What about the quick version, counting the years until the money comes back?
+
+NOA: The payback period. It adds cash from different years without discounting any of it, which is the one thing you already know you can't do.
+
+TOM: Is there a number of years that counts as too long?
+
+NOA: Not in this course. No cutoff is set anywhere, so if a question wants one it has to hand it to you.
+
+TOM: So the formula was never the hard part. Knowing what the answer is made of was.
+
+NOA: Recall one thing. Net present value is an amount of money, measured today, and its sign is the decision.

@@ -1,0 +1,35 @@
+NOA: Here's the question. You know what you put into a savings account years ago, and you know what sits in it now. Does anyone need to tell you what rate you earned?
+
+NOA: Take a moment.
+
+TOM: No. It's hiding in those two numbers. I'd just have to dig it out.
+
+NOA: You would. And that's the second half of today. Compounding and discounting are not two topics. They're one move, run in two directions.
+
+TOM: So it's a set of stairs. I climb them to go up, I take the same stairs to come down.
+
+NOA: That's it. Forward in time, you multiply by the growth factor. Backwards, you divide by that same factor.
+
+TOM: Which takes us back to the money changer. Shekels to dollars at the counter, dollars back on the way home. Same rate, both directions.
+
+NOA: And a third. A recipe for four people. Scale it up for eight, scale it back for two. One number does both jobs.
+
+TOM: So there's one equation here, not three.
+
+NOA: One equation, four parts. Money now, money later, the rate, and the number of years. Any three of them hand you the fourth.
+
+TOM: So two ends and the years give me the rate. And the rate and the years give me either end.
+
+NOA: That's the whole toolbox. Now the trap. Going back to the rate, you don't split the total return evenly across the years.
+
+TOM: Why not? Sharing it out evenly feels honest.
+
+NOA: Interest on interest. In the second year you earn a return on the first year's return, not only on your own money.
+
+TOM: Like a raise. My second raise is worked out on the salary I already raised, not on what I started with.
+
+NOA: Which is why the years never simply add up, and equal slices always land you in the wrong place.
+
+TOM: The years stack on each other instead of sitting side by side.
+
+NOA: They stack. Take a breath and recall one thing. Forward you multiply, back you divide, and it's the same factor doing both.

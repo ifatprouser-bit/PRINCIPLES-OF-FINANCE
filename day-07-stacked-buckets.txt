@@ -1,0 +1,23 @@
+NOA: Your salary lands. Rent goes out, then a loan repayment, then whatever's left goes into savings. Now picture a month where the money is short. Take a moment. Which of those three gets less, and which gets nothing at all?
+
+TOM: Savings get nothing. Rent is fixed, the loan is fixed. Savings are only what survives.
+
+NOA: A firm works the same way, and there's a picture that makes it exact. One tap, and three open containers stacked like steps. The tap is the firm's assets, on the day the debt has to be paid.
+
+TOM: And the three containers are?
+
+NOA: The top one is the senior debt. That's the lender who was promised first place. Under it sits the junior debt, also called subordinated debt. Same thing, money the firm borrowed, but promised second. At the bottom there's an open pool. That pool is the equity, and the equity belongs to the shareholders, the people who own the firm.
+
+TOM: So the tap pours into the top container only.
+
+NOA: Only the top one. The junior debt is never fed from the tap. It's fed by water coming over the top edge of the senior one.
+
+TOM: Then the senior debt has to be paid in full before the junior lender gets a single coin. Not nearly paid. Paid right up to the top edge.
+
+NOA: You've just said the whole rule, and in this course it has a name. The senior debt holders are paid first, until they are fully covered. Only then are the junior debt holders paid, until they are fully covered. Only then do the shareholders get anything at all. That order is the Absolute Priority Rule, and in this course the letters APR mean exactly that. They do not mean a rate of interest.
+
+TOM: And if the junior debt is only half covered?
+
+NOA: Then the shareholders get nothing. Not a little. Nothing. A container that is not full passes nothing down.
+
+NOA: Take a breath and recall one thing. Senior debt first, in full. Then junior debt, in full. Then the shareholders get whatever spills over the last edge.

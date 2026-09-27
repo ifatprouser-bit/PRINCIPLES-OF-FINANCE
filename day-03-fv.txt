@@ -1,0 +1,29 @@
+NOA: You put the same amount away at the end of every year for ten years. On the day of the tenth payment, is the pile just ten times what you put in? Take a moment.
+
+TOM: It has to be more, or nobody would bother. But I couldn't tell you how much more.
+
+NOA: More, and usually far more. That's the future value of an annuity. Same three tests as before. The only change is where you stand when you look.
+
+TOM: Before, we stood at today and pulled everything back. Now we stand at the end.
+
+NOA: And push everything forward. The first payment has been in there longest, so it's grown the most. Each later one has had less time.
+
+TOM: So the newest money is doing the least work.
+
+NOA: And the very last payment does none at all. It arrives on the day we're measuring. No time to earn anything.
+
+TOM: That's the bit I'd have got wrong. I'd have handed it a year of interest without noticing.
+
+NOA: And that makes the whole answer too big by one period of growth. It's the same kind of mistake as counting the wait wrong at the front end.
+
+TOM: So both ends of this punish being out by one.
+
+NOA: They do. Now, a savings club, where everyone puts in the same amount each month and the pot is shared out at the end of the year.
+
+TOM: Or a pension at work that you pay into yearly, and you want to know what's waiting at the finish.
+
+NOA: Or a small shop putting the same sum aside every month to replace its delivery van. On the day the old one dies, what's sitting in that fund?
+
+TOM: Same machine, three lives. And it runs backwards too. If I know the pile I need, I can work out the payment that gets me there.
+
+NOA: Which is exactly what a savings plan asks. Take a breath, and one thing to carry. The future value of an annuity is dated on the day of the last payment, and that last payment earns nothing.

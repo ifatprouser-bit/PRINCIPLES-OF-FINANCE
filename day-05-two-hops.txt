@@ -1,0 +1,29 @@
+NOA: This one decides your mark on the topic. You put the payment, the count and the rate into the annuity formula. Out comes a number. What date does that number belong to? Say a year out loud before I answer.
+
+TOM: Today. That's what present value means.
+
+NOA: That's what almost everyone says, and it's only true by accident. The formula doesn't deliver to today. It delivers to one period before the first payment.
+
+TOM: So the formula picks the address, not me.
+
+NOA: The payments pick it. Think of a package. It goes to the pickup point at the end of your street, never your door. If you want it in the kitchen, you walk.
+
+TOM: And if you lived above the pickup point you'd never notice the walk.
+
+NOA: That's exactly why the marks go. When the first payment is next year, one period before it is today. The package lands in your kitchen, the walk is zero. Every beginner exercise is built that way, so the rule stays hidden.
+
+TOM: It's the bus, then. The bus takes you to the station, not your apartment. Nobody says the bus was broken. You walk the last bit.
+
+NOA: Or a new sofa. The delivery leaves it at the door of the building. Getting it up the stairs is yours. Two moves, every time.
+
+TOM: So a first payment in year four means the formula drops the value at year three. Which isn't today.
+
+NOA: Follow the picture. Four equal bars, years four through seven. One curve sweeps off them and stops dead at year three. That's the formula finishing its job. Then a second curve leaves year three and travels left, all the way to today. Nobody draws that second one.
+
+TOM: So stopping at the curve that ends at year three hands in a future value and calls it a present value.
+
+NOA: And that wrong number is sitting in the options, waiting. One precise thing. Carry it back by the year the value landed in, not the year of the first payment.
+
+TOM: So count from where it landed, not from where it starts. Off by one there and the answer is off.
+
+NOA: Take a breath and recall one thing. The annuity formula lands one period before the first payment. Two hops, never one.

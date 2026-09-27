@@ -1,0 +1,29 @@
+NOA: One question before we put it together. Halfway through a long problem, three or four pieces going, what's most likely to go wrong? Not the sums. Think for a second.
+
+TOM: Losing track. Finishing a piece, feeling pleased, forgetting it isn't actually finished.
+
+NOA: And that has a shape. Laundry on the drying rack. Washed, dry, the work feels done. It is not put away yet.
+
+TOM: Like a suitcase by the front door. You packed it. You'll still miss the flight, because packed isn't in the car.
+
+NOA: Or splitting a bill and everyone says they'll send their share. Saying isn't sending.
+
+TOM: So the delayed piece is the suitcase by the door. You did the hard part, it's sitting in some future year, and it feels done.
+
+NOA: It slips past unless you write down where it is. That's the whole reason for the small table. One row per piece. What it is, what its formula gave you, and then the column that matters, the year that value is sitting in right now.
+
+TOM: Run your eye down that column. Any row not saying zero is still on the drying rack.
+
+NOA: Not wrong. Just not finished. Two different things, and only one is fixable in ten seconds.
+
+TOM: What about a year with no money in it? Does that get a row?
+
+NOA: No. An empty year is just empty. Nobody stretches a meeting across a blank week to tidy up the calendar. If payments stop and start again later, that's two runs and two pieces.
+
+TOM: And once every row says zero, they're standing on the same date, so adding them finally means something.
+
+NOA: Then sense check. The total must come out smaller than the plain sum of the cash, because everything arrived later than today. And bigger than the largest single piece inside it.
+
+TOM: Two tests that cost nothing.
+
+NOA: Take a breath and recall one thing. A piece isn't finished when you've valued it. It's finished when it's standing at today.

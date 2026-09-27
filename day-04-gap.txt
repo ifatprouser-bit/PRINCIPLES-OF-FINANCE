@@ -1,0 +1,29 @@
+NOA: Here is the question. Your pay goes up three percent this year. Are you better off? Take a moment, because it's a trick and it also isn't.
+
+TOM: I can't answer that. It depends what happened to prices.
+
+NOA: There it is. You didn't reach for the size of the raise. You reached for the distance between the raise and the prices.
+
+TOM: Because if prices rose three percent too, I stood completely still. Same money, same shopping.
+
+NOA: That distance is the whole idea. When a payment stream grows forever, its value doesn't depend on the growth alone, or on the required return alone, which is the return people want. It depends on the gap between them. The payment one period from now, divided by that gap.
+
+TOM: So a company raising its dividend every year is my salary story again. And a landlord raising the rent. The apartment isn't worth more just because the rent grows.
+
+NOA: It's worth more because the return people want still sits above that growth.
+
+TOM: What if the two get close? My raise only just ahead of prices?
+
+NOA: Then everything is shaky. A tiny change either way flips you from slowly gaining to slowly losing. Same in the formula. When the gap is thin, half a percent of growth can double the answer.
+
+TOM: And if growth catches the return completely?
+
+NOA: Then there's no price. Not a huge price. None. A stream growing forever at least as fast as you discount it is worth more than any number you could name.
+
+TOM: Which can't be true of anything real. Nothing grows faster than everything around it forever.
+
+NOA: So the formula has not failed. What we assumed has. Either that growth cannot last, or the required return is too low.
+
+TOM: The maths is telling me the story in the question isn't a real story.
+
+NOA: Take a breath and recall one thing. Check the gap before you divide. If the return doesn't beat the growth, the thing to question is the question.

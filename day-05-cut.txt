@@ -1,0 +1,29 @@
+NOA: Start here. When you see a long list of payments across different years, what makes it feel hard? Be honest, take a second.
+
+TOM: It looks like one big lump. I don't know where to put my hands.
+
+NOA: And it isn't one lump. Think of a shelf that comes in a box for you to build. The picture on the box looks impossible. Then you open the sheet and it's four moves, and you've done all four before.
+
+TOM: The moves aren't new. The order is new.
+
+NOA: Same with a recipe you've never cooked. Chopping, boiling, letting something rest. You've done every move a hundred times.
+
+TOM: Or a route across town you've never driven. New route, roads you already drive every week.
+
+NOA: A stream of cash flows is that. You see a wall. You cut, and there's a single cash flow, there's an annuity, maybe a perpetuity. You own all three.
+
+TOM: So the skill isn't a formula. It's knowing what you're looking at.
+
+NOA: Knowing what you're looking at, in four moves. Draw the timeline, amounts written above the year they land in. Name each piece. Value each piece. Then add.
+
+TOM: Why not add the payments first and discount the total once? Faster.
+
+NOA: Because money from different years isn't the same thing. It's adding shekels to euros without changing one into the other. The numbers add happily. The answer means nothing.
+
+TOM: So convert first. Bring every payment to today. Then the plus sign is allowed.
+
+NOA: Look along that first timeline. Four matching bars in a row on the left, same height, evenly spaced. The fact that it repeats is what makes it an annuity. Then one bar on its own at the far end, nothing beside it. Standing alone is what makes it single.
+
+TOM: The picture names the pieces before any sums do.
+
+NOA: Always. Take a breath and recall one thing. A messy stream is only familiar shapes side by side. Cut before you calculate.

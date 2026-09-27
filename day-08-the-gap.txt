@@ -1,0 +1,35 @@
+NOA: You get a raise at work, three percent. That same month every shop on your street raises its prices by three percent. How much better off are you? Take a moment.
+
+TOM: Not at all. Nothing moved. They cancel.
+
+NOA: And that's the whole of today's second formula. What matters is never the two numbers alone. It's the distance between them.
+
+TOM: Then for a share the two must be the return I want and something the dividend itself is doing.
+
+NOA: Real firms rarely pay the same dividend year after year. A healthy one lifts it a little each time, by roughly the same percent. So the stream grows steadily and never ends.
+
+TOM: A growing perpetuity. I know that shape.
+
+NOA: So the price is next year's dividend over the gap between the return investors ask for and the rate the dividend grows at. Growth pushes each payment up, discounting pulls it down for arriving later, and only the difference reaches the price.
+
+TOM: Then a small change in growth is not a small change in the answer.
+
+NOA: Squeeze the gap narrow and the price doesn't creep, it leaps. Same dividend, barely moved. A price several times larger.
+
+TOM: And if the gap closes completely, the bottom of that fraction is nothing at all. I wouldn't even be allowed to divide.
+
+NOA: Picture walking up an escalator that is coming down. Climb faster than the steps and you reach the top. Climb at exactly their speed and you walk forever and arrive nowhere.
+
+TOM: Or running for a bus pulling away at exactly your running speed. You never board and you never give up.
+
+NOA: That's a dividend growing as fast as the rate you discount at. Every payment weighs the same in today's money, an endless row of them, and the total never settles. There's no price to find. And if the growth climbs past the return, the arithmetic goes quiet and hands you a negative price, which is worse, because a negative looks like an answer.
+
+TOM: So the minus sign is not an answer. It's the model saying it doesn't apply here, and a share can't be worth less than nothing.
+
+NOA: Check the return investors ask for beats the growth before you divide. Then check which payment sits on top of that gap.
+
+TOM: The next one, not the one just paid. And a question will usually hand me yesterday's, because that's the one in the newspaper.
+
+NOA: Which is the bus that already left. You are pricing what is still coming, so grow it forward one year first. That single step is the most common lost mark here.
+
+NOA: Take a breath and recall one thing. A dividend growing forever is a growing perpetuity, and the price lives in the gap between the return investors ask for and the growth.

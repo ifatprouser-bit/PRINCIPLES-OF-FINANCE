@@ -1,0 +1,31 @@
+NOA: Somebody offers you a fixed amount every year, the same amount, for as long as the company stands. What would you need to know before you could price it? Take a moment.
+
+TOM: How much a year. And what return I want for handing over my money.
+
+NOA: That's everything. Two numbers, one division. And you learned nothing new to answer me, because you've met this stream already.
+
+TOM: The perpetuity. Fixed payment, steady beat, no end.
+
+NOA: All that changed is the label on the cash flow. It used to be a payment. Now it's called a dividend.
+
+TOM: Which is how a lot of finance works, I notice. My grandmother's soup turns up on a menu with a long name and a price, and I don't know what it is until it reaches the table. Or a form asks for my place of residence and I stall before writing my address.
+
+NOA: Someone is introduced at a meeting by their full formal name and you've sat beside them for years. So where the dividend never changes, the value is that dividend divided by the return investors ask for.
+
+TOM: One division. No new formula.
+
+NOA: Careful with the word forever, though, because the other endless-sounding thing does stop. A lease has a date printed on it. A company comes with no date.
+
+TOM: So a lease is an annuity, and a company is a perpetuity.
+
+NOA: And the clearest real case of a flat dividend forever has a name. A preferred share. Its dividend is fixed when the share is first sold and doesn't grow, it is paid before the ordinary shareholders see anything, and the holder usually has no vote.
+
+TOM: Paid first, no say in the room. Plenty of people would take that trade.
+
+NOA: One honest thing. Your course lists the preferred share as a topic and never spells it out, so what I just said is the standard version from the book. If your lecturer said it differently in class, his version wins.
+
+TOM: The way you price it isn't in doubt, though.
+
+NOA: No. Fixed, forever, no growth is a plain perpetuity, whatever the share is called.
+
+NOA: Take a breath and recall one thing. A dividend that never changes is not a new problem. It's a perpetuity, and one division prices it.

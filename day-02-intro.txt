@@ -1,0 +1,19 @@
+NOA: One question before anything else. Someone owes you money. They ask to pay you later instead of today. What would you want in return?
+
+NOA: Take a moment. There's no wrong answer here.
+
+TOM: My honest answer is, something extra. I couldn't tell you how much. But not the same amount.
+
+NOA: Hold on to that feeling, because it's the whole day. Everything that comes after in this course stands on it.
+
+TOM: So what are we naming?
+
+NOA: Four words. Present value: what a future payment is worth today. Future value: what money you already have grows into. Discounting: moving money backwards in time. Compounding: moving it forwards.
+
+TOM: And the price of waiting? The bit I said I'd want on top?
+
+NOA: That's the rate. One number, one letter, r. Sometimes we call it the discount rate.
+
+TOM: Four words and one letter. I can hold that.
+
+NOA: Take a breath and recall one thing. Money today and money later are not the same money.

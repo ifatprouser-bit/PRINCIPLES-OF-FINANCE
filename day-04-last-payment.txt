@@ -1,0 +1,33 @@
+NOA: Two contracts. Same money, same growth every year, same risk. One runs twenty years. The other has no end date. How far apart are those two prices? A little, or a lot? Guess before I say.
+
+TOM: A little, I want to say, because the early payments are the ones that matter.
+
+NOA: With a payment that stays the same you'd be right. Here it can be a third of the value, and worse. That's why this one decision is worth more than any of the sums that come after it.
+
+TOM: So the big money isn't in the growth rate at all. Something before it decides.
+
+NOA: Not whether the payments grow. Both of these grow. It's whether there's a last payment.
+
+TOM: So I hunt for an end date in the wording.
+
+NOA: Every time. A lease that runs eight years. A patent, which is the right to be the only one selling something, with years left on the clock. The example here uses mining rights that run out. Each of those hands you a number of payments.
+
+TOM: And if I miss it, I pay for payments that nobody will ever send me.
+
+NOA: And the miss is bigger here than with a payment that stays the same, because growth cancels part of the discounting. When a payment grows almost as fast as you shrink it, the far off payments stop being loose change.
+
+TOM: So the closer growth is to the required return, the harder I should look for the end date.
+
+NOA: Yes. And how close they are gives you one more case. What if growth exactly matches the required return, the return people want?
+
+TOM: Then the gap is nothing. You said that meant no price at all.
+
+NOA: For a stream with no end, yes. This one stops. Think of pay that rises exactly with prices. Every year's pay buys the same basket.
+
+TOM: So every payment weighs the same as every other one, in today's money.
+
+NOA: So there's nothing to work out. You count them. How many payments, times what one is worth today.
+
+TOM: Then the end date isn't just something I look for. Here it's the whole answer.
+
+NOA: Take a breath and recall one thing. Before you pick a formula, hunt for the last payment.

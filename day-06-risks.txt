@@ -1,0 +1,47 @@
+NOA: Somebody promises to pay you back next year. Name two completely different ways that can let you down.
+
+NOA: Take a moment. Two, not one.
+
+TOM: She doesn't pay. That's the obvious one.
+
+NOA: And the second is quieter, which is why nobody sees it coming.
+
+TOM: She pays. In full, to the day. And it's worth less than I expected, because by then everything costs more.
+
+NOA: Those are the two risks sitting inside every bond. The money doesn't arrive, which is credit risk, also called default risk. Or it arrives and buys less, which is inflation risk, also called purchasing power risk.
+
+TOM: So one is about the borrower. The other is about the world the money lands in.
+
+NOA: Which is why the safest borrower alive can't protect you from the second. A relative promises a fixed sum as a wedding gift, three years out. You can completely count on her, and the money arrives exactly as promised.
+
+TOM: And it pays for a smaller party than it would have. She kept her word perfectly and I still lost something.
+
+NOA: Same machine, closer to home. You agree a fixed salary for three years, no raises. The number on your payslip is entirely safe. Now look in your shopping basket.
+
+TOM: The number stops meaning what it meant. Same money, less life. That's what a fixed payment does over a long bond.
+
+NOA: Now the other risk. Your sister and a stranger each hand you the same written promise. Same sum, same date, same words.
+
+TOM: I'd pay less for the stranger's. Not because his promise says less, but because I'm less sure of it.
+
+NOA: Say what that means.
+
+TOM: Two promises exactly the same, two different prices. The riskier one is the cheap one, and cheap is how I get paid for carrying the doubt.
+
+NOA: That distance, said as a rate, is what the course calls the credit spread. Doubt, priced.
+
+TOM: So doubt has a price, and I read it off two prices for one promise. What I still can't see is what makes one borrower shakier than the next.
+
+NOA: Partly who they are. Partly where you stand behind them. Take a bank. It borrows from the public, and a deposit is exactly that, you lending money to your bank. Behind the depositors stands another lender, who agreed in writing to be paid only after the depositors are paid in full. That's subordinated debt, also called junior debt.
+
+TOM: Which is why they'd be promised more. They stand at the back of the line, so they want paying for standing there.
+
+NOA: And when there isn't enough to go round, that order is not open to argument. Depositors whole first. Only then what's left for the subordinated lender. Shareholders last, and often nothing.
+
+TOM: And the depositors never thought of themselves as lenders at all. I thought somebody stood behind them.
+
+NOA: Somebody does. Deposit insurance. A government promise to pay insured depositors back if the bank fails. The course never puts a figure on how much is covered, so don't carry a figure into the exam. Carry what the promise changes. Insurance doesn't make the bank safe. It moves the depositor's risk onto the state.
+
+TOM: And the subordinated lender was never offered that. Which is the real reason his return has to be higher.
+
+NOA: Take a breath and recall one thing. Ask which of the two problems the question is about. Does the money fail to arrive, or does it arrive and buy less?
