@@ -16,6 +16,73 @@
 
   var LOG_KEY = 'pof.errorlog.v1';
 
+  /* ------------------------------------------------------------------
+     VISITOR COUNTING (GoatCounter)
+
+     PUT YOUR CODE ON THE NEXT LINE. It is the part before .goatcounter.com
+     in your own address. If yours is  ifat-finance.goatcounter.com  then the
+     line reads  var GOATCOUNTER_CODE = 'ifat-finance';
+     Leave it as it is and nothing is loaded and nothing is counted.
+
+     This one line covers the whole site, because every page loads this file.
+     GoatCounter sets no cookies and stores no personal data, so there is
+     nothing to warn your classmates about.
+  ------------------------------------------------------------------ */
+
+  var GOATCOUNTER_CODE = '';
+
+  var pendingCounts = [];
+
+  function startCounting() {
+    if (!GOATCOUNTER_CODE) return;
+    try {
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter',
+        'https://' + GOATCOUNTER_CODE + '.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.addEventListener('load', drainCounts);
+      document.head.appendChild(s);
+    } catch (e) { /* counting must never break a study page */ }
+  }
+
+  function drainCounts() {
+    while (pendingCounts.length) {
+      var q = pendingCounts.shift();
+      try { global.goatcounter.count(q); } catch (e) { /* ignore */ }
+    }
+  }
+
+  /* Record one thing a learner did. Safe before the script has loaded, and
+     safe if it never loads at all. */
+  function countEvent(path, title) {
+    if (!GOATCOUNTER_CODE) return;
+    var q = { path: path, title: title || path, event: true };
+    if (global.goatcounter && global.goatcounter.count) {
+      try { global.goatcounter.count(q); } catch (e) { /* ignore */ }
+    } else {
+      pendingCounts.push(q);
+    }
+  }
+
+  /* Count the first play of each audio strip, once per page view. Pressing
+     pause and play again, or dragging the slider, does not count twice. */
+  function wireAudioCounting() {
+    var players = document.querySelectorAll('audio');
+    for (var i = 0; i < players.length; i++) {
+      (function (el, n) {
+        var counted = false;
+        el.addEventListener('play', function () {
+          if (counted) return;
+          counted = true;
+          var src = el.getAttribute('src') || '';
+          var name = src.split('/').pop().replace(/\.mp3$/i, '') || ('strip-' + n);
+          countEvent('audio-play/' + name, 'Played: ' + name);
+        });
+      })(players[i], i + 1);
+    }
+  }
+
   /* ---------- storage: never let a blocked or full localStorage break the page ---------- */
 
   function readLog() {
@@ -395,7 +462,12 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', wireReveals);
+  document.addEventListener('DOMContentLoaded', function () {
+    wireReveals();
+    wireAudioCounting();
+  });
+
+  startCounting();
 
   global.POF = {
     quiz: quiz,
@@ -403,6 +475,7 @@
     mountErrorLog: mountErrorLog,
     buildPrompt: buildPrompt,
     readLog: readLog,
-    clearLog: clearLog
+    clearLog: clearLog,
+    countEvent: countEvent
   };
 })(window);
