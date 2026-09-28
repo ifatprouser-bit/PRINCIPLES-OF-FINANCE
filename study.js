@@ -29,7 +29,7 @@
      nothing to warn your classmates about.
   ------------------------------------------------------------------ */
 
-  var GOATCOUNTER_CODE = '';
+  var GOATCOUNTER_CODE = 'ifat-finance';
 
   var pendingCounts = [];
 
