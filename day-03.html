@@ -4,17 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Day 3 · Annuity</title>
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <div class="wrap">
 
   <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
-  <div class="crumb">DAY 3 · Monday 28 September</div>
+  <div class="crumb">Day 3 · Monday 28 September</div>
   <h1>Annuity: the same payment every period</h1>
   <p class="lede">One formula replaces a long column of divisions. Today you learn when you are allowed to use it.</p>
-
-  <div class="secaudio"><span class="salab">Before you start: today's words · 1:11</span><audio controls preload="none" src="day-03-intro.mp3"></audio></div>
 
   <!-- ============ RECALL (day 1) ============ -->
   <div class="preq">
@@ -41,8 +39,6 @@
   <div class="panel">
     <h3>1. Three tests for an annuity</h3>
 
-    <div class="secaudio"><span class="salab">Two cleaning clients: which one is paying an annuity? · 1:43</span><audio controls preload="none" src="day-03-tests.mp3"></audio></div>
-
     <p class="p">An annuity is the same payment, arriving after the same gap in time, for a fixed number of periods. That one sentence hides three separate tests, and a stream has to pass all three.</p>
 
     <table class="dtable">
@@ -51,8 +47,6 @@
       <tr><td class="lab">Same gap</td><td>Is the time between payments always equal?</td><td>A year is skipped</td></tr>
       <tr><td class="lab">Fixed count</td><td>Does it stop after a known number of payments?</td><td>It runs forever. That is a perpetuity, a stream that never stops. Day 4</td></tr>
     </table>
-
-    <div class="secaudio"><span class="salab">End of period: the first payment is a full year away · 1:33</span><audio controls preload="none" src="day-03-timing.mp3"></audio></div>
 
     <p class="p">In this course the payments arrive at the <b>end</b> of each period unless the question says otherwise. Every class example and every formula on the exam sheet is built that way, so read a question as end of period unless the words say start of period.</p>
 
@@ -63,7 +57,7 @@
     <div class="svg-wrap">
       <svg viewBox="0 0 560 210" role="img" aria-label="Timeline showing three payments of 500 at the end of years 1, 2 and 3, each discounted back to time 0">
         <line x1="40" y1="120" x2="530" y2="120" stroke="#6f6886" stroke-width="2"/>
-        <g font-size="12" fill="#6f6886" text-anchor="middle">
+        <g font-size="13" fill="#5f5877" text-anchor="middle">
           <line x1="60" y1="113" x2="60" y2="127" stroke="#6f6886" stroke-width="2"/><text x="60" y="145">0 (today)</text>
           <line x1="200" y1="113" x2="200" y2="127" stroke="#6f6886" stroke-width="2"/><text x="200" y="145">end yr 1</text>
           <line x1="340" y1="113" x2="340" y2="127" stroke="#6f6886" stroke-width="2"/><text x="340" y="145">end yr 2</text>
@@ -79,12 +73,12 @@
         </g>
         <defs><marker id="ah3" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M0 0 L8 4 L0 8 z" fill="#6b4ef0"/></marker></defs>
-        <g font-size="11.5" fill="#5238c4" text-anchor="middle">
+        <g font-size="13" fill="#5238c4" text-anchor="middle">
           <text x="130" y="46">÷ 1.06 once</text>
           <text x="200" y="14">÷ 1.06 twice</text>
           <text x="270" y="182">÷ 1.06 three times</text>
         </g>
-        <g font-size="12" fill="#6f6886"><text x="40" y="200">Each arrow lands on today. Nothing is added until every arrow has landed.</text></g>
+        <g font-size="13" fill="#5f5877"><text x="40" y="200">Each arrow lands on today. Nothing is added until every arrow has landed.</text></g>
       </svg>
       <div class="cap">Three payments of 500, a rate of 6%. The count of divisions equals the year number.</div>
     </div>
@@ -131,15 +125,11 @@
   <div class="panel">
     <h3>2. Present value of an annuity</h3>
 
-    <div class="secaudio"><span class="salab">Why equal payments are worth less than their total · 1:44</span><audio controls preload="none" src="day-03-pv.mp3"></audio></div>
-
     <p class="p">The long way works, but on a 20 year stream it is 20 divisions with a scientific calculator and no room for a mistake. The annuity formula does the whole column in one line.</p>
 
     <div class="math">PV = A × [ 1 − 1 / (1 + r)<sup>n</sup> ] / r</div>
 
     <p class="p">A is the payment, the same size every time. r is the rate per period. n is the number of payments. The part in the brackets, divided by r, is called the annuity factor. It is the value today of 1 received at the end of every period for n periods. You then multiply it by the real payment.</p>
-
-    <div class="secaudio"><span class="salab">The copier: pay cash now or pay every year? · 1:42</span><audio controls preload="none" src="day-03-copier.mp3"></audio></div>
 
     <p class="p">The answer sits at time 0, which is one full period before the first payment. That is built into the formula. You do not discount the result again.</p>
 
@@ -207,8 +197,6 @@
   <div class="panel">
     <h3>3. Future value of an annuity</h3>
 
-    <div class="secaudio"><span class="salab">Saving for retirement: what equal payments grow into · 1:42</span><audio controls preload="none" src="day-03-fv.mp3"></audio></div>
-
     <p class="p">Sometimes you do not want today's value. You want the pile of money at the end, after saving the same amount every year. That is the future value of an annuity.</p>
 
     <div class="math">FV = A × [ (1 + r)<sup>n</sup> − 1 ] / r</div>
@@ -218,9 +206,9 @@
     <div class="rule">FV of an annuity is dated on the day of the last payment. The last payment earns no interest. If you give it a year of interest you get an answer that is too high by a factor of (1 + r).</div>
 
     <div class="svg-wrap">
-      <svg viewBox="0 0 560 200" role="img" aria-label="Three savings of 2000 at the end of years 1, 2 and 3 compounded forward to the end of year 3">
+      <svg viewBox="0 0 560 212" role="img" aria-label="Three savings of 2000 at the end of years 1, 2 and 3 compounded forward to the end of year 3">
         <line x1="40" y1="60" x2="530" y2="60" stroke="#6f6886" stroke-width="2"/>
-        <g font-size="12" fill="#6f6886" text-anchor="middle">
+        <g font-size="13" fill="#5f5877" text-anchor="middle">
           <line x1="70" y1="53" x2="70" y2="67" stroke="#6f6886" stroke-width="2"/><text x="70" y="45">0</text>
           <line x1="210" y1="53" x2="210" y2="67" stroke="#6f6886" stroke-width="2"/><text x="210" y="45">end yr 1</text>
           <line x1="350" y1="53" x2="350" y2="67" stroke="#6f6886" stroke-width="2"/><text x="350" y="45">end yr 2</text>
@@ -235,12 +223,12 @@
         </g>
         <defs><marker id="ah3b" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M0 0 L8 4 L0 8 z" fill="#6b4ef0"/></marker></defs>
-        <g font-size="11.5" fill="#5238c4" text-anchor="middle">
-          <text x="290" y="146">× 1.08 twice → 2,332.80</text>
-          <text x="418" y="130">× 1.08 once → 2,160.00</text>
-          <text x="496" y="120" text-anchor="end">no interest → 2,000.00</text>
+        <g font-size="13" fill="#5238c4" text-anchor="middle">
+          <text x="240" y="146">× 1.08 twice → 2,332.80</text>
+          <text x="450" y="146">× 1.08 once → 2,160.00</text>
+          <text x="450" y="164">no interest → 2,000.00</text>
         </g>
-        <g font-size="13" font-weight="700" fill="#1f9d63"><text x="330" y="180">Total at the end of year 3: 6,492.80</text></g>
+        <g font-size="13" font-weight="700" fill="#0d6a3f"><text x="330" y="194">Total at the end of year 3: 6,492.80</text></g>
       </svg>
       <div class="cap">Saving 2,000 at the end of each year for 3 years at 8%. The last 2,000 has had no time to grow.</div>
     </div>
@@ -311,7 +299,7 @@
 
 </div>
 
-<script src="study.js"></script>
+<script src="assets/study.js"></script>
 <script>
 POF.quiz({
   mount: "quiz",

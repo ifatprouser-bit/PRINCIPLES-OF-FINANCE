@@ -169,7 +169,7 @@ just before `</body>`. Do not inline the CSS or the JS. Do not load anything fro
 No fonts, no libraries, no images from a URL. A diagram is inline `<svg>`.
 
 Top of every page, in order: a `.home` link back to `index.html` reading `← All 15 days`,
-a `.crumb` reading `DAY N · <weekday> <date>`, an `h1`, a one-line `.lede`.
+a `.crumb` reading `Day N · <weekday> <date>` (sentence case, never typed in capitals), an `h1`, a one-line `.lede`.
 
 Bottom of every page: a `.navrow` with a back button to the previous day and a `.primary`
 next button to the following day. Day 1 has no back button. Day 15's next button points at
@@ -249,6 +249,23 @@ Read an hour before the exam. It must settle nerves, not raise them.
 - One closing line. Calm, short, no new content.
 
 ---
+
+### 6.6 Type and colour (added 29 September 2026)
+
+From `exam-prep-day-builder`, non-negotiable 17. `assets/theme.css` already follows it, so use its
+classes and do not override them.
+
+- **No all-caps anywhere.** No `text-transform:uppercase`, and no label typed in capitals. Labels
+  are sentence case, 14 to 15px bold, in the accent colour. Hierarchy comes from size and colour.
+- **Body text is at least 16px**, line height about 1.6. Nothing on a page is smaller than 13px.
+  This includes text inside `<svg>` diagrams once the diagram is scaled to the page width.
+- **Space carries structure.** Air between panels and after paragraphs, never smaller type.
+- **Every text colour has 4.5 to 1 contrast on its actual background.** On soft boxes use the ink
+  tokens `--good-ink`, `--amber-ink`, `--bad-ink` and `--brand-d`. The bright `--good`, `--amber`
+  and `--bad` are for borders and fills only. Tinted text on a tinted box (green on green, amber
+  on amber) is the usual failure, so check those pairs first.
+- **Never colour alone.** A highlight or a right and wrong state also carries a mark or a word
+  (the tick and cross in the quiz, the tick on a highlighted table row, the words on a pill).
 
 ## 7. The quiz engine
 

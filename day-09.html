@@ -4,17 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Day 9: Projects, NPV and IRR</title>
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <div class="wrap">
 
   <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
-  <div class="crumb">DAY 9 · Sunday 4 October</div>
+  <div class="crumb">Day 9 · Sunday 4 October</div>
   <h1>Projects: should we do this at all</h1>
   <p class="lede">A project is just a stream of cash flows with a price tag on the front. Today you learn how to say yes or no to it.</p>
-
-  <div class="secaudio"><span class="salab">Before you start: today's words · 1:14</span><audio controls preload="none" src="day-09-intro.mp3"></audio></div>
 
   <!-- ============ RECALL: DAY 6 ============ -->
   <div class="preq">
@@ -55,8 +53,6 @@
   <div class="panel">
     <h3>1. Net present value: what the project is worth, minus what it costs</h3>
 
-    <div class="secaudio"><span class="salab">The washing machine: is it worth more than it costs? · 1:47</span><audio controls preload="none" src="day-09-worth-it.mp3"></audio></div>
-
     <p class="p">Every project you will meet on this exam has the same shape. You pay something today.
       Money comes back later. The question is always the same: is the money that comes back worth more,
       <b>seen from today</b>, than the money you pay out today.</p>
@@ -79,7 +75,7 @@
 
     <div class="svg-wrap">
       <svg viewBox="0 0 560 210" role="img" aria-label="Two horizontal bars. The top bar is the value today of the money the project brings in, 61,382.42. The bottom bar is the cost today, 50,000. The part of the top bar that sticks out past the cost is the NPV of 11,382.42.">
-        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
           <text x="175" y="42" text-anchor="end" fill="#211c33" font-weight="700">Worth today</text>
           <text x="175" y="58" text-anchor="end" fill="#6f6886">of all the inflows</text>
           <rect x="180" y="26" width="250" height="38" rx="5" fill="#ece7fd" stroke="#6b4ef0"/>
@@ -186,8 +182,6 @@
   <div class="panel">
     <h3>2. Internal rate of return, and the four ways it lets you down</h3>
 
-    <div class="secaudio"><span class="salab">IRR: the highest loan rate where the project still breaks even · 1:49</span><audio controls preload="none" src="day-09-break-even.mp3"></audio></div>
-
     <p class="p">NPV answers in money. Many people would rather hear a percent. A percent can be set beside the
       rate on a loan or the return on a share without knowing the size of anything. That percent is the
       <b>internal rate of return</b>, or IRR.</p>
@@ -203,13 +197,13 @@
 
     <div class="svg-wrap">
       <svg viewBox="0 0 560 250" role="img" aria-label="A curve showing net present value falling as the discount rate rises from 0 to 20 percent, crossing zero at 10 percent, which is the internal rate of return.">
-        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
           <line x1="70" y1="150" x2="530" y2="150" stroke="#211c33" stroke-width="1.5"/>
           <line x1="70" y1="45" x2="70" y2="225" stroke="#211c33" stroke-width="1.5"/>
           <text x="62" y="42" text-anchor="end" fill="#6f6886">NPV</text>
-          <text x="536" y="146" text-anchor="start" fill="#6f6886" font-size="11">r</text>
+          <text x="536" y="146" text-anchor="start" fill="#5f5877" font-size="13">r</text>
 
-          <g fill="#6f6886" font-size="11">
+          <g fill="#5f5877" font-size="13">
             <text x="70" y="168" text-anchor="middle">0%</text>
             <text x="180" y="168" text-anchor="middle">5%</text>
             <text x="290" y="182" text-anchor="middle">10%</text>
@@ -223,11 +217,11 @@
           <line x1="224" y1="150" x2="224" y2="131" stroke="#1f9d63" stroke-width="1" stroke-dasharray="3 3"/>
           <circle cx="224" cy="131" r="4" fill="#1f9d63"/>
           <text x="224" y="122" text-anchor="middle" fill="#1f9d63" font-weight="700">454.89</text>
-          <text x="224" y="108" text-anchor="middle" fill="#1f9d63" font-size="11">NPV at r = 7%</text>
+          <text x="224" y="108" text-anchor="middle" fill="#0d6a3f" font-size="13">NPV at r = 7%</text>
 
           <circle cx="290" cy="150" r="5" fill="#b6791f"/>
           <text x="300" y="206" text-anchor="middle" fill="#b6791f" font-weight="700">IRR = 10%</text>
-          <text x="300" y="220" text-anchor="middle" fill="#6f6886" font-size="11">the rate where NPV = 0</text>
+          <text x="300" y="220" text-anchor="middle" fill="#5f5877" font-size="13">the rate where NPV = 0</text>
         </g>
       </svg>
       <p class="cap">The line is the same project priced at many different rates. It slopes down because a higher
@@ -280,8 +274,6 @@
       the exam you are normally given a few rates in the options, so test those instead of guessing blind.</p>
 
     <p class="sub">The problems with IRR</p>
-    <div class="secaudio"><span class="salab">When IRR lets you down: two answers, borrowing, reinvesting · 1:48</span><audio controls preload="none" src="day-09-irr-traps.mp3"></audio></div>
-
     <p class="p">This is a named topic on the syllabus, so expect it. IRR is a summary, and every summary throws
       something away.</p>
 
@@ -337,8 +329,6 @@
   <div class="panel">
     <h3>3. Independent or mutually exclusive: the question that changes the rule</h3>
 
-    <div class="secaudio"><span class="salab">Can you take both, or must you pick one? · 1:34</span><audio controls preload="none" src="day-09-both-or-one.mp3"></audio></div>
-
     <p class="p">Before you compare two projects you have to know what kind of pair they are. The syllabus names
       both kinds, and the exam guide names them too.</p>
 
@@ -348,8 +338,6 @@
       <tr><td class="lab">Mutually exclusive</td><td style="text-align:left">Only one can be taken. One plot of land, one machine slot, one team. Now you must put them in order, and you do that by NPV. The winner is the one with the highest NPV at your required return, as long as that NPV is above zero.</td></tr>
     </table>
 
-    <div class="secaudio"><span class="salab">Size: a better rate is not more money · 1:27</span><audio controls preload="none" src="day-09-rate-not-size.mp3"></audio></div>
-
     <p class="p">Putting projects in order is where IRR breaks. A percent tells you how hard each dollar works. It
       does not tell you how many dollars there are, or for how long they work. Two things can pull the order apart.</p>
 
@@ -357,8 +345,6 @@
       pretest at the top of this page. Thirty percent on 1,000 is a gain of 181.82 in present value. Twenty percent
       on 100,000 is a gain of 9,090.91. The smaller percent wins by a distance, because the firm banks money, not
       percentages.</p>
-
-    <div class="secaudio"><span class="salab">Timing: paid soon or paid later, and where the lines cross · 1:52</span><audio controls preload="none" src="day-09-crossing.mp3"></audio></div>
 
     <p class="p"><b>Timing.</b> A project that pays back fast has a high IRR because its cash does not sit and wait.
       A project that pays later can still be worth more in total. Which of the two wins depends on the discount
@@ -414,13 +400,13 @@
 
     <div class="svg-wrap">
       <svg viewBox="0 0 560 250" role="img" aria-label="Two downward sloping lines showing the net present value of project S and project L at discount rates from 0 to 20 percent. Project L starts higher and falls faster. The lines cross at about 9.93 percent.">
-        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
           <line x1="70" y1="180" x2="530" y2="180" stroke="#211c33" stroke-width="1.5"/>
           <line x1="70" y1="50" x2="70" y2="222" stroke="#211c33" stroke-width="1.5"/>
           <text x="62" y="47" text-anchor="end" fill="#6f6886">NPV</text>
-          <text x="536" y="176" text-anchor="start" fill="#6f6886" font-size="11">r</text>
+          <text x="536" y="176" text-anchor="start" fill="#5f5877" font-size="13">r</text>
 
-          <g fill="#6f6886" font-size="11">
+          <g fill="#5f5877" font-size="13">
             <text x="70" y="198" text-anchor="middle">0%</text>
             <text x="180" y="198" text-anchor="middle">5%</text>
             <text x="290" y="212" text-anchor="middle">10%</text>
@@ -438,9 +424,9 @@
           <text x="300" y="232" text-anchor="middle" fill="#1f9d63" font-weight="700">they cross at about 9.93%</text>
 
           <line x1="246" y1="50" x2="246" y2="180" stroke="#6f6886" stroke-width="1" stroke-dasharray="4 4"/>
-          <text x="246" y="44" text-anchor="middle" fill="#6f6886" font-size="11">r = 8%: L is on top</text>
+          <text x="246" y="44" text-anchor="middle" fill="#5f5877" font-size="13">r = 8%: L is on top</text>
           <line x1="422" y1="50" x2="422" y2="180" stroke="#6f6886" stroke-width="1" stroke-dasharray="4 4"/>
-          <text x="440" y="44" text-anchor="middle" fill="#6f6886" font-size="11">r = 16%: S is on top</text>
+          <text x="440" y="44" text-anchor="middle" fill="#5f5877" font-size="13">r = 16%: S is on top</text>
         </g>
       </svg>
       <p class="cap">L is steeper because all of its cash sits at year 3, and far-away money suffers most when the
@@ -478,7 +464,7 @@
 
 </div>
 
-<script src="study.js"></script>
+<script src="assets/study.js"></script>
 <script>
 POF.quiz({
   mount: "quiz",

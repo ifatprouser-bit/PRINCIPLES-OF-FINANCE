@@ -4,17 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Day 5: Mixed streams</title>
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <div class="wrap">
 
   <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
-  <div class="crumb">DAY 5 · Wednesday 30 September</div>
+  <div class="crumb">Day 5 · Wednesday 30 September</div>
   <h1>Mixed streams</h1>
   <p class="lede">A messy stream is only a set of small streams sitting side by side. Cut it, value each piece, add.</p>
-
-  <div class="secaudio"><span class="salab">Before you start: mixed streams and the delayed annuity · 1:13</span><audio controls preload="none" src="day-05-intro.mp3"></audio></div>
 
   <!-- ============ RECALL: DAY 3 ============ -->
   <div class="preq">
@@ -56,8 +54,6 @@
     <p class="p">In plain words: he plans to hand you a mix of one-off payments and a run of equal payments,
       and ask what the whole thing is worth today. That is exactly this page.</p>
 
-    <div class="secaudio"><span class="salab">A new recipe, familiar steps: cut the stream into pieces · 1:43</span><audio controls preload="none" src="day-05-cut.mp3"></audio></div>
-
     <p class="p">You already have every tool you need. Day 2 gave you the single cash flow. Day 3 gave you the
       annuity. Day 4 gave you the perpetuity and growth. Nothing new is added today. What is new is the
       cutting: seeing a long list of numbers and spotting the two or three familiar shapes hiding inside it.</p>
@@ -76,7 +72,7 @@
     <div class="svg-wrap">
       <svg viewBox="0 0 560 210" role="img" aria-label="Timeline from year 0 to year 5 with an annuity of 2,000 in years 1 to 4 and a single payment of 9,000 in year 5">
         <line x1="40" y1="140" x2="530" y2="140" stroke="#211c33" stroke-width="2"/>
-        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12" fill="#211c33">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13" fill="#211c33">
           <g stroke="#211c33" stroke-width="2">
             <line x1="40" y1="134" x2="40" y2="146"/><line x1="130" y1="134" x2="130" y2="146"/>
             <line x1="220" y1="134" x2="220" y2="146"/><line x1="310" y1="134" x2="310" y2="146"/>
@@ -88,7 +84,7 @@
           <text x="310" y="163" text-anchor="middle" fill="#6f6886">3</text>
           <text x="400" y="163" text-anchor="middle" fill="#6f6886">4</text>
           <text x="490" y="163" text-anchor="middle" fill="#6f6886">5</text>
-          <text x="40" y="180" text-anchor="middle" fill="#6f6886" font-size="11">today</text>
+          <text x="40" y="180" text-anchor="middle" fill="#5f5877" font-size="13">today</text>
 
           <g stroke="#6b4ef0" stroke-width="3">
             <line x1="130" y1="140" x2="130" y2="92"/><line x1="220" y1="140" x2="220" y2="92"/>
@@ -182,16 +178,12 @@
   <div class="panel">
     <h3>2. Where the annuity value lands, and why you must move it again</h3>
 
-    <div class="secaudio"><span class="salab">The pickup point: where the annuity formula leaves its answer · 1:44</span><audio controls preload="none" src="day-05-where-it-lands.mp3"></audio></div>
-
     <p class="p">This is the idea that decides your mark on this topic. Read it twice.</p>
 
     <p class="p">The annuity formula does not give you a value at year 0. It gives you a value
       <b>one period before the first payment</b>. When the first payment is at year 1, one period before that
       is year 0, which is today, so nothing more is needed. That is the case everyone practices, and it hides
       the rule.</p>
-
-    <div class="secaudio"><span class="salab">The walk home: the second hop back to today · 1:29</span><audio controls preload="none" src="day-05-two-hops.mp3"></audio></div>
 
     <p class="p">When the first payment is later, the formula still lands one period before it. So the number
       you get sits in some future year, not today. It is a future value. You then have to discount that number
@@ -208,7 +200,7 @@
     <div class="svg-wrap">
       <svg viewBox="0 0 560 250" role="img" aria-label="Timeline showing four payments of 4,000 in years 4 to 7, the annuity formula landing at year 3, then a second discounting hop from year 3 back to year 0">
         <line x1="30" y1="150" x2="540" y2="150" stroke="#211c33" stroke-width="2"/>
-        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="12">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
           <g stroke="#211c33" stroke-width="2">
             <line x1="30" y1="144" x2="30" y2="156"/><line x1="100" y1="144" x2="100" y2="156"/>
             <line x1="170" y1="144" x2="170" y2="156"/><line x1="240" y1="144" x2="240" y2="156"/>
@@ -225,24 +217,24 @@
             <line x1="310" y1="150" x2="310" y2="100"/><line x1="380" y1="150" x2="380" y2="100"/>
             <line x1="450" y1="150" x2="450" y2="100"/><line x1="520" y1="150" x2="520" y2="100"/>
           </g>
-          <g fill="#6b4ef0" font-weight="700" text-anchor="middle" font-size="11.5">
+          <g fill="#5238c4" font-weight="700" text-anchor="middle" font-size="13">
             <text x="310" y="92">4,000</text><text x="380" y="92">4,000</text>
             <text x="450" y="92">4,000</text><text x="520" y="92">4,000</text>
           </g>
           <path d="M310 74 L310 66 L520 66 L520 74" fill="none" stroke="#6b4ef0" stroke-width="1.5"/>
-          <text x="415" y="58" text-anchor="middle" fill="#5238c4" font-weight="700" font-size="11.5">n = 4 payments</text>
+          <text x="415" y="58" text-anchor="middle" fill="#5238c4" font-weight="700" font-size="13">n = 4 payments</text>
 
           <circle cx="240" cy="150" r="5" fill="#b6791f"/>
           <path d="M305 106 C 275 118, 252 128, 243 142" fill="none" stroke="#b6791f" stroke-width="2.5"/>
           <polygon points="240,150 248,140 250,148" fill="#b6791f"/>
-          <text x="270" y="200" text-anchor="middle" fill="#b6791f" font-weight="700" font-size="11.5">hop 1: annuity formula</text>
-          <text x="270" y="214" text-anchor="middle" fill="#b6791f" font-size="11.5">lands at year 3 = 12,958.88</text>
+          <text x="270" y="200" text-anchor="middle" fill="#7d4f08" font-weight="700" font-size="13">hop 1: annuity formula</text>
+          <text x="270" y="214" text-anchor="middle" fill="#7d4f08" font-size="13">lands at year 3 = 12,958.88</text>
 
           <path d="M236 142 C 190 112, 90 112, 34 140" fill="none" stroke="#d2453f" stroke-width="2.5"/>
           <polygon points="30,150 32,136 41,143" fill="#d2453f"/>
-          <text x="132" y="200" text-anchor="middle" fill="#d2453f" font-weight="700" font-size="11.5">hop 2: ÷ 1.09³</text>
-          <text x="132" y="214" text-anchor="middle" fill="#d2453f" font-size="11.5">lands at year 0 = 10,006.63</text>
-          <text x="30" y="234" text-anchor="middle" fill="#6f6886" font-size="11">today</text>
+          <text x="132" y="200" text-anchor="middle" fill="#a3282a" font-weight="700" font-size="13">hop 2: ÷ 1.09³</text>
+          <text x="132" y="214" text-anchor="middle" fill="#a3282a" font-size="13">lands at year 0 = 10,006.63</text>
+          <text x="30" y="234" text-anchor="middle" fill="#5f5877" font-size="13">today</text>
         </g>
       </svg>
       <p class="cap">Two hops, not one. The amber hop is the annuity formula and it stops at year 3. The red hop
@@ -328,8 +320,6 @@
   <!-- ============ PANEL 3 ============ -->
   <div class="panel">
     <h3>3. Put the pieces together, then check</h3>
-
-    <div class="secaudio"><span class="salab">Dry laundry isn't put away: finish every piece at today · 1:44</span><audio controls preload="none" src="day-05-together.mp3"></audio></div>
 
     <p class="p">Now the real exam shape: some one-off payments, a run of equal payments in the middle, and a
       gap year with nothing in it. Nothing here is new. You are only doing panel 1 and panel 2 at the same time.</p>
@@ -437,7 +427,7 @@
 
 </div>
 
-<script src="study.js"></script>
+<script src="assets/study.js"></script>
 <script>
 POF.quiz({
   mount: "quiz",

@@ -4,17 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Day 4 · Perpetuity and growth</title>
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <div class="wrap">
 
 <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
-<div class="crumb">DAY 4 · Tuesday 29 September</div>
+<div class="crumb">Day 4 · Tuesday 29 September</div>
 <h1>Perpetuity and growth</h1>
 <p class="lede">A payment that never stops. A payment that grows. And the one rule that decides which formula you are allowed to use.</p>
-
-  <div class="secaudio"><span class="salab">Before you start: three streams, two that never end · 1:16</span><audio controls preload="none" src="day-04-intro.mp3"></audio></div>
 
 <!-- ============ RECALL: DAY 2 ============ -->
 <div class="preq">
@@ -49,8 +47,6 @@
 <div class="panel">
   <h3>1 · The plain perpetuity: forever, but still a number you can name</h3>
 
-    <div class="secaudio"><span class="salab">Why a payment that never ends still has a price · 1:38</span><audio controls preload="none" src="day-04-forever.mp3"></audio></div>
-
   <p class="p">A <b>perpetuity</b> is the same payment, arriving after the same gap in time, that never ends. The British
      government once sold bonds like this, called consols. They paid a fixed coupon, which is the regular
      interest payment, and never paid the borrowed money back. A company can also live forever, so a fixed dividend paid by a company is close to the same shape.</p>
@@ -71,28 +67,26 @@
       <line x1="56" y1="220" x2="540" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
       <line x1="56" y1="26" x2="56" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
       <line x1="56" y1="40" x2="540" y2="40" stroke="#d2453f" stroke-width="1.5" stroke-dasharray="6 5"/>
-      <text x="544" y="44" font-size="11" fill="#d2453f" font-weight="700" text-anchor="end" dy="-6">ceiling $600</text>
+      <text x="544" y="44" font-size="13" fill="#a3282a" font-weight="700" text-anchor="end" dy="-6">ceiling $600</text>
       <line x1="56" y1="130" x2="60" y2="130" stroke="#6f6886"/>
-      <text x="50" y="134" font-size="11" fill="#6f6886" text-anchor="end">$300</text>
-      <text x="50" y="224" font-size="11" fill="#6f6886" text-anchor="end">$0</text>
-      <text x="50" y="44" font-size="11" fill="#6f6886" text-anchor="end">$600</text>
+      <text x="50" y="134" font-size="13" fill="#5f5877" text-anchor="end">$300</text>
+      <text x="50" y="224" font-size="13" fill="#5f5877" text-anchor="end">$0</text>
+      <text x="50" y="44" font-size="13" fill="#5f5877" text-anchor="end">$600</text>
       <polyline fill="none" stroke="#6b4ef0" stroke-width="2.6" stroke-linejoin="round" points="56,220.0 60,211.4 64,203.3 68,195.5 72,188.1 76,181.0 80,174.3 84,167.9 88,161.8 92,156.0 96,150.5 100,145.2 104,140.2 108,135.5 112,130.9 116,126.6 120,122.5 124,118.5 128,114.8 132,111.2 136,107.8 140,104.6 144,101.5 148,98.6 152,95.8 156,93.2 160,90.6 164,88.2 168,85.9 172,83.7 176,81.6 180,79.7 184,77.8 188,76.0 192,74.3 196,72.6 200,71.1 204,69.6 208,68.2 212,66.8 216,65.6 220,64.4 224,63.2 228,62.1 232,61.0 236,60.0 240,59.1 244,58.2 248,57.3 252,56.5 256,55.7 260,54.9 264,54.2 268,53.6 272,52.9 276,52.3 280,51.7 284,51.2 288,50.6 292,50.1 296,49.6 300,49.2 304,48.7 308,48.3 312,47.9 316,47.6 320,47.2 324,46.8 328,46.5 332,46.2 336,45.9 340,45.6 344,45.4 348,45.1 352,44.9 356,44.6 360,44.4 364,44.2 368,44.0 372,43.8 376,43.6 380,43.5 384,43.3 388,43.1 392,43.0 396,42.8 400,42.7 404,42.6 408,42.5 412,42.3 416,42.2 420,42.1 424,42.0 428,41.9 432,41.8 436,41.7 440,41.7 444,41.6 448,41.5 452,41.4 456,41.4 460,41.3 464,41.2 468,41.2 472,41.1 476,41.1 480,41.0 484,41.0 488,40.9 492,40.9 496,40.8 500,40.8 504,40.8 508,40.7 512,40.7 516,40.7 520,40.6 524,40.6 528,40.6 532,40.5 536,40.5"/>
       <circle cx="156" cy="93.2" r="4" fill="#6b4ef0"/>
-      <text x="162" y="90" font-size="11" fill="#211c33" font-weight="700">year 25</text>
+      <text x="162" y="90" font-size="13" fill="#211c33" font-weight="700">year 25</text>
       <circle cx="456" cy="41.4" r="4" fill="#6b4ef0"/>
-      <text x="450" y="58" font-size="11" fill="#211c33" font-weight="700" text-anchor="end">year 100</text>
-      <text x="56" y="238" font-size="11" fill="#6f6886">year 0</text>
-      <text x="296" y="238" font-size="11" fill="#6f6886" text-anchor="middle">year 60</text>
-      <text x="536" y="238" font-size="11" fill="#6f6886" text-anchor="end">year 120</text>
-      <text x="296" y="256" font-size="11.5" fill="#6f6886" text-anchor="middle">years counted so far</text>
+      <text x="450" y="58" font-size="13" fill="#211c33" font-weight="700" text-anchor="end">year 100</text>
+      <text x="56" y="238" font-size="13" fill="#5f5877">year 0</text>
+      <text x="296" y="238" font-size="13" fill="#5f5877" text-anchor="middle">year 60</text>
+      <text x="536" y="238" font-size="13" fill="#5f5877" text-anchor="end">year 120</text>
+      <text x="296" y="256" font-size="13" fill="#5f5877" text-anchor="middle">years counted so far</text>
     </svg>
     <div class="cap">Running total of $30 received every year, discounted at 5%. Each new year adds less than
       the year before. The line never crosses $600.</div>
   </div>
 
-  <div class="secaudio"><span class="salab">The scholarship fund: the pot that pays forever · 1:45</span><audio controls preload="none" src="day-04-the-pot.mp3"></audio></div>
-
-    <p class="p">The table gives the same curve as numbers. Read the last two rows. Two hundred years of
+  <p class="p">The table gives the same curve as numbers. Read the last two rows. Two hundred years of
      payments are worth $599.97. Forever is worth $600.00. The difference is three cents. That is why a bond
      with a 100 year life can be priced with the perpetuity formula and nobody complains.</p>
 
@@ -150,8 +144,6 @@
 <div class="panel">
   <h3>2 · The growing perpetuity: r must beat g</h3>
 
-    <div class="secaudio"><span class="salab">A pay rise against prices: value lives in the gap · 1:47</span><audio controls preload="none" src="day-04-gap.mp3"></audio></div>
-
   <p class="p">A <b>growing perpetuity</b> is a payment that never ends and gets bigger every period by the
      same percentage. Call that percentage g. This is the normal shape for a share of stock. Many firms
      raise their dividend by a few percent a year and keep doing it.</p>
@@ -160,9 +152,7 @@
      first period, not the one just paid. If the question gives you last year's dividend, multiply it by
      (1 + g) before you divide.</p>
 
-  <div class="secaudio"><span class="salab">When growth reaches the required return: the wall · 1:51</span><audio controls preload="none" src="day-04-wall.mp3"></audio></div>
-
-    <p class="p">Now the limit on this formula. It divides by (r − g). If g gets close to r, that gap gets tiny and
+  <p class="p">Now the limit on this formula. It divides by (r − g). If g gets close to r, that gap gets tiny and
      the value explodes. If g equals r the gap is zero and division is not possible. If g is bigger than r
      the formula hands you a negative number, which is nonsense for a stream of positive payments. The honest
      reading is this: a stream that grows forever at least as fast as you discount it is worth more than any
@@ -179,20 +169,20 @@
       <line x1="56" y1="220" x2="540" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
       <line x1="56" y1="26" x2="56" y2="220" stroke="#e7e3f2" stroke-width="1.5"/>
       <line x1="496" y1="26" x2="496" y2="220" stroke="#d2453f" stroke-width="1.5" stroke-dasharray="6 5"/>
-      <text x="492" y="40" font-size="11.5" fill="#d2453f" font-weight="700" text-anchor="end">g = r = 9%: wall</text>
-      <text x="50" y="224" font-size="11" fill="#6f6886" text-anchor="end">$0</text>
-      <text x="50" y="138" font-size="11" fill="#6f6886" text-anchor="end">$100</text>
-      <text x="50" y="56" font-size="11" fill="#6f6886" text-anchor="end">$200</text>
+      <text x="492" y="40" font-size="13" fill="#a3282a" font-weight="700" text-anchor="end">g = r = 9%: wall</text>
+      <text x="50" y="224" font-size="13" fill="#5f5877" text-anchor="end">$0</text>
+      <text x="50" y="138" font-size="13" fill="#5f5877" text-anchor="end">$100</text>
+      <text x="50" y="56" font-size="13" fill="#5f5877" text-anchor="end">$200</text>
       <line x1="56" y1="138" x2="540" y2="138" stroke="#f2effb" stroke-width="1"/>
       <polyline fill="none" stroke="#6b4ef0" stroke-width="2.6" stroke-linejoin="round" points="56,201.8 61,201.6 66,201.4 71,201.1 76,200.9 80,200.7 85,200.4 90,200.1 95,199.9 100,199.6 105,199.3 110,199.1 115,198.8 120,198.5 124,198.2 129,197.9 134,197.5 139,197.2 144,196.9 149,196.5 154,196.2 159,195.8 164,195.4 168,195.0 173,194.6 178,194.2 183,193.8 188,193.3 193,192.9 198,192.4 203,191.9 208,191.4 212,190.9 217,190.3 222,189.8 227,189.2 232,188.6 237,188.0 242,187.3 247,186.7 252,186.0 256,185.2 261,184.5 266,183.7 271,182.9 276,182.0 281,181.1 286,180.2 291,179.2 296,178.1 300,177.0 305,175.9 310,174.7 315,173.4 320,172.1 325,170.7 330,169.2 335,167.6 340,165.9 344,164.1 349,162.2 354,160.1 359,157.9 364,155.6 369,153.0 374,150.3 379,147.3 384,144.1 388,140.6 393,136.7 398,132.5 403,127.8 408,122.5 413,116.7 418,110.2 423,102.7 428,94.2 432,84.4 437,73.0 442,59.5 447,45.0"/>
       <circle cx="251" cy="186.0" r="4" fill="#6b4ef0"/>
-      <text x="258" y="184" font-size="11" fill="#211c33" font-weight="700">g = 4%: $41.60</text>
+      <text x="258" y="184" font-size="13" fill="#211c33" font-weight="700">g = 4%: $41.60</text>
       <circle cx="447" cy="43.3" r="4" fill="#6b4ef0"/>
-      <text x="441" y="41" font-size="11" fill="#211c33" font-weight="700" text-anchor="end">g = 8%: $216</text>
-      <text x="56" y="238" font-size="11" fill="#6f6886">g = 0%</text>
-      <text x="276" y="238" font-size="11" fill="#6f6886" text-anchor="middle">g = 4.5%</text>
-      <text x="496" y="238" font-size="11" fill="#6f6886" text-anchor="middle">g = 9%</text>
-      <text x="296" y="256" font-size="11.5" fill="#6f6886" text-anchor="middle">growth rate g, with r fixed at 9%</text>
+      <text x="441" y="41" font-size="13" fill="#211c33" font-weight="700" text-anchor="end">g = 8%: $216</text>
+      <text x="56" y="238" font-size="13" fill="#5f5877">g = 0%</text>
+      <text x="276" y="238" font-size="13" fill="#5f5877" text-anchor="middle">g = 4.5%</text>
+      <text x="496" y="238" font-size="13" fill="#5f5877" text-anchor="middle">g = 9%</text>
+      <text x="296" y="256" font-size="13" fill="#5f5877" text-anchor="middle">growth rate g, with r fixed at 9%</text>
     </svg>
     <div class="cap">Value of a share paying a $2.00 dividend now, growing at g forever, discounted at 9%.
       Near the wall the price becomes wild. A small change in g moves the answer a very long way.</div>
@@ -262,8 +252,6 @@
 <div class="panel">
   <h3>3 · The growing annuity: growth with a last payment</h3>
 
-    <div class="secaudio"><span class="salab">The gold mine: look for the last payment · 1:42</span><audio controls preload="none" src="day-04-last-payment.mp3"></audio></div>
-
   <p class="p">A <b>growing annuity</b> is the same idea as a growing perpetuity with one change. The payments
      stop. There is a fixed number of them, n. A mining permit for 20 years, a lease that runs 8 years, a
      patent with 12 years left: the cash flow grows, and then one day there is no more cash flow.</p>
@@ -278,9 +266,7 @@
     nothing in the question ends the stream.
   </div>
 
-  <div class="secaudio"><span class="salab">When r equals g: every payment buys the same basket · 1:36</span><audio controls preload="none" src="day-04-same-basket.mp3"></audio></div>
-
-    <p class="p">This formula has one special case, and the course notes state it directly. When r equals g,
+  <p class="p">This formula has one special case, and the course notes state it directly. When r equals g,
      you cannot divide by (r − g), but the present value still exists. Every payment grows at exactly the rate
      you discount at, so every payment is worth the same amount today: this year's cash flow.
      The answer is simply that amount multiplied by the number of payments.</p>
@@ -334,13 +320,13 @@
 
   <div class="svg-wrap">
     <svg viewBox="0 0 560 210" role="img" aria-label="Bar chart comparing 16.15 million dollars for twenty years of gold against 22.07 million dollars if the stream never ended">
-      <text x="14" y="42" font-size="12.5" fill="#211c33" font-weight="700">20 years (correct)</text>
+      <text x="14" y="42" font-size="13" fill="#211c33" font-weight="700">20 years (correct)</text>
       <rect x="14" y="52" width="380" height="34" rx="7" fill="#6b4ef0"/>
       <text x="404" y="74" font-size="13" fill="#211c33" font-weight="700">$16.15m</text>
-      <text x="14" y="124" font-size="12.5" fill="#211c33" font-weight="700">same stream treated as forever</text>
+      <text x="14" y="124" font-size="13" fill="#211c33" font-weight="700">same stream treated as forever</text>
       <rect x="14" y="134" width="520" height="34" rx="7" fill="#fae5e4" stroke="#d2453f" stroke-width="1.5"/>
-      <text x="24" y="156" font-size="13" fill="#d2453f" font-weight="700">$22.07m</text>
-      <text x="14" y="196" font-size="11.5" fill="#6f6886">Same payments, same growth, same discount rate. Only the end date changes.</text>
+      <text x="24" y="156" font-size="13" fill="#a3282a" font-weight="700">$22.07m</text>
+      <text x="14" y="196" font-size="13" fill="#5f5877">Same payments, same growth, same discount rate. Only the end date changes.</text>
     </svg>
     <div class="cap">Dropping the 20 year limit adds $5.9 million of value that the contract never pays you.</div>
   </div>
@@ -386,7 +372,7 @@
 
 </div>
 
-<script src="study.js"></script>
+<script src="assets/study.js"></script>
 <script>
 POF.quiz({
   mount: "quiz",

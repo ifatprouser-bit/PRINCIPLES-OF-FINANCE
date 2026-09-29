@@ -2,71 +2,74 @@
    Paste inside a <style> tag in each day page. All components below use these tokens. */
 :root{--bg:#f5f3fb;--card:#fff;--ink:#211c33;--muted:#6f6886;--brand:#6b4ef0;--brand-d:#5238c4;
 --brand-soft:#ece7fd;--good:#1f9d63;--good-soft:#e4f6ec;--bad:#d2453f;--bad-soft:#fae5e4;--line:#e7e3f2;
---amber:#b6791f;--amber-soft:#fcf3e3;}
+--amber:#b6791f;--amber-soft:#fcf3e3;
+/* text-safe inks: 4.5:1 or better on their soft boxes. Use these for TEXT; keep the bright tokens for borders and fills. */
+--good-ink:#0d6a3f;--amber-ink:#7d4f08;--bad-ink:#a3282a;--muted:#5f5877;}
 *{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0;line-height:1.55;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0;line-height:1.6;font-size:16px;}
 .wrap{max-width:760px;margin:0 auto;padding:26px 22px 60px;}
-.home{display:inline-block;margin:0 0 12px;color:var(--brand);font-weight:700;font-size:13px;text-decoration:none;}
-.crumb{color:var(--brand);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.05em;}
+.home{display:inline-block;margin:0 0 12px;color:var(--brand-d);font-weight:700;font-size:14px;text-decoration:none;}
+.crumb{color:var(--brand-d);font-weight:700;font-size:14px;}
 h1{font-size:28px;margin:8px 0 4px;letter-spacing:-.02em;}
 .lede{color:var(--muted);margin:0 0 14px;font-size:16px;}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(40,20,90,.04);}
 .panel h3{margin:0 0 6px;font-size:18px;display:flex;align-items:center;gap:8px;}
 .panel h3 .scorechip{margin-left:auto;}
-.panel .note{color:var(--muted);font-size:14px;margin:0 0 14px;}
+.panel .note{color:var(--muted);font-size:15px;margin:0 0 14px;}
 /* pretest "guess first" box */
 .preq{background:var(--amber-soft);border:1px solid #f0deb8;border-radius:16px;padding:18px 20px;margin:18px 0;}
-.preq .tag{color:var(--amber);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;}
-.preq p{margin:8px 0 0;font-size:16px;} .preq .do{margin-top:10px;font-weight:600;color:var(--amber);}
+.preq .tag{color:var(--amber-ink);font-weight:800;font-size:14px;}
+.preq p{margin:8px 0 0;font-size:16px;} .preq .do{margin-top:10px;font-weight:600;color:var(--amber-ink);}
 /* audio */
 audio{width:100%;margin-top:6px;}
 .secaudio{background:var(--brand-soft);border:1px solid #d9d0fb;border-radius:12px;padding:10px 13px;margin:4px 0 14px;}
-.secaudio .salab{display:block;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--brand-d);margin-bottom:7px;}
+.secaudio .salab{display:block;font-size:14px;font-weight:800;color:var(--brand-d);margin-bottom:7px;}
 /* takeaway box */
-.takeaway{font-size:14.5px;background:#fbfaff;border:1px dashed var(--line);border-radius:11px;padding:13px 16px;margin-top:14px;}
-.takeaway b{color:var(--brand);} .takeaway ul{margin:2px 0 0;padding-left:20px;} .takeaway li{margin:5px 0;}
+.takeaway{font-size:16px;background:#fbfaff;border:1px dashed var(--line);border-radius:11px;padding:13px 16px;margin-top:14px;}
+.takeaway b{color:var(--brand-d);} .takeaway ul{margin:2px 0 0;padding-left:20px;} .takeaway li{margin:5px 0;}
 .takeaway .tk-gen{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);}
 /* prose helpers */
 .sub{font-size:15px;font-weight:800;color:var(--brand-d);margin:20px 0 6px;}
-.p{font-size:15px;margin:0 0 8px;}
-.partlab{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);margin:0 0 6px;}
+.p{font-size:16px;margin:0 0 8px;}
+.partlab{font-size:14px;font-weight:800;color:var(--brand-d);margin:0 0 6px;}
 .rule{background:var(--brand-soft);border-radius:11px;padding:12px 16px;font-weight:600;color:var(--brand-d);margin:16px 0;}
-.question{background:#f6f4fc;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:14px 16px;font-size:15.5px;}
+.question{background:#f6f4fc;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:14px 16px;font-size:16px;}
 /* worked-example steps */
 .step{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);} .step:first-of-type{border-top:none;}
-.stepn{flex:0 0 28px;height:28px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px;}
+.stepn{flex:0 0 28px;height:28px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px;}
 .stepbody .lab{font-weight:600;}
-.math{font-family:"SF Mono",Menlo,Consolas,monospace;background:#f6f4fc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-top:6px;font-size:14.5px;display:inline-block;}
-.ans{background:var(--good-soft);border:1px solid #bfe6cf;border-radius:11px;padding:12px 16px;margin-top:16px;font-weight:600;color:var(--good);}
+.math{font-family:"SF Mono",Menlo,Consolas,monospace;background:#f6f4fc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-top:6px;font-size:15px;display:inline-block;}
+.ans{background:var(--good-soft);border:1px solid #bfe6cf;border-radius:11px;padding:12px 16px;margin-top:16px;font-weight:600;color:var(--good-ink);}
 /* try-it reveal */
 .tryq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0;} .tryq .q{font-weight:600;margin-bottom:8px;}
-.reveal-btn{background:var(--brand);color:#fff;border:none;border-radius:9px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:14px;}
-.reveal{display:none;margin-top:10px;padding:11px 14px;border-radius:9px;background:#faf9fe;border:1px dashed var(--line);font-size:14px;} .reveal.show{display:block;}
+.reveal-btn{background:var(--brand);color:#fff;border:none;border-radius:9px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:15px;}
+.reveal{display:none;margin-top:10px;padding:11px 14px;border-radius:9px;background:#faf9fe;border:1px dashed var(--line);font-size:16px;} .reveal.show{display:block;}
 /* data tables (show the exam's data) */
-.dtable{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0;}
+.dtable{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0;}
 .dtable th,.dtable td{border:1px solid var(--line);padding:6px 8px;text-align:center;}
 .dtable th{background:var(--brand-soft);color:var(--brand-d);font-weight:700;} .dtable td.lab{text-align:left;font-weight:600;}
-.dtable tr.hl td{background:var(--good-soft);font-weight:700;color:var(--good);}
-.datalab{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--brand-d);margin:20px 0 8px;}
-.given{color:var(--muted);font-size:13px;margin:2px 0 4px;}
+.dtable tr.hl td{background:var(--good-soft);font-weight:700;color:var(--good-ink);}
+.dtable tr.hl td.lab::before{content:"\2713  ";}  /* a mark, so the highlight is not colour alone */
+.datalab{font-size:14px;font-weight:800;color:var(--brand-d);margin:20px 0 8px;}
+.given{color:var(--muted);font-size:14px;margin:2px 0 4px;}
 /* visuals */
 .svg-wrap{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin:14px 0;text-align:center;}
 .svg-wrap svg{width:100%;height:auto;max-width:560px;}
-.cap{color:var(--muted);font-size:13px;margin-top:8px;}
+.cap{color:var(--muted);font-size:14px;margin-top:8px;}
 /* quiz */
 .qblock{padding:16px 0;border-top:1px solid var(--line);} .qblock:first-of-type{border-top:none;padding-top:4px;}
-.qnum{color:var(--brand);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;}
-.examtag{display:inline-block;background:var(--good-soft);color:var(--good);border:1px solid #bfe6cf;border-radius:999px;padding:2px 9px;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-left:8px;vertical-align:middle;}
+.qnum{color:var(--brand-d);font-weight:700;font-size:14px;}
+.examtag{display:inline-block;background:var(--good-soft);color:var(--good-ink);border:1px solid #bfe6cf;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:800;margin-left:8px;vertical-align:middle;}
 .qtext{font-weight:600;margin:6px 0 12px;font-size:16px;}
-.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;margin:7px 0;font-size:15px;cursor:pointer;transition:.14s;color:var(--ink);}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;margin:7px 0;font-size:16px;cursor:pointer;transition:.14s;color:var(--ink);}
 .opt:hover{border-color:var(--brand);background:var(--brand-soft);}
 .opt.correct{border-color:var(--good);background:var(--good-soft);} .opt.wrong{border-color:var(--bad);background:var(--bad-soft);}
 .opt .mark{float:right;font-weight:700;}
-.exp{margin-top:11px;padding:13px 15px;border-radius:11px;background:#faf9fe;border:1px dashed var(--line);font-size:14px;display:none;} .exp.show{display:block;} .exp b{color:var(--brand);}
-.scorechip{font-size:13px;color:var(--muted);font-weight:600;}
+.exp{margin-top:11px;padding:13px 15px;border-radius:11px;background:#faf9fe;border:1px dashed var(--line);font-size:16px;display:none;} .exp.show{display:block;} .exp b{color:var(--brand-d);}
+.scorechip{font-size:14px;color:var(--muted);font-weight:600;}
 /* nav */
 .navrow{display:flex;justify-content:space-between;margin-top:22px;gap:10px;}
-.navbtn{text-decoration:none;font-weight:600;font-size:14px;padding:10px 16px;border-radius:11px;border:1px solid var(--line);color:var(--ink);background:#fff;}
+.navbtn{text-decoration:none;font-weight:600;font-size:15px;padding:10px 16px;border-radius:11px;border:1px solid var(--line);color:var(--ink);background:#fff;}
 .navbtn.primary{background:var(--brand);color:#fff;border-color:var(--brand);}
 /* timer (mock exam) */
 .timer{background:var(--brand);color:#fff;border-radius:12px;padding:10px 16px;font-weight:700;font-size:16px;display:inline-flex;align-items:center;gap:10px;}

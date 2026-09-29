@@ -4,17 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Day 2 · A single cash flow</title>
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <div class="wrap">
 
 <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
-<div class="crumb">DAY 2 · Sunday 27 September</div>
+<div class="crumb">Day 2 · Sunday 27 September</div>
 <h1>A single cash flow</h1>
 <p class="lede">One payment, one date. Move it to today, move it to the future, and read the rate that links the two.</p>
-
-  <div class="secaudio"><span class="salab">Before you start: today's words · 1:06</span><audio controls preload="none" src="day-02-intro.mp3"></audio></div>
 
 <!-- ================= RECALL ================= -->
 <div class="preq">
@@ -41,8 +39,6 @@
 <div class="panel">
   <h3>1. You cannot add money from two different dates</h3>
 
-    <div class="secaudio"><span class="salab">Two offers on two dates: why you can't compare raw numbers · 1:40</span><audio controls preload="none" src="day-02-different-dates.mp3"></audio></div>
-
   <p class="p">This is the idea the professor puts first, and everything from here to day 9 stands on it. A payment of 100 today and a payment of 100 in three years are not the same thing. They are not even the same kind of thing.</p>
   <p class="p">Think of dates as currencies. Money in 2029 is one currency. Money today is another. You would never add 100 dollars to 100 shekels and write 200. You change one into the other first, at the exchange rate. The interest rate is that exchange rate.</p>
   <p class="p">Three reasons a payment in the future is worth less than the same payment today:</p>
@@ -64,7 +60,7 @@
         <line x1="370" y1="112" x2="370" y2="128"/>
         <line x1="525" y1="112" x2="525" y2="128"/>
       </g>
-      <g font-size="12" fill="#6f6886" text-anchor="middle">
+      <g font-size="13" fill="#5f5877" text-anchor="middle">
         <text x="60" y="146">today (0)</text>
         <text x="215" y="146">year 1</text>
         <text x="370" y="146">year 2</text>
@@ -72,11 +68,11 @@
       </g>
       <line x1="525" y1="120" x2="525" y2="78" stroke="#6b4ef0" stroke-width="3"/>
       <polygon points="525,68 519,80 531,80" fill="#6b4ef0"/>
-      <text x="525" y="58" font-size="13" font-weight="700" fill="#6b4ef0" text-anchor="middle">1,000</text>
+      <text x="525" y="58" font-size="13" font-weight="700" fill="#5238c4" text-anchor="middle">1,000</text>
       <path d="M517 88 C 388 20, 180 20, 66 86" fill="none" stroke="#1f9d63" stroke-width="2.5" stroke-dasharray="6 4"/>
       <polygon points="60,94 72,88 66,80" fill="#1f9d63"/>
-      <text x="285" y="26" font-size="12.5" font-weight="700" fill="#1f9d63" text-anchor="middle">divide by (1 + r) three times</text>
-      <text x="60" y="174" font-size="12.5" font-weight="700" fill="#1f9d63" text-anchor="middle">value today</text>
+      <text x="285" y="26" font-size="13" font-weight="700" fill="#0d6a3f" text-anchor="middle">divide by (1 + r) three times</text>
+      <text x="60" y="174" font-size="13" font-weight="700" fill="#0d6a3f" text-anchor="middle">value today</text>
     </svg>
     <p class="cap">The payment stays where it is. Only its value moves, and it moves one period at a time.</p>
   </div>
@@ -116,14 +112,10 @@
 <div class="panel">
   <h3>2. Present value: pull one payment back to today</h3>
 
-    <div class="secaudio"><span class="salab">Infosoft's payment: what a future payment is worth today · 1:29</span><audio controls preload="none" src="day-02-present-value.mp3"></audio></div>
-
   <p class="p">A single cash flow is one payment on one future date. To find what it is worth today you divide it by the growth factor for every year you have to wait.</p>
   <p class="p" style="text-align:center"><span class="math">PV = FV / (1 + r)<sup>N</sup></span></p>
   <p class="p">FV is the payment. N is the number of years from today until the payment lands. r is the rate per year. The name of this move is <b>discounting</b>: taking a future payment back to what it is worth today.</p>
-  <div class="secaudio"><span class="salab">A check dated years from now: zero-coupon bond price and rate · 1:42</span><audio controls preload="none" src="day-02-price-and-rate.mp3"></audio></div>
-
-    <p class="p">Two things pull the value down, and they act on their own. A higher rate pulls it down. A longer wait pulls it down. Both together pull it down hard.</p>
+  <p class="p">Two things pull the value down, and they act on their own. A higher rate pulls it down. A longer wait pulls it down. Both together pull it down hard.</p>
 
   <div class="rule">Count N as the gap between today and the payment date. A payment at the end of year 1 is divided by (1 + r) once. It is not left alone.</div>
 
@@ -185,13 +177,9 @@
 <div class="panel">
   <h3>3. One move, two directions</h3>
 
-    <div class="secaudio"><span class="salab">Compounding and discounting: one move, two directions · 1:40</span><audio controls preload="none" src="day-02-two-directions.mp3"></audio></div>
-
   <p class="p">Compounding and discounting are not two topics. They are one move. Multiply by (1 + r)<sup>N</sup> to walk forward in time. Divide by the same factor to walk back.</p>
   <p class="p" style="text-align:center"><span class="math">FV = PV &times; (1 + r)<sup>N</sup></span></p>
-  <div class="secaudio"><span class="salab">The college fund: finding the rate, and the equal-slices trap · 1:43</span><audio controls preload="none" src="day-02-find-the-rate.mp3"></audio></div>
-
-    <p class="p">Because it is one equation with four parts, any three of them give you the fourth. If you know both ends and the number of years, the rate falls out:</p>
+  <p class="p">Because it is one equation with four parts, any three of them give you the fourth. If you know both ends and the number of years, the rate falls out:</p>
   <p class="p" style="text-align:center"><span class="math">r = (FV / PV)<sup>1/N</sup> &minus; 1</span></p>
   <p class="p">Notice the power of 1/N, not a division by N. That is because of interest on interest. In year 2 you earn a return on year 1's return as well as on your own money, so the years do not simply add up.</p>
 
@@ -207,12 +195,12 @@
       <text x="455" y="110" font-size="13" fill="#5238c4" text-anchor="middle">FV</text>
       <line x1="186" y1="76" x2="366" y2="76" stroke="#6b4ef0" stroke-width="2.5"/>
       <polygon points="376,76 362,70 362,82" fill="#6b4ef0"/>
-      <text x="278" y="62" font-size="12.5" font-weight="700" fill="#6b4ef0" text-anchor="middle">multiply by (1 + r) to the power N</text>
-      <text x="278" y="44" font-size="11.5" fill="#6f6886" text-anchor="middle">compounding</text>
+      <text x="278" y="62" font-size="13" font-weight="700" fill="#5238c4" text-anchor="middle">multiply by (1 + r) to the power N</text>
+      <text x="278" y="44" font-size="13" fill="#5f5877" text-anchor="middle">compounding</text>
       <line x1="374" y1="114" x2="194" y2="114" stroke="#1f9d63" stroke-width="2.5"/>
       <polygon points="184,114 198,108 198,120" fill="#1f9d63"/>
-      <text x="278" y="136" font-size="12.5" font-weight="700" fill="#1f9d63" text-anchor="middle">divide by (1 + r) to the power N</text>
-      <text x="278" y="154" font-size="11.5" fill="#6f6886" text-anchor="middle">discounting</text>
+      <text x="278" y="136" font-size="13" font-weight="700" fill="#0d6a3f" text-anchor="middle">divide by (1 + r) to the power N</text>
+      <text x="278" y="154" font-size="13" fill="#5f5877" text-anchor="middle">discounting</text>
     </svg>
     <p class="cap">The same factor does both jobs. Only the direction of travel changes.</p>
   </div>
@@ -275,7 +263,7 @@
 
 </div>
 
-<script src="study.js"></script>
+<script src="assets/study.js"></script>
 <script>
 POF.quiz({
   mount: "quiz",
