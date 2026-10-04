@@ -15,7 +15,7 @@ h1{font-size:28px;margin:8px 0 4px;letter-spacing:-.02em;}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(40,20,90,.04);}
 .panel h3{margin:0 0 6px;font-size:18px;display:flex;align-items:center;gap:8px;}
 .panel h3 .scorechip{margin-left:auto;}
-.panel .note{color:var(--muted);font-size:15px;margin:0 0 14px;}
+.panel .note{color:var(--muted);font-size:16px;margin:0 0 14px;}
 /* pretest "guess first" box */
 .preq{background:var(--amber-soft);border:1px solid #f0deb8;border-radius:16px;padding:18px 20px;margin:18px 0;}
 .preq .tag{color:var(--amber-ink);font-weight:800;font-size:14px;}
@@ -29,37 +29,37 @@ audio{width:100%;margin-top:6px;}
 .takeaway b{color:var(--brand-d);} .takeaway ul{margin:2px 0 0;padding-left:20px;} .takeaway li{margin:5px 0;}
 .takeaway .tk-gen{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);}
 /* prose helpers */
-.sub{font-size:15px;font-weight:800;color:var(--brand-d);margin:20px 0 6px;}
-.p{font-size:16px;margin:0 0 8px;}
+.sub{font-size:16px;font-weight:800;color:var(--brand-d);margin:20px 0 6px;}
+.p{font-size:16px;margin:0 0 12px;}
 .partlab{font-size:14px;font-weight:800;color:var(--brand-d);margin:0 0 6px;}
 .rule{background:var(--brand-soft);border-radius:11px;padding:12px 16px;font-weight:600;color:var(--brand-d);margin:16px 0;}
 .question{background:#f6f4fc;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:14px 16px;font-size:16px;}
 /* worked-example steps */
 .step{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);} .step:first-of-type{border-top:none;}
-.stepn{flex:0 0 28px;height:28px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px;}
+.stepn{flex:0 0 28px;height:28px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;font-size:16px;}
 .stepbody .lab{font-weight:600;}
-.math{font-family:"SF Mono",Menlo,Consolas,monospace;background:#f6f4fc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-top:6px;font-size:15px;display:inline-block;}
+.math{font-family:"SF Mono",Menlo,Consolas,monospace;background:#f6f4fc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-top:6px;font-size:16px;display:inline-block;}
 .ans{background:var(--good-soft);border:1px solid #bfe6cf;border-radius:11px;padding:12px 16px;margin-top:16px;font-weight:600;color:var(--good-ink);}
 /* try-it reveal */
 .tryq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0;} .tryq .q{font-weight:600;margin-bottom:8px;}
-.reveal-btn{background:var(--brand);color:#fff;border:none;border-radius:9px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:15px;}
+.reveal-btn{background:var(--brand);color:#fff;border:none;border-radius:9px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:16px;}
 .reveal{display:none;margin-top:10px;padding:11px 14px;border-radius:9px;background:#faf9fe;border:1px dashed var(--line);font-size:16px;} .reveal.show{display:block;}
 /* data tables (show the exam's data) */
-.dtable{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0;}
-.dtable th,.dtable td{border:1px solid var(--line);padding:6px 8px;text-align:center;}
+.dtable{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5;margin:12px 0;}
+.dtable th,.dtable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
 .dtable th{background:var(--brand-soft);color:var(--brand-d);font-weight:700;} .dtable td.lab{text-align:left;font-weight:600;}
 .dtable tr.hl td{background:var(--good-soft);font-weight:700;color:var(--good-ink);}
 .dtable tr.hl td.lab::before{content:"\2713  ";}  /* a mark, so the highlight is not colour alone */
 .datalab{font-size:14px;font-weight:800;color:var(--brand-d);margin:20px 0 8px;}
-.given{color:var(--muted);font-size:14px;margin:2px 0 4px;}
+.given{color:var(--muted);font-size:16px;margin:2px 0 4px;}
 /* visuals */
 .svg-wrap{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin:14px 0;text-align:center;}
 .svg-wrap svg{width:100%;height:auto;max-width:560px;}
-.cap{color:var(--muted);font-size:14px;margin-top:8px;}
+.cap{color:var(--muted);font-size:16px;margin-top:8px;}
 /* quiz */
 .qblock{padding:16px 0;border-top:1px solid var(--line);} .qblock:first-of-type{border-top:none;padding-top:4px;}
 .qnum{color:var(--brand-d);font-weight:700;font-size:14px;}
-.examtag{display:inline-block;background:var(--good-soft);color:var(--good-ink);border:1px solid #bfe6cf;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:800;margin-left:8px;vertical-align:middle;}
+.examtag{display:inline-block;background:var(--good-soft);color:var(--good-ink);border:1px solid #bfe6cf;border-radius:999px;padding:2px 10px;font-size:14px;font-weight:800;margin-left:8px;vertical-align:middle;}
 .qtext{font-weight:600;margin:6px 0 12px;font-size:16px;}
 .opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;margin:7px 0;font-size:16px;cursor:pointer;transition:.14s;color:var(--ink);}
 .opt:hover{border-color:var(--brand);background:var(--brand-soft);}
@@ -69,11 +69,24 @@ audio{width:100%;margin-top:6px;}
 .scorechip{font-size:14px;color:var(--muted);font-weight:600;}
 /* nav */
 .navrow{display:flex;justify-content:space-between;margin-top:22px;gap:10px;}
-.navbtn{text-decoration:none;font-weight:600;font-size:15px;padding:10px 16px;border-radius:11px;border:1px solid var(--line);color:var(--ink);background:#fff;}
+.navbtn{text-decoration:none;font-weight:600;font-size:16px;padding:10px 16px;border-radius:11px;border:1px solid var(--line);color:var(--ink);background:#fff;}
 .navbtn.primary{background:var(--brand);color:#fff;border-color:var(--brand);}
 /* timer (mock exam) */
 .timer{background:var(--brand);color:#fff;border-radius:12px;padding:10px 16px;font-weight:700;font-size:16px;display:inline-flex;align-items:center;gap:10px;}
 .timer button{background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:8px;padding:4px 10px;cursor:pointer;font-weight:600;}
+
+/* sub- and superscripts in formulas: never below 13px */
+sub,sup{font-size:max(.8em,13px);line-height:0;}
+.dtable td,.dtable th{font-variant-numeric:tabular-nums;}
+
+/* phone: more room for text, and diagrams keep readable labels (swipe inside the box) */
+@media (max-width:600px){
+  .wrap{padding:20px 12px 48px;}
+  .panel{padding:18px 16px;border-radius:14px;}
+  .svg-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px;}
+  .svg-wrap svg[viewBox^="0 0 560"]{min-width:560px;max-width:none;}
+  .svg-wrap:has(svg[viewBox^="0 0 560"])::before{content:"Swipe sideways to see the whole diagram \2192";display:block;text-align:start;font-size:14px;font-weight:700;color:var(--brand-d);margin:0 0 6px;position:sticky;left:0;}
+}
 
 /* wide tables scroll on small screens: wrap the table in <div class="tscroll"> */
 .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
