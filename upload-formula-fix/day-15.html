@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 15: Warm-up</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">Day 15 · Saturday 10 October 2026</div>
+  <h1>Warm-up</h1>
+  <p class="lede">Twenty minutes in the hour before the paper starts. Then close it.</p>
+
+  <!-- ============ OPENING ============ -->
+  <div class="panel">
+    <p class="p">Nothing on this page is new. Every task and every line below comes from days 1 to 9.</p>
+    <p class="p">The point is not to learn. The point is to get your hands moving on three shapes you already know.</p>
+  </div>
+
+  <!-- ============ THE THREE TASKS ============ -->
+  <div class="panel">
+    <h3>Three tasks to warm the hands</h3>
+    <p class="note">Paper and calculator. Work each one, then open the answer. The numbers are small on purpose.</p>
+
+    <p class="sub">Task 1. Present value of a mixed stream</p>
+    <div class="question">
+      You get 1,000 at the end of year 1, then 2,000 at the end of year 2, then 2,000 at the end of
+      year 3. Nothing after that. The required rate of return is 10 percent. What is the stream worth today?
+    </div>
+    <div class="tryq">
+      <button class="reveal-btn" type="button" data-reveal="a1">Show the answer</button>
+      <div class="reveal" id="a1">
+        <p class="p"><span class="math">1,000 / 1.10 = 909.09</span></p>
+        <p class="p"><span class="math">2,000 / 1.21 = 1,652.89</span></p>
+        <p class="p"><span class="math">2,000 / 1.331 = 1,502.63</span></p>
+        <p class="p">All three now sit at year 0, so add them:
+          <span class="math">909.09 + 1,652.89 + 1,502.63 = 4,064.61</span></p>
+        <p class="p"><b>The stream is worth 4,064.61 today.</b></p>
+        <p class="p">The other route gives the same number. The two 2,000s are an annuity with n = 2 whose first
+          payment is at year 2, so its value lands at year 1:
+          <span class="math">2,000 × 1.735537 = 3,471.07</span> at year 1, then
+          <span class="math">3,471.07 / 1.10 = 3,155.52</span> at year 0, plus 909.09 = 4,064.61.</p>
+        <p class="p"><b>Sense check.</b> The cash paid is 5,000. Your answer has to be smaller. It is.</p>
+      </div>
+    </div>
+
+    <p class="sub">Task 2. The payoff waterfall</p>
+    <div class="question">
+      At maturity a firm owes 50 to its senior lender and 30 to its junior lender. APR holds.
+      What does each of the three holders get if the assets are worth 110? And if they are worth 65?
+    </div>
+    <div class="tryq">
+      <button class="reveal-btn" type="button" data-reveal="a2">Show the answer</button>
+      <div class="reveal" id="a2">
+        <p class="p">The two borders first:
+          <span class="math">F<sub>S</sub> = 50 &nbsp;·&nbsp; F<sub>S</sub> + F<sub>J</sub> = 80</span></p>
+        <p class="p"><b>Assets worth 110.</b> 110 is above 80, so both debts are paid in full.
+          Senior <b>50</b>, junior <b>30</b>, equity Max(110 − 80, 0) = <b>30</b>.
+          Check: 50 + 30 + 30 = 110.</p>
+        <p class="p"><b>Assets worth 65.</b> 65 is above 50 but below 80, so the senior lender is full and the
+          junior lender is short. Senior <b>50</b>, junior Min(65 − 50, 30) = <b>15</b>,
+          equity Max(65 − 80, 0) = <b>0</b>. Check: 50 + 15 + 0 = 65.</p>
+      </div>
+    </div>
+
+    <p class="sub">Task 3. NPV</p>
+    <div class="question">
+      A project costs 7,000 at year 0. It brings in 3,000 at the end of year 1, 4,000 at the end of year 2 and
+      3,000 at the end of year 3. The discount rate is 10 percent. What is the NPV, and what is the decision?
+    </div>
+    <div class="tryq">
+      <button class="reveal-btn" type="button" data-reveal="a3">Show the answer</button>
+      <div class="reveal" id="a3">
+        <p class="p"><span class="math">3,000 / 1.10 = 2,727.27</span></p>
+        <p class="p"><span class="math">4,000 / 1.21 = 3,305.79</span></p>
+        <p class="p"><span class="math">3,000 / 1.331 = 2,253.94</span></p>
+        <p class="p"><span class="math">2,727.27 + 3,305.79 + 2,253.94 = 8,287.00</span></p>
+        <p class="p"><span class="math">NPV = 8,287.00 − 7,000 = 1,287.00</span></p>
+        <p class="p"><b>NPV is 1,287.00. It is above zero, so take the project.</b></p>
+        <p class="p"><b>Sense check.</b> The cash coming in is 10,000, so the gain before any discounting is
+          3,000. The NPV has to be below that. It is.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ THE TRAP LIST ============ -->
+  <div class="panel">
+    <h3>The trap list</h3>
+    <p class="note">The mistakes this course punishes. Read the list once, slowly.</p>
+
+    <table class="dtable">
+      <tr><th style="width:30%">Watch for</th><th>The line</th></tr>
+
+      <tr><td class="lab">APR</td><td style="text-align:left">In this course APR means <b>Absolute Priority
+        Rule</b>. It is not an annual percentage rate.</td></tr>
+
+      <tr><td class="lab">Size or move</td><td style="text-align:left">Equity is a size. A dividend is a move.
+        Check which one the question is asking for.</td></tr>
+
+      <tr><td class="lab">Find the state first</td><td style="text-align:left">Compare V<sub>T</sub> with
+        F<sub>S</sub>, then with F<sub>S</sub> + F<sub>J</sub>, before you work anything out.</td></tr>
+
+      <tr><td class="lab">The adding-up check</td><td style="text-align:left">Senior plus junior plus equity
+        must equal exactly V<sub>T</sub>. That check alone kills most wrong options.</td></tr>
+
+      <tr><td class="lab">The equity floor</td><td style="text-align:left">Equity can never be negative. It
+        stops at zero, because the owners have limited liability: they can lose what they put in, and no
+        more.</td></tr>
+
+      <tr><td class="lab">r against g</td><td style="text-align:left">A growing perpetuity only works when r is
+        bigger than g. If it is not, the value cannot be found this way.</td></tr>
+
+      <tr><td class="lab">Next year's payment</td><td style="text-align:left">The sheet writes the top of the
+        growing perpetuity formula as CF. It means next period's payment, not the payment made today.</td></tr>
+
+      <tr><td class="lab">Timing</td><td style="text-align:left">A payment at the end of year 1 is discounted
+        once. It is not left alone.</td></tr>
+
+      <tr><td class="lab">Where the annuity lands</td><td style="text-align:left">The annuity formula gives a
+        value one period before the first payment. A delayed annuity needs a second discounting after
+        that.</td></tr>
+
+      <tr><td class="lab">Counting n</td><td style="text-align:left">n is the number of payments, never the
+        number of years since today.</td></tr>
+
+      <tr><td class="lab">Coupon rate</td><td style="text-align:left">The coupon rate is not the yield. The
+        coupon is fixed cash on the par value. The yield is what the market charges today.</td></tr>
+
+      <tr><td class="lab">One date at a time</td><td style="text-align:left">You cannot add cash flows from
+        different dates. Bring every piece to the same date first, then add.</td></tr>
+
+      <tr><td class="lab">When they disagree</td><td style="text-align:left">If NPV and IRR point at different
+        projects, NPV is the answer, because NPV is measured in money.</td></tr>
+
+      <tr><td class="lab">The page 1 heading</td><td style="text-align:left">On the sheet, "The value of a single
+        cashflow" sits above the annuity table. Trust the row titles. "C per Period" means a repeating payment; "C Invested" or "C to Be Received" means one payment.
+        "Invested" or "to Be Received" means one payment.</td></tr>
+
+      <tr><td class="lab">Letters change costume</td><td style="text-align:left">Across the sheet, C = A = CF for
+        the payment, t = n = N for the periods, r = R for the rate. Same formulas, different costumes.</td></tr>
+
+      <tr><td class="lab">A(1 + g) in front</td><td style="text-align:left">On the growing annuity the sheet's
+        front factor is A(1 + g), and that product is the first payment. If the question gives the first payment,
+        that number goes in front as it is. Do not grow it again.</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ THE EXAM FACTS ============ -->
+  <div class="panel">
+    <h3>The paper itself</h3>
+    <table class="dtable">
+      <tr><td class="lab" style="width:34%">Length</td><td style="text-align:left">2.5 hours, which is 150 minutes</td></tr>
+      <tr><td class="lab">Questions</td><td style="text-align:left">About 22, all multiple choice</td></tr>
+      <tr><td class="lab">Pace</td><td style="text-align:left">About 6.8 minutes per question</td></tr>
+      <tr><td class="lab">Formula sheet</td><td style="text-align:left">Given to you by the professor</td></tr>
+      <tr><td class="lab">Calculator</td><td style="text-align:left">Scientific only</td></tr>
+    </table>
+    <p class="p">The formula sheet is given to you, so nothing has to be remembered. Your job in the
+      room is to pick the right formula and read the dates correctly.</p>
+  </div>
+
+  <p class="p">You have done all of this before. Go and do it once more.</p>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-14.html">← Day 14: Mock 4</a>
+    <a class="navbtn primary" href="index.html">All 15 days →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+</body>
+</html>

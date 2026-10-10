@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula page</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a>
+  <div class="crumb">Reference · The exam sheet, formula by formula</div>
+  <h1>The formula page</h1>
+  <p class="lede">Every formula here comes from the professor's exam sheet, in the sheet's own shape.
+    Keep this open while you work, so the shape you practice is the shape you will see. The few spots
+    where this page corrects or adds to the sheet say so in plain words.</p>
+
+  <!-- ============ OPENING ============ -->
+  <div class="panel">
+    <p class="p">In the exam you hold the professor's sheet, "formulas for the final 2025_Summer". This
+      page copies its formulas exactly and adds one line under each: when to reach for it. Where the pack
+      uses something the sheet does not print, it says so in bold. Each formula names where it sits on
+      the sheet, so you can practice finding it there.</p>
+  </div>
+
+  <!-- ============ SHEET TRAPS ============ -->
+  <div class="panel">
+    <h3>Three traps built into the sheet itself</h3>
+    <p class="note">All three were met in real practice. Read this box before the exam.</p>
+
+    <p class="partlab">Trap 1 · The page 1 heading is in the wrong place</p>
+    <p class="given">The words "The value of a single cashflow" sit above the first table. That table
+      holds the <strong>annuity</strong> formulas. The single-payment formulas are in the second table,
+      under "Simple Cash Flow". Trust the row titles inside the tables, never the big heading above them.</p>
+
+    <p class="partlab">Trap 2 · The selector words are "C per Period"</p>
+    <p class="given">Read the words straight after the C. "<strong>C per Period</strong>" is a payment
+      that repeats: the annuity table. "<strong>C Invested</strong>" or "<strong>C to Be Received
+      in</strong> t Periods" is one payment: the simple cash flow table. Circle "C per Period" on your
+      sheet. Careful: the words "per Period" also appear at the END of the single-payment rows, where
+      they describe the rate. Only "C per Period" marks the annuity.</p>
+
+    <p class="partlab">Trap 3 · The same thing wears different letters</p>
+    <p class="given">The sheet is not consistent with its own letters. The future value of an annuity is
+      even printed twice, once with C and t, once with A and n. Same formula, two costumes.</p>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><th style="width:40%">The thing</th><th>Letters the sheet uses for it</th></tr>
+      <tr><td class="lab">The repeating payment</td><td style="text-align:left">C (page 1 tables) = A (page 2 annuity lines) = CF (perpetuities and streams)</td></tr>
+      <tr><td class="lab">How many periods</td><td style="text-align:left">t (pages 1 and 2 tables) = n (page 2 annuity lines) = N (streams and NPV)</td></tr>
+      <tr><td class="lab">The rate</td><td style="text-align:left">r everywhere, except R in the stock formulas on page 3</td></tr>
+      <tr><td class="lab">The growth rate</td><td style="text-align:left">g</td></tr>
+      <tr><td class="lab">A face value</td><td style="text-align:left">F for a bond, F<sub>S</sub> and F<sub>J</sub> for senior and junior debt</td></tr>
+    </table>
+    </div>
+    <div class="rule">One more shape to know: the sheet never writes a minus in an exponent. Discounting
+      is always a fraction, 1 / (1 + r)<sup>t</sup>. If another book writes (1 + r)<sup>−n</sup>, it
+      means exactly 1 / (1 + r)<sup>n</sup>. Same number, different clothes. On the exam, use the
+      fraction, because that is what is in front of you.</div>
+  </div>
+
+  <!-- ============ PAYOFF AT MATURITY ============ -->
+  <div class="panel">
+    <h3>1 · Payoff at maturity: who gets what</h3>
+    <p class="note">Day 7. Sheet page 2, the bullet list. <span class="math">V<sub>T</sub></span> is the
+      value of the firm's assets at maturity. The sheet writes it both as V(T) and V_T, the same thing. <span class="math">F<sub>S</sub></span> is the face value
+      of the senior debt. <span class="math">F<sub>J</sub></span> is the face value of the junior debt.</p>
+
+    <p class="partlab">Senior debt · sheet page 2</p>
+    <div class="math">Min(V<sub>T</sub>, F<sub>S</sub>)</div>
+    <p class="given">Use it when the debt comes due and you are asked what the senior lender collects.
+      The senior lender is paid first, and never more than the face value.</p>
+
+    <p class="partlab">Junior debt, also called subordinated debt · sheet page 2</p>
+    <div class="math">If V<sub>T</sub> &lt; F<sub>S</sub> → 0</div>
+    <p class="given">The senior lender is not yet paid in full, so the junior lender gets nothing at all.</p>
+    <div class="math">If V<sub>T</sub> &gt; F<sub>S</sub> → Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>)</div>
+    <p class="given">Once the senior lender is paid in full, the junior lender takes what is left, but
+      never more than his own face value.</p>
+
+    <p class="partlab">Equity · sheet page 2</p>
+    <div class="math">Max(V<sub>T</sub> − F<sub>S</sub>, 0)</div>
+    <p class="given">This is the only equity line the sheet prints, for the case where senior debt is
+      the only debt. The owners take what is left after the lender, and they can never be asked to pay in.</p>
+    <div class="math">Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0)</div>
+    <p class="given"><strong>Not printed on the sheet.</strong> The class slides use it when there is
+      junior debt as well. The owners are paid after all of it. See the last panel on this page for why
+      both lines are the same rule.</p>
+
+    <div class="rule">Two checks on every payoff answer. The three payoffs must add up to exactly
+      <span class="math">V<sub>T</sub></span>. Equity is never below zero.</div>
+  </div>
+
+  <!-- ============ ONE CASH FLOW ============ -->
+  <div class="panel">
+    <h3>2 · One cash flow</h3>
+    <p class="note">Day 2. One amount, one date. Sheet page 1, the second table, "Simple Cash Flow".
+      Its rows start "C Invested" and "C to Be Received". Only the rate there is "per Period".</p>
+
+    <p class="partlab">Present value, coming back · sheet page 1, second table, rows III and IV</p>
+    <div class="math">PV = C / (1 + r)<sup>t</sup></div>
+    <div class="math">PV = FV<sub>t</sub> / (1 + r)<sup>t</sup></div>
+    <p class="given">Use either when one amount sits on a future date and you want its value today. They
+      are the same move: the sheet calls the amount C in one row and FV<sub>t</sub> in the other.</p>
+
+    <p class="partlab">Future value, going forward · sheet page 1, second table, row II</p>
+    <div class="math">FV<sub>t</sub> = C × (1 + r)<sup>t</sup></div>
+    <p class="given">Use it when one amount sits today and you want what it grows to by date t.</p>
+
+    <p class="partlab">The rate, when both ends are known</p>
+    <div class="math">r = (FV / PV)<sup>1/t</sup> − 1</div>
+    <p class="given"><strong>Not printed on the sheet.</strong> It is row II turned around. Use it when
+      the question gives you both amounts and the number of years, and asks for the rate of return.</p>
+  </div>
+
+  <!-- ============ MANY EQUAL CASH FLOWS ============ -->
+  <div class="panel">
+    <h3>3 · Many cash flows that end</h3>
+    <p class="note">Days 3 and 4. Sheet page 1, the FIRST table, the one whose rows say "C per Period".
+      Ignore the heading above it. The payment is C there, A on page 2.</p>
+
+    <p class="partlab">Present value of an annuity · sheet page 1, first table, row III</p>
+    <div class="math">PV = C × {1 − [1 / (1 + r)<sup>t</sup>]} / r</div>
+    <p class="given">Use it when the same amount arrives every period, the gaps are equal, the count is
+      fixed, and you want one value today. The sheet calls the curly part the annuity present value
+      factor. Work the fraction first: 1 divided by (1 + r)<sup>t</sup>, then 1 minus that, then divide
+      by r, then multiply by the payment.</p>
+
+    <p class="partlab">Future value of an annuity · sheet page 1 row II, and again on page 2</p>
+    <div class="math">FV<sub>t</sub> = C × {[(1 + r)<sup>t</sup> − 1] / r}</div>
+    <div class="math">Future Value of an Annuity = A × [((1 + r)<sup>n</sup> − 1) / r]</div>
+    <p class="given">The sheet prints this one twice, in two costumes. Use it when the same amount is
+      paid in every period and you want the pile on the day of the last payment. Saving plans and
+      pension questions.</p>
+
+    <div class="rule">Tell the two brackets apart before you compute. 1 − 1/(1+r)<sup>t</sup> shrinks
+      money back: present value, always smaller than the sum of the payments. (1+r)<sup>t</sup> − 1
+      grows money forward: future value, always bigger than the sum. If your PV comes out above the raw
+      sum of payments, you grabbed the FV bracket.</div>
+
+    <p class="partlab">Present value of a growing annuity · sheet page 2</p>
+    <div class="math">PV = A(1 + g) × [ (1 − (1 + g)<sup>n</sup> / (1 + r)<sup>n</sup>) / (r − g) ]</div>
+    <p class="given">Use it when the payment grows at a steady rate g and the stream still has a last
+      payment. Look for an end date: a license period, a lease length, a remaining life.</p>
+    <p class="given"><strong>What A means here.</strong> On this sheet, the first payment you receive is
+      A(1 + g), so A is the amount one step before the first payment. If the question hands you the
+      first payment directly, that number already is A(1 + g). Put it in front and keep the bracket as
+      it is. The pack sometimes writes the same formula as
+      CF<sub>1</sub> × [ 1 − ((1 + g)/(1 + r))<sup>n</sup> ] / (r − g), where CF<sub>1</sub> is the
+      first payment. Same formula, because CF<sub>1</sub> = A(1 + g).</p>
+    <p class="given">A useful check: set g to zero and this collapses into the plain annuity PV above.</p>
+
+    <p class="partlab">Growing annuity, the case where r equals g</p>
+    <div class="math">PV = n × A</div>
+    <p class="given"><strong>Not printed on the sheet.</strong> From the course notes. Use it when r and
+      g are the same number, so the formula above would divide by zero. A is the current cash flow, the
+      one before the first growth.</p>
+  </div>
+
+  <!-- ============ FOREVER ============ -->
+  <div class="panel">
+    <h3>4 · Cash flows that never end</h3>
+    <p class="note">Day 4. Nothing in the question stops the stream. The sheet prints these twice: as
+      PV = C/r on page 1 (row IV of the first table) and with the letters CF on page 2.</p>
+
+    <p class="partlab">Present value of a perpetuity · sheet page 1 row IV, and page 2</p>
+    <div class="math">PV = C / r</div>
+    <div class="math">Present Value of a Perpetuity = CF / r</div>
+    <p class="given">Use it when the same amount arrives every period and there is no end date and no
+      growth. One division, nothing else. C and CF are the same payment in two costumes.</p>
+
+    <p class="partlab">Present value of a growing perpetuity · sheet page 2</p>
+    <div class="math">Present Value of a Growing Perpetuity = CF / (r − g)</div>
+    <p class="given">Use it when the payment grows at a steady rate for ever. The top line is next
+      period's cash flow, not the payment made now. It needs <span class="math">r &gt; g</span>.</p>
+  </div>
+
+  <!-- ============ STOCKS ============ -->
+  <div class="panel">
+    <h3>5 · Stocks</h3>
+    <p class="note">Day 8. Sheet page 3. P is a price, D is a dividend, the number below the letter is
+      the date. The rate is written R here, the same thing the rest of the sheet calls r.</p>
+
+    <p class="partlab">Holding period return · sheet page 3</p>
+    <div class="math">HPR = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></div>
+    <p class="given">Use it when you are told what you paid, what the share is worth one period later,
+      and the dividend you collected, and you are asked what you earned. The sheet says HPR = r.</p>
+
+    <p class="partlab">Price as the value of all future dividends · sheet page 3, box I</p>
+    <div class="math">P<sub>0</sub> = D<sub>1</sub>/(1 + R)<sup>1</sup> + D<sub>2</sub>/(1 + R)<sup>2</sup> + D<sub>3</sub>/(1 + R)<sup>3</sup> + …</div>
+    <p class="given">The general case. Use it when the dividends are listed one by one.</p>
+
+    <p class="partlab">Dividend model, constant growth · sheet page 3, box II</p>
+    <div class="math">P<sub>0</sub> = D<sub>1</sub> / (R − g)</div>
+    <p class="given">The sheet calls it the dividend growth model. Use it when the dividend grows at a
+      steady rate for ever. This is the growing perpetuity, so it also needs R bigger than g.</p>
+
+    <p class="partlab">Dividend model, no growth</p>
+    <div class="math">P<sub>0</sub> = D / R</div>
+    <p class="given"><strong>Not printed as its own row.</strong> It is the constant growth model with
+      g = 0, and it is the perpetuity formula under a different name. Preferred shares behave this way.</p>
+
+    <p class="partlab">Next year's dividend, from the one just paid · sheet page 3, inside box III</p>
+    <div class="math">D<sub>next</sub> = D<sub>now</sub> × (1 + g)</div>
+    <p class="given">Use it first whenever the question gives you the dividend just paid. The growth
+      model wants next year's dividend on top, never the one already in your hand. The sheet shows this
+      move inside the supernormal growth box, as P<sub>t</sub> = D<sub>t</sub> × (1 + g) / (R − g).</p>
+
+    <p class="partlab">Required return · sheet page 3, box IV</p>
+    <div class="math">R = D<sub>1</sub>/P<sub>0</sub> + g</div>
+    <p class="given">Use it when the price and next year's dividend are given and the question asks for
+      the return. D<sub>1</sub>/P<sub>0</sub> is the dividend yield, g is the capital gains yield.</p>
+  </div>
+
+  <!-- ============ PROJECTS ============ -->
+  <div class="panel">
+    <h3>6 · Projects</h3>
+    <p class="note">Days 5 and 9. A list of dated amounts, and a decision to make. Sheet pages 3 and 4.</p>
+
+    <p class="partlab">Present value of a stream · sheet page 3, bottom</p>
+    <div class="math">PV = CF<sub>1</sub>/(1+r)<sup>1</sup> + CF<sub>2</sub>/(1+r)<sup>2</sup> + … + CF<sub>N</sub>/(1+r)<sup>N</sup></div>
+    <p class="given">Use it when the amounts are different from year to year, so no single shape covers
+      them. Each cash flow is divided by (1 + r) to the power of its own year. Value each piece on its
+      own date and add. A run of equal amounts inside the list can still be done with an annuity formula.</p>
+    <p class="given">Small print: the sheet itself writes the first few denominators as (1 + r)<sup>i</sup>
+      without changing the i. That is a typo on the sheet, not a rule. The power always matches the cash
+      flow's own year, as the last term (1 + r)<sup>N</sup> shows.</p>
+
+    <p class="partlab">Net present value · sheet page 4</p>
+    <div class="math">NPV = Σ CF<sub>i</sub> / (1+r)<sup>i</sup> − I<sub>0</sub></div>
+    <p class="given">Use it when a project costs money today and pays later, and you must say yes or no.
+      The sum runs over i = 1 to N. <span class="math">I<sub>0</sub></span> is the cost of the initial investment. Take the project
+      above zero, reject it below zero.</p>
+
+    <p class="partlab">Internal rate of return</p>
+    <p class="given"><strong>Not printed on the sheet.</strong> The IRR is the discount rate that makes
+      NPV exactly zero, and day 9 defines it in those words. Use it when the question wants the answer
+      as a percent instead of in money. Take the project when IRR is above the required return r.</p>
+    <p class="given">In the one case the exam can ask you to solve by hand, one amount out today and one
+      amount in at date t, the IRR is the rate formula from group 2:
+      <span class="math">r = (FV / PV)<sup>1/t</sup> − 1</span>. With more than one inflow you compare
+      the rates you are given instead, because the equation cannot be turned around by hand.</p>
+  </div>
+
+  <!-- ============ BONDS ============ -->
+  <div class="panel">
+    <h3>7 · Bonds</h3>
+    <p class="note">Day 6. Sheet page 2, the boxed table at the top. C is the coupon paid each period,
+      F is the bond's face value, r is the rate per period, t is the number of periods.</p>
+
+    <p class="partlab">Value of a coupon bond · sheet page 2, box I</p>
+    <div class="math">Bond value = C × [1 − 1/(1 + r)<sup>t</sup>] / r + F / (1 + r)<sup>t</sup></div>
+    <p class="given">One line, two pieces you already know: the annuity PV for the coupons, plus one
+      cash flow PV for the face value at the end. The sheet glues them together for you.</p>
+
+    <p class="partlab">The coupon payment</p>
+    <div class="math">Coupon = coupon rate × par value</div>
+    <p class="given"><strong>Not printed on the sheet.</strong> Work this out first, before any
+      discounting. The coupon rate only fixes the size of the payment. It is never the rate you
+      discount at. You discount at the yield.</p>
+
+    <p class="partlab">Yield on a bond · sheet page 2, box II</p>
+    <p class="given">The sheet says it plainly: given a bond's value, coupon, time and face value, the
+      yield is found by trial and error only. Try a rate, price the bond, compare. Raising the rate
+      lowers the bond value.</p>
+
+    <div class="datalab">Which pieces each bond needs</div>
+    <table class="dtable">
+      <tr><th style="width:26%">Bond</th><th>What it pays</th><th style="width:34%">Formula to use</th></tr>
+      <tr><td class="lab">Zero coupon</td><td style="text-align:left">Nothing until maturity, then the par value once</td><td style="text-align:left">One cash flow, group 2</td></tr>
+      <tr><td class="lab">Coupon bond</td><td style="text-align:left">The same coupon every year, plus the par value at the end</td><td style="text-align:left">The one-line bond formula above, or annuity (group 3) plus one cash flow (group 2), added</td></tr>
+      <tr><td class="lab">Perpetuity bond</td><td style="text-align:left">The same coupon every year for ever, and the principal never comes back</td><td style="text-align:left">Perpetuity, group 4</td></tr>
+    </table>
+    <div class="rule">Price and yield move in opposite directions. The coupon never moves, so the price
+      has to do all the moving. Coupon above yield gives a premium price, above par. Coupon below yield
+      gives a discount price, below par. Coupon equal to yield gives exactly par.</div>
+  </div>
+
+  <!-- ============ NOT ON THE SHEET ============ -->
+  <div class="panel">
+    <h3>8 · Used in the pack, not printed on the exam formula sheet</h3>
+    <p class="note">These are taught in the pack but do not appear on the sheet the professor gives you.
+      Know them. The off-sheet lines already flagged above: the rate formula r = (FV/PV)<sup>1/t</sup> − 1,
+      the IRR definition, the coupon payment line, the equity line with junior debt, and the growing
+      annuity r = g case.</p>
+
+    <p class="partlab">Return on assets and return on equity</p>
+    <div class="math">ROA = net income / total assets</div>
+    <div class="math">ROE = net income / equity</div>
+    <p class="given">Use them when a question compares two firms, or asks what borrowing did to a firm's
+      profit. Same profit on top, a different number on the bottom. Debt is the only reason the two
+      numbers are not equal.</p>
+    <p class="given">Day 8 makes an honest note about these, and it is repeated here. The class notes in
+      this course describe ROA and ROE in words but do not print a formula for either. The two lines above
+      are the standard course book ones. Some books use operating profit instead of net income in ROA. If
+      your lecturer wrote one version on the board, that version wins.</p>
+
+    <p class="partlab">Nominal rate and real rate</p>
+    <div class="math">R = real rate + expected inflation</div>
+    <p class="given">Use it when a question gives a rate and an inflation figure and asks what you really
+      earned. Take the inflation away from the stated rate to get the real rate.</p>
+  </div>
+
+  <!-- ============ DECISION AID ============ -->
+  <div class="panel">
+    <h3>Which one do I reach for</h3>
+    <p class="note">Read the question for two things only: does the amount repeat, and does it stop.</p>
+
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><th>What the question gives you</th><th>Does it grow?</th><th>Tool</th><th>Formula, as the sheet writes it</th></tr>
+      <tr><td style="text-align:left">One single amount on one date</td><td>No</td><td class="lab">Single cash flow</td><td>PV = C / (1 + r)<sup>t</sup></td></tr>
+      <tr><td style="text-align:left">The same amount every period, t of them</td><td>No</td><td class="lab">Annuity</td><td>C × {1 − [1/(1 + r)<sup>t</sup>]} / r</td></tr>
+      <tr><td style="text-align:left">The same amount every period, no end date</td><td>No</td><td class="lab">Perpetuity</td><td>C / r</td></tr>
+      <tr><td style="text-align:left">An amount that grows at g, n of them</td><td>Yes, at g</td><td class="lab">Growing annuity</td><td>A(1 + g) × [ (1 − (1 + g)<sup>n</sup>/(1 + r)<sup>n</sup>) / (r − g) ]</td></tr>
+      <tr><td style="text-align:left">An amount that grows at g, no end date</td><td>Yes, at g</td><td class="lab">Growing perpetuity</td><td>CF / (r − g), needs r &gt; g</td></tr>
+      <tr><td style="text-align:left">Different amounts on different dates</td><td>Either</td><td class="lab">Stream</td><td>Value each one on its own date and add</td></tr>
+    </table>
+    </div>
+
+    <div class="rule">If one of the three annuity tests fails, same amount, same gap, fixed count, then
+      this is not one annuity. Split the stream into parts and value each part on its own.</div>
+  </div>
+
+  <!-- ============ TRAPS ============ -->
+  <div class="panel">
+    <h3>What makes a right formula give a wrong answer</h3>
+    <p class="note">Every row below is a mark this course actually takes off people.</p>
+
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><th style="width:32%">Check</th><th>What goes wrong if you skip it</th></tr>
+      <tr><td class="lab">"per Period" or not</td><td style="text-align:left">The annuity table's rows say "C per Period". The single payment table's rows say "C Invested" or "C to Be Received". Use the annuity formula on one payment and you have bought that payment once per year. A PV of one payment can never be bigger than the payment.</td></tr>
+      <tr><td class="lab">PV bracket, not FV bracket</td><td style="text-align:left">1 − 1/(1+r)<sup>t</sup> pulls money back: present value. (1+r)<sup>t</sup> − 1 pushes money forward: future value. A PV of an annuity must come out below the raw sum of the payments. Above it, you grabbed the wrong bracket.</td></tr>
+      <tr><td class="lab">r must be bigger than g</td><td style="text-align:left">A growing perpetuity with r at or below g has no value you can work out. The formula still hands you a number, and that number tells you nothing, or it is negative.</td></tr>
+      <tr><td class="lab">Where the annuity answer is dated</td><td style="text-align:left">An annuity formula gives a value one period before the first payment. If the first payment is not at the end of period 1, that answer sits in the future and needs a second discounting move back to today.</td></tr>
+      <tr><td class="lab">Where the FV answer is dated</td><td style="text-align:left">The future value of an annuity is dated on the day of the last payment. The last payment earns no interest. Give it a year of interest and your answer is too big, by (1 + r) times.</td></tr>
+      <tr><td class="lab">Count the years from today</td><td style="text-align:left">A payment at the end of year 1 is divided by (1 + r) once. It is not left alone. This one error moves every later number.</td></tr>
+      <tr><td class="lab">The payoffs add to V<sub>T</sub></td><td style="text-align:left">Senior plus junior plus equity must come to exactly V<sub>T</sub>. If they do not, one of the three is wrong, and it is usually the junior one.</td></tr>
+      <tr><td class="lab">Equity stops at zero</td><td style="text-align:left">Owners can lose everything they put in and no more. A negative equity payoff is always a wrong answer.</td></tr>
+      <tr><td class="lab">Senior before junior</td><td style="text-align:left">The junior lender sees nothing until the senior lender is paid in full. Paying them in the wrong order is the classic trap on this topic.</td></tr>
+      <tr><td class="lab">APR means Absolute Priority Rule</td><td style="text-align:left">In this course APR is the rule that sets who gets paid first. It never means annual percentage rate.</td></tr>
+      <tr><td class="lab">Next period's cash flow on top</td><td style="text-align:left">A growing perpetuity and the constant growth dividend model both want next period's amount. If the question gives you the one just paid, grow it by (1 + g) first.</td></tr>
+      <tr><td class="lab">Discount at the yield, not the coupon</td><td style="text-align:left">The coupon rate only sets the size of the payment. Discounting at the coupon rate always gives you par back, which is the wrong answer for every bond except one priced at par.</td></tr>
+      <tr><td class="lab">Never add across dates</td><td style="text-align:left">Two amounts on two different dates cannot be added until both sit on the same date. Draw the timeline before any formula.</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- ============ THE DISAGREEMENT ============ -->
+  <div class="panel">
+    <h3>The one place the sources disagree</h3>
+    <p class="p">The formula sheet writes equity as
+      <span class="math">Max(V<sub>T</sub> − F<sub>S</sub>, 0)</span> and the class slides write it as
+      <span class="math">Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0)</span>. This pack treats
+      them as one rule seen in two cases. The owners are paid last, so equity gets what is left after
+      all the debt. With senior debt only, all the debt is
+      <span class="math">F<sub>S</sub></span>. With junior debt as well, all the debt is
+      <span class="math">F<sub>S</sub></span> plus <span class="math">F<sub>J</sub></span>. The check
+      that settles which line you need is the same in both cases: your three payoffs must add up to
+      exactly <span class="math">V<sub>T</sub></span>. If they do not, you used the wrong line.</p>
+
+    <div class="datalab">Same formula, other clothes you may meet</div>
+    <table class="dtable">
+      <tr><th style="width:36%">As the sheet writes it</th><th>Other clothes for the same formula</th></tr>
+      <tr><td style="text-align:left">PV = C × {1 − [1/(1 + r)<sup>t</sup>]} / r</td><td style="text-align:left">PV = A × (1 − 1/(1 + r)<sup>n</sup>) / r, as the day pages write it. The letters and the bracket style changed, the math did not: A is C, n is t.</td></tr>
+      <tr><td style="text-align:left">PV = C × {1 − [1/(1 + r)<sup>t</sup>]} / r</td><td style="text-align:left">PV = A × (1 − (1 + r)<sup>−n</sup>) / r, as a book may write it. The minus in the exponent means 1 over: (1 + r)<sup>−n</sup> is 1/(1 + r)<sup>n</sup>. Same number. On the exam, work with the fraction, the shape in front of you.</td></tr>
+      <tr><td style="text-align:left">A(1 + g) × [ (1 − (1 + g)<sup>n</sup>/(1 + r)<sup>n</sup>) / (r − g) ]</td><td style="text-align:left">CF<sub>1</sub> × [ 1 − ((1 + g)/(1 + r))<sup>n</sup> ] / (r − g). Same formula, because CF<sub>1</sub> is the first payment and the first payment is A(1 + g).</td></tr>
+      <tr><td style="text-align:left">C for the payment on page 1, A on page 2, CF for perpetuities</td><td style="text-align:left">Any of these letters. The letter carries no meaning of its own. See the costume table at the top of this page.</td></tr>
+    </table>
+    <p class="given">None of these change an answer. They are listed so a different costume on exam day
+      does not stop you.</p>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn primary" href="index.html">All 15 days →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+</body>
+</html>

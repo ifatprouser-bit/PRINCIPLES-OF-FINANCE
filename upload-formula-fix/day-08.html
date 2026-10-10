@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 8: What the shareholder gets</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">Day 8 · Saturday 3 October</div>
+  <h1>What the shareholder gets</h1>
+  <p class="lede">A share pays you twice: a dividend in your hand, and a price that moves. Value it, and you are back to the perpetuity from day 4.</p>
+  <div class="secaudio"><span class="salab">Before you start: today's words · 1:14</span><audio controls preload="none" src="day-08-intro.mp3"></audio></div>
+
+
+  <!-- ============ RECALL: DAY 5 ============ -->
+  <div class="preq">
+    <div class="tag">Five minutes: recall</div>
+    <p><b>Day 5 was the mixed stream.</b> Answer both on paper before you open anything.</p>
+    <p><b>1.</b> A licence pays 1,000 at the end of each year from year 4 to year 9, and nothing in any other
+       year. The rate is 8 percent. What is n, which year does the annuity value land in, and what is the
+       licence worth today?</p>
+    <p><b>2.</b> Why can you not add 1,000 received in year 2 to 1,000 received in year 5 and call the sum 2,000?</p>
+    <p class="do">Write your two answers down, then check.</p>
+    <button class="reveal-btn" type="button" data-reveal="rc1">Show the answer</button>
+    <div class="reveal" id="rc1">
+      <p class="p"><b>1.</b> Years 4, 5, 6, 7, 8, 9 is six payments, so <b>n = 6</b>. n counts payments, never
+        years since today. The first payment is at year 4, so the annuity value lands one period before it,
+        at <b>the end of year 3</b>.</p>
+      <p class="p">Hop 1: <span class="math">1,000 × {1 − [1 / 1.08<sup>6</sup>]} / 0.08 = 1,000 × 4.622880 = 4,622.88</span>
+        dated year 3.</p>
+      <p class="p">Hop 2: <span class="math">4,622.88 / 1.08<sup>3</sup> = 4,622.88 / 1.259712 = 3,669.79</span> today.</p>
+      <p class="p">Stopping after hop 1 and writing 4,622.88 is the classic lost mark on this topic.</p>
+      <p class="p"><b>2.</b> Because they are not the same money. A payment in year 2 can be invested for three
+        more years before year 5 arrives, so it is worth more. Amounts from different dates cannot be added.
+        Bring every amount to one date first, then add.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRETEST ============ -->
+  <div class="preq">
+    <div class="tag">Guess first</div>
+    <p>You buy a share for 40. One year later the share is worth 37. During that year the company paid you a
+       dividend of 5.</p>
+    <p><b>Did you make money or lose money over the year, and by how much in percent?</b></p>
+    <p class="do">Guess now. No answer is shown here. This is a guess, not a test. Panel 1 answers it.</p>
+  </div>
+
+  <!-- ============ PANEL 1 ============ -->
+  <div class="panel">
+    <h3>1. Holding period return: the two things a share pays you</h3>
+
+    <div class="secaudio"><span class="salab">The coffee machine: a share pays you in cash and in price · 1:36</span><audio controls preload="none" src="day-08-two-ways.mp3"></audio></div>
+
+    <p class="p">A <b>share</b> (a stock) is a claim on what is left in a firm after everyone else has been
+      paid. Day 7 drew that claim on the leftovers as a picture. Today the question is different and simpler:
+      if you hold a share for one year, what do you earn?</p>
+
+    <p class="p">Two things reach you. The first is the <b>dividend</b>, which is cash the company hands to
+      shareholders during the year. The second is the <b>price change</b>, which is what the share is worth at
+      the end minus what you paid at the start. That price change is called a <b>capital gain</b> when the
+      price rises and a <b>capital loss</b> when it falls.</p>
+
+    <p class="p">The <b>holding period return</b> puts both together and shows them as a percent of what you
+      paid. That is the formula on your exam sheet:</p>
+
+    <div class="math">r = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></div>
+
+    <table class="dtable">
+      <tr><th style="width:20%">Letter</th><th>What it is</th></tr>
+      <tr><td class="lab">P<sub>0</sub></td><td style="text-align:left">The price at the start. What you paid. This is also the number you divide by.</td></tr>
+      <tr><td class="lab">P<sub>1</sub></td><td style="text-align:left">The price at the end of the period.</td></tr>
+      <tr><td class="lab">D<sub>1</sub></td><td style="text-align:left">The dividend paid to you during the period.</td></tr>
+      <tr><td class="lab">r</td><td style="text-align:left">The return for that one period, as a decimal. Multiply by 100 for percent.</td></tr>
+    </table>
+
+    <p class="p">Two details decide most of the marks here. You always divide by the <b>starting</b> price, not
+      the ending one. And the dividend is added even though it never shows up in the price. If you look only at
+      the price you are reading half the story.</p>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 230" role="img" aria-label="A share bought at 120 is worth 129 a year later and paid a dividend of 4.80, so the total gain of 13.80 is made of a 9 price rise and a 4.80 dividend">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <line x1="40" y1="185" x2="530" y2="185" stroke="#211c33" stroke-width="2"/>
+          <text x="120" y="205" text-anchor="middle" fill="#6f6886">today (t = 0)</text>
+          <text x="380" y="205" text-anchor="middle" fill="#6f6886">one year later (t = 1)</text>
+
+          <rect x="70" y="85" width="100" height="100" fill="#ece7fd" stroke="#6b4ef0" stroke-width="2"/>
+          <text x="120" y="140" text-anchor="middle" fill="#5238c4" font-weight="700" font-size="14">P₀ = 120</text>
+          <text x="120" y="75" text-anchor="middle" fill="#6f6886">what you paid</text>
+
+          <rect x="330" y="78" width="100" height="107" fill="#ece7fd" stroke="#6b4ef0" stroke-width="2"/>
+          <text x="380" y="140" text-anchor="middle" fill="#5238c4" font-weight="700" font-size="14">P₁ = 129</text>
+          <rect x="330" y="42" width="100" height="32" fill="#e4f6ec" stroke="#1f9d63" stroke-width="2"/>
+          <text x="380" y="63" text-anchor="middle" fill="#0d6a3f" font-weight="700" font-size="13">D₁ = 4.80</text>
+
+          <line x1="447" y1="42" x2="447" y2="185" stroke="#b6791f" stroke-width="1.5"/>
+          <line x1="440" y1="42" x2="454" y2="42" stroke="#b6791f" stroke-width="1.5"/>
+          <line x1="440" y1="185" x2="454" y2="185" stroke="#b6791f" stroke-width="1.5"/>
+          <text x="462" y="105" fill="#b6791f" font-weight="700">133.80</text>
+          <text x="462" y="121" fill="#5f5877" font-size="13">back in</text>
+          <text x="462" y="134" fill="#5f5877" font-size="13">your pocket</text>
+
+          <text x="250" y="150" text-anchor="middle" fill="#5238c4" font-weight="700" font-size="13">price change +9</text>
+          <text x="250" y="166" text-anchor="middle" fill="#0d6a3f" font-weight="700" font-size="13">dividend +4.80</text>
+          <text x="250" y="182" text-anchor="middle" fill="#211c33" font-weight="700" font-size="13">total +13.80</text>
+        </g>
+      </svg>
+      <p class="cap">The green block is the only part you can spend during the year. The purple block is only
+        worth something when you sell. The return counts both, and measures them against the 120 you paid.
+        The green block is drawn taller than its true size so that its number can be read.</p>
+    </div>
+
+    <div class="rule">Divide by the starting price P<sub>0</sub>, always. Add the dividend, always. A price that
+      falls can still leave you with a positive return, as long as the dividend is bigger than the fall.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A share is bought for 120. One year later its price is 129. During that year the company paid a dividend
+      of 4.80 a share. What is the holding period return?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name the formula and pull the inputs out of the question.</span>
+      <div class="math">r = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></div>
+      <div class="p">P<sub>0</sub> = 120, P<sub>1</sub> = 129, D<sub>1</sub> = 4.80.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Work out the price change.</span>
+      <div class="math">129 − 120 = 9</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Add the dividend to get the whole gain.</span>
+      <div class="math">9 + 4.80 = 13.80</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Divide by the starting price.</span>
+      <div class="math">13.80 / 120 = 0.115</div>
+    </div></div>
+
+    <div class="ans">The holding period return is 0.115, which is 11.5 percent.</div>
+
+    <p class="p" style="margin-top:10px"><b>Split it in two and the number tells you more.</b> The dividend part
+      is 4.80 / 120 = 0.04, which is 4 percent. The price part is 9 / 120 = 0.075, which is 7.5 percent.
+      Together, 4 + 7.5 = 11.5 percent. Those two pieces have names: the dividend part is the dividend yield,
+      the price part is the capital gain. Splitting is a good check, because the two pieces must add back to
+      your answer.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A share is bought for 60. A year later the price is 57. The company paid a dividend
+        of 4.20 during the year. What is the holding period return? Say first whether you expect it to be
+        positive or negative.</div>
+      <button class="reveal-btn" type="button" data-reveal="t1">Show the answer</button>
+      <div class="reveal" id="t1">
+        <p class="p">Price change: 57 − 60 = <b>−3</b>. That is a capital loss.</p>
+        <p class="p">Whole gain: −3 + 4.20 = <b>1.20</b>. The dividend is larger than the fall, so the holder
+          still comes out ahead.</p>
+        <p class="p">Return: <span class="math">1.20 / 60 = 0.02</span>, which is <b>2 percent</b>.</p>
+        <p class="p">Split check: dividend part 4.20 / 60 = 7 percent, price part −3 / 60 = −5 percent.
+          7 − 5 = 2 percent. The two pieces add back, so the answer holds.</p>
+        <p class="p">This is the case the exam likes. A falling price does not automatically mean a loss.</p>
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it, backwards. A share is bought for 25. It pays a dividend of 1.00 during the year, and
+        the holding period return turns out to be 8 percent. What was the price at the end of the year?</div>
+      <button class="reveal-btn" type="button" data-reveal="t2">Show the answer</button>
+      <div class="reveal" id="t2">
+        <p class="p">Start from the same formula and move the pieces: P<sub>1</sub> = P<sub>0</sub>(1 + r) − D<sub>1</sub>.</p>
+        <p class="p"><span class="math">25 × 1.08 = 27.00</span>, then <span class="math">27.00 − 1.00 = 26.00</span>.</p>
+        <p class="p">Check by going forward: (26 − 25 + 1) / 25 = 2 / 25 = 0.08. Correct.</p>
+        <p class="p">The trap is stopping at 27.00. That is the price you would need if the share paid no
+          dividend at all. The dividend does part of the work, so the price has to do less.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 2 ============ -->
+  <div class="panel">
+    <h3>2. No growth: the share is a perpetuity in new clothes</h3>
+
+    <div class="secaudio"><span class="salab">A dividend that never changes is the old perpetuity · 1:46</span><audio controls preload="none" src="day-08-old-shape.mp3"></audio></div>
+
+    <p class="p">Panel 1 asked what you earned over one year. Now turn the question around. If you know what
+      investors require, what should the share be worth today?</p>
+
+    <p class="p">The answer uses one idea only. A share is a promise of future dividends. Its value today is the
+      present value of those dividends. That method has a name in this course, the <b>dividend discount model</b>.</p>
+
+    <p class="p">Start with the easy case. The dividend is the same amount every year and it never stops. Say it
+      out loud: a fixed payment, at equal gaps, forever. That is the <b>perpetuity</b> from day 4. You already
+      have the formula and you do not need a new one.</p>
+
+    <div class="math">P<sub>0</sub> = D / r</div>
+
+    <p class="p">D is the yearly dividend and r is the return investors require. Nothing about the perpetuity
+      changed. Only the label on the cash flow changed, from "a payment" to "a dividend".</p>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 190" role="img" aria-label="A timeline showing equal dividends of 6 at the end of every year with no end, valued today as 6 divided by r">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <line x1="40" y1="130" x2="520" y2="130" stroke="#211c33" stroke-width="2"/>
+          <g stroke="#211c33" stroke-width="2">
+            <line x1="40" y1="124" x2="40" y2="136"/><line x1="120" y1="124" x2="120" y2="136"/>
+            <line x1="200" y1="124" x2="200" y2="136"/><line x1="280" y1="124" x2="280" y2="136"/>
+            <line x1="360" y1="124" x2="360" y2="136"/><line x1="440" y1="124" x2="440" y2="136"/>
+          </g>
+          <g fill="#6f6886" text-anchor="middle">
+            <text x="40" y="152">0</text><text x="120" y="152">1</text><text x="200" y="152">2</text>
+            <text x="280" y="152">3</text><text x="360" y="152">4</text><text x="440" y="152">5</text>
+          </g>
+          <text x="40" y="168" text-anchor="middle" fill="#5f5877" font-size="13">today</text>
+          <g stroke="#6b4ef0" stroke-width="3">
+            <line x1="120" y1="130" x2="120" y2="72"/><line x1="200" y1="130" x2="200" y2="72"/>
+            <line x1="280" y1="130" x2="280" y2="72"/><line x1="360" y1="130" x2="360" y2="72"/>
+            <line x1="440" y1="130" x2="440" y2="72"/>
+          </g>
+          <g fill="#5238c4" font-weight="700" text-anchor="middle" font-size="13">
+            <text x="120" y="64">6</text><text x="200" y="64">6</text><text x="280" y="64">6</text>
+            <text x="360" y="64">6</text><text x="440" y="64">6</text>
+          </g>
+          <text x="490" y="136" fill="#5238c4" font-weight="700" font-size="18">· · ·</text>
+          <text x="492" y="64" fill="#5238c4" font-weight="700" font-size="13">forever</text>
+          <path d="M116 100 C 90 104, 62 112, 46 122" fill="none" stroke="#1f9d63" stroke-width="2"/>
+          <polygon points="40,128 50,116 52,126" fill="#1f9d63"/>
+          <text x="52" y="182" text-anchor="middle" fill="#0d6a3f" font-weight="700" font-size="13">P₀ = 6 / r</text>
+        </g>
+      </svg>
+      <p class="cap">Every bar is the same height and the row never ends. That shape is a perpetuity, whatever
+        the cash flow is called. One division does the whole job.</p>
+    </div>
+
+    <p class="sub">Preferred stock</p>
+    <div class="secaudio"><span class="salab">The silent partner: paid first, fixed amount, no vote · 1:32</span><audio controls preload="none" src="day-08-preferred.mp3"></audio></div>
+
+    <p class="p">A <b>preferred share</b> is the clearest real example of this shape. It pays a fixed dividend,
+      set when the share is issued, and that amount does not grow. Preferred shareholders are paid their
+      dividend before ordinary shareholders get anything, and they usually have no vote. So a preferred share
+      is valued with exactly the formula above.</p>
+    <p class="p" style="color:#6f6886;font-size:14px"><b>An honest note.</b> Preferred stock is listed as a
+      topic in the course syllabus, but the class notes in this project do not spell it out. What is written
+      above is the standard meaning from the course book, and the way to value it is the no growth model. If your
+      lecturer said something different in class, follow him.</p>
+
+    <div class="rule">If the dividend never changes, the share price is one division: the dividend divided by
+      the required return. Do not reach for the annuity formula. An annuity stops, a perpetuity does not.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A preferred share pays a dividend of 6.00 at the end of every year and will keep doing so with no
+      increase. Investors in shares of this risk require 8 percent. What is the share worth today? And what
+      happens to its value if the required return falls to 6 percent?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name the shape before the formula.</span>
+      <div class="p">Same amount, once a year, no end date, no growth. That is a plain perpetuity, so
+        P<sub>0</sub> = D / r.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Put the numbers in at 8 percent.</span>
+      <div class="math">P<sub>0</sub> = 6.00 / 0.08 = 75.00</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Now the required return falls to 6 percent.</span>
+      <div class="math">P<sub>0</sub> = 6.00 / 0.06 = 100.00</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Check the direction.</span>
+      <div class="p">The dividend did not change. Investors simply became willing to accept less, so the same
+        cash is now worth more. Price up when the required return goes down. This is the same seesaw you will
+        meet again with bonds.</div>
+    </div></div>
+
+    <div class="ans">At 8 percent the share is worth 75.00. At 6 percent it is worth 100.00.</div>
+
+    <p class="p" style="margin-top:10px"><b>Check it the other way.</b> Buy at 75.00 and collect 6.00 a year
+      forever: 6.00 / 75.00 = 0.08, which is the 8 percent you required. The formula and the check are the same
+      equation read in opposite directions.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A preferred share trades at 48.00 and pays a fixed dividend of 3.60 every year
+        forever. What return does a buyer at that price earn?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3">Show the answer</button>
+      <div class="reveal" id="t3">
+        <p class="p">Turn P<sub>0</sub> = D / r around: r = D / P<sub>0</sub>.</p>
+        <p class="p"><span class="math">r = 3.60 / 48.00 = 0.075</span>, which is <b>7.5 percent</b>.</p>
+        <p class="p">Check: 48.00 × 0.075 = 3.60. Correct.</p>
+        <p class="p">Notice what this means in the exam. Price and required return are two ways of saying one
+          thing. Give me either and I can find the other, as long as the dividend is fixed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 3 ============ -->
+  <div class="panel">
+    <h3>3. Constant growth: a growing perpetuity, so r must beat g</h3>
+
+    <div class="secaudio"><span class="salab">Last month's rent is gone: price from next year's dividend · 1:36</span><audio controls preload="none" src="day-08-next-one.mp3"></audio></div>
+
+    <p class="p">Real companies rarely pay the same dividend forever. A healthy firm raises it a little each
+      year. Assume it rises by the same percent every year and call that percent g, the growth rate. The stream
+      is now a fixed first payment that grows at a steady rate and never stops. Day 4 named that shape: a
+      <b>growing perpetuity</b>.</p>
+
+    <div class="math">P<sub>0</sub> = D<sub>1</sub> / (r − g)</div>
+
+    <p class="p">The one thing people get wrong is the top of the fraction. It is D<sub>1</sub>, the dividend
+      one year from now, not the dividend just paid. Exam questions usually hand you the dividend just paid and
+      call it D<sub>0</sub>. You must grow it first:</p>
+
+    <div class="math">D<sub>1</sub> = D<sub>0</sub> × (1 + g)</div>
+
+    <div class="secaudio"><span class="salab">The escalator: the price lives in the gap between r and g · 1:44</span><audio controls preload="none" src="day-08-the-gap.mp3"></audio></div>
+
+    <p class="p">The bottom of the fraction carries a condition. r must be larger than g. If g were equal to r
+      the bottom would be zero and there would be no answer. If g were larger than r the formula would return a
+      negative price, which is not a real answer either. There is a reason behind the sums. A dividend that
+      grows faster than the rate you discount at, forever, is worth an unlimited amount, and no model can
+      price that.</p>
+
+    <div class="rule">Check r &gt; g before you divide. Then check that the number on top is next year's
+      dividend. Those two checks catch most of the lost marks on this formula.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 190" role="img" aria-label="Dividend bars growing taller each year, the first one labelled D1, and a note that the required return must be greater than the growth rate">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <line x1="40" y1="140" x2="520" y2="140" stroke="#211c33" stroke-width="2"/>
+          <g stroke="#211c33" stroke-width="2">
+            <line x1="40" y1="134" x2="40" y2="146"/><line x1="120" y1="134" x2="120" y2="146"/>
+            <line x1="200" y1="134" x2="200" y2="146"/><line x1="280" y1="134" x2="280" y2="146"/>
+            <line x1="360" y1="134" x2="360" y2="146"/><line x1="440" y1="134" x2="440" y2="146"/>
+          </g>
+          <g fill="#6f6886" text-anchor="middle">
+            <text x="40" y="162">0</text><text x="120" y="162">1</text><text x="200" y="162">2</text>
+            <text x="280" y="162">3</text><text x="360" y="162">4</text><text x="440" y="162">5</text>
+          </g>
+          <g stroke="#6b4ef0" stroke-width="3">
+            <line x1="120" y1="140" x2="120" y2="100"/><line x1="200" y1="140" x2="200" y2="90"/>
+            <line x1="280" y1="140" x2="280" y2="79"/><line x1="360" y1="140" x2="360" y2="67"/>
+            <line x1="440" y1="140" x2="440" y2="54"/>
+          </g>
+          <g fill="#5238c4" font-weight="700" text-anchor="middle" font-size="13">
+            <text x="120" y="92">D₁</text><text x="200" y="82">D₁(1+g)</text>
+            <text x="280" y="71">D₁(1+g)²</text><text x="360" y="59">D₁(1+g)³</text>
+            <text x="440" y="46">D₁(1+g)⁴</text>
+          </g>
+          <text x="492" y="146" fill="#5238c4" font-weight="700" font-size="18">· · ·</text>
+          <rect x="230" y="168" width="200" height="20" rx="6" fill="#fcf3e3" stroke="#f0deb8"/>
+          <text x="330" y="182" text-anchor="middle" fill="#7d4f08" font-weight="700" font-size="13">only works while r &gt; g</text>
+          <text x="40" y="182" fill="#0d6a3f" font-weight="700" font-size="13">P₀ = D₁ / (r − g)</text>
+        </g>
+      </svg>
+      <p class="cap">Each bar is taller than the one before by the same percent. The first bar is D₁, one year
+        from today, which is why the dividend just paid has to be grown once before it goes into the formula.</p>
+    </div>
+
+    <p class="sub">Worked example, from the class notes</p>
+    <div class="question">
+      In 1992, Southwestern Bell paid dividends per share of 2.73. Its earnings and dividends had grown at
+      6 percent a year between 1988 and 1992 and were expected to grow at the same rate in the long term. The
+      rate of return required by investors on shares of equal risk was 12.23 percent. What is the value of this
+      share?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name the shape and check the condition.</span>
+      <div class="p">A dividend that grows at a steady 6 percent with no end date is a growing perpetuity.
+        r = 12.23 percent and g = 6 percent, so r is larger than g and the formula may be used.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">The 2.73 was already paid, so grow it one year.</span>
+      <div class="math">D<sub>1</sub> = 2.73 × 1.06 = 2.8938</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Work out the bottom of the fraction.</span>
+      <div class="math">r − g = 0.1223 − 0.06 = 0.0623</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Divide.</span>
+      <div class="math">P<sub>0</sub> = 2.8938 / 0.0623 = 46.45</div>
+    </div></div>
+
+    <div class="ans">The share is worth 46.45.</div>
+
+    <p class="p" style="margin-top:10px"><b>Sense check.</b> If the dividend never grew, the share would be
+      worth 2.73 / 0.1223 = 22.32. Growth roughly doubles it. That is the right direction and a believable size,
+      because 6 percent growth eats most of a 12.23 percent required return.</p>
+
+    <p class="datalab">How fast the price climbs as g gets close to r</p>
+    <div class="tscroll">
+      <table class="dtable">
+        <tr><th>Growth g</th><th>D₀</th><th>D₁ = D₀(1+g)</th><th>r − g</th><th>Price at r = 10%</th></tr>
+        <tr><td class="lab">0%</td><td>2.00</td><td>2.00</td><td>0.10</td><td>20.00</td></tr>
+        <tr><td class="lab">2%</td><td>2.00</td><td>2.04</td><td>0.08</td><td>25.50</td></tr>
+        <tr><td class="lab">4%</td><td>2.00</td><td>2.08</td><td>0.06</td><td>34.67</td></tr>
+        <tr><td class="lab">6%</td><td>2.00</td><td>2.12</td><td>0.04</td><td>53.00</td></tr>
+        <tr class="hl"><td class="lab">8%</td><td>2.00</td><td>2.16</td><td>0.02</td><td>108.00</td></tr>
+      </table>
+    </div>
+    <p class="cap">The dividend barely moves down the table. The price becomes more than five times bigger. The
+      whole effect comes from the bottom of the fraction getting smaller. This is why a small change in g can
+      change an answer by a lot, and why the r greater than g check matters.</p>
+
+    <div class="tryq">
+      <div class="q">Try it, backwards. A share trades at 30.00 today. It will pay a dividend of 1.50 at the end
+        of the year, and the dividend is expected to grow 4 percent a year forever. What return are buyers at
+        30.00 requiring?</div>
+      <button class="reveal-btn" type="button" data-reveal="t4">Show the answer</button>
+      <div class="reveal" id="t4">
+        <p class="p">Rearrange P<sub>0</sub> = D<sub>1</sub> / (r − g) into r = D<sub>1</sub> / P<sub>0</sub> + g.</p>
+        <p class="p"><span class="math">1.50 / 30.00 = 0.05</span>, then <span class="math">0.05 + 0.04 = 0.09</span>,
+          which is <b>9 percent</b>.</p>
+        <p class="p">Check: 1.50 / (0.09 − 0.04) = 1.50 / 0.05 = 30.00. Correct.</p>
+        <p class="p">Read the two parts. The 5 percent is the dividend yield, the cash you get next year against
+          the price. The 4 percent is the growth, which shows up as a rising price. Panel 1 called those the
+          same two pieces. It is the same idea reaching you from the other end.</p>
+        <p class="p">The 1.50 here is already next year's dividend, so it does not get grown again.</p>
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it. A share is expected to pay 5.00 next year. Its dividend is expected to grow
+        8 percent a year forever, and investors require 6 percent. What is the share worth?</div>
+      <button class="reveal-btn" type="button" data-reveal="t5">Show the answer</button>
+      <div class="reveal" id="t5">
+        <p class="p">Check the condition first: r = 6 percent, g = 8 percent, so r is <b>not</b> larger than g.</p>
+        <p class="p">If you push on anyway you get 5.00 / (0.06 − 0.08) = 5.00 / (−0.02) = <b>−250.00</b>.
+          A share cannot be worth minus 250. The negative sign is the model telling you it does not apply.</p>
+        <p class="p">The correct answer is that the constant growth model cannot value this share. A dividend
+          growing forever faster than the rate you discount at has no finite present value.</p>
+        <p class="p">In real life a firm cannot grow faster than its economy forever. So this guess would be
+          replaced by a few years of fast growth and then a slower steady rate. That extra step is beyond this
+          course. For the exam, the point is to spot the broken condition and stop.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 4 ============ -->
+  <div class="panel">
+    <h3>4. Profit, and what the manager is actually aiming at</h3>
+
+    <p class="p">This panel is a set of concept topics from the professor's exam guide. They sit here because
+      they are all about the shareholder: how well the firm earns for her, and whether the manager is trying to
+      do that at all.</p>
+
+    <p class="sub">ROA against ROE</p>
+    <div class="secaudio"><span class="salab">Two food carts: ROA against ROE, and debt is the gap · 1:49</span><audio controls preload="none" src="day-08-borrowed-money.mp3"></audio></div>
+
+    <p class="p">Two ratios measure profit, and they differ only in what you compare the profit to.
+      <b>ROA</b>, return on assets, compares profit to everything the firm owns. It answers: how well do the
+      assets work. <b>ROE</b>, return on equity, compares the same profit to the shareholders' own money. It
+      answers: how well did the owners do.</p>
+
+    <div class="math">ROA = net income / total assets &nbsp;&nbsp;·&nbsp;&nbsp; ROE = net income / equity</div>
+
+    <p class="p">The gap between them is debt, and nothing else. Assets are paid for by equity plus debt. If a
+      firm borrows, its equity is smaller than its assets. The same profit is then divided by a smaller number,
+      so ROE comes out higher than ROA. A firm with no debt has equity equal to assets, so its two ratios are the
+      same number.</p>
+    <div class="secaudio"><span class="salab">The rainy month: debt makes ROE swing both ways · 1:26</span><audio controls preload="none" src="day-08-both-ways.mp3"></audio></div>
+
+
+    <p class="p">Borrowing is not a free gain. It lifts ROE when the firm earns money, and it drives ROE
+      down faster than ROA when the firm loses money. That is the meaning of leverage, and it is why ROE alone
+      never tells you whether a firm is well run.</p>
+
+    <p class="p" style="color:#6f6886;font-size:14px"><b>An honest note.</b> The class notes in this project
+      describe ROA and ROE in words but do not print a formula for either. The two formulas above are the
+      standard course book ones. Some books use operating profit instead of net income in ROA. If your lecturer
+      wrote a specific version on the board, that version wins.</p>
+
+    <div class="rule">Same profit, but you divide by something different. ROA divides by assets, ROE divides by equity. Debt is the
+      only reason they differ, and it makes ROE swing further in both directions.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      Firm Alpha owns assets of 500. It is financed by 300 of debt and 200 of equity. Last year its net income,
+      after paying interest, was 40. Firm Beta owns the same 500 of assets and also earned net income of 40, but
+      it has no debt at all. Find ROA and ROE for each firm.
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Alpha's ROA. Divide profit by everything it owns.</span>
+      <div class="math">40 / 500 = 0.08 = 8 percent</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Alpha's ROE. Divide the same profit by the owners' money.</span>
+      <div class="math">40 / 200 = 0.20 = 20 percent</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Beta has no debt, so its equity is the whole 500.</span>
+      <div class="math">ROA = 40 / 500 = 8 percent &nbsp;&nbsp; ROE = 40 / 500 = 8 percent</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Read the comparison.</span>
+      <div class="p">The two firms use their assets equally well, and the equal ROA of 8 percent says so.
+        Alpha's owners did better, 20 percent against 8 percent, because they put in only 200 of their own
+        money and borrowed the rest.</div>
+    </div></div>
+
+    <div class="ans">Alpha: ROA 8 percent, ROE 20 percent. Beta: ROA 8 percent, ROE 8 percent.</div>
+
+    <div class="tscroll">
+      <table class="dtable">
+        <tr><th></th><th>Assets</th><th>Debt</th><th>Equity</th><th>Net income</th><th>ROA</th><th>ROE</th></tr>
+        <tr><td class="lab">Alpha, with debt</td><td>500</td><td>300</td><td>200</td><td>40</td><td>8%</td><td>20%</td></tr>
+        <tr><td class="lab">Beta, no debt</td><td>500</td><td>0</td><td>500</td><td>40</td><td>8%</td><td>8%</td></tr>
+        <tr><td class="lab">Alpha, in a bad year</td><td>500</td><td>300</td><td>200</td><td>−20</td><td>−4%</td><td>−10%</td></tr>
+      </table>
+    </div>
+    <p class="cap">The third row is the part people forget. Debt did not disappear when the profit turned into a
+      loss. Alpha's owners lose 10 percent while the assets lose only 4 percent.</p>
+
+    <p class="sub">What the financial manager is trying to do</p>
+    <div class="secaudio"><span class="salab">The cafe bonus: why share value beats profit and the other goals · 1:47</span><audio controls preload="none" src="day-08-the-aim.mp3"></audio></div>
+
+    <p class="p">The exam guide lists the possible goals of the financial manager, and the course gives one
+      answer. These are the goals on the list, and what is wrong with each.</p>
+
+    <div class="tscroll">
+      <table class="dtable">
+        <tr><th style="width:30%">Possible goal</th><th>The problem with it</th></tr>
+        <tr><td class="lab">Maximise profit</td><td style="text-align:left">Profit in which year. A manager can raise this year's profit by cutting spending that the firm needs next year. It also ignores risk.</td></tr>
+        <tr><td class="lab">Minimise costs</td><td style="text-align:left">The cheapest firm is one that does nothing. Costs are worth paying when they bring in more than they cost.</td></tr>
+        <tr><td class="lab">Maximise market share</td><td style="text-align:left">Share can be bought by selling below cost. Selling more while losing money on each sale destroys value.</td></tr>
+        <tr><td class="lab">Survive, or avoid bankruptcy</td><td style="text-align:left">Safe, and usually poor. Keeping away from every risk means turning down good projects.</td></tr>
+        <tr class="hl"><td class="lab">The course answer</td><td style="text-align:left">Maximise the current value of the firm's shares, which is shareholder wealth. It already counts timing, risk and every future year at once.</td></tr>
+      </table>
+    </div>
+
+    <p class="p">Notice why the last line is not a separate rule. A share price is the present value of the
+      dividends the firm will pay. Raising that price means making those future dividends bigger, safer or
+      sooner. Everything on this page has been about the same number.</p>
+
+    <p class="sub">Value maximisation and sustainability</p>
+    <div class="secaudio"><span class="salab">Money, environment, people: the triple bottom line · 1:24</span><audio controls preload="none" src="day-08-sustainability.mp3"></audio></div>
+
+    <p class="p">The course raises one more point next to that goal. <b>Sustainability</b> means managing what
+      the notes call the triple bottom line: the money result, the result for the environment and the result for people.
+      It is not the same thing as pure value maximisation, and the course says so plainly. It also says the two
+      are connected. A firm that harms its workers, its customers or its environment tends to pay for it
+      later, in fines, in lost customers and in the price of its shares.</p>
+
+    <div class="takeaway">
+      <b>Carry these five lines into the exam</b>
+      <ul>
+        <li>Holding period return divides by the starting price and always includes the dividend.</li>
+        <li>A price that falls can still give a positive return. Check the dividend before you answer.</li>
+        <li>No growth means P₀ = D / r, a plain perpetuity. Growth means P₀ = D₁ / (r − g).</li>
+        <li>D₁ is next year's dividend. If the question gives you the one just paid, multiply by (1 + g) first.</li>
+        <li>ROE is above ROA only because of debt, and debt makes ROE fall further in a bad year too.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick. Every question carries all the data you need.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-07.html">← Day 7: Who gets paid first</a>
+    <a class="navbtn primary" href="day-09.html">Day 9: NPV and IRR →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 8,
+  topic: "Stocks",
+  items: [
+    {
+      q: "An investor pays 80 for a share. One year later the share is worth 74. During that year the company paid a dividend of 9 a share. What is the holding period return for the year?",
+      opts: ["3.75 percent", "minus 7.5 percent", "11.25 percent", "4.05 percent"],
+      correct: 0,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> r = (P1 − P0 + D1) / P0.<br><br><b>Inputs from the stem.</b> P0 = 80, P1 = 74, D1 = 9.<br><br>1. Price change: 74 − 80 = −6. The price fell, so this part is a capital loss.<br>2. Add the dividend: −6 + 9 = 3.<br>3. Divide by the starting price: 3 / 80 = 0.0375.<br>4. As a percent: 3.75 percent.<br><br><b>Check.</b> Split it. Dividend part 9 / 80 = 11.25 percent. Price part −6 / 80 = −7.5 percent. 11.25 − 7.5 = 3.75 percent. The two pieces add back, so the answer holds.<br><br><b>The wrong options.</b> Minus 7.5 percent is the price change on its own, which throws the dividend away. 11.25 percent is the dividend on its own, which ignores the fall in price. 4.05 percent is 3 / 74, dividing by the ending price instead of the starting price, so the base is wrong.<br><br><b>The idea being tested.</b> A falling price does not mean a loss. Here the 9 of dividend is larger than the 6 the price fell, so the investor still ends the year ahead."
+    },
+    {
+      q: "A preferred share pays a fixed dividend of 5.60 at the end of every year and never increases it. The share was priced when investors required 8 percent. Investors now require 10 percent instead. What is the share worth at the new required return?",
+      opts: ["70.00", "61.60", "56.00", "0.56"],
+      correct: 2,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> A fixed payment at equal gaps with no end date is a perpetuity, so P0 = D / r. No growth term appears because the dividend does not grow.<br><br><b>Inputs from the stem.</b> D = 5.60 every year. The rate to use is the new one, r = 0.10.<br><br>1. P0 = 5.60 / 0.10<br>2. P0 = 56.00<br><br><b>Check the direction.</b> At the old 8 percent the share was worth 5.60 / 0.08 = 70.00. The required return went up, so the price must go down, and 56.00 is below 70.00. Buy at 56.00 and collect 5.60 a year: 5.60 / 56.00 = 0.10, the 10 percent now required.<br><br><b>The wrong options.</b> 70.00 is the old price at 8 percent, kept by mistake after the rate changed. 61.60 comes from growing the dividend by 10 percent first, 5.60 × 1.10 = 6.16, then dividing by 0.10. This dividend does not grow, so nothing should be grown. 0.56 is 5.60 divided by 10 instead of 0.10, the decimal slip that turns a percent into a whole number."
+    },
+    {
+      q: "Two shares are being valued. Share X will pay a dividend of 2.00 at the end of next year and that dividend is expected to grow 4 percent a year forever. Share Y will also pay 2.00 at the end of next year, but its dividend is expected to grow 11 percent a year forever. Investors require 9 percent on both. Which statement is right?",
+      opts: [
+        "X is worth 40.00. Y cannot be valued with this model, because its dividend grows at least as fast as the required return.",
+        "X is worth 40.00 and Y is worth minus 100.00.",
+        "Both are worth 22.22, because the dividend next year and the required return are the same for both.",
+        "Y is worth more than X, because a faster growing dividend is always worth more."
+      ],
+      correct: 0,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> Growing perpetuity: P0 = D1 / (r − g), and it only works while r is greater than g.<br><br><b>Share X.</b> D1 = 2.00, r = 0.09, g = 0.04. r is above g, so the model applies.<br>1. r − g = 0.09 − 0.04 = 0.05<br>2. P0 = 2.00 / 0.05 = 40.00<br>Check: 40.00 × 0.05 = 2.00, the dividend it was built from.<br><br><b>Share Y.</b> D1 = 2.00, r = 0.09, g = 0.11. Here g is above r, so the condition fails and the model cannot be used. Pushing on gives 2.00 / (0.09 − 0.11) = 2.00 / (−0.02) = −100.00, and a share cannot be worth minus 100. The negative sign is the model reporting that it does not apply. A dividend growing forever faster than the rate you discount at has no finite present value.<br><br><b>The wrong options.</b> Minus 100.00 is the sum taken at face value instead of being read as a sign that the model has broken. 22.22 is 2.00 / 0.09, which is the no growth formula used on two streams that do grow, so it prices X too low and still says nothing about Y. The last option mistakes faster growth for more value. Faster growth is worth more only while the model still holds, which means only while r stays above g."
+    },
+    {
+      q: "A company paid a dividend of 3.00 a share yesterday. Its dividend is expected to grow 5 percent a year forever. The share trades at 45.00 today. What required return does that price imply?",
+      opts: ["11.67 percent", "7 percent", "12 percent", "2 percent"],
+      correct: 2,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> Start from P0 = D1 / (r − g) and rearrange: r = D1 / P0 + g.<br><br><b>Inputs from the stem.</b> The 3.00 was paid yesterday, so it is D0, not D1. g = 0.05. P0 = 45.00.<br><br>1. Grow the dividend one year: D1 = 3.00 × 1.05 = 3.15<br>2. Dividend yield: 3.15 / 45.00 = 0.07<br>3. Add the growth: 0.07 + 0.05 = 0.12<br>4. As a percent: 12 percent.<br><br><b>Check.</b> Put it back into the forward formula: 3.15 / (0.12 − 0.05) = 3.15 / 0.07 = 45.00, the price given. Correct.<br><br><b>The wrong options.</b> 11.67 percent comes from using the 3.00 as if it were next year's dividend: 3.00 / 45.00 + 0.05 = 0.1167. That is the single most common slip on this formula. 7 percent is the dividend yield alone, forgetting that the growing price is also part of what the investor earns. 2 percent takes the growth away instead of adding it.<br><br><b>The idea being tested.</b> The required return on a share is the dividend yield plus the growth rate. Those are the same two pieces as the holding period return: cash in hand, and a price that moves."
+    },
+    {
+      q: "A firm owns total assets of 800. Last year it reported a return on assets of 6 percent and a return on equity of 15 percent. How much equity does it have, and how much debt?",
+      opts: [
+        "Equity 480, debt 320",
+        "Equity 320, debt 480",
+        "Equity 120, debt 680",
+        "Equity 400, debt 400"
+      ],
+      correct: 1,
+      tag: "Concepts",
+      exp: "<b>Formulas, run backwards.</b> ROA = net income / total assets, so net income = ROA × total assets. ROE = net income / equity, so equity = net income / ROE. Assets are paid for by debt plus equity, so debt = assets − equity.<br><br><b>Inputs from the stem.</b> Total assets 800, ROA 0.06, ROE 0.15. Net income is not given, so it is the first thing to find.<br><br>1. Net income = 0.06 × 800 = 48<br>2. Equity = 48 / 0.15 = 320<br>3. Debt = 800 − 320 = 480<br><br><b>Check.</b> Put both back: 48 / 800 = 0.06, the ROA given. 48 / 320 = 0.15, the ROE given. And 320 + 480 = 800. All three close.<br><br><b>Read what the borrowing did.</b> The owners paid for 320 of the 800, so ROE is 800 / 320 = 2.5 times ROA. The whole gap between 6 percent and 15 percent is borrowed money, and in a year with a loss that same borrowing makes ROE fall 2.5 times as far.<br><br><b>The wrong options.</b> Equity 480 and debt 320 is the right pair with the labels swapped, which is what happens when 480 is read as the owners' share instead of the lenders'. Equity 120 is 0.15 × 800, multiplying by ROE instead of dividing net income by it. Equity 400 splits the assets evenly between debt and equity, and the check kills it: 48 / 400 = 12 percent, not the 15 percent the stem gives."
+    },
+    {
+      q: "A new finance manager tells the board that her single goal will be to make this year's reported profit as large as possible. Judged against the goal this course sets for a financial manager, what is the main problem with that plan?",
+      opts: [
+        "Profit is not a real number, so it cannot be a goal.",
+        "It is correct, because profit is what shareholders receive.",
+        "It says nothing about which year the profit arrives in or how risky it is, so it can be raised by choices that reduce what the shares are worth.",
+        "It ignores market share, which is what the course says the manager should maximise."
+      ],
+      correct: 2,
+      tag: "Concepts",
+      exp: "<b>What the course says.</b> Several goals are possible: maximise profit, minimise costs, maximise market share, survive. The course settles on one: maximise the current value of the firm's shares, which is shareholder wealth.<br><br><b>Why share value wins.</b> A share price is the present value of the dividends the firm is expected to pay. So a price already counts every future year, the timing of each, and the risk attached. A single year's profit counts none of those.<br><br><b>Why this year's profit fails.</b> A manager can raise this year's profit by cutting research, maintenance or marketing that the firm needs later, or by taking on risk that does not show in the profit line. Both can push the share price down while the profit figure goes up.<br><br><b>The wrong options.</b> Profit is a real measured number, so that complaint is not the problem. Shareholders do not receive profit. They receive dividends, and whatever the share is worth when they sell. Market share is one of the possible goals the course lists and then rejects, so it is not the standard being missed here.<br><br><b>One more line from the course.</b> Next to value maximisation the course sets sustainability, which it describes as managing a triple bottom line: money, the environment and people. It is not the same as pure value maximisation, and the two are connected."
+    }
+  ]
+});
+</script>
+</body>
+</html>

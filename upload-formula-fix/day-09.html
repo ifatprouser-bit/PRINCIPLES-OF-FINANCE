@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 9: Projects, NPV and IRR</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">Day 9 · Sunday 4 October</div>
+  <h1>Projects: should we do this at all</h1>
+  <p class="lede">A project is just a stream of cash flows with a price tag on the front. Today you learn how to say yes or no to it.</p>
+  <div class="secaudio"><span class="salab">Before you start: today's words · 1:14</span><audio controls preload="none" src="day-09-intro.mp3"></audio></div>
+
+
+  <!-- ============ RECALL: DAY 6 ============ -->
+  <div class="preq">
+    <div class="tag">Five minutes: recall</div>
+    <p><b>Day 6 was bonds.</b> Answer both on paper before you open anything.</p>
+    <p><b>1.</b> A bond has a par value of 1,000 and a coupon rate of 6 percent, paid once a year.
+       What exactly is the par value, and how much cash does the coupon pay each year?</p>
+    <p><b>2.</b> That bond has 3 years left. Market rates for bonds of this risk are now 8 percent.
+       Is the price above 1,000, below 1,000, or exactly 1,000? Work out the price, and name that kind of bond.</p>
+    <p class="do">Write your two answers down, then check.</p>
+    <button class="reveal-btn" type="button" data-reveal="rc1">Show the answer</button>
+    <div class="reveal" id="rc1">
+      <p class="p"><b>1.</b> The par value, also called the face value, is the fixed amount the borrower pays back
+        on the last day. It is not the price. The coupon rate is applied to the par value, not to the price, so the
+        cash coupon is <span class="math">0.06 × 1,000 = 60</span> every year.</p>
+      <p class="p"><b>2.</b> Below 1,000. The coupon is fixed at 60 forever, so when buyers can get 8 percent
+        elsewhere, the only way this bond can compete is a lower price. That is the seesaw: rates up, price down.</p>
+      <p class="p">Price = the three coupons as an annuity, plus the par value as a single cash flow:</p>
+      <p class="p"><span class="math">60 × (1 − 1/1.08<sup>3</sup>) / 0.08 = 60 × 2.577097 = 154.63</span></p>
+      <p class="p"><span class="math">1,000 / 1.08<sup>3</sup> = 1,000 / 1.259712 = 793.83</span></p>
+      <p class="p"><span class="math">154.63 + 793.83 = 948.46</span></p>
+      <p class="p">948.46 is below par, so this is a <b>discount bond</b>. The coupon rate of 6 percent is below the
+        yield of 8 percent, and that is always the sign.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRETEST ============ -->
+  <div class="preq">
+    <div class="tag">Guess first</div>
+    <p>Two projects. You can only do one of them. Your required return is 10 percent.</p>
+    <p><b>Project small:</b> pay 1,000 today, receive 1,300 at the end of one year. That is a 30 percent return.</p>
+    <p><b>Project big:</b> pay 100,000 today, receive 120,000 at the end of one year. That is a 20 percent return.</p>
+    <p><b>Which one makes the owners richer?</b></p>
+    <p class="do">Guess now. No answer is shown here. This is a guess, not a test. The whole page answers it.</p>
+  </div>
+
+  <!-- ============ PANEL 1 ============ -->
+  <div class="panel">
+    <h3>1. Net present value: what the project is worth, minus what it costs</h3>
+
+    <div class="secaudio"><span class="salab">The washing machine: is it worth more than it costs? · 1:47</span><audio controls preload="none" src="day-09-worth-it.mp3"></audio></div>
+
+    <p class="p">Every project you will meet on this exam has the same shape. You pay something today.
+      Money comes back later. The question is always the same: is the money that comes back worth more,
+      <b>seen from today</b>, than the money you pay out today.</p>
+
+    <p class="p">You already know how to answer that. Day 2 taught you that cash from different years cannot be
+      added until you bring it all to one date. So bring every future inflow back to year 0, add them, and compare
+      the total with the cost. The gap between those two numbers is the <b>net present value</b>, or NPV.</p>
+
+    <p class="p">The professor's own guide for the final describes NPV in four words: "excess of market value over
+      cost". In plain words, that is how much more the future cash is worth today than what you pay for it.
+      Market value means what the future cash is worth today. Cost means what you hand over today.
+      NPV is what is left over. It is money the owners gain the moment the project is taken.</p>
+
+    <p class="p">On the formula sheet it looks like this:</p>
+    <p class="p"><span class="math">NPV = Σ CF<sub>i</sub> / (1+r)<sup>i</sup> − I<sub>0</sub></span></p>
+    <p class="p">CF<sub>i</sub> is the cash flow in year i. r is the required rate of return, the return you could
+      get elsewhere at the same risk. I<sub>0</sub> is the cost of the initial investment, which is the money you pay at
+      year 0. Notice there is no new formula here. The first part is the present value of a stream of cash flows,
+      which you have used since day 5. The only new thing is taking the price away at the end.</p>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 210" role="img" aria-label="Two horizontal bars. The top bar is the value today of the money the project brings in, 61,382.42. The bottom bar is the cost today, 50,000. The part of the top bar that sticks out past the cost is the NPV of 11,382.42.">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <text x="175" y="42" text-anchor="end" fill="#211c33" font-weight="700">Worth today</text>
+          <text x="175" y="58" text-anchor="end" fill="#6f6886">of all the inflows</text>
+          <rect x="180" y="26" width="250" height="38" rx="5" fill="#ece7fd" stroke="#6b4ef0"/>
+          <rect x="430" y="26" width="57" height="38" rx="5" fill="#e4f6ec" stroke="#1f9d63"/>
+          <text x="305" y="50" text-anchor="middle" fill="#5238c4" font-weight="700">61,382.42</text>
+
+          <text x="175" y="112" text-anchor="end" fill="#211c33" font-weight="700">Cost today</text>
+          <text x="175" y="128" text-anchor="end" fill="#6f6886">what you pay at year 0</text>
+          <rect x="180" y="96" width="250" height="38" rx="5" fill="#fcf3e3" stroke="#b6791f"/>
+          <text x="305" y="120" text-anchor="middle" fill="#b6791f" font-weight="700">50,000.00</text>
+
+          <line x1="430" y1="18" x2="430" y2="142" stroke="#6f6886" stroke-width="1" stroke-dasharray="4 4"/>
+
+          <line x1="458" y1="66" x2="458" y2="168" stroke="#1f9d63" stroke-width="1.5"/>
+          <text x="458" y="184" text-anchor="middle" fill="#1f9d63" font-weight="700">NPV = 11,382.42</text>
+          <text x="458" y="200" text-anchor="middle" fill="#6f6886">the part that sticks out</text>
+        </g>
+      </svg>
+      <p class="cap">The green piece is the whole point. It is the value the project adds on top of paying for
+        itself. If the top bar were shorter than the bottom bar there would be no green piece, and the project
+        would destroy value.</p>
+    </div>
+
+    <div class="rule">Take the project if NPV is above zero. Reject it if NPV is below zero. At exactly zero the
+      project earns exactly the required return and adds nothing, so you are free either way.</div>
+
+    <p class="p">Why that rule and not something else? A positive NPV means the future cash is worth more than
+      the asking price, once you price it at the going rate for that level of risk. You could sell the project on the day you
+      bought it and pocket the difference. A negative NPV means you could get the same future cash more cheaply
+      somewhere else at the same risk.</p>
+
+    <p class="sub">Worked example</p>
+    <p class="given">This is the shape the professor names in his guide for the final, so learn it in this form.</p>
+    <div class="question">
+      A project needs an initial investment of 50,000 at year 0. It brings in 20,000 at the end of year 1,
+      25,000 at the end of year 2 and 30,000 at the end of year 3. The discount rate is 10 percent.
+      What is the NPV of the project, and should the firm take it?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Sort the numbers before touching the calculator.</span>
+      <div class="p">I<sub>0</sub> = 50,000, paid at year 0. Three inflows, all different sizes, so this is not an
+        annuity. It is three single cash flows. r = 0.10.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Bring each inflow back to year 0 on its own.</span>
+      <div class="math">20,000 / 1.10 = 18,181.82</div>
+      <div class="math">25,000 / 1.21 = 20,661.16</div>
+      <div class="math">30,000 / 1.331 = 22,539.44</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Now they all sit on the same date, so add them.</span>
+      <div class="math">18,181.82 + 20,661.16 + 22,539.44 = 61,382.42</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Take away what you pay today.</span>
+      <div class="math">NPV = 61,382.42 − 50,000 = 11,382.42</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Check the size before you write it down.</span>
+      <div class="p">Total cash coming in is 75,000. Discounting must shrink it, and 61,382.42 is smaller than
+        75,000. Good. The NPV must then be smaller than 75,000 − 50,000 = 25,000, and 11,382.42 is.</div>
+    </div></div>
+
+    <div class="ans">NPV = 11,382.42. It is above zero, so take the project.</div>
+
+    <p class="sub">One line about the payback period</p>
+    <p class="p">The syllabus lists a third method, the payback period. It counts how many years pass before the
+      cash coming in adds up to the cost. Here 20,000 plus 25,000 is 45,000 by the end of year 2, and the last
+      5,000 arrives during year 3, so the payback is about 2.2 years. It is quick, and it is weak. It adds cash
+      from different years without discounting, and it ignores everything that happens after the cost is covered.
+      The class material in this pack does not take it further, so do not expect a deep question on it.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A project costs 40,000 at year 0. It brings in 15,000 at the end of year 1,
+        18,000 at the end of year 2 and 12,000 at the end of year 3.
+        <br>(a) At a discount rate of 12 percent, what is the NPV, and what is your decision?
+        <br>(b) The required return then drops to 4 percent. Redo it. Does the decision change?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1">Show the answer</button>
+      <div class="reveal" id="t1">
+        <p class="p"><b>(a) At 12 percent.</b></p>
+        <p class="p"><span class="math">15,000 / 1.12 = 13,392.86</span></p>
+        <p class="p"><span class="math">18,000 / 1.2544 = 14,349.49</span></p>
+        <p class="p"><span class="math">12,000 / 1.404928 = 8,541.36</span></p>
+        <p class="p"><span class="math">13,392.86 + 14,349.49 + 8,541.36 = 36,283.71</span></p>
+        <p class="p"><span class="math">NPV = 36,283.71 − 40,000 = −3,716.29</span>. Below zero, so reject.</p>
+        <p class="p"><b>(b) At 4 percent.</b></p>
+        <p class="p"><span class="math">15,000 / 1.04 = 14,423.08</span></p>
+        <p class="p"><span class="math">18,000 / 1.0816 = 16,642.01</span></p>
+        <p class="p"><span class="math">12,000 / 1.124864 = 10,667.96</span></p>
+        <p class="p"><span class="math">NPV = 41,733.05 − 40,000 = 1,733.05</span>. Above zero, so accept.</p>
+        <p class="p"><b>Yes, the decision changes.</b> Nothing about the project changed. Only the price of waiting
+          changed. A lower discount rate makes far-away money worth more today, so NPV rises. This project is worth
+          doing only when money is cheap.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 2 ============ -->
+  <div class="panel">
+    <h3>2. Internal rate of return, and the four ways it lets you down</h3>
+
+    <div class="secaudio"><span class="salab">IRR: the highest loan rate where the project still breaks even · 1:49</span><audio controls preload="none" src="day-09-break-even.mp3"></audio></div>
+
+    <p class="p">NPV answers in money. Many people would rather hear a percent. A percent can be set beside the
+      rate on a loan or the return on a share without knowing the size of anything. That percent is the
+      <b>internal rate of return</b>, or IRR.</p>
+
+    <p class="p">The definition is short. The IRR is the discount rate that makes the NPV of the project exactly
+      zero. It is the rate at which the project just breaks even. Nothing is looked up and nothing is given to you.
+      The cash flows themselves decide it, which is what "internal" means.</p>
+
+    <p class="p">Reading it is easy. If the IRR is above your required return, the project earns more than you
+      could get elsewhere, so NPV at your required return must be positive. If the IRR is below your required return, NPV
+      must be negative. Those two rules are the same rule seen from two sides, as long as the project is normal:
+      money out first, then money in, and never out again.</p>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 250" role="img" aria-label="A curve showing net present value falling as the discount rate rises from 0 to 20 percent, crossing zero at 10 percent, which is the internal rate of return.">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <line x1="70" y1="150" x2="530" y2="150" stroke="#211c33" stroke-width="1.5"/>
+          <line x1="70" y1="45" x2="70" y2="225" stroke="#211c33" stroke-width="1.5"/>
+          <text x="62" y="42" text-anchor="end" fill="#6f6886">NPV</text>
+          <text x="536" y="146" text-anchor="start" fill="#5f5877" font-size="13">r</text>
+
+          <g fill="#5f5877" font-size="13">
+            <text x="70" y="168" text-anchor="middle">0%</text>
+            <text x="180" y="168" text-anchor="middle">5%</text>
+            <text x="290" y="182" text-anchor="middle">10%</text>
+            <text x="400" y="168" text-anchor="middle">15%</text>
+            <text x="510" y="168" text-anchor="middle">20%</text>
+          </g>
+
+          <polyline points="70,66 125,89 180,111 235,131 290,150 345,168 400,184 455,199 510,214"
+                    fill="none" stroke="#6b4ef0" stroke-width="3"/>
+
+          <line x1="224" y1="150" x2="224" y2="131" stroke="#1f9d63" stroke-width="1" stroke-dasharray="3 3"/>
+          <circle cx="224" cy="131" r="4" fill="#1f9d63"/>
+          <text x="224" y="122" text-anchor="middle" fill="#1f9d63" font-weight="700">454.89</text>
+          <text x="224" y="108" text-anchor="middle" fill="#0d6a3f" font-size="13">NPV at r = 7%</text>
+
+          <circle cx="290" cy="150" r="5" fill="#b6791f"/>
+          <text x="300" y="206" text-anchor="middle" fill="#b6791f" font-weight="700">IRR = 10%</text>
+          <text x="300" y="220" text-anchor="middle" fill="#5f5877" font-size="13">the rate where NPV = 0</text>
+        </g>
+      </svg>
+      <p class="cap">The line is the same project priced at many different rates. It slopes down because a higher
+        rate shrinks future money. Where it cuts the axis, NPV is zero, and that rate is the IRR. Anywhere left of
+        that point the NPV is positive.</p>
+    </div>
+
+    <div class="rule">Take the project if IRR is above the required return r. This gives the same answer as NPV for
+      a single normal project. For anything else, trust NPV.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A machine costs 8,000 today. It is sold at the end of year 2 and returns a single amount of 9,680.
+      Nothing happens in between. The required return is 7 percent. Find the IRR and decide.
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Write down what "NPV is zero" means here. IRR has no formula on the exam sheet. This equation is the definition.</span>
+      <div class="math">−8,000 + 9,680 / (1 + IRR)<sup>2</sup> = 0</div>
+      <div class="p">So 8,000 must grow into 9,680 in two years at the rate IRR.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Divide, to see the total growth over the two years.</span>
+      <div class="math">9,680 / 8,000 = 1.21</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Take the root, because the growth happened over two years, not one.</span>
+      <div class="math">1.21<sup>1/2</sup> = 1.10, so IRR = 0.10 = 10 percent</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Decide, then confirm with NPV.</span>
+      <div class="p">10 percent is above the required 7 percent, so accept.</div>
+      <div class="math">NPV = 9,680 / 1.1449 − 8,000 = 8,454.89 − 8,000 = 454.89</div>
+      <div class="p">Positive, as the IRR promised. The two rules agree.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Plug the answer back in.</span>
+      <div class="math">8,000 × 1.10<sup>2</sup> = 8,000 × 1.21 = 9,680</div>
+      <div class="p">Exactly the cash flow in the question, so 10 percent is right.</div>
+    </div></div>
+
+    <div class="ans">IRR = 10 percent, above the required 7 percent, so accept. NPV at 7 percent is 454.89.</div>
+
+    <p class="p">That example was kind: two cash flows, so one clean answer. With three or more inflows
+      there is no formula. You guess a rate, work out the NPV, and move your guess until the NPV changes sign. In
+      the exam you are normally given a few rates in the options, so test those instead of guessing blind.</p>
+
+    <p class="sub">The problems with IRR</p>
+    <div class="secaudio"><span class="salab">When IRR lets you down: two answers, borrowing, reinvesting · 1:48</span><audio controls preload="none" src="day-09-irr-traps.mp3"></audio></div>
+
+    <p class="p">This is a named topic on the syllabus, so expect it. IRR is a summary, and every summary throws
+      something away.</p>
+
+    <table class="dtable">
+      <tr><th style="width:30%">The problem</th><th>What goes wrong</th></tr>
+      <tr><td class="lab">Ranking</td><td style="text-align:left">When you must pick one project out of two, the higher IRR is not always the better choice. IRR is blind to size and to timing. Panel 3 shows this happening.</td></tr>
+      <tr><td class="lab">More than one answer</td><td style="text-align:left">If the cash flows change sign more than once, more than one rate can make NPV zero. With two answers, the rule "is IRR above r" has no meaning.</td></tr>
+      <tr><td class="lab">Borrowing, not lending</td><td style="text-align:left">If money comes in first and goes out later, the rule turns upside down. You then want a <b>low</b> IRR, because you are the borrower.</td></tr>
+      <tr><td class="lab">Putting the money back to work</td><td style="text-align:left">IRR quietly assumes every inflow is put back to work at the IRR itself. A 40 percent IRR rarely means you can put that money back to work at 40 percent.</td></tr>
+    </table>
+
+    <p class="p">Here is the second problem with real numbers. A project pays out 1,000 today, brings in 2,600 at the
+      end of year 1, then needs 1,650 spent at the end of year 2 to close it down. The signs go minus, plus, minus.
+      Two changes of sign, so look for two answers:</p>
+
+    <div class="tscroll">
+      <table class="dtable">
+        <tr><th>Discount rate</th><th>0%</th><th>10%</th><th>20%</th><th>30%</th><th>50%</th><th>60%</th></tr>
+        <tr><td class="lab">NPV</td><td>−50.00</td><td>0.00</td><td>20.83</td><td>23.67</td><td>0.00</td><td>−19.53</td></tr>
+      </table>
+    </div>
+
+    <p class="p">NPV is zero at 10 percent and zero again at 50 percent. Both are the IRR. Asking whether "the IRR"
+      beats your required return has no answer here, because there are two of them. The way out is to ignore IRR and read the NPV at the rate that
+      actually applies to you.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A project costs 5,000 today and returns 1,500 at the end of each of the next 5 years.
+        Compute the NPV at 15 percent and at 16 percent. Between which two rates does the IRR sit, and is it nearer
+        to one end than the other?</div>
+      <button class="reveal-btn" type="button" data-reveal="t2">Show the answer</button>
+      <div class="reveal" id="t2">
+        <p class="p">Five equal payments in a row, so this is an annuity. Use the present value of an annuity factor.</p>
+        <p class="p">At 15 percent: <span class="math">(1 − 1/1.15<sup>5</sup>) / 0.15 = 3.352155</span></p>
+        <p class="p"><span class="math">1,500 × 3.352155 = 5,028.23, so NPV = 28.23</span></p>
+        <p class="p">At 16 percent: <span class="math">(1 − 1/1.16<sup>5</sup>) / 0.16 = 3.274294</span></p>
+        <p class="p"><span class="math">1,500 × 3.274294 = 4,911.44, so NPV = −88.56</span></p>
+        <p class="p">NPV is positive at 15 percent and negative at 16 percent, so the IRR sits between them. It is
+          much nearer to 15 percent, because 28.23 is a much smaller distance from zero than 88.56. The true value
+          is 15.24 percent.</p>
+        <p class="p">This is the whole method for a project with many inflows. Find two rates where the sign changes,
+          then close in from both sides.</p>
+      </div>
+    </div>
+
+    <p class="note">A warning about the class slide deck on NPV and IRR. Its solution slides give more than one
+      answer for the same practice question, and its two pages on the mutually exclusive practice pick different
+      projects. Use its questions, not its answer page. Every number on this page was worked out again from the cash
+      flows and checked in code.</p>
+  </div>
+
+  <!-- ============ PANEL 3 ============ -->
+  <div class="panel">
+    <h3>3. Independent or mutually exclusive: the question that changes the rule</h3>
+
+    <div class="secaudio"><span class="salab">Can you take both, or must you pick one? · 1:34</span><audio controls preload="none" src="day-09-both-or-one.mp3"></audio></div>
+
+    <p class="p">Before you compare two projects you have to know what kind of pair they are. The syllabus names
+      both kinds, and the exam guide names them too.</p>
+
+    <table class="dtable">
+      <tr><th style="width:30%">Kind of pair</th><th>What it means and what you do</th></tr>
+      <tr><td class="lab">Independent</td><td style="text-align:left">Taking one does not stop you taking the other. Judge each project on its own. Take every one with NPV above zero. There is no ranking to do.</td></tr>
+      <tr><td class="lab">Mutually exclusive</td><td style="text-align:left">Only one can be taken. One plot of land, one machine slot, one team. Now you must put them in order, and you do that by NPV. The winner is the one with the highest NPV at your required return, as long as that NPV is above zero.</td></tr>
+    </table>
+
+    <div class="secaudio"><span class="salab">Size: a better rate is not more money · 1:27</span><audio controls preload="none" src="day-09-rate-not-size.mp3"></audio></div>
+
+    <p class="p">Putting projects in order is where IRR breaks. A percent tells you how hard each dollar works. It
+      does not tell you how many dollars there are, or for how long they work. Two things can pull the order apart.</p>
+
+    <p class="p"><b>Size.</b> A tiny project can earn a huge percent and still add almost nothing. That is the
+      pretest at the top of this page. Thirty percent on 1,000 is a gain of 181.82 in present value. Twenty percent
+      on 100,000 is a gain of 9,090.91. The smaller percent wins by a distance, because the firm banks money, not
+      percentages.</p>
+    <div class="secaudio"><span class="salab">Timing: paid soon or paid later, and where the lines cross · 1:52</span><audio controls preload="none" src="day-09-crossing.mp3"></audio></div>
+
+
+    <p class="p"><b>Timing.</b> A project that pays back fast has a high IRR because its cash does not sit and wait.
+      A project that pays later can still be worth more in total. Which of the two wins depends on the discount
+      rate, and that is what the next example shows.</p>
+
+    <div class="rule">Independent projects: take every project with NPV above zero. Mutually exclusive projects:
+      take the single highest NPV. When NPV and IRR disagree, NPV is the answer, because NPV is measured in money.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      Two projects, and the firm can take only one of them. Both cost 10,000 at year 0.
+      Project S returns 6,500 at the end of year 1 and 6,500 at the end of year 2, and then stops.
+      Project L returns nothing in years 1 and 2, then 15,000 at the end of year 3.
+      The required return is 8 percent. Which project should the firm take?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">NPV of S at 8 percent.</span>
+      <div class="math">6,500 / 1.08 = 6,018.52</div>
+      <div class="math">6,500 / 1.1664 = 5,572.70</div>
+      <div class="math">NPV = 6,018.52 + 5,572.70 − 10,000 = 1,591.22</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">NPV of L at 8 percent.</span>
+      <div class="math">15,000 / 1.259712 = 11,907.48</div>
+      <div class="math">NPV = 11,907.48 − 10,000 = 1,907.48</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Now the IRR of each, for comparison.</span>
+      <div class="p">S: the rate where 6,500 twice exactly repays 10,000. Trial and error gives 19.43 percent.</div>
+      <div class="math">L: 15,000 / 10,000 = 1.5, then 1.5<sup>1/3</sup> = 1.144714, so IRR = 14.47 percent</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Line the two rules up side by side.</span>
+      <table class="dtable">
+        <tr><th>Project</th><th>NPV at 8%</th><th>IRR</th></tr>
+        <tr><td class="lab">S</td><td>1,591.22</td><td>19.43%</td></tr>
+        <tr><td class="lab">L</td><td>1,907.48</td><td>14.47%</td></tr>
+      </table>
+      <div class="p">NPV points at L. IRR points at S. They disagree.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Follow NPV, and say why.</span>
+      <div class="p">L adds 1,907.48 − 1,591.22 = 316.26 more to the value of the firm today. S has the better
+        percent because its cash comes back sooner, but there is less of it. The owners spend money, not percent.</div>
+    </div></div>
+
+    <div class="ans">Take project L. Its NPV of 1,907.48 is the highest, even though project S has the higher IRR.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 250" role="img" aria-label="Two downward sloping lines showing the net present value of project S and project L at discount rates from 0 to 20 percent. Project L starts higher and falls faster. The lines cross at about 9.93 percent.">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <line x1="70" y1="180" x2="530" y2="180" stroke="#211c33" stroke-width="1.5"/>
+          <line x1="70" y1="50" x2="70" y2="222" stroke="#211c33" stroke-width="1.5"/>
+          <text x="62" y="47" text-anchor="end" fill="#6f6886">NPV</text>
+          <text x="536" y="176" text-anchor="start" fill="#5f5877" font-size="13">r</text>
+
+          <g fill="#5f5877" font-size="13">
+            <text x="70" y="198" text-anchor="middle">0%</text>
+            <text x="180" y="198" text-anchor="middle">5%</text>
+            <text x="290" y="212" text-anchor="middle">10%</text>
+            <text x="400" y="198" text-anchor="middle">15%</text>
+            <text x="510" y="198" text-anchor="middle">20%</text>
+          </g>
+
+          <polyline points="70,70 180,115 290,152 400,183 510,209" fill="none" stroke="#b6791f" stroke-width="3"/>
+          <polyline points="70,114 180,134 290,152 400,168 510,182" fill="none" stroke="#6b4ef0" stroke-width="3"/>
+
+          <text x="96" y="64" fill="#b6791f" font-weight="700">L</text>
+          <text x="96" y="110" fill="#6b4ef0" font-weight="700">S</text>
+
+          <circle cx="289" cy="152" r="5" fill="#1f9d63"/>
+          <text x="300" y="232" text-anchor="middle" fill="#1f9d63" font-weight="700">they cross at about 9.93%</text>
+
+          <line x1="246" y1="50" x2="246" y2="180" stroke="#6f6886" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="246" y="44" text-anchor="middle" fill="#5f5877" font-size="13">r = 8%: L is on top</text>
+          <line x1="422" y1="50" x2="422" y2="180" stroke="#6f6886" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="440" y="44" text-anchor="middle" fill="#5f5877" font-size="13">r = 16%: S is on top</text>
+        </g>
+      </svg>
+      <p class="cap">L is steeper because all of its cash sits at year 3, and far-away money suffers most when the
+        rate rises. Left of the crossing point L wins. Right of it S wins. The rate you are given decides which side
+        of the picture you are standing on.</p>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it. Keep the same two projects, S and L, with the same cash flows. The required return is
+        now 16 percent instead of 8 percent. Which project should the firm take now?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3">Show the answer</button>
+      <div class="reveal" id="t3">
+        <p class="p">Project S: <span class="math">(1 − 1/1.16<sup>2</sup>) / 0.16 = 1.605232</span></p>
+        <p class="p"><span class="math">6,500 × 1.605232 = 10,434.01, so NPV = 434.01</span></p>
+        <p class="p">Project L: <span class="math">15,000 / 1.560896 = 9,609.87, so NPV = −390.13</span></p>
+        <p class="p"><b>Take S.</b> The answer has flipped, and L is now worse than doing nothing at all, because its
+          NPV is negative. At 16 percent you would reject L even if it were the only project on the table.</p>
+        <p class="p">Nothing about either project changed. Only the rate changed. The two lines in the picture cross
+          at about 9.93 percent, and 16 percent is on the far side of that crossing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-08.html">← Day 8: Stocks</a>
+    <a class="navbtn primary" href="day-10.html">Day 10: Mock 1 →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 9,
+  topic: "NPV and IRR",
+  items: [
+    {
+      q: "A project needs 30,000 today. It returns 11,000 at the end of each of the next 3 years. The required rate of return is 12 percent. What is the NPV, and what is the decision?",
+      opts: ["NPV = −3,579.86, so reject", "NPV = 3,000.00, so accept", "NPV = 3,410.84, so accept", "NPV = −6,410.59, so reject"],
+      correct: 0,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> Three equal payments in a row, so the inflows form an annuity: PV = A × (1 − 1/(1+r)^n) / r. Then NPV = PV − I0.<br><br><b>Inputs from the stem.</b> A = 11,000. n = 3, because the payments land at the end of years 1, 2 and 3. r = 0.12. I0 = 30,000 at year 0.<br><br>1. 1.12³ = 1.404928<br>2. 1 / 1.404928 = 0.711780<br>3. Annuity factor: (1 − 0.711780) / 0.12 = 2.401831<br>4. Present value of the inflows: 11,000 × 2.401831 = 26,420.14<br>5. NPV = 26,420.14 − 30,000 = −3,579.86<br>6. Below zero, so reject.<br><br><b>Check.</b> Solve for the rate that makes NPV zero and you get 4.92 percent. That is far below the required 12 percent, so a negative NPV is exactly what you should expect. The two rules agree.<br><br><b>The trap in this question.</b> The project pays back 33,000 in total against a cost of 30,000, so it looks like a winner. It is not. Money arriving in years 1 to 3 is worth less than money today, and once you price the wait properly the project loses 3,579.86.<br><br><b>The wrong options.</b> 3,000.00 is 33,000 − 30,000, adding cash from three different years with no discounting at all. 3,410.84 comes from using an annuity factor for 4 years instead of 3, that is 11,000 × 3.037349 − 30,000, which counts a payment that never arrives. −6,410.59 comes from dividing the annuity value by 1.12 one extra time, 26,420.14 / 1.12 − 30,000, which discounts a value that already sits at year 0."
+    },
+    {
+      q: "A project costs 6,000 today. It pays nothing in years 1 and 2, then returns a single amount of 8,640 at the end of year 3. What is the internal rate of return?",
+      opts: ["12.92 percent", "20.00 percent", "14.67 percent", "44.00 percent"],
+      correct: 0,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> The IRR is the rate that makes NPV zero. With one outflow and one inflow: 6,000 × (1 + IRR)³ = 8,640, so IRR = (8,640 / 6,000)^(1/3) − 1.<br><br><b>Inputs from the stem.</b> I0 = 6,000 at year 0. One inflow of 8,640, and it lands at the end of year 3, so the power is 3.<br><br>1. Total growth over the three years: 8,640 / 6,000 = 1.44<br>2. Take the cube root, because the growth is spread over 3 years: 1.44^(1/3) = 1.129243<br>3. IRR = 1.129243 − 1 = 0.129243, that is 12.92 percent<br><br><b>Check.</b> Plug it back: 6,000 × 1.129243³ = 6,000 × 1.44 = 8,640. That is the cash flow in the question, so the rate is right.<br><br><b>The wrong options.</b> 20.00 percent is the square root of 1.44 minus 1, which treats the money as growing over 2 years instead of 3. 44.00 percent is the whole gain, (8,640 − 6,000) / 6,000, quoted as if it happened in a single year. 14.67 percent is 44 divided by 3, which spreads the total gain evenly across the years and ignores that the money earns on itself each year."
+    },
+    {
+      q: "A firm can take project M or project N, but not both. Each costs 20,000 at year 0. Project M returns 12,000 at the end of year 1 and 12,000 at the end of year 2. Project N returns nothing in years 1 and 2, then 28,000 at the end of year 3. The required return is 9 percent. What should the firm do?",
+      opts: ["Take M, because its cash comes back sooner", "Take neither, because the wait is too long", "Take N, because it adds more value today", "Take both, because there is room for two"],
+      correct: 2,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> NPV for each project, then compare. M's inflows are an annuity: PV = A × (1 − 1/(1+r)^n)/r. N's inflow is a single cash flow: PV = CF / (1+r)^t.<br><br><b>Inputs from the stem.</b> Both cost 20,000 at year 0. M: A = 12,000, n = 2. N: 28,000 at t = 3. r = 0.09. The words \"but not both\" make them mutually exclusive.<br><br>1. 1.09² = 1.1881, annuity factor = (1 − 1/1.1881) / 0.09 = 1.759111<br>2. M: 12,000 × 1.759111 = 21,109.33, so NPV = 1,109.33<br>3. 1.09³ = 1.295029<br>4. N: 28,000 / 1.295029 = 21,621.14, so NPV = 1,621.14<br>5. Now the IRRs. M: the rate where 12,000 twice repays 20,000, which is 13.07 percent. N: (28,000 / 20,000)^(1/3) − 1 = 1.4^(1/3) − 1 = 11.87 percent.<br>6. NPV picks N, 1,621.14 against 1,109.33. IRR picks M, 13.07 percent against 11.87 percent. They disagree, and NPV wins.<br><br><b>Check.</b> Plug the IRRs back in. N: 20,000 × 1.1187³ = 28,000.83, which is the 28,000 in the question once you allow for rounding 11.8689 percent to 11.87. M: discount the two 12,000 payments at 13.0662 percent, 12,000 × 1.666668 = 20,000.01, so NPV at that rate is zero. Both rates hold.<br><br><b>Why NPV wins.</b> N adds 1,621.14 − 1,109.33 = 511.80 more money today. M has the better percent only because its cash comes back faster, but there is less of it. The firm banks money, not percentages.<br><br><b>The wrong options.</b> \"Take M\" follows the IRR, which is blind to how much cash there is. \"Take both\" is impossible, because the stem says one or the other, not both. \"Take neither\" throws away a positive NPV of 1,621.14 for no reason. A long wait is not a fault by itself, because the discounting has already charged for it."
+    },
+    {
+      q: "A project costs 9,000 today and returns 3,000 at the end of each of the next 4 years. At a required return of 10 percent its NPV is 509.60, so the firm plans to accept it. The required return is then raised to 14 percent. What is the NPV now, and does the plan survive?",
+      opts: ["NPV = 3,000.00, and the firm still accepts", "NPV = −258.86, and the firm now rejects", "NPV = 509.60, unchanged, so the firm still accepts", "NPV = −2,035.10, and the firm now rejects"],
+      correct: 1,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> Four equal payments in a row, so an annuity: PV = A × (1 − 1/(1+r)^n)/r, then NPV = PV − I0.<br><br><b>Inputs from the stem.</b> A = 3,000. n = 4. I0 = 9,000. The new r = 0.14.<br><br>1. 1.14⁴ = 1.688960<br>2. 1 / 1.688960 = 0.592080<br>3. Annuity factor: (1 − 0.592080) / 0.14 = 2.913712<br>4. Present value of the inflows: 3,000 × 2.913712 = 8,741.14<br>5. NPV = 8,741.14 − 9,000 = −258.86<br>6. Below zero, so the plan does not survive. Reject.<br><br><b>Check.</b> The rate that makes NPV zero for these cash flows is 12.59 percent. The old rate of 10 percent was below it, which is why NPV was positive. The new rate of 14 percent is above it, so NPV must be negative. The sign flip is exactly what the IRR predicts.<br><br><b>What this question is really about.</b> Nothing about the project changed. Only the price of waiting changed. A project can be worth doing at one required return and not worth doing at another, and the discount rate is a given in the question, not something you choose.<br><br><b>The wrong options.</b> 3,000.00 is 12,000 − 9,000, the raw cash added up with no discounting. 509.60 is the old NPV at 10 percent, kept by mistake after the rate moved. −2,035.10 comes from using an annuity factor for 3 years instead of 4, that is 3,000 × 2.321632 − 9,000, dropping one of the four payments."
+    },
+    {
+      q: "A project has these cash flows: 2,500 paid out at year 0, 7,000 received at the end of year 1, and 4,800 paid out at the end of year 2 to close the site. Which statement about the internal rate of return of this project is true?",
+      opts: ["The IRR is 20 percent, and it is the only rate that makes NPV zero", "The project has no IRR at all, because a later cash flow is negative", "The IRR is 60 percent, the highest rate that makes NPV zero", "Two different rates, 20 percent and 60 percent, each make NPV zero"],
+      correct: 3,
+      tag: "NPV and IRR",
+      exp: "<b>The rule being tested.</b> The IRR is any rate that makes NPV zero. When the cash flows change sign more than once, more than one rate can do that, and then the question \"is the IRR above my required return\" has no single answer.<br><br><b>Inputs from the stem.</b> The signs run minus, plus, minus: −2,500, then +7,000, then −4,800. That is two changes of sign, so look for up to two rates.<br><br>1. Write the NPV as a sum that depends on the rate: −2,500 + 7,000/(1+r) − 4,800/(1+r)² = 0<br>2. Test 20 percent: −2,500 + 7,000/1.2 − 4,800/1.44 = −2,500 + 5,833.33 − 3,333.33 = 0. It works.<br>3. Test 60 percent: −2,500 + 7,000/1.6 − 4,800/2.56 = −2,500 + 4,375 − 1,875 = 0. It works too.<br>4. So both 20 percent and 60 percent are internal rates of return for this project.<br><br><b>Check the shape of the curve.</b> At 0 percent NPV is −300. At 40 percent it is +51.02. At 80 percent it is −92.59. The curve starts below zero, rises through zero at 20 percent, comes back down through zero at 60 percent, and keeps falling. Two crossings, so two IRRs.<br><br><b>What to do instead.</b> Drop IRR and read the NPV at the rate that actually applies to the firm. NPV gives one number and one decision, whatever the signs do.<br><br><b>The wrong options.</b> Saying the IRR is 20 percent and unique ignores the second crossing at 60 percent. Saying there is no IRR is the opposite error: the problem here is too many, not none. Picking the highest rate that works is not a rule anywhere in this course, and it would turn the decision the wrong way for any required return between 20 and 60 percent."
+    },
+    {
+      q: "A firm has three separate one-year projects. Taking one does not prevent taking any other, and there is no limit on the money available. Project P costs 5,000 and returns 5,800 at the end of year 1. Project Q costs 8,000 and returns 8,600 at the end of year 1. Project R costs 2,000 and returns 2,300 at the end of year 1. The required return is 10 percent. Which should the firm take?",
+      opts: ["Take P only, and leave R and Q out", "Take P and R, but leave Q out", "Take all three, there is no budget limit", "Take P and Q, but leave R out"],
+      correct: 1,
+      tag: "NPV and IRR",
+      exp: "<b>The rule being tested.</b> These projects are independent: taking one does not block another, and there is no budget limit. For independent projects you judge each one on its own and take every project with NPV above zero. There is no ranking to do.<br><br><b>Formula.</b> NPV = CF1 / (1 + r) − I0 for each project, with r = 0.10.<br><br>1. P: 5,800 / 1.10 = 5,272.73, so NPV = 5,272.73 − 5,000 = 272.73. Positive, take it.<br>2. Q: 8,600 / 1.10 = 7,818.18, so NPV = 7,818.18 − 8,000 = −181.82. Negative, drop it.<br>3. R: 2,300 / 1.10 = 2,090.91, so NPV = 2,090.91 − 2,000 = 90.91. Positive, take it.<br>4. Take P and R. Together they add 272.73 + 90.91 = 363.64 to the value of the firm today.<br><br><b>Check with IRR.</b> For a one-year project the IRR is just the plain return. P: 5,800/5,000 − 1 = 16 percent. Q: 8,600/8,000 − 1 = 7.5 percent. R: 2,300/2,000 − 1 = 15 percent. P and R beat the required 10 percent. Q does not. Same answer, which is what you expect for normal independent projects.<br><br><b>The wrong options.</b> Taking P only treats the projects as if the firm had to pick one, which is the mutually exclusive rule used in the wrong place. R's NPV is small, but small and positive still adds money. Taking all three forgets that no budget limit is not the same as no test, and Q fails the test. Taking P and Q falls for Q returning 8,600 against a cost of 8,000, which looks like a gain but is only 7.5 percent, below the 10 percent the firm can earn elsewhere at the same risk. It also drops R, whose 15 percent clears the bar easily."
+    }
+  ]
+});
+</script>
+</body>
+</html>

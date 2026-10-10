@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 2 · A single cash flow</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+<a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+<div class="crumb">Day 2 · Sunday 27 September</div>
+<h1>A single cash flow</h1>
+<p class="lede">One payment, one date. Move it to today, move it to the future, and read the rate that links the two.</p>
+  <div class="secaudio"><span class="salab">Before you start: today's words · 1:06</span><audio controls preload="none" src="day-02-intro.mp3"></audio></div>
+
+
+<!-- ================= RECALL ================= -->
+<div class="preq">
+  <div class="tag">Five minutes: recall</div>
+  <p><b>1.</b> Sort these four into real assets and financial assets: a delivery truck, a corporate bond, a bakery oven, a share of stock.</p>
+  <p><b>2.</b> Equity is a size and a dividend is a move. Say in one line what each of those two words is measuring.</p>
+  <p class="do">Answer both out loud before you open the box.</p>
+  <button class="reveal-btn" type="button" data-reveal="r-day1">Show the answer</button>
+  <div class="reveal" id="r-day1">
+    <p class="p"><b>1.</b> Real assets: the delivery truck and the bakery oven. They are the things that actually produce goods and services. Financial assets: the corporate bond and the share of stock. They are paper claims on the cash that the real assets produce.</p>
+    <p class="p"><b>2.</b> Equity is a size. It is how big the owners' claim is at one moment in time. A dividend is a move. It is cash leaving the firm and going to the owners, so it makes the equity smaller.</p>
+  </div>
+</div>
+
+<!-- ================= PRETEST ================= -->
+<div class="preq">
+  <div class="tag">Guess first</div>
+  <p>A customer owes you 1,000 and wants to pay in two years instead of today. Money earns 6 percent a year.</p>
+  <p>What single number in two years would feel equal to 1,000 today? Write your guess on paper now.</p>
+  <p class="do">This is a guess, not a test. No answer is shown here. You will be able to check it yourself by the end of the page.</p>
+</div>
+
+<!-- ================= PANEL 1 ================= -->
+<div class="panel">
+  <h3>1. You cannot add money from two different dates</h3>
+
+    <div class="secaudio"><span class="salab">Two offers on two dates: why you can't compare raw numbers · 1:40</span><audio controls preload="none" src="day-02-different-dates.mp3"></audio></div>
+
+  <p class="p">This is the idea the professor puts first, and everything from here to day 9 stands on it. A payment of 100 today and a payment of 100 in three years are not the same thing. They are not even the same kind of thing.</p>
+  <p class="p">Think of dates as currencies. Money in 2029 is one currency. Money today is another. You would never add 100 dollars to 100 shekels and write 200. You change one into the other first, at the exchange rate. The interest rate is that exchange rate.</p>
+  <p class="p">Three reasons a payment in the future is worth less than the same payment today:</p>
+  <table class="dtable">
+    <tr><td class="lab">Waiting</td><td>People prefer to spend now. To give that up they want more back later. That is the real rate.</td></tr>
+    <tr><td class="lab">Inflation</td><td>Prices rise, so the same money buys less later.</td></tr>
+    <tr><td class="lab">Risk</td><td>The payment may arrive smaller, or late, or never.</td></tr>
+  </table>
+  <p class="p">Your course file writes the first two together as <span class="math">R = real rate + expected inflation</span>, a line that is <strong>not printed on the exam sheet</strong>, and then adds a premium, which is extra return, if the investor is carrying risk. You do not need to split the rate on the exam. You need to know that all three reasons sit inside the one number <b>r</b>.</p>
+
+  <div class="rule">Before any formula, draw the timeline. Mark today as 0, mark every payment on its own date, and never add two numbers that sit on different dates.</div>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 560 200" role="img" aria-label="A timeline from today to year 3 with a payment at year 3 and an arrow bringing it back to today">
+      <line x1="45" y1="120" x2="530" y2="120" stroke="#211c33" stroke-width="2"/>
+      <g stroke="#211c33" stroke-width="2">
+        <line x1="60" y1="112" x2="60" y2="128"/>
+        <line x1="215" y1="112" x2="215" y2="128"/>
+        <line x1="370" y1="112" x2="370" y2="128"/>
+        <line x1="525" y1="112" x2="525" y2="128"/>
+      </g>
+      <g font-size="13" fill="#5f5877" text-anchor="middle">
+        <text x="60" y="146">today (0)</text>
+        <text x="215" y="146">year 1</text>
+        <text x="370" y="146">year 2</text>
+        <text x="525" y="146">year 3</text>
+      </g>
+      <line x1="525" y1="120" x2="525" y2="78" stroke="#6b4ef0" stroke-width="3"/>
+      <polygon points="525,68 519,80 531,80" fill="#6b4ef0"/>
+      <text x="525" y="58" font-size="13" font-weight="700" fill="#5238c4" text-anchor="middle">1,000</text>
+      <path d="M517 88 C 388 20, 180 20, 66 86" fill="none" stroke="#1f9d63" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <polygon points="60,94 72,88 66,80" fill="#1f9d63"/>
+      <text x="285" y="26" font-size="13" font-weight="700" fill="#0d6a3f" text-anchor="middle">divide by (1 + r) three times</text>
+      <text x="60" y="174" font-size="13" font-weight="700" fill="#0d6a3f" text-anchor="middle">value today</text>
+    </svg>
+    <p class="cap">The payment stays where it is. Only its value moves, and it moves one period at a time.</p>
+  </div>
+
+  <p class="partlab">Worked example</p>
+  <div class="question">A supplier offers you two ways to be paid for the same job. Offer A is 1,000 paid today. Offer B is 1,080 paid in one year. Money is worth 5 percent a year to you. Which offer is bigger, and by how much?</div>
+
+  <div class="step"><div class="stepn">1</div><div class="stepbody">
+    <div class="lab">Put both offers on a timeline.</div>
+    <div>Offer A sits at date 0. Offer B sits at date 1. They are on different dates, so you cannot compare the raw numbers 1,000 and 1,080.</div>
+  </div></div>
+  <div class="step"><div class="stepn">2</div><div class="stepbody">
+    <div class="lab">Choose one date to compare on. Today is the easy one.</div>
+    <div>Offer A is already at today, so it needs no change.</div>
+  </div></div>
+  <div class="step"><div class="stepn">3</div><div class="stepbody">
+    <div class="lab">Bring offer B back one year.</div>
+    <div class="math">PV = 1,080 / (1 + 0.05) = 1,028.57</div>
+  </div></div>
+  <div class="step"><div class="stepn">4</div><div class="stepbody">
+    <div class="lab">Now both numbers sit on the same date, so you may compare them.</div>
+    <div class="math">1,028.57 &minus; 1,000 = 28.57</div>
+  </div></div>
+  <div class="ans">Offer B is bigger, by about 28.57 in today's money. Check it the other way: 1,028.57 &times; 1.05 = 1,080, so the two really are the same money seen from two dates.</div>
+
+  <div class="tryq">
+    <div class="q">Try it. Same two offers, 1,000 today or 1,080 in one year. At what interest rate would the two offers feel exactly equal?</div>
+    <button class="reveal-btn" type="button" data-reveal="t1a">Show the answer</button>
+    <div class="reveal" id="t1a">
+      Equal means 1,000 &times; (1 + r) = 1,080. So r = 1,080 / 1,000 &minus; 1 = 0.08, that is <b>8 percent</b>.<br>
+      Read it this way: below 8 percent the later offer wins, above 8 percent the money-today offer wins.
+    </div>
+  </div>
+</div>
+
+<!-- ================= PANEL 2 ================= -->
+<div class="panel">
+  <h3>2. Present value: pull one payment back to today</h3>
+
+    <div class="secaudio"><span class="salab">Infosoft's payment: what a future payment is worth today · 1:29</span><audio controls preload="none" src="day-02-present-value.mp3"></audio></div>
+
+  <p class="p">A single cash flow is one payment on one future date. To find what it is worth today you divide it by the growth factor for every year you have to wait.</p>
+  <p class="p" style="text-align:center"><span class="math">PV = FV / (1 + r)<sup>N</sup></span></p>
+  <p class="p">On the exam sheet, today's formulas sit in the table headed "Simple Cash Flow". Its rows say "C Invested" and "C to Be Received". Do not use the table above it, headed "The value of a single cashflow": despite its name, that table holds the annuity formulas, the rows that start "C per Period", meaning a payment that repeats. Read the words straight after the C: the "per Period" at the end of a row title describes the rate and appears in both tables.</p>
+  <p class="p">The sheet writes this formula as <span class="math">PV = FV<sub>t</sub> / (1 + r)<sup>t</sup></span> and as <span class="math">PV = C / (1 + r)<sup>t</sup></span>. The FV and N on this page are the sheet's FV<sub>t</sub> and t.</p>
+  <p class="p">FV is the payment. N is the number of years from today until the payment lands. r is the rate per year. The name of this move is <b>discounting</b>: taking a future payment back to what it is worth today.</p>
+  <div class="secaudio"><span class="salab">A check dated years from now: zero-coupon bond price and rate · 1:42</span><audio controls preload="none" src="day-02-price-and-rate.mp3"></audio></div>
+
+  <p class="p">Two things pull the value down, and they act on their own. A higher rate pulls it down. A longer wait pulls it down. Both together pull it down hard.</p>
+
+  <div class="rule">Count N as the gap between today and the payment date. A payment at the end of year 1 is divided by (1 + r) once. It is not left alone.</div>
+
+  <div class="datalab">What 100 paid on a future date is worth today</div>
+  <p class="given">Read down a column to see the effect of waiting. Read across a row to see the effect of the rate.</p>
+  <div class="tscroll">
+  <table class="dtable">
+    <tr><th>Paid in</th><th>r = 4%</th><th>r = 6%</th><th>r = 8%</th></tr>
+    <tr><td class="lab">1 year</td><td>96.15</td><td>94.34</td><td>92.59</td></tr>
+    <tr><td class="lab">3 years</td><td>88.90</td><td>83.96</td><td>79.38</td></tr>
+    <tr><td class="lab">5 years</td><td>82.19</td><td>74.73</td><td>68.06</td></tr>
+    <tr><td class="lab">10 years</td><td>67.56</td><td>55.84</td><td>46.32</td></tr>
+  </table>
+  </div>
+
+  <p class="partlab">Worked example</p>
+  <div class="question">You own Infosoft, a small software firm. You rent your office, and you owe the landlord one single payment of 500,000 ten years from now. The right discount rate for this payment is 10 percent. What is that payment worth today?</div>
+
+  <div class="step"><div class="stepn">1</div><div class="stepbody">
+    <div class="lab">Name the shape.</div>
+    <div>One payment, one date. This is a single cash flow, so use PV = FV / (1 + r)<sup>N</sup>.</div>
+  </div></div>
+  <div class="step"><div class="stepn">2</div><div class="stepbody">
+    <div class="lab">Take the inputs out of the question.</div>
+    <div class="math">FV = 500,000 &nbsp; r = 0.10 &nbsp; N = 10</div>
+  </div></div>
+  <div class="step"><div class="stepn">3</div><div class="stepbody">
+    <div class="lab">Build the growth factor first, on its own.</div>
+    <div class="math">1.10<sup>10</sup> = 2.5937</div>
+  </div></div>
+  <div class="step"><div class="stepn">4</div><div class="stepbody">
+    <div class="lab">Divide the payment by that factor.</div>
+    <div class="math">PV = 500,000 / 2.5937 = 192,771.64</div>
+  </div></div>
+  <div class="ans">About 192,772 today. Check it: 192,771.64 &times; 2.5937 gives back 500,000.</div>
+
+  <div class="tryq">
+    <div class="q">Try it. A government zero-coupon bond pays no interest along the way. It pays its face value of 100 in three years and nothing before that. Face value is the amount the borrower promised to pay back. The required return is 2 percent a year. What is the price of the bond today?</div>
+    <button class="reveal-btn" type="button" data-reveal="t2a">Show the answer</button>
+    <div class="reveal" id="t2a">
+      A zero-coupon bond is one single payment, so the price is just its present value.<br>
+      1.02<sup>3</sup> = 1.061208, and 100 / 1.061208 = <b>94.23</b>.<br>
+      Check: 94.23 &times; 1.061208 = 100.00. A price under the face value is what you expect here, because the buyer gets nothing at all until year 3.
+    </div>
+  </div>
+
+  <div class="tryq">
+    <div class="q">Try it. A zero-coupon bond pays 100 in six years. The required return falls from 8 percent to 5 percent. What happens to the price, and by how much?</div>
+    <button class="reveal-btn" type="button" data-reveal="t2b">Show the answer</button>
+    <div class="reveal" id="t2b">
+      At 8 percent: 100 / 1.08<sup>6</sup> = 100 / 1.586874 = 63.02.<br>
+      At 5 percent: 100 / 1.05<sup>6</sup> = 100 / 1.340096 = 74.62.<br>
+      The price <b>rises by about 11.60</b>. A smaller divider leaves a bigger number. Price and rate always move in opposite directions, and you will meet this again on day 6 with coupon bonds.
+    </div>
+  </div>
+</div>
+
+<!-- ================= PANEL 3 ================= -->
+<div class="panel">
+  <h3>3. One move, two directions</h3>
+
+    <div class="secaudio"><span class="salab">Compounding and discounting: one move, two directions · 1:40</span><audio controls preload="none" src="day-02-two-directions.mp3"></audio></div>
+
+  <p class="p">Compounding and discounting are not two topics. They are one move. Multiply by (1 + r)<sup>N</sup> to walk forward in time. Divide by the same factor to walk back.</p>
+  <p class="p" style="text-align:center"><span class="math">FV = PV &times; (1 + r)<sup>N</sup></span></p>
+  <p class="p">The sheet writes this one as <span class="math">FV<sub>t</sub> = C &times; (1 + r)<sup>t</sup></span>, in the same "Simple Cash Flow" table: the PV and N here are the sheet's C and t.</p>
+  <div class="secaudio"><span class="salab">The college fund: finding the rate, and the equal-slices trap · 1:43</span><audio controls preload="none" src="day-02-find-the-rate.mp3"></audio></div>
+
+  <p class="p">Because it is one equation with four parts, any three of them give you the fourth. If you know both ends and the number of years, the rate falls out:</p>
+  <p class="p" style="text-align:center"><span class="math">r = (FV / PV)<sup>1/N</sup> &minus; 1</span></p>
+  <p class="p"><strong>Not printed on the exam sheet.</strong> It is the sheet's growth row turned around, so you can always rebuild it from FV<sub>t</sub> = C &times; (1 + r)<sup>t</sup>.</p>
+  <p class="p">Notice the power of 1/N, not a division by N. That is because of interest on interest. In year 2 you earn a return on year 1's return as well as on your own money, so the years do not simply add up.</p>
+
+  <div class="rule">Going forward, multiply. Coming back, divide. Looking for the rate, take the Nth root of the two ends divided by each other, then take one away.</div>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 560 190" role="img" aria-label="Two arrows between today and year N, one multiplying forward and one dividing back">
+      <rect x="30" y="66" width="150" height="58" rx="12" fill="#ece7fd" stroke="#6b4ef0" stroke-width="1.5"/>
+      <text x="105" y="90" font-size="13" font-weight="700" fill="#5238c4" text-anchor="middle">today</text>
+      <text x="105" y="110" font-size="13" fill="#5238c4" text-anchor="middle">PV</text>
+      <rect x="380" y="66" width="150" height="58" rx="12" fill="#ece7fd" stroke="#6b4ef0" stroke-width="1.5"/>
+      <text x="455" y="90" font-size="13" font-weight="700" fill="#5238c4" text-anchor="middle">year N</text>
+      <text x="455" y="110" font-size="13" fill="#5238c4" text-anchor="middle">FV</text>
+      <line x1="186" y1="76" x2="366" y2="76" stroke="#6b4ef0" stroke-width="2.5"/>
+      <polygon points="376,76 362,70 362,82" fill="#6b4ef0"/>
+      <text x="278" y="62" font-size="13" font-weight="700" fill="#5238c4" text-anchor="middle">multiply by (1 + r) to the power N</text>
+      <text x="278" y="44" font-size="13" fill="#5f5877" text-anchor="middle">compounding</text>
+      <line x1="374" y1="114" x2="194" y2="114" stroke="#1f9d63" stroke-width="2.5"/>
+      <polygon points="184,114 198,108 198,120" fill="#1f9d63"/>
+      <text x="278" y="136" font-size="13" font-weight="700" fill="#0d6a3f" text-anchor="middle">divide by (1 + r) to the power N</text>
+      <text x="278" y="154" font-size="13" fill="#5f5877" text-anchor="middle">discounting</text>
+    </svg>
+    <p class="cap">The same factor does both jobs. Only the direction of travel changes.</p>
+  </div>
+
+  <p class="partlab">Worked example</p>
+  <div class="question">You have just put 2,000 into a retirement account. You expect to earn 9 percent a year and you will never add another cent. You retire in 45 years. What will the account be worth then?</div>
+
+  <div class="step"><div class="stepn">1</div><div class="stepbody">
+    <div class="lab">Name the direction.</div>
+    <div>You have money today and you want its value later, so you are walking forward. Use FV = PV &times; (1 + r)<sup>N</sup>.</div>
+  </div></div>
+  <div class="step"><div class="stepn">2</div><div class="stepbody">
+    <div class="lab">Take the inputs out of the question.</div>
+    <div class="math">PV = 2,000 &nbsp; r = 0.09 &nbsp; N = 45</div>
+  </div></div>
+  <div class="step"><div class="stepn">3</div><div class="stepbody">
+    <div class="lab">Build the growth factor.</div>
+    <div class="math">1.09<sup>45</sup> = 48.3273</div>
+  </div></div>
+  <div class="step"><div class="stepn">4</div><div class="stepbody">
+    <div class="lab">Multiply.</div>
+    <div class="math">FV = 2,000 &times; 48.3273 = 96,654.57</div>
+  </div></div>
+  <div class="ans">About 96,655. Check it by walking back: 96,654.57 / 48.3273 = 2,000. Simple interest at the same 9 percent would have given only 2,000 &times; (1 + 0.09 &times; 45) = 10,100. Interest on interest is the whole difference.</div>
+
+  <div class="tryq">
+    <div class="q">Try it. College will cost 200,000 when your child starts in 18 years. You have 27,000 to invest today and you will add nothing. What annual rate do you need?</div>
+    <button class="reveal-btn" type="button" data-reveal="t3a">Show the answer</button>
+    <div class="reveal" id="t3a">
+      You know both ends and the years, so solve for r. This rate formula is <b>not printed on the exam sheet</b>: it is the growth row turned around.<br>
+      27,000 &times; (1 + r)<sup>18</sup> = 200,000, so (1 + r)<sup>18</sup> = 7.4074.<br>
+      r = 7.4074<sup>1/18</sup> &minus; 1 = 1.117673 &minus; 1 = <b>11.77 percent a year</b>.<br>
+      Check: 27,000 &times; 1.117673<sup>18</sup> = 200,000. Watch the trap: 7.4074 divided by 18 is not the answer, because the years compound.
+    </div>
+  </div>
+
+  <div class="tryq">
+    <div class="q">Try it. A two-year zero-coupon bond with a face value of 100 is priced at 90 today. What is the required return per year, in annual effective terms? That means the true rate per year, once interest on interest is counted.</div>
+    <button class="reveal-btn" type="button" data-reveal="t3b">Show the answer</button>
+    <div class="reveal" id="t3b">
+      90 &times; (1 + r)<sup>2</sup> = 100, so r = (100 / 90)<sup>1/2</sup> &minus; 1 = <b>5.41 percent</b>. This rate formula is <b>not printed on the exam sheet</b>: it is the growth row turned around.<br>
+      Check: 90 &times; 1.054093 = 94.87, and 94.87 &times; 1.054093 = 100.<br>
+      Your class file rounds this to 5.4 percent. Both are the same answer, just carried to a different number of digits.<br>
+      The trap: the total return over the two years is 100 / 90 &minus; 1 = 11.11 percent, and half of that is 5.56 percent, which is not the answer. Splitting a return in half ignores interest on interest.
+    </div>
+  </div>
+</div>
+
+<!-- ================= QUIZ ================= -->
+<div class="panel">
+  <h3>Quiz <span data-scorechip="quiz"></span></h3>
+  <p class="note">Six questions. The answer appears when you pick. All the data you need is inside each question.</p>
+  <div id="quiz"></div>
+</div>
+
+<div class="navrow">
+  <a class="navbtn" href="day-01.html">← Day 1</a>
+  <a class="navbtn primary" href="day-03.html">Day 3: Annuity →</a>
+</div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 2,
+  topic: "Single cash flow",
+  items: [
+    {
+      q: "A shipping company will receive a single payment of 40,000 at the end of year 4. Its required return is 7 percent a year. What is that payment worth today?",
+      opts: ["30,516", "32,652", "31,250", "52,432"],
+      correct: 0,
+      tag: "Single cash flow",
+      exp: "Formula: PV = FV / (1 + r) to the power N, because this is one payment on one date.<br>Inputs from the question: FV = 40,000, r = 0.07, N = 4.<br>1. Growth factor: 1.07 to the power 4 = 1.310796.<br>2. Divide: 40,000 / 1.310796 = 30,515.81, so about 30,516.<br>Check: 30,515.81 x 1.310796 = 40,000.<br>Why the others are wrong. 52,432 multiplies instead of dividing: 40,000 x 1.310796, which sends the money further into the future. 32,652 uses N = 3 instead of 4, one year short. 31,250 uses simple interest, 40,000 / (1 + 0.07 x 4), which ignores interest on interest."
+    },
+    {
+      q: "Maya puts 6,500 into a savings account today. The account earns 5.5 percent a year. She adds nothing more and takes nothing out for 12 years. How much is in the account at the end of year 12?",
+      opts: ["10,790", "11,714", "12,358", "3,419"],
+      correct: 2,
+      tag: "Single cash flow",
+      exp: "Formula: FV = PV x (1 + r) to the power N, because the money is walking forward in time.<br>Inputs from the question: PV = 6,500, r = 0.055, N = 12.<br>1. Growth factor: 1.055 to the power 12 = 1.901207.<br>2. Multiply: 6,500 x 1.901207 = 12,357.85, so about 12,358.<br>Check: 12,357.85 / 1.901207 = 6,500.<br>Why the others are wrong. 10,790 is simple interest, 6,500 x (1 + 0.055 x 12), which pays no interest on past interest. 11,714 uses N = 11, one year short. 3,419 divides instead of multiplying, which is discounting, the wrong direction."
+    },
+    {
+      q: "A zero-coupon bond pays its face value of 1,000 in five years and pays nothing before that. It trades today at 850. What is its return per year, in annual effective terms, meaning the true rate per year once interest on interest is counted?",
+      opts: ["17.65 percent", "3.30 percent", "3.53 percent", "15.00 percent"],
+      correct: 1,
+      tag: "Single cash flow",
+      exp: "Formula: r = (FV / PV) to the power 1/N, minus 1. You know both ends and the number of years, so the rate is the unknown. This rate formula is <b>not printed on the exam sheet</b>: it is the growth row turned around.<br>Inputs from the question: FV = 1,000, PV = 850, N = 5.<br>1. Divide the two ends: 1,000 / 850 = 1.176471.<br>2. Take the fifth root: 1.176471 to the power 0.2 = 1.033038.<br>3. Take one away: 0.033038, that is 3.30 percent a year.<br>Check: 850 x 1.033038 to the power 5 = 1,000.<br>Why the others are wrong. 17.65 percent is the total return over all five years, not a yearly rate. 3.53 percent divides that total by 5, which ignores interest on interest. 15.00 percent divides the gain by the face value, (1,000 minus 850) / 1,000, instead of by the price you actually paid."
+    },
+    {
+      q: "A single payment of 9,000 is due in six years. The discount rate used to value it rises from 4 percent to 7 percent. What happens to the value of that payment today?",
+      opts: ["It rises by about 1,116", "It falls by about 270", "It does not change, because the payment is fixed at 9,000", "It falls by about 1,116"],
+      correct: 3,
+      tag: "Single cash flow",
+      exp: "Formula: PV = FV / (1 + r) to the power N, run twice, once at each rate.<br>Inputs from the question: FV = 9,000, N = 6, first r = 0.04, then r = 0.07.<br>1. At 4 percent: 1.04 to the power 6 = 1.265319, and 9,000 / 1.265319 = 7,112.83.<br>2. At 7 percent: 1.07 to the power 6 = 1.500730, and 9,000 / 1.500730 = 5,997.08.<br>3. Difference: 7,112.83 minus 5,997.08 = 1,115.75, a fall of about 1,116.<br>Check: 5,997.08 x 1.500730 = 9,000, so the second value is correct.<br>Why the others are wrong. A rise has the direction backwards: a bigger divider gives a smaller result. 270 comes from 9,000 x (0.07 minus 0.04), which applies the rate gap once to the payment instead of compounding it over six years. The value does change: the payment is fixed, but what that fixed payment is worth today is not."
+    },
+    {
+      q: "A firm receives 3,000 in cash today and is promised another 3,000 at the end of year 2. The discount rate is 8 percent a year. What is the whole promise worth today?",
+      opts: ["5,572", "6,000", "5,350", "2,572"],
+      correct: 0,
+      tag: "Single cash flow",
+      exp: "Rule first: cash flows on different dates cannot be added until they sit on the same date.<br>Inputs from the question: 3,000 at date 0, 3,000 at date 2, r = 0.08.<br>1. The 3,000 received today is already in today's money. It stays 3,000.<br>2. The year 2 payment: 1.08 to the power 2 = 1.1664, and 3,000 / 1.1664 = 2,572.02.<br>3. Now both sit at date 0, so add them: 3,000 + 2,572.02 = 5,572.02.<br>Check: 2,572.02 x 1.1664 = 3,000.<br>Why the others are wrong. 6,000 adds the two raw numbers without moving them to the same date, which is the main error this topic punishes. 5,350 also discounts today's cash by one year, but money already in your hand needs no discounting. 2,572 values only the future payment and forgets the cash received today."
+    },
+    {
+      q: "You invest 4,000 today at 8 percent a year and add nothing more. After how many whole years is the account first worth at least 8,000?",
+      opts: ["9 years", "10 years", "about 8.7 years", "about 12.5 years"],
+      correct: 1,
+      tag: "Single cash flow",
+      exp: "Formula: FV = PV x (1 + r) to the power N. Try whole values of N until the account passes 8,000.<br>Inputs from the question: PV = 4,000, r = 0.08, target FV = 8,000.<br>1. After 9 years: 4,000 x 1.08 to the power 9 = 4,000 x 1.999005 = 7,996.02. That is still under 8,000.<br>2. After 10 years: 4,000 x 1.08 to the power 10 = 4,000 x 2.158925 = 8,635.70. That is over 8,000.<br>3. So the first whole year that clears the target is year 10.<br>Check: 7,996.02 is 3.98 short of 8,000, so year 9 really does miss it.<br>Why the others are wrong. 9 years comes from the rule of 72, 72 / 8 = 9. That rule is only a quick guess, and here it lands just under the target. 8.7 years uses continuous compounding, which is not what this question says. 12.5 years uses simple interest: 4,000 of gain divided by 4,000 x 0.08 = 320 a year."
+    }
+  ]
+});
+</script>
+</body>
+</html>

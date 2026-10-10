@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 11: Mock 2</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">Day 11 · Tuesday 6 October</div>
+  <h1>Mock 2: the time value paper</h1>
+  <p class="lede">Twenty two questions, 150 minutes, sit it in one go. Nothing is shown until you submit.</p>
+
+  <!-- ============ RULES ============ -->
+  <div class="panel">
+    <h3>How to sit this paper</h3>
+    <p class="note">Read this once, then start the clock and do not stop it.</p>
+
+    <table class="dtable">
+      <tr><td class="lab">Questions</td><td>22, all multiple choice</td></tr>
+      <tr><td class="lab">Time</td><td>150 minutes, about 6.8 minutes a question</td></tr>
+      <tr><td class="lab">Calculator</td><td>Scientific only. Nothing that prices a bond or an annuity for you</td></tr>
+      <tr><td class="lab">Formula sheet</td><td>Below. The real exam gives you one too, so nothing has to be learned by heart</td></tr>
+      <tr><td class="lab">Feedback</td><td>None until you submit. No score, no answer, no hint</td></tr>
+      <tr><td class="lab">Misses</td><td>Saved to your error log automatically when the paper closes</td></tr>
+    </table>
+
+    <div class="rule">This paper puts most of its weight on time value of money on purpose. Eleven of the 22 questions are single
+      cash flows, annuities, perpetuities and mixed streams, so a weak spot there will show up here clearly.</div>
+
+    <p class="p">Press Start, then work down the page. Pick an answer for every question, even one you are unsure of.
+      A blank counts the same as a wrong answer and it teaches you nothing. If the timer runs out the paper closes
+      itself and marks what you have.</p>
+    <p class="p">Keep paper beside you. Draw the timeline before you touch the calculator. Almost every mistake in
+      this topic is a timing mistake, not an arithmetic one.</p>
+  </div>
+
+  <!-- ============ FORMULA SHEET ============ -->
+  <div class="panel">
+    <h3>Formula sheet</h3>
+    <p class="note">The same sheet on every mock in this pack. This mirrors the professor's sheet. The rows under
+      "Not printed on the professor's sheet" are pack additions.</p>
+
+    <p class="partlab">A single cash flow</p>
+    <table class="dtable">
+      <tr><td class="lab">Future value</td><td>FV_t = C × (1 + r)^t</td></tr>
+      <tr><td class="lab">Present value</td><td>PV = C / (1 + r)^t</td></tr>
+      <tr><td class="lab">Basic PV equation</td><td>PV = FV_t / (1 + r)^t</td></tr>
+    </table>
+
+    <p class="partlab">Annuity, the same payment C every period for t periods</p>
+    <table class="dtable">
+      <tr><td class="lab">Future value</td><td>FV_t = C × {[(1 + r)^t − 1] / r}</td></tr>
+      <tr><td class="lab">Present value</td><td>PV = C × {1 − [1 / (1 + r)^t]} / r</td></tr>
+    </table>
+    <p class="given">On the real sheet this table sits under the misleading heading "The value of a single
+      cashflow". Trust the row titles: "C per Period" means a repeating payment; "C Invested" or "C to Be Received" means one payment.</p>
+
+    <p class="partlab">Growing annuity</p>
+    <table class="dtable">
+      <tr><td class="lab">Present value</td><td>PV = A(1 + g) × [ (1 − (1 + g)^n / (1 + r)^n) / (r − g) ]</td></tr>
+    </table>
+    <p class="given">The first payment equals A(1 + g). Same formula in other letters:
+      PV = C_1 × [1 − ((1 + g) / (1 + r))^n] / (r − g), where C_1 is the first payment, because C_1 = A(1 + g).</p>
+
+    <p class="partlab">Perpetuity, a payment with no end date</p>
+    <table class="dtable">
+      <tr><td class="lab">Plain</td><td>PV = C / r</td></tr>
+      <tr><td class="lab">Growing</td><td>PV = CF / (r − g), and this needs r &gt; g</td></tr>
+    </table>
+
+    <p class="partlab">Bond</p>
+    <table class="dtable">
+      <tr><td class="lab">Bond value</td><td>Bond value = C × [1 − 1 / (1 + r)^t] / r + F / (1 + r)^t</td></tr>
+    </table>
+    <p class="given">C is the coupon paid each period, F is the bond's face value. The yield is found by trial
+      and error: try rates until the calculated value equals the given price.</p>
+
+    <p class="partlab">Payoff at maturity</p>
+    <table class="dtable">
+      <tr><td class="lab">Senior debt</td><td>Min(V_T , F_S)</td></tr>
+      <tr><td class="lab">Junior debt</td><td>0 if V_T &lt; F_S, otherwise Min(V_T − F_S , F_J)</td></tr>
+      <tr><td class="lab">Equity</td><td>Max(V_T − F_S , 0)</td></tr>
+    </table>
+    <p class="given">V_T is the value of the firm's assets at maturity. F_S is the face value of the senior debt.
+      F_J is the face value of the junior debt.</p>
+
+    <p class="partlab">Stocks, the rate is written R here</p>
+    <table class="dtable">
+      <tr><td class="lab">All future dividends</td><td>P_0 = D_1 / (1 + R)^1 + D_2 / (1 + R)^2 + D_3 / (1 + R)^3 + …</td></tr>
+      <tr><td class="lab">Constant growth</td><td>P_0 = D_1 / (R − g)</td></tr>
+      <tr><td class="lab">Supernormal, steady after t</td><td>P_t = D_t × (1 + g) / (R − g)</td></tr>
+      <tr><td class="lab">Required return</td><td>R = D_1 / P_0 + g</td></tr>
+      <tr><td class="lab">Holding period return</td><td>HPR = (P_1 − P_0 + D_1) / P_0</td></tr>
+    </table>
+
+    <p class="partlab">Stream and NPV</p>
+    <table class="dtable">
+      <tr><td class="lab">Stream of cash flows</td><td>PV = CF_1 / (1 + r)^1 + CF_2 / (1 + r)^2 + … + CF_N / (1 + r)^N</td></tr>
+      <tr><td class="lab">NPV</td><td>NPV = sum of CF_i / (1 + r)^i − I_0</td></tr>
+    </table>
+    <p class="given">The annuity and perpetuity formulas both give a value one period before the first payment.
+      If the first payment is not at the end of period 1, the answer needs a second discounting move back to today.</p>
+
+    <p class="partlab">Not printed on the professor's sheet</p>
+    <table class="dtable">
+      <tr><td class="lab">Equity with junior debt</td><td>Max(V_T − F_S − F_J , 0). Equity is what is left after every debt is paid, and it stops at zero</td></tr>
+      <tr><td class="lab">IRR</td><td>The discount rate that makes NPV exactly zero</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ THE PAPER ============ -->
+  <div id="mock"></div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-10.html">← Day 10: Mock 1</a>
+    <a class="navbtn primary" href="day-12.html">Day 12: Sweep →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.mock({
+  mount: "mock",
+  day: 11,
+  topic: "Mock 2",
+  minutes: 150,
+  items: [
+
+  /* ---------- 1 ---------- */
+  {
+    q: "You buy a 1 year government T bill with a 3% yield and plan to hold it to maturity. Principal and interest are guaranteed by law. Which decision environment is this?",
+    opts: ["Certainty", "Uncertainty", "Ambiguity"],
+    correct: 0,
+    tag: "Concepts",
+    src: "From a course quiz",
+    exp: "<b>Certainty.</b><br><br>This course splits decisions into three environments by what you know about the outcomes. The course calls the chance of each outcome its probability.<br><br><b>Certainty:</b> the outcome is known before you decide.<br><b>Uncertainty:</b> the outcome is not known, but you can put believable chances on the outcomes.<br><b>Ambiguity:</b> the outcome is not known, and the chances themselves cannot be worked out in any believable way.<br><br>Here the yield is 3 percent, the payment is guaranteed by law, and you hold the bill to maturity so no selling price has to be guessed. Nothing is left to find out.<br><br><b>Why the others are wrong.</b> Uncertainty needs a spread of possible outcomes to put chances on, and there is none here. Ambiguity needs chances that are missing or cannot be trusted, and nothing is missing.<br><br>This case and this answer come from the professor's own quiz."
+  },
+
+  /* ---------- 2 ---------- */
+  {
+    q: "You will need 30,000 at the end of year 7. You can deposit one amount today and add nothing more. At Bank A the account earns 4 percent a year. At Bank B it earns 5 percent a year. How much smaller is the deposit you need at Bank B?",
+    opts: ["2,735.06", "21,320.44", "1,477.09", "2,100.00"],
+    correct: 2,
+    tag: "Single cash flow",
+    exp: "<b>Formula.</b> Present value of a single cash flow, PV = CF_n / (1 + r)^n. The deposit you need today is the present value of 30,000.<br><br><b>Inputs.</b> CF_7 = 30,000. n = 7. Two rates, r = 4% and r = 5%.<br><br><b>1.</b> Bank A: 1.04^7 = 1.315932, so PV = 30,000 / 1.315932 = <b>22,797.53</b>.<br><b>2.</b> Bank B: 1.05^7 = 1.407100, so PV = 30,000 / 1.407100 = <b>21,320.44</b>.<br><b>3.</b> The gap = 22,797.53 − 21,320.44 = <b>1,477.09</b>.<br><br><b>Check.</b> Grow the smaller deposit forward: 21,320.44 × 1.05^7 = 30,000. Grow the larger one: 22,797.53 × 1.04^7 = 30,000. Both land on the target, so both present values are right.<br><br><b>The wrong answers.</b><br>2,100.00 is 30,000 × 1% × 7. That treats the extra 1 percent as simple interest on the target amount, with no compounding and no discounting.<br>2,735.06 is 30,000 × 1.05^7 − 30,000 × 1.04^7. That compounds forward instead of discounting back, so it answers a question nobody asked.<br>21,320.44 is the Bank B deposit itself, not the saving."
+  },
+
+  /* ---------- 3 ---------- */
+  {
+    q: "A contract pays 3,000 at the end of year 1. It then pays 5,500 at the end of each of years 2, 3 and 4. Last, it pays a single 9,000 at the end of year 5, and nothing after that. The required rate of return is 8 percent. What is the contract worth today?",
+    opts: ["21,054.98", "22,027.13", "23,077.06", "28,500.00"],
+    correct: 1,
+    tag: "Mixed stream",
+    exp: "<b>Formula.</b> A stream is valued piece by piece: PV = sum of CF_i / (1 + r)^i. The three equal payments are an annuity, so use PV = A × [1 − 1/(1 + r)^n] / r for those, and the single amounts one at a time.<br><br><b>Inputs.</b> Single 3,000 at year 1. Annuity A = 5,500 for n = 3, covering years 2, 3 and 4. Single 9,000 at year 5. r = 8%.<br><br><b>1.</b> Year 1 payment: 3,000 / 1.08 = <b>2,777.78</b>.<br><b>2.</b> The annuity factor for 3 years at 8 percent: [1 − 1/1.08^3] / 0.08 = 2.577097.<br><b>3.</b> 5,500 × 2.577097 = <b>14,174.03</b>. This is not today's value. The formula gives the value one period before the first payment, and the first of the three lands at the end of year 2, so 14,174.03 sits at the end of <b>year 1</b>.<br><b>4.</b> Move it back one more year: 14,174.03 / 1.08 = <b>13,124.11</b>.<br><b>5.</b> Year 5 payment: 1.08^5 = 1.469328, so 9,000 / 1.469328 = <b>6,125.25</b>.<br><b>6.</b> Add: 2,777.78 + 13,124.11 + 6,125.25 = <b>22,027.13</b>.<br><br><b>Check.</b> The undiscounted total is 3,000 + 16,500 + 9,000 = 28,500. The answer must be below that and not far below, because the money arrives within five years. 22,027 fits.<br><br><b>The wrong answers.</b><br>23,077.06 leaves the annuity at 14,174.03 and adds it straight in. That is the second discounting move forgotten, worth 1,050 here.<br>28,500.00 is the plain sum of the cash flows with no discounting at all. Cash flows from different years cannot be added.<br>21,054.98 discounts the annuity two years instead of one. The first of the three equal payments arrives at the end of year 2, so the formula's answer already sits at the end of year 1 and needs only one more move."
+  },
+
+  /* ---------- 4 ---------- */
+  {
+    q: "A bond has a par value of 1,000 and 5 years left to maturity. It pays a coupon of 8 percent once a year. Investors buying bonds of this risk now ask for 6 percent. What is the bond worth today, and what is a bond in this position called?",
+    opts: ["920.15, a discount bond", "1,000.00, it always returns to par", "1,400.00, a premium bond", "1,084.25, a premium bond"],
+    correct: 3,
+    tag: "Bonds",
+    exp: "<b>Formula.</b> A coupon bond is an annuity of coupons plus the par value as one single cash flow.<br>Price = C × [1 − 1/(1 + r)^n] / r + F / (1 + r)^n.<br><br><b>Inputs.</b> Coupon C = 8% × 1,000 = 80 a year. Face value F = 1,000. n = 5. Yield r = 6%.<br><br><b>1.</b> Annuity factor: [1 − 1/1.06^5] / 0.06 = 4.212364.<br><b>2.</b> Coupons: 80 × 4.212364 = <b>336.99</b>.<br><b>3.</b> 1.06^5 = 1.338226, so the face value is worth 1,000 / 1.338226 = <b>747.26</b>.<br><b>4.</b> Price = 336.99 + 747.26 = <b>1,084.25</b>.<br><br><b>Naming it.</b> The coupon rate of 8 percent is above the yield of 6 percent, so the bond pays more cash each year than the market now asks for. Buyers compete for it and the price rises above par. Above par is a <b>premium bond</b>. You can say premium before doing any arithmetic, just from coupon rate above yield.<br><br><b>Check.</b> Price above 1,000 agrees with the naming, and the gap of 84.25 is about the present value of the extra 20 a year for 5 years: 20 × 4.212364 = 84.25. Exactly.<br><br><b>The wrong answers.</b><br>920.15 swaps the two rates: a 6 percent coupon priced at an 8 percent yield. That is a discount bond, the mirror case.<br>1,000.00 only happens when the coupon rate equals the yield.<br>1,400.00 adds the five coupons and the face value with no discounting: 400 + 1,000."
+  },
+
+  /* ---------- 5 ---------- */
+  {
+    q: "A supplier offers two ways to settle the same bill. You can pay 19,066 in cash today, or pay 4,000 at the end of each year for the next 6 years. What yearly rate is built into the payment plan?",
+    opts: ["6 percent", "6.5 percent", "7 percent", "7.5 percent"],
+    correct: 2,
+    tag: "Annuity",
+    exp: "<b>Formula.</b> Present value of an annuity, PV = A × [1 − 1/(1 + r)^n] / r. Here PV and A are known and r is the unknown. There is no neat way to turn this around and solve for r, so test the options. On a multiple choice paper that is the fastest route, and it is what the exam expects.<br><br><b>Inputs.</b> PV = 19,066. A = 4,000. n = 6. Find r.<br><br><b>1.</b> Turn the question into a factor: 19,066 / 4,000 = <b>4.7665</b>. You need the rate whose 6 year annuity factor is 4.7665.<br><b>2.</b> Try 6%: [1 − 1/1.06^6] / 0.06 = 4.917324, so the plan would be worth 4,000 × 4.917324 = 19,669.30. Too high.<br><b>3.</b> Try 7%: [1 − 1/1.07^6] / 0.07 = 4.766540, so 4,000 × 4.766540 = <b>19,066.16</b>. That is the cash price. <b>r = 7 percent.</b><br><b>4.</b> Direction check: a higher rate gives a smaller present value, so if 6 percent was too high, the answer had to be above 6 percent. That halves the testing.<br><br><b>Check.</b> Pay 19,066 today at 7 percent and draw 4,000 a year: after year 1 the balance is 19,066 × 1.07 − 4,000 = 16,400.62, and repeating this six times ends at zero.<br><br><b>The wrong answers.</b><br>6 percent gives 19,669.30, about 603 too much.<br>6.5 percent gives 19,364.05, still too much.<br>7.5 percent gives 18,775.39, now too little. The right rate sits between 7 and 7.5, and 7 hits it exactly."
+  },
+
+  /* ---------- 6 ---------- */
+  {
+    q: "You invest in a broad stock index fund for one year. The prospectus provides an estimated return distribution based on long history and models. Which decision environment is this?",
+    opts: ["Uncertainty", "Ambiguity", "Certainty"],
+    correct: 0,
+    tag: "Concepts",
+    src: "From a course quiz",
+    exp: "<b>Uncertainty.</b><br><br>Hold the three definitions side by side. Certainty: the outcome is known. Uncertainty: the outcome is not known, but believable chances can be put on the possible outcomes. Ambiguity: the outcome is not known, and the chances cannot be worked out in any believable way.<br><br>Here you do not know what the fund will return. But the prospectus, the fund's own information booklet, gives a list of possible returns with a chance on each, built on long history and models. So the chances exist and they rest on data. That is exactly uncertainty.<br><br><b>Why the others are wrong.</b> Certainty is wrong because a stock index can end the year anywhere. Ambiguity is wrong because the chances are not missing. The test for ambiguity is whether you could write down a believable list of chances at all, and here the prospectus already has.<br><br>The line to hold on to: a known list of outcomes with chances you can use is uncertainty, no matter how wide the spread is.<br><br>This case and this answer come from the professor's own quiz."
+  },
+
+  /* ---------- 7 ---------- */
+  {
+    q: "A water license pays its holder 9,000 at the end of next year. Water charges are expected to rise, so each later payment is 4.6 percent bigger than the one before, and the payments carry on with no end date. The required return is 5 percent. What is the license worth today?",
+    opts: ["195,652", "180,000", "93,750", "2,250,000"],
+    correct: 3,
+    tag: "Perpetuity",
+    exp: "<b>Formula.</b> Present value of a growing perpetuity, PV = C_1 / (r − g). Two conditions must hold before you use it: the payments never stop, and r is greater than g.<br><br><b>Inputs.</b> C_1 = 9,000, the payment at the end of year 1. g = 4.6% = 0.046. r = 5% = 0.05. Check r &gt; g: 0.05 is greater than 0.046, so the formula works.<br><br><b>1.</b> The gap: r − g = 0.05 − 0.046 = <b>0.004</b>.<br><b>2.</b> PV = 9,000 / 0.004 = <b>2,250,000</b>.<br><br><b>Why it is so large.</b> The bottom of the fraction is the whole story. A gap of 0.4 percent means you divide by a very small number. Compare it with a gap of 4 percent, which would give 225,000. The same cash flow is worth ten times more when the gap is ten times smaller. This is the point of the question. When r is only just above g, the value shoots up, and the answer is supposed to look uncomfortable.<br><br><b>Check.</b> Take the value back through the formula: 2,250,000 × 0.004 = 9,000, the first payment. It fits.<br><br><b>The wrong answers.</b><br>195,652 is 9,000 / 0.046. That divides by the growth rate instead of by the gap.<br>180,000 is 9,000 / 0.05. That is the plain perpetuity, growth ignored.<br>93,750 is 9,000 / (0.05 + 0.046). That adds the growth rate instead of subtracting it, which is the most common slip on this formula."
+  },
+
+  /* ---------- 8 ---------- */
+  {
+    q: "A grant pays 2,600 at the end of each year from year 4 to year 9, and nothing in any other year. The discount rate is 7 percent. What is the grant worth today?",
+    opts: ["15,600.00", "10,116.38", "12,393.00", "9,454.56"],
+    correct: 1,
+    tag: "Mixed stream",
+    exp: "<b>Formula.</b> Present value of an annuity, PV = A × [1 − 1/(1 + r)^n] / r, then one more discounting move for the delay.<br><br><b>Inputs.</b> A = 2,600. r = 7%. Count the payments: years 4, 5, 6, 7, 8 and 9, so <b>n = 6</b>. Count them on paper. Nine minus four is five, and that is the classic wrong count.<br><br><b>1.</b> Annuity factor: [1 − 1/1.07^6] / 0.07 = 4.766540.<br><b>2.</b> 2,600 × 4.766540 = <b>12,393.00</b>.<br><b>3.</b> Where does that number sit on the timeline? One period before the first payment. The first payment is at the end of year 4, so 12,393.00 is a value at the end of <b>year 3</b>, not today.<br><b>4.</b> Bring it home: 1.07^3 = 1.225043, so 12,393.00 / 1.225043 = <b>10,116.38</b>.<br><br><b>Check.</b> The plain sum of the payments is 15,600 and the money arrives late, so the answer must be well below 15,600. It is about two thirds of it, which is right for money that lands between four and nine years out at 7 percent.<br><br><b>The wrong answers.</b><br>12,393.00 is the answer if you stop after the annuity formula. The second discounting move is the whole point of a delayed annuity, and it is worth 2,276 here.<br>9,454.56 divides by 1.07^4 instead of 1.07^3. The number of discounting years is the first payment year minus one, so 3, not 4.<br>15,600.00 is 2,600 × 6, the payments added up with no discounting."
+  },
+
+  /* ---------- 9 ---------- */
+  {
+    q: "A project needs 45,000 today. It brings in 14,000 at the end of year 1, 20,000 at the end of year 2 and 22,000 at the end of year 3, then it ends. The required rate of return is 9 percent. What is the NPV, and what is the decision?",
+    opts: ["1,665.67, accept", "11,000.00, accept", "46,665.67, accept", "minus 1,665.67, reject"],
+    correct: 0,
+    tag: "NPV and IRR",
+    exp: "<b>Formula.</b> NPV = sum of CF_i / (1 + r)^i − I0.<br><br><b>Inputs.</b> I0 = 45,000 paid at year 0. CF_1 = 14,000, CF_2 = 20,000, CF_3 = 22,000. r = 9%.<br><br><b>1.</b> 14,000 / 1.09 = <b>12,844.04</b>.<br><b>2.</b> 1.09^2 = 1.188100, so 20,000 / 1.188100 = <b>16,833.60</b>.<br><b>3.</b> 1.09^3 = 1.295029, so 22,000 / 1.295029 = <b>16,988.03</b>.<br><b>4.</b> Add the inflows: 12,844.04 + 16,833.60 + 16,988.03 = <b>46,665.67</b>.<br><b>5.</b> NPV = 46,665.67 − 45,000 = <b>1,665.67</b>.<br><br><b>Decision.</b> NPV is positive, so the project is worth more than it costs at the required return. Accept it. The rule is that simple: positive means accept, negative means reject.<br><br><b>Check.</b> The inflows add to 56,000 before discounting, and 46,666 after. Losing about 9,300 to discounting over three years at 9 percent is the right size.<br><br><b>The wrong answers.</b><br>11,000.00 is 56,000 − 45,000, the cash flows added with no discounting. It would make almost any project look good.<br>46,665.67 is the present value of the inflows with the 45,000 never subtracted. That is a present value, not an NPV.<br>Minus 1,665.67 has the sign flipped and would send you to the wrong decision."
+  },
+
+  /* ---------- 10 ---------- */
+  {
+    q: "A single payment of 50,000 is due on one future date and nothing is paid before it. Discounted at 9 percent a year, that payment is worth 23,021.39 today. In how many years is it due?",
+    opts: ["10 years", "7 years", "9 years", "8 years"],
+    correct: 2,
+    tag: "Single cash flow",
+    exp: "<b>Formula.</b> PV = CF_n / (1 + r)^n. Here PV, CF_n and r are known and n is the unknown.<br><br><b>Inputs.</b> CF_n = 50,000. PV = 23,021.39. r = 9%.<br><br><b>1.</b> Turn it around: (1 + r)^n = CF_n / PV = 50,000 / 23,021.39 = <b>2.171893</b>.<br><b>2.</b> Now find the n that makes 1.09^n equal 2.171893. On a scientific calculator, use logs (ln is not on the professor's sheet): n = ln(2.171893) / ln(1.09) = 0.775599 / 0.086178 = <b>9.0</b>.<br><b>3.</b> Without logs, test the options. 1.09^8 = 1.992563 and 1.09^9 = 2.171893. The second one matches.<br><br><b>Check.</b> 50,000 / 1.09^9 = 50,000 / 2.171893 = 23,021.39, the value given. It fits exactly.<br><br><b>The wrong answers.</b><br>8 years gives 50,000 / 1.992563 = 25,093.31, about 2,072 too high.<br>10 years gives 50,000 / 2.367364 = 21,120.54, too low.<br>7 years gives 27,351.71, far too high.<br><br>The shape to remember: dividing the future amount by the present value gives the growth factor, and the only job left is to find which power of (1 + r) it is."
+  },
+
+  /* ---------- 11 ---------- */
+  {
+    q: "A firm must choose production capacity. Market research gives demand probabilities: low 20%, medium 60%, high 20%. Which decision environment is this?",
+    opts: ["Certainty", "Uncertainty", "Ambiguity"],
+    correct: 1,
+    tag: "Concepts",
+    src: "From a course quiz",
+    exp: "<b>Uncertainty.</b><br><br>The three environments again. Certainty: the outcome is known. Uncertainty: the outcome is not known, but believable chances can be put on it. Ambiguity: the outcome is not known, and the chances cannot be worked out in any believable way.<br><br>Here demand could be low, medium or high, so the outcome is open. But market research has already produced the chances, 20 percent, 60 percent and 20 percent, and they add to 100 percent. The firm can work out an expected result and decide. That is uncertainty.<br><br><b>Why the others are wrong.</b> Certainty is wrong because the firm does not know which demand level will arrive. Ambiguity is wrong because the chances are on the table. Notice how little the subject matter matters: a T bill, an index fund and a factory decision are sorted by the same single test, which is what you know about the chances.<br><br>This case and this answer come from the professor's own quiz."
+  },
+
+  /* ---------- 12 ---------- */
+  {
+    q: "You pay 1,800 into an account at the end of each year for 8 years. The account earns 6 percent a year and you take nothing out. On the day you make the eighth payment, how much of the balance is interest rather than money you paid in?",
+    opts: ["17,815.44", "14,400.00", "864.00", "3,415.44"],
+    correct: 3,
+    tag: "Annuity",
+    exp: "<b>Formula.</b> Future value of an annuity, FV = A × [(1 + r)^n − 1] / r. The interest part is that balance minus the money you paid in.<br><br><b>Inputs.</b> A = 1,800. r = 6%. n = 8.<br><br><b>1.</b> 1.06^8 = <b>1.593848</b>.<br><b>2.</b> The factor: (1.593848 − 1) / 0.06 = 0.593848 / 0.06 = <b>9.897468</b>.<br><b>3.</b> Balance: 1,800 × 9.897468 = <b>17,815.44</b>.<br><b>4.</b> Your own money: 1,800 × 8 = <b>14,400</b>.<br><b>5.</b> Interest: 17,815.44 − 14,400 = <b>3,415.44</b>.<br><br><b>A timing point worth holding.</b> The future value of an annuity lands on the date of the last payment, not a year later. So the eighth payment earns no interest at all. Only the first seven have had time to grow, and that is why the interest is smaller than a quick guess suggests.<br><br><b>Check.</b> The factor must be above 8, because there are 8 payments and the early ones have grown. 9.897468 is above 8, so it is the right size.<br><br><b>The wrong answers.</b><br>17,815.44 is the whole balance, not the interest inside it.<br>14,400.00 is only what you paid in, so it is the part the question asks you to remove.<br>864.00 is 1,800 × 6% × 8, simple interest on one payment. It ignores both the growing balance and the fact that each payment starts earning at a different date."
+  },
+
+  /* ---------- 13 ---------- */
+  {
+    q: "At maturity a firm's assets are worth 118. On that date it owes 90 to its senior lender and 45 to its junior lender. The absolute priority rule holds. What does each holder receive?",
+    opts: ["Senior 90, junior 28, equity 28", "Senior 73, junior 45, equity 0", "Senior 90, junior 28, equity 0", "Senior 90, junior 45, equity minus 17"],
+    correct: 2,
+    tag: "Payoff structure",
+    exp: "<b>Formulas.</b> Senior = Min(V_T , F_S). Junior = 0 if V_T is below F_S, otherwise Min(V_T − F_S , F_J). Equity = what is left after every debt, and it never goes below zero.<br><br><b>Inputs.</b> V_T = 118. F_S = 90. F_J = 45.<br><br><b>1.</b> Place V_T first, before any arithmetic. Is 118 above F_S of 90? Yes. Is it above F_S + F_J = 135? No. So the senior lender is paid in full, the junior lender is paid in part, and the owners get nothing. You already know the shape of the answer.<br><b>2.</b> Senior = Min(118 , 90) = <b>90</b>.<br><b>3.</b> What is left: 118 − 90 = 28.<br><b>4.</b> Junior = Min(28 , 45) = <b>28</b>. The junior lender is owed 45 and receives 28, a loss of 17.<br><b>5.</b> Equity = Max(118 − 90 − 45 , 0) = Max(−17 , 0) = <b>0</b>.<br><br><b>Check.</b> The three payoffs must add up to exactly V_T: 90 + 28 + 0 = 118. They do. If your three numbers do not add to V_T, something is wrong, every time.<br><br><b>The wrong answers.</b><br>Senior 90, junior 45, equity minus 17 pays the junior lender in full with money that does not exist, and then lets equity go negative. Shareholders have limited liability, so their payoff stops at zero. This set adds to 118 but only because two errors cancel.<br>Senior 90, junior 28, equity 28 hands the leftover 28 to the junior lender and to the owners at the same time. It adds to 146, more than the firm owns.<br>Senior 73, junior 45, equity 0 pays the junior lender first and leaves the senior lender short. That reverses the priority order, which is the one thing the rule forbids."
+  },
+
+  /* ---------- 14 ---------- */
+  {
+    q: "A license pays 1,500 today, and then 1,500 at the end of each of the next 4 years. Nothing after that. The discount rate is 9 percent. What is the license worth today?",
+    opts: ["6,359.58", "5,834.48", "7,500.00", "4,859.58"],
+    correct: 0,
+    tag: "Mixed stream",
+    exp: "<b>Formula.</b> Present value of an annuity, PV = A × [1 − 1/(1 + r)^n] / r, for the payments that arrive at the end of years 1 to 4. The payment made today is already at today's value and needs no discounting.<br><br><b>Inputs.</b> Five payments of 1,500 in total. One at time 0, then four at the ends of years 1, 2, 3 and 4. r = 9%.<br><br><b>1.</b> Split the stream. Today's payment: <b>1,500</b>, discounted zero times.<br><b>2.</b> The four later payments are an ordinary annuity with n = 4. Factor: [1 − 1/1.09^4] / 0.09 = 3.239720.<br><b>3.</b> 1,500 × 3.239720 = <b>4,859.58</b>.<br><b>4.</b> Add: 1,500 + 4,859.58 = <b>6,359.58</b>.<br><br><b>Why the split.</b> The annuity formula assumes the first payment is one full period away. Here one payment is not, so it is taken out and handled on its own. That is the whole trick and it works every time a stream starts today.<br><br><b>Check.</b> The undiscounted total is 7,500. The answer must be below it, and above the 5,834.48 you would get if all five payments were pushed to the ends of years 1 to 5. 6,359.58 sits between them, which is right.<br><br><b>The wrong answers.</b><br>5,834.48 is 1,500 × [1 − 1/1.09^5] / 0.09. That treats all five payments as ending years, which pushes today's payment a year into the future and loses value that is already in your hand.<br>7,500.00 is 1,500 × 5 with no discounting.<br>4,859.58 is the four later payments only, with today's payment left out of the sum."
+  },
+
+  /* ---------- 15 ---------- */
+  {
+    q: "A bond has a par value of 1,000 and 6 years left to maturity. It pays a coupon of 70 once a year. It trades today at 1,060. A classmate says the yield must be 7 percent, because 70 on a par value of 1,000 is a coupon rate of 7 percent. Which statement is right?",
+    opts: ["The yield is exactly 7 percent, because the coupon rate sets the yield", "The yield is above 7 percent, because the buyer pays more than par", "The yield cannot be worked out without knowing what similar bonds yield", "The yield is below 7 percent, because buyers pay more than par for the same fixed coupons"],
+    correct: 3,
+    tag: "Bonds",
+    exp: "<b>The idea.</b> The coupon rate and the yield are two different things. The coupon rate is fixed on the day the bond is issued and is applied to the par value, so it never changes: 7% × 1,000 = 70 a year, whatever happens later. The yield is what a buyer at today's price actually earns. It moves with the price every day.<br><br><b>Reasoning.</b> A buyer pays 1,060 today and receives the same 70 a year plus 1,000 back at the end. Paying more for an unchanged set of payments has to mean earning less. So the yield must be below 7 percent.<br><br><b>Putting a number on it.</b> Price = 70 × [1 − 1/(1 + r)^6] / r + 1,000 / (1 + r)^6. Test 6 percent: 70 × 4.917324 + 1,000 / 1.418519 = 344.21 + 704.96 = 1,049.17, a little below 1,060. So the yield is a little below 6 percent. Solving properly gives about <b>5.79 percent</b>. The exam rarely asks you to solve it, only to place it on the right side of the coupon rate.<br><br><b>The rule that saves time.</b> Price above par means yield below the coupon rate, a premium bond. Price below par means yield above the coupon rate, a discount bond. Price equal to par means the two are the same.<br><br><b>The wrong answers.</b><br>Exactly 7 percent is the classmate's error: reading the coupon rate as the yield. It would only be true if the price were exactly 1,000.<br>Above 7 percent has the seesaw backwards. A higher price goes with a lower return, not a higher one.<br>The last option is wrong because everything needed is here. The price, the coupons, the face value and the number of years fully fix the yield."
+  },
+
+  /* ---------- 16 ---------- */
+  {
+    q: "Two grants each pay 7,200 at the end of next year, and both carry on with no end date. Grant A stays at 7,200 for ever, with no increase at all. Grant B rises by 1.5 percent every year. The required return on both is 4.5 percent. How much more is Grant B worth today than Grant A?",
+    opts: ["240,000", "80,000", "40,000", "2,400"],
+    correct: 1,
+    tag: "Perpetuity",
+    exp: "<b>Formulas.</b> Growing perpetuity, PV = C_1 / (r − g). Plain perpetuity, PV = C / r. The second is just the first with g = 0, so one formula covers both.<br><br><b>Inputs.</b> C_1 = 7,200 for both. r = 4.5% = 0.045. g = 0 for A, g = 1.5% = 0.015 for B. Check r &gt; g in both cases: yes.<br><br><b>1.</b> Grant A: g = 0, so r − g = 0.045. PV = 7,200 / 0.045 = <b>160,000</b>.<br><b>2.</b> Grant B: r − g = 0.045 − 0.015 = 0.03. PV = 7,200 / 0.03 = <b>240,000</b>.<br><b>3.</b> Difference: 240,000 − 160,000 = <b>80,000</b>.<br><br><b>What the zero growth case shows.</b> With zero growth the growing perpetuity formula turns into C / r on its own. There is no separate rule to remember and no special case to learn. Growth of zero is just one point on the same line.<br><br><b>And how strong growth is.</b> A rise of 1.5 percent a year, small next to the 4.5 percent return, lifts the value by half. Growth works on the bottom of the fraction, not the top, so a small change there moves the answer a long way.<br><br><b>Check.</b> Multiply back: 240,000 × 0.03 = 7,200 and 160,000 × 0.045 = 7,200. Both return the first payment.<br><br><b>The wrong answers.</b><br>40,000 comes from 7,200 / (0.045 + 0.015) = 120,000 for Grant B, adding the growth rate instead of subtracting it. That makes the growing grant look worth less than the flat one, which cannot be right.<br>2,400 comes from growing the top of the fraction instead of shrinking the bottom: 7,200 × 1.015 / 0.045 = 162,400. Growth applies to every future payment, not only to the first.<br>240,000 is Grant B's own value, not the gap the question asks for."
+  },
+
+  /* ---------- 17 ---------- */
+  {
+    q: "A company paid a dividend of 1.80 a share last week. The dividend is expected to grow 3.5 percent a year with no end date. Investors ask for 8 percent on shares of this risk. What is one share worth today?",
+    opts: ["41.40", "40.00", "23.29", "16.20"],
+    correct: 0,
+    tag: "Stocks",
+    exp: "<b>Formula.</b> Dividend discount model with constant growth, which is a growing perpetuity: P0 = D1 / (r − g). D1 is the dividend one year from now, not the one just paid.<br><br><b>Inputs.</b> D0 = 1.80, already paid, so it is gone and no buyer today receives it. g = 3.5% = 0.035. r = 8% = 0.08. Check r &gt; g: yes.<br><br><b>1.</b> Move the dividend forward one year: D1 = D0 × (1 + g) = 1.80 × 1.035 = <b>1.863</b>.<br><b>2.</b> The gap: r − g = 0.08 − 0.035 = <b>0.045</b>.<br><b>3.</b> P0 = 1.863 / 0.045 = <b>41.40</b>.<br><br><b>The trap in the wording.</b> Last week means the dividend has been paid. The formula needs the next one. Read every dividend question for the word that dates the payment: paid, just paid and last week all mean D0, while will pay and expected next year mean D1.<br><br><b>Check.</b> Work backwards: 41.40 × 0.045 = 1.863, and 1.863 / 1.035 = 1.80, the dividend just paid. It closes.<br><br><b>The wrong answers.</b><br>40.00 is 1.80 / 0.045, using the dividend already paid instead of next year's. It is the single most common error on this model and it always gives an answer that is slightly too low.<br>23.29 is 1.863 / 0.08, which ignores growth and treats the share like a preferred share with a flat dividend.<br>16.20 is 1.863 / (0.08 + 0.035), adding the growth rate to the required return instead of subtracting it."
+  },
+
+  /* ---------- 18 ---------- */
+  {
+    q: "A contract pays 4,000 at the end of year 1 and 4,000 at the end of year 2. At the end of year 3 the holder must pay out 2,500 for a big repair it cannot avoid. The contract then pays 4,000 at the end of year 4 and 4,000 at the end of year 5, and ends. The discount rate is 6 percent. What is the contract worth today?",
+    opts: ["10,990.98", "14,349.46", "11,391.93", "13,490.98"],
+    correct: 2,
+    tag: "Mixed stream",
+    exp: "<b>Formula.</b> Value the stream piece by piece. Two two year annuities and one single negative cash flow. PV = A × [1 − 1/(1 + r)^n] / r for each pair, and CF_n / (1 + r)^n for the repair.<br><br><b>Inputs.</b> A = 4,000 in years 1 and 2, and again in years 4 and 5. A single minus 2,500 at the end of year 3. r = 6%.<br><br><b>1.</b> Two year annuity factor: [1 − 1/1.06^2] / 0.06 = 1.833393.<br><b>2.</b> Years 1 and 2: 4,000 × 1.833393 = <b>7,333.57</b>. The first payment is at the end of year 1, so this value already sits at today.<br><b>3.</b> The repair: 1.06^3 = 1.191016, so −2,500 / 1.191016 = <b>−2,099.05</b>.<br><b>4.</b> Years 4 and 5: 4,000 × 1.833393 = 7,333.57 again, but the first of that pair lands at the end of year 4, so this value sits at the end of <b>year 3</b>. Move it back: 7,333.57 / 1.191016 = <b>6,157.41</b>.<br><b>5.</b> Add all three: 7,333.57 − 2,099.05 + 6,157.41 = <b>11,391.93</b>.<br><br><b>The two things being tested.</b> A negative cash flow is discounted exactly like a positive one, it just carries a minus sign into the sum. And the second pair of payments is a delayed annuity, so it needs the extra move back to today.<br><br><b>Check.</b> Undiscounted, the contract gives 16,000 and costs 2,500, so 13,500 net. The answer must be below that. 11,391.93 is about 84 percent of it, which is right for money spread over five years at 6 percent.<br><br><b>The wrong answers.</b><br>13,490.98 leaves the repair out altogether. Costs count.<br>10,990.98 subtracts the 2,500 at its full amount instead of discounting it. A cost three years away hurts less than a cost today.<br>14,349.46 treats all five years as one annuity of 4,000 and then takes off 2,500, which both invents a payment in year 3 and ignores the discounting of the cost."
+  },
+
+  /* ---------- 19 ---------- */
+  {
+    q: "A fund pays 3,000 at the end of each year for the next 25 years and then stops. The discount rate is 8 percent. A buyer prices it with the perpetuity formula and offers 37,500. How much too high is that offer?",
+    opts: ["37,500.00", "32,024.33", "3,000.00", "5,475.67"],
+    correct: 3,
+    tag: "Annuity",
+    exp: "<b>Formulas.</b> Present value of an annuity, PV = A × [1 − 1/(1 + r)^n] / r, because the payments stop. The buyer used PV = C / r, which is for payments that never stop.<br><br><b>Inputs.</b> A = 3,000. n = 25. r = 8%.<br><br><b>1.</b> The buyer's figure: 3,000 / 0.08 = <b>37,500</b>. This is the value of 3,000 a year for ever.<br><b>2.</b> 1.08^25 = <b>6.848475</b>.<br><b>3.</b> Annuity factor: [1 − 1 / 6.848475] / 0.08 = [1 − 0.146018] / 0.08 = 0.853982 / 0.08 = <b>10.674776</b>.<br><b>4.</b> True value: 3,000 × 10.674776 = <b>32,024.33</b>.<br><b>5.</b> How much too high: 37,500 − 32,024.33 = <b>5,475.67</b>.<br><br><b>What the gap is.</b> It is the present value of everything from year 26 onwards, which this fund never pays. Note how small it is: about 15 percent of the total, even though it covers an unlimited number of payments. Money far in the future is worth very little today, which is also why the perpetuity formula is a usable shortcut only when the payments really do continue.<br><br><b>Check.</b> The annuity factor must be below 1 / r = 12.5, and it is, at 10.674776. A stream that stops is always worth less than the same payment for ever.<br><br><b>The wrong answers.</b><br>37,500.00 is the buyer's offer itself, not the size of the error.<br>32,024.33 is the true value, again not the difference.<br>3,000.00 is one year's payment and has nothing to do with the gap."
+  },
+
+  /* ---------- 20 ---------- */
+  {
+    q: "A firm has cash troubles this year. It owes a coupon of 40 to its bondholders, and it has paid a dividend of 40 to its shareholders in each of the last three years. Which statement is right?",
+    opts: ["Neither has to be paid, since the board decides both amounts each year", "The coupon must be paid. Missing it puts the firm in default. The dividend can be cut or skipped without default", "Both must be paid. Missing either one puts the firm in default", "The dividend must be paid first, because the shareholders own the firm"],
+    correct: 1,
+    tag: "Concepts",
+    exp: "<b>The idea.</b> A coupon is a promise written into a contract. A dividend is a decision.<br><br><b>Debt payments.</b> The bond contract fixes the amount and the date. If the firm does not pay, it is in default, and the lenders can act: they can demand the whole loan back, and they can take the firm to court. Default is the event that starts bankruptcy, Chapter 11 or Chapter 7.<br><br><b>Dividend payments.</b> No contract promises a dividend. The board decides each year. A firm that cuts its dividend to zero is not in default and nobody can sue it for the money. The share price will probably fall, and the board will be unpopular, but that is a different kind of cost.<br><br><b>Why it matters for everything else in this course.</b> This is the reason the payoff formulas put debt first and equity last. Lenders have a fixed claim they can take to court. Shareholders have whatever is left over, which is why their payoff is a Max with a floor of zero.<br><br><b>The wrong answers.</b><br>Both must be paid treats a dividend as a debt. It is not one.<br>The dividend first reverses the priority order. Owning the firm is exactly what puts shareholders last in the line, not first.<br>Neither has to be paid is right about the dividend and wrong about the coupon, and the coupon is the half with legal force behind it."
+  },
+
+  /* ---------- 21 ---------- */
+  {
+    q: "A zero coupon bond repays 5,000 at the end of year 8 and pays nothing before then. This morning buyers ask for 4.5 percent. During the day, new inflation figures are published and buyers begin to demand 6 percent on bonds of this kind. By how much does the price fall?",
+    opts: ["600.00", "3,137.06", "378.86", "75.00"],
+    correct: 2,
+    tag: "Bonds",
+    exp: "<b>Formula.</b> A zero coupon bond is one single cash flow, so Price = F / (1 + r)^n.<br><br><b>Inputs.</b> F = 5,000. n = 8. r goes from 4.5% to 6%.<br><br><b>1.</b> 1.045^8 = <b>1.422101</b>, so the morning price is 5,000 / 1.422101 = <b>3,515.93</b>.<br><b>2.</b> 1.06^8 = <b>1.593848</b>, so the afternoon price is 5,000 / 1.593848 = <b>3,137.06</b>.<br><b>3.</b> The fall: 3,515.93 − 3,137.06 = <b>378.86</b>.<br><br><b>Why the price moves at all.</b> The 5,000 at the end of year 8 is fixed. Nothing about the bond changed. Only the rate buyers demand changed, and price is the only part that can adjust. Rates up, price down. That seesaw is the single most tested idea about bonds.<br><br><b>Why inflation does this.</b> A buyer who expects prices to rise faster needs a higher return to end up just as well off once rising prices are taken out. Higher required return, lower price today. That is inflation risk, and it hits every fixed payment, even one from a government that will certainly pay.<br><br><b>Check.</b> Grow each price forward at its own rate: 3,515.93 × 1.045^8 = 5,000 and 3,137.06 × 1.06^8 = 5,000. Both reach the same face value, which is the point.<br><br><b>The wrong answers.</b><br>75.00 is 5,000 × 1.5%, the change in rate applied once to the face value, with no compounding and no discounting.<br>600.00 is 5,000 × 1.5% × 8, the same idea stretched over eight years as simple interest.<br>3,137.06 is the new price, not the fall."
+  },
+
+  /* ---------- 22 ---------- */
+  {
+    q: "A firm can put 25,000 into a project today. The project pays nothing until it is sold at the end of year 4, when it returns one single amount. The firm's required rate of return is 11 percent. How large must that single amount be for the project's internal rate of return to be exactly 11 percent?",
+    opts: ["36,000.00", "16,468.27", "27,750.00", "37,951.76"],
+    correct: 3,
+    tag: "NPV and IRR",
+    exp: "<b>The idea first.</b> The internal rate of return is the rate that makes NPV equal zero. So asking for an IRR of exactly 11 percent is the same as asking what payment makes the project break even when discounted at 11 percent.<br><br><b>Formula.</b> Set NPV = 0: CF_4 / (1 + r)^4 − 25,000 = 0, so CF_4 = 25,000 × (1 + r)^4. That is just the future value of a single cash flow.<br><br><b>Inputs.</b> I0 = 25,000. n = 4. r = 11%.<br><br><b>1.</b> 1.11^2 = 1.2321.<br><b>2.</b> 1.11^4 = 1.2321 × 1.2321 = <b>1.518070</b>.<br><b>3.</b> CF_4 = 25,000 × 1.518070 = <b>37,951.76</b>.<br><br><b>Check.</b> Discount it back: 37,951.76 / 1.518070 = 25,000, so NPV = 25,000 − 25,000 = 0. An NPV of zero at 11 percent is exactly what an IRR of 11 percent means.<br><br><b>What this tells you about the decision rule.</b> At this payment the firm does not care either way. Anything above 37,951.76 gives a positive NPV and an IRR above 11 percent, so accept. Anything below gives both a negative NPV and an IRR under 11 percent, so reject. For a single outflow followed by a single inflow, the NPV rule and the IRR rule always agree.<br><br><b>The wrong answers.</b><br>36,000.00 is 25,000 × (1 + 0.11 × 4), simple interest for four years with no compounding.<br>16,468.27 is 25,000 / 1.11^4. That discounts when the question needs compounding forward.<br>27,750.00 is 25,000 × 1.11, one year of growth instead of four."
+  }
+
+  ]
+});
+</script>
+</body>
+</html>

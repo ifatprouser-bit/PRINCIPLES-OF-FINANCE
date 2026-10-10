@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 5: Mixed streams</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">Day 5 · Wednesday 30 September</div>
+  <h1>Mixed streams</h1>
+  <p class="lede">A messy stream is only a set of small streams sitting side by side. Cut it, value each piece, add.</p>
+  <div class="secaudio"><span class="salab">Before you start: mixed streams and the delayed annuity · 1:13</span><audio controls preload="none" src="day-05-intro.mp3"></audio></div>
+
+
+  <!-- ============ RECALL: DAY 3 ============ -->
+  <div class="preq">
+    <div class="tag">Five minutes: recall</div>
+    <p><b>Day 3 was the annuity.</b> Answer both on paper before you open anything.</p>
+    <p><b>1.</b> What has to be true about a run of payments before you are allowed to call it an annuity?</p>
+    <p><b>2.</b> You will receive 1,000 at the end of each year for 3 years. The rate is 10 percent.
+       What is the value today, and what will the money be worth at the end of year 3?</p>
+    <p class="do">Write your two answers down, then check.</p>
+    <button class="reveal-btn" type="button" data-reveal="rc1">Show the answer</button>
+    <div class="reveal" id="rc1">
+      <p class="p"><b>1.</b> Three things. The payment is the same size every time. The gaps between payments are
+        equal, one per period. The run stops after a fixed number of periods. If any one of those fails, it is not
+        an annuity and the annuity formula is the wrong tool.</p>
+      <p class="p"><b>2.</b> Value today: <span class="math">1,000 × (1 − 1/1.10<sup>3</sup>) / 0.10 = 2,486.85</span></p>
+      <p class="p">Value at the end of year 3: <span class="math">1,000 × (1.10<sup>3</sup> − 1) / 0.10 = 3,310.00</span></p>
+      <p class="p">Check: 2,486.85 × 1.10<sup>3</sup> = 3,310.00. The two answers are the same money seen from two dates.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRETEST ============ -->
+  <div class="preq">
+    <div class="tag">Guess first</div>
+    <p>A contract pays 750 at the end of year 4, 750 at the end of year 5 and 750 at the end of year 6.
+       Nothing before, nothing after. The rate is 10 percent.</p>
+    <p>You put 750, n = 3 and 10 percent into the annuity formula. You get a number.
+       <b>Which year does that number belong to?</b></p>
+    <p class="do">Guess now. No answer is shown here. This is a guess, not a test. The whole page answers it.</p>
+  </div>
+
+  <!-- ============ PANEL 1 ============ -->
+  <div class="panel">
+    <h3>1. Cut the stream into pieces you already know</h3>
+
+    <p class="partlab">Why this day carries the most weight</p>
+    <p class="p">In his guide for the final, the professor writes:
+      "Most probable question on the test: I will give a stream of future cash flows that is composed of
+      simple cash flows and annuities and will ask for the present value of these cash flows."</p>
+    <p class="p">In plain words: he plans to hand you a mix of one-off payments and a run of equal payments,
+      and ask what the whole thing is worth today. That is exactly this page.</p>
+
+    <div class="secaudio"><span class="salab">A new recipe, familiar steps: cut the stream into pieces · 1:43</span><audio controls preload="none" src="day-05-cut.mp3"></audio></div>
+
+    <p class="p">You already have every tool you need. Day 2 gave you the single cash flow. Day 3 gave you the
+      annuity. Day 4 gave you the perpetuity and growth. Nothing new is added today. What is new is the
+      cutting: seeing a long list of numbers and spotting the two or three familiar shapes hiding inside it.</p>
+
+    <p class="p">The reason you cannot just add the numbers is the rule from day 2. Money that arrives in
+      different years cannot be added. First bring every amount to the same date. Then add.</p>
+
+    <table class="dtable">
+      <tr><th style="width:26%">Move</th><th>What you do</th></tr>
+      <tr><td class="lab">1. Draw</td><td style="text-align:left">Draw the timeline. Mark every year that has money on it. Write the amount above the year.</td></tr>
+      <tr><td class="lab">2. Name</td><td style="text-align:left">Look at the picture and name each piece: a single cash flow, an annuity, or a perpetuity, which is a stream that never stops.</td></tr>
+      <tr><td class="lab">3. Value</td><td style="text-align:left">Value each piece with its own formula. Then write down <b>which year that value sits in</b>. This line is where marks are lost.</td></tr>
+      <tr><td class="lab">4. Add</td><td style="text-align:left">Bring any piece that is not yet at year 0 back to year 0. Now every piece sits on the same date, so you may add them.</td></tr>
+    </table>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 210" role="img" aria-label="Timeline from year 0 to year 5 with an annuity of 2,000 in years 1 to 4 and a single payment of 9,000 in year 5">
+        <line x1="40" y1="140" x2="530" y2="140" stroke="#211c33" stroke-width="2"/>
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13" fill="#211c33">
+          <g stroke="#211c33" stroke-width="2">
+            <line x1="40" y1="134" x2="40" y2="146"/><line x1="130" y1="134" x2="130" y2="146"/>
+            <line x1="220" y1="134" x2="220" y2="146"/><line x1="310" y1="134" x2="310" y2="146"/>
+            <line x1="400" y1="134" x2="400" y2="146"/><line x1="490" y1="134" x2="490" y2="146"/>
+          </g>
+          <text x="40" y="163" text-anchor="middle" fill="#6f6886">0</text>
+          <text x="130" y="163" text-anchor="middle" fill="#6f6886">1</text>
+          <text x="220" y="163" text-anchor="middle" fill="#6f6886">2</text>
+          <text x="310" y="163" text-anchor="middle" fill="#6f6886">3</text>
+          <text x="400" y="163" text-anchor="middle" fill="#6f6886">4</text>
+          <text x="490" y="163" text-anchor="middle" fill="#6f6886">5</text>
+          <text x="40" y="180" text-anchor="middle" fill="#5f5877" font-size="13">today</text>
+
+          <g stroke="#6b4ef0" stroke-width="3">
+            <line x1="130" y1="140" x2="130" y2="92"/><line x1="220" y1="140" x2="220" y2="92"/>
+            <line x1="310" y1="140" x2="310" y2="92"/><line x1="400" y1="140" x2="400" y2="92"/>
+          </g>
+          <g fill="#6b4ef0" font-weight="700">
+            <text x="130" y="84" text-anchor="middle">2,000</text>
+            <text x="220" y="84" text-anchor="middle">2,000</text>
+            <text x="310" y="84" text-anchor="middle">2,000</text>
+            <text x="400" y="84" text-anchor="middle">2,000</text>
+          </g>
+          <path d="M130 60 L130 52 L400 52 L400 60" fill="none" stroke="#6b4ef0" stroke-width="1.5"/>
+          <text x="265" y="44" text-anchor="middle" fill="#5238c4" font-weight="700">piece A: annuity, 4 payments</text>
+
+          <line x1="490" y1="140" x2="490" y2="72" stroke="#b6791f" stroke-width="3"/>
+          <text x="490" y="64" text-anchor="middle" fill="#b6791f" font-weight="700">9,000</text>
+          <text x="490" y="46" text-anchor="middle" fill="#b6791f" font-weight="700">piece B</text>
+          <text x="490" y="32" text-anchor="middle" fill="#b6791f" font-weight="700">single</text>
+        </g>
+      </svg>
+      <p class="cap">One stream, two pieces. The four purple bars repeat and are equally spaced, so they are an
+        annuity. The amber bar stands alone, so it is a single cash flow.</p>
+    </div>
+
+    <div class="rule">Never add amounts from different years. Value each piece first, carry every piece back to
+      year 0, and only then add.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A supplier will pay you 2,000 at the end of each year for the next 4 years. On top of that you will
+      receive one payment of 9,000 at the end of year 5. The required rate of return is 7 percent.
+      What is the whole stream worth today?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Draw and name the pieces.</span>
+      <div class="p">Piece A: 2,000 in years 1, 2, 3, 4. Same size, one per year, four of them. That is an annuity.
+        Piece B: 9,000 in year 5 on its own. That is a single cash flow.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Value piece A with the annuity formula.</span>
+      <div class="math">PV = A × (1 − 1/(1+r)<sup>n</sup>) / r</div>
+      <div class="math">PV = 2,000 × (1 − 1/1.07<sup>4</sup>) / 0.07</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Do the bracket first.</span>
+      <div class="math">1.07<sup>4</sup> = 1.310796 → 1 / 1.310796 = 0.762895</div>
+      <div class="math">(1 − 0.762895) / 0.07 = 3.387211</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Multiply by the payment.</span>
+      <div class="math">2,000 × 3.387211 = 6,774.42</div>
+      <div class="p">The first payment of piece A lands at year 1, so this value already sits at year 0. No extra
+        move is needed here. Panel 2 is about the case where a move <i>is</i> needed.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Value piece B with the single cash flow formula.</span>
+      <div class="math">PV = CF / (1+r)<sup>t</sup> = 9,000 / 1.07<sup>5</sup> = 9,000 / 1.402552 = 6,416.88</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">6</div><div class="stepbody">
+      <span class="lab">Both pieces now sit at year 0, so add them.</span>
+      <div class="math">6,774.42 + 6,416.88 = 13,191.30</div>
+    </div></div>
+
+    <div class="ans">The stream is worth 13,191.30 today.</div>
+    <p class="p" style="margin-top:10px"><b>Sense check.</b> The cash actually paid is 8,000 plus 9,000, which is
+      17,000. Your answer must be smaller than that, because the money arrives later. 13,191.30 is smaller.
+      It must also be bigger than the largest single piece. It is.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. You will receive 650 at the end of each year for 3 years, plus a single 6,000 at the
+        end of year 3. The rate is 4 percent. What is the stream worth today?</div>
+      <button class="reveal-btn" type="button" data-reveal="t1">Show the answer</button>
+      <div class="reveal" id="t1">
+        <p class="p">Annuity piece: 650 × (1 − 1/1.04<sup>3</sup>) / 0.04 = 650 × 2.775091 = <b>1,803.81</b>.
+          First payment is at year 1, so this already sits at year 0.</p>
+        <p class="p">Single piece: 6,000 / 1.04<sup>3</sup> = 6,000 / 1.124864 = <b>5,333.98</b>.</p>
+        <p class="p">Total: 1,803.81 + 5,333.98 = <b>7,137.79</b>.</p>
+        <p class="p">Note that the 6,000 and the third 650 both land in year 3. That is allowed. Two pieces may
+          share a year. You still value them separately.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 2 ============ -->
+  <div class="panel">
+    <h3>2. Where the annuity value lands, and why you must move it again</h3>
+
+    <div class="secaudio"><span class="salab">The pickup point: where the annuity formula leaves its answer · 1:44</span><audio controls preload="none" src="day-05-where-it-lands.mp3"></audio></div>
+
+    <p class="p">This is the idea that decides your mark on this topic. Read it twice.</p>
+
+    <p class="p">The annuity formula does not give you a value at year 0. It gives you a value
+      <b>one period before the first payment</b>. When the first payment is at year 1, one period before that
+      is year 0, which is today, so nothing more is needed. That is the case everyone practices, and it hides
+      the rule.</p>
+    <div class="secaudio"><span class="salab">The walk home: the second hop back to today · 1:29</span><audio controls preload="none" src="day-05-two-hops.mp3"></audio></div>
+
+
+    <p class="p">When the first payment is later, the formula still lands one period before it. So the number
+      you get sits in some future year, not today. It is a future value. You then have to discount that number
+      back to year 0, that is, bring it back to what it is worth today, with the single cash flow formula.
+      Two moves, not one.</p>
+
+    <p class="p">A run of equal payments that starts later than year 1 is called a <b>delayed annuity</b>.
+      The same rule applies to a delayed perpetuity: the perpetuity formula also lands one period before the
+      first payment.</p>
+
+    <div class="rule">Count n as the number of payments. The annuity value lands in the year just before the
+      first payment. If that year is not 0, discount it again by that many years.</div>
+
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 250" role="img" aria-label="Timeline showing four payments of 4,000 in years 4 to 7, the annuity formula landing at year 3, then a second discounting hop from year 3 back to year 0">
+        <line x1="30" y1="150" x2="540" y2="150" stroke="#211c33" stroke-width="2"/>
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif" font-size="13">
+          <g stroke="#211c33" stroke-width="2">
+            <line x1="30" y1="144" x2="30" y2="156"/><line x1="100" y1="144" x2="100" y2="156"/>
+            <line x1="170" y1="144" x2="170" y2="156"/><line x1="240" y1="144" x2="240" y2="156"/>
+            <line x1="310" y1="144" x2="310" y2="156"/><line x1="380" y1="144" x2="380" y2="156"/>
+            <line x1="450" y1="144" x2="450" y2="156"/><line x1="520" y1="144" x2="520" y2="156"/>
+          </g>
+          <g fill="#6f6886" text-anchor="middle">
+            <text x="30" y="172">0</text><text x="100" y="172">1</text><text x="170" y="172">2</text>
+            <text x="240" y="172">3</text><text x="310" y="172">4</text><text x="380" y="172">5</text>
+            <text x="450" y="172">6</text><text x="520" y="172">7</text>
+          </g>
+
+          <g stroke="#6b4ef0" stroke-width="3">
+            <line x1="310" y1="150" x2="310" y2="100"/><line x1="380" y1="150" x2="380" y2="100"/>
+            <line x1="450" y1="150" x2="450" y2="100"/><line x1="520" y1="150" x2="520" y2="100"/>
+          </g>
+          <g fill="#5238c4" font-weight="700" text-anchor="middle" font-size="13">
+            <text x="310" y="92">4,000</text><text x="380" y="92">4,000</text>
+            <text x="450" y="92">4,000</text><text x="520" y="92">4,000</text>
+          </g>
+          <path d="M310 74 L310 66 L520 66 L520 74" fill="none" stroke="#6b4ef0" stroke-width="1.5"/>
+          <text x="415" y="58" text-anchor="middle" fill="#5238c4" font-weight="700" font-size="13">n = 4 payments</text>
+
+          <circle cx="240" cy="150" r="5" fill="#b6791f"/>
+          <path d="M305 106 C 275 118, 252 128, 243 142" fill="none" stroke="#b6791f" stroke-width="2.5"/>
+          <polygon points="240,150 248,140 250,148" fill="#b6791f"/>
+          <text x="305" y="200" text-anchor="middle" fill="#7d4f08" font-weight="700" font-size="13">hop 1: annuity formula</text>
+          <text x="305" y="214" text-anchor="middle" fill="#7d4f08" font-size="13">lands at year 3 = 12,958.88</text>
+
+          <path d="M236 142 C 190 112, 90 112, 34 140" fill="none" stroke="#d2453f" stroke-width="2.5"/>
+          <polygon points="30,150 32,136 41,143" fill="#d2453f"/>
+          <text x="112" y="200" text-anchor="middle" fill="#a3282a" font-weight="700" font-size="13">hop 2: ÷ 1.09³</text>
+          <text x="112" y="214" text-anchor="middle" fill="#a3282a" font-size="13">lands at year 0 = 10,006.63</text>
+          <text x="30" y="234" text-anchor="middle" fill="#5f5877" font-size="13">today</text>
+        </g>
+      </svg>
+      <p class="cap">Two hops, not one. The amber hop is the annuity formula and it stops at year 3. The red hop
+        is the second discounting that finally reaches today. Stopping after the amber hop is the classic lost mark.</p>
+    </div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A permit will pay you 4,000 at the end of year 4, and the same 4,000 at the end of years 5, 6 and 7.
+      You receive nothing in years 1, 2 and 3, and nothing after year 7. The rate is 9 percent.
+      What is the permit worth today?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Draw it and count the payments.</span>
+      <div class="p">Money lands in years 4, 5, 6, 7. Four equal payments, one per year. So n = 4, not 7.
+        n counts payments, never years since today.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Find the year the annuity value will land in.</span>
+      <div class="p">The first payment is at year 4. One period before year 4 is year 3. So the annuity formula
+        will give a value dated year 3.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Hop 1. Use the annuity formula.</span>
+      <div class="math">V<sub>3</sub> = 4,000 × (1 − 1/1.09<sup>4</sup>) / 0.09</div>
+      <div class="math">1.09<sup>4</sup> = 1.411582 → 1 / 1.411582 = 0.708425</div>
+      <div class="math">(1 − 0.708425) / 0.09 = 3.239720</div>
+      <div class="math">4,000 × 3.239720 = 12,958.88</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Say out loud what that number is.</span>
+      <div class="p">12,958.88 is what the four payments are worth <b>standing at the end of year 3</b>.
+        It is not the answer. It is money sitting three years in the future.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Hop 2. Discount that number back 3 years.</span>
+      <div class="math">PV = 12,958.88 / 1.09<sup>3</sup> = 12,958.88 / 1.295029 = 10,006.63</div>
+    </div></div>
+
+    <div class="ans">The permit is worth 10,006.63 today.</div>
+
+    <p class="p" style="margin-top:10px"><b>Check it the long way.</b> Discount the four payments one at a time:
+      4,000/1.09<sup>4</sup> = 2,833.70, 4,000/1.09<sup>5</sup> = 2,599.73, 4,000/1.09<sup>6</sup> = 2,385.07,
+      4,000/1.09<sup>7</sup> = 2,188.14. Add them without rounding on the way: 10,006.63. Same answer. The two
+      hops are just a fast way of doing those four divisions at once.</p>
+
+    <p class="p"><b>The trap in numbers.</b> If you stop after hop 1 you write 12,958.88. That is 2,952.25 too
+      much, about 30 percent too high. On a multiple choice paper that wrong number will be sitting there as an
+      option, because it is the mistake the question is built to catch.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. A rental agreement pays 1,800 at the end of each year from year 3 to year 8, and
+        nothing else. The rate is 12 percent. What is it worth today?</div>
+      <button class="reveal-btn" type="button" data-reveal="t2">Show the answer</button>
+      <div class="reveal" id="t2">
+        <p class="p">Payments land in years 3, 4, 5, 6, 7, 8. That is six payments, so n = 6.</p>
+        <p class="p">First payment is year 3, so the annuity value lands at year 2.</p>
+        <p class="p">Hop 1: 1,800 × (1 − 1/1.12<sup>6</sup>) / 0.12 = 1,800 × 4.111407 = <b>7,400.53</b> at year 2.</p>
+        <p class="p">Hop 2: 7,400.53 / 1.12<sup>2</sup> = 7,400.53 / 1.2544 = <b>5,899.66</b> today.</p>
+        <p class="p">If you stopped at 7,400.53 you were 1,500.87 too high.</p>
+      </div>
+    </div>
+
+    <div class="tryq">
+      <div class="q">Try it, no calculator. A fund pays 2,200 at the end of each year from year 10 to year 15.
+        What is n, and which year does the annuity formula's answer belong to?</div>
+      <button class="reveal-btn" type="button" data-reveal="t3">Show the answer</button>
+      <div class="reveal" id="t3">
+        <p class="p">Years 10, 11, 12, 13, 14, 15. Count them: <b>n = 6</b>.</p>
+        <p class="p">The first payment is at year 10, so the value lands at <b>the end of year 9</b>.
+          To reach today you then divide by (1+r)<sup>9</sup>, not by (1+r)<sup>10</sup>.</p>
+        <p class="p">The most common slip here is dividing by (1+r)<sup>10</sup>. That discounts the money one
+          year too much and gives an answer that is too small.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PANEL 3 ============ -->
+  <div class="panel">
+    <h3>3. Put the pieces together, then check</h3>
+    <div class="secaudio"><span class="salab">Dry laundry isn't put away: finish every piece at today · 1:44</span><audio controls preload="none" src="day-05-together.mp3"></audio></div>
+
+
+    <p class="p">Now the real exam shape: some one-off payments, a run of equal payments in the middle, and a
+      gap year with nothing in it. Nothing here is new. You are only doing panel 1 and panel 2 at the same time.</p>
+
+    <p class="p">A gap year is not a problem. A year with no money simply has no piece attached to it. Do not try
+      to stretch an annuity over a gap. If the payments stop and start again, that is two pieces, not one.</p>
+
+    <div class="rule">Keep a small table while you work: piece, value, year that value sits in, extra discounting
+      needed. The table is what stops the delayed piece from slipping through.</div>
+
+    <p class="sub">Worked example</p>
+    <div class="question">
+      A project pays 1,000 at the end of year 1. It pays nothing in year 2. It then pays 2,500 at the end of
+      each year from year 3 to year 7. Finally it pays 12,000 at the end of year 8. The required rate of return
+      is 6 percent. What is the present value, meaning the value today, of the whole stream?
+    </div>
+
+    <div class="step"><div class="stepn">1</div><div class="stepbody">
+      <span class="lab">Name the pieces.</span>
+      <div class="p">Piece A: single 1,000 at year 1. Piece B: annuity of 2,500 for years 3 to 7, so n = 5.
+        Piece C: single 12,000 at year 8. Year 2 is empty and gets no piece.</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">2</div><div class="stepbody">
+      <span class="lab">Piece A.</span>
+      <div class="math">1,000 / 1.06 = 943.40 &nbsp;(already at year 0)</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">3</div><div class="stepbody">
+      <span class="lab">Piece B, hop 1. First payment is year 3, so the value will land at year 2.</span>
+      <div class="math">V<sub>2</sub> = 2,500 × (1 − 1/1.06<sup>5</sup>) / 0.06</div>
+      <div class="math">1.06<sup>5</sup> = 1.338226 → 1 / 1.338226 = 0.747258 → (1 − 0.747258) / 0.06 = 4.212364</div>
+      <div class="math">2,500 × 4.212364 = 10,530.91 &nbsp;(dated year 2)</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">4</div><div class="stepbody">
+      <span class="lab">Piece B, hop 2. Bring it back 2 years.</span>
+      <div class="math">10,530.91 / 1.06<sup>2</sup> = 10,530.91 / 1.1236 = 9,372.47</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">5</div><div class="stepbody">
+      <span class="lab">Piece C.</span>
+      <div class="math">12,000 / 1.06<sup>8</sup> = 12,000 / 1.593848 = 7,528.95</div>
+    </div></div>
+
+    <div class="step"><div class="stepn">6</div><div class="stepbody">
+      <span class="lab">All three now sit at year 0. Add.</span>
+      <div class="math">943.40 + 9,372.47 + 7,528.95 = 17,844.82</div>
+    </div></div>
+
+    <div class="ans">The stream is worth 17,844.82 today.</div>
+
+    <p class="datalab">The working table, filled in</p>
+    <div class="tscroll">
+      <table class="dtable">
+        <tr><th>Piece</th><th>What it is</th><th>Value from its formula</th><th>Year that value sits in</th><th>Extra discounting</th><th>Value at year 0</th></tr>
+        <tr><td class="lab">A</td><td>Single 1,000, year 1</td><td>1,000</td><td>1</td><td>÷ 1.06</td><td>943.40</td></tr>
+        <tr><td class="lab">B</td><td>Annuity 2,500, years 3 to 7, n = 5</td><td>10,530.91</td><td>2</td><td>÷ 1.06²</td><td>9,372.47</td></tr>
+        <tr><td class="lab">C</td><td>Single 12,000, year 8</td><td>12,000</td><td>8</td><td>÷ 1.06⁸</td><td>7,528.95</td></tr>
+        <tr class="hl"><td class="lab">Total</td><td>Every piece now at year 0</td><td></td><td>0</td><td></td><td>17,844.82</td></tr>
+      </table>
+    </div>
+    <p class="cap">The fourth column is the one that saves you. If a row shows a year other than 0, that row is
+      not finished yet.</p>
+
+    <p class="p"><b>Sense check.</b> The cash paid out is 1,000 + 12,500 + 12,000 = 25,500. The answer must be
+      below that and it is. It must also be above the biggest single piece, 9,372.47, and it is.</p>
+
+    <div class="tryq">
+      <div class="q">Try it. Same project, same dates, but the required rate of return rises from 6 percent to
+        9 percent. First say whether the value goes up or down. Then work it out.</div>
+      <button class="reveal-btn" type="button" data-reveal="t4">Show the answer</button>
+      <div class="reveal" id="t4">
+        <p class="p">It goes <b>down</b>. A higher rate punishes future money harder, so every piece shrinks.</p>
+        <p class="p">Piece A: 1,000 / 1.09 = <b>917.43</b></p>
+        <p class="p">Piece B, hop 1: 2,500 × (1 − 1/1.09<sup>5</sup>) / 0.09 = 2,500 × 3.889651 = <b>9,724.13</b> at year 2.</p>
+        <p class="p">Piece B, hop 2: 9,724.13 / 1.09<sup>2</sup> = 9,724.13 / 1.1881 = <b>8,184.60</b></p>
+        <p class="p">Piece C: 12,000 / 1.09<sup>8</sup> = 12,000 / 1.992563 = <b>6,022.40</b></p>
+        <p class="p">Total: 917.43 + 8,184.60 + 6,022.40 = <b>15,124.43</b>, down from 17,844.82.</p>
+      </div>
+    </div>
+
+    <div class="takeaway">
+      <b>Carry these four lines into the exam</b>
+      <ul>
+        <li>Draw the timeline before you touch the calculator. Every time.</li>
+        <li>n is the number of payments, not the number of years since today.</li>
+        <li>The annuity or perpetuity value lands one period before the first payment. Write that year down.</li>
+        <li>Add only after every piece sits at year 0.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel">
+    <h3>Quiz <span data-scorechip="quiz"></span></h3>
+    <p class="note">Six questions. The answer appears when you pick. Every question carries all the data you need.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-04.html">← Day 4: Perpetuity and growth</a>
+    <a class="navbtn primary" href="day-06.html">Day 6: Bonds →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.quiz({
+  mount: "quiz",
+  day: 5,
+  topic: "Mixed stream",
+  items: [
+    {
+      q: "A contract pays 1,200 at the end of year 1, then 900 at the end of year 2, then 600 at the end of each of years 3, 4 and 5. Nothing after that. The required rate of return is 5 percent. What is the contract worth today?",
+      opts: ["3,441.22", "3,900.00", "3,593.13", "3,370.65"],
+      correct: 0,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Two single cash flows plus one annuity: PV = CF/(1+r)^t for each single, and PV = A × (1 − 1/(1+r)^n)/r for the annuity.<br><br><b>Inputs from the question.</b> Singles: 1,200 at t = 1 and 900 at t = 2. Annuity: A = 600, payments in years 3, 4, 5 so n = 3, first payment at year 3. r = 0.05.<br><br>1. Single at year 1: 1,200 / 1.05 = 1,142.86<br>2. Single at year 2: 900 / 1.05² = 900 / 1.1025 = 816.33<br>3. The annuity's first payment is at year 3, so its value will land at year 2.<br>4. Hop 1: 600 × (1 − 1/1.05^3) / 0.05 = 600 × 2.723248 = 1,633.95, dated year 2.<br>5. Hop 2: 1,633.95 / 1.05² = 1,633.95 / 1.1025 = 1,482.04, now at year 0.<br>6. Add the three year 0 values: 1,142.86 + 816.33 + 1,482.04 = 3,441.22<br><br><b>Check.</b> Total cash paid is 1,200 + 900 + 1,800 = 3,900. The answer must be below that, and 3,441.22 is.<br><br><b>The wrong options.</b> 3,900.00 is what you get by adding the cash with no discounting at all, which breaks the rule that money from different years cannot be added. 3,593.13 comes from stopping after hop 1, that is 1,142.86 + 816.33 + 1,633.95, leaving the annuity value stranded at year 2. 3,370.65 comes from discounting the annuity value 3 years instead of 2, which is one year too many."
+    },
+    {
+      q: "A fund pays 5,000 at the end of each year from year 6 to year 10, and nothing in any other year. At a discount rate of 10 percent its value today is 11,768.90. The discount rate now falls to 8 percent. What is its value today at 8 percent?",
+      opts: ["19,963.55", "12,580.42", "13,586.86", "11,768.90"],
+      correct: 2,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Delayed annuity. PV = [A × (1 − 1/(1+r)^n)/r] ÷ (1+r)^k, where k is the year the annuity value lands in.<br><br><b>Inputs from the question.</b> A = 5,000. Payments in years 6, 7, 8, 9, 10, so n = 5. First payment at year 6, so the annuity value lands at year 5, giving k = 5. r = 0.08.<br><br>1. 1.08^5 = 1.469328, so 1 / 1.469328 = 0.680583<br>2. (1 − 0.680583) / 0.08 = 3.992710<br>3. Hop 1: 5,000 × 3.992710 = 19,963.55, dated year 5.<br>4. Hop 2: 19,963.55 / 1.08^5 = 19,963.55 / 1.469328 = 13,586.86<br><br><b>Check.</b> The rate fell from 10 percent to 8 percent, so the value must rise. It went from 11,768.90 to 13,586.86. It rose, as it should.<br><br><b>The wrong options.</b> 19,963.55 is hop 1 on its own, the value at year 5, left there instead of being brought back. 12,580.42 comes from dividing by 1.08^6 instead of 1.08^5, one year too much discounting. 11,768.90 is the old answer at 10 percent, kept by mistake after the rate changed."
+    },
+    {
+      q: "A charity has been promised 400 at the end of every year forever. The first payment arrives at the end of year 4. The discount rate is 8 percent. What is the promise worth today?",
+      opts: ["5,000.00", "3,969.16", "3,675.15", "294.01"],
+      correct: 1,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Perpetuity: PV = CF / r. Then a single cash flow move: divide by (1+r)^k.<br><br><b>Inputs from the question.</b> CF = 400 every year forever. r = 0.08. First payment at year 4.<br><br>1. The perpetuity formula lands one period before the first payment, exactly like the annuity formula. First payment is year 4, so the value will land at year 3.<br>2. Hop 1: 400 / 0.08 = 5,000.00, dated year 3.<br>3. Hop 2: 1.08³ = 1.259712, so 5,000.00 / 1.259712 = 3,969.16<br><br><b>Check.</b> Put 3,969.16 forward three years: 3,969.16 × 1.259712 = 5,000.00, and 5,000.00 × 0.08 = 400 of interest a year forever without ever touching the money that earns it. The answer holds.<br><br><b>The wrong options.</b> 5,000.00 is hop 1 left at year 3, the single most common error on this topic. 3,675.15 comes from dividing by 1.08⁴, treating the delay as four years instead of three. 294.01 is 400 / 1.08⁴, which values only the first payment and throws away the rest of the perpetuity."
+    },
+    {
+      q: "A machine costs 30,000 today. It returns 8,000 at the end of year 1, and then the same amount C at the end of each of years 2, 3, 4 and 5. The required rate of return is 9 percent, and the present value of everything the machine returns is exactly 30,000. What is C?",
+      opts: ["10,093.47", "5,665.14", "6,994.60", "7,624.12"],
+      correct: 3,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Same tools, run backwards. PV of the single + PV of the delayed annuity = 30,000, and you solve for A.<br><br><b>Inputs from the question.</b> Single: 8,000 at t = 1. Annuity: payments in years 2, 3, 4, 5, so n = 4, first payment at year 2, so its value lands at year 1. r = 0.09. Target PV = 30,000.<br><br>1. Value the single: 8,000 / 1.09 = 7,339.45<br>2. What the annuity piece must be worth today: 30,000 − 7,339.45 = 22,660.55<br>3. The annuity value lands at year 1, so that year 1 value must be 22,660.55 × 1.09 = 24,700.00<br>4. The annuity factor: 1.09⁴ = 1.411582, so (1 − 0.708425) / 0.09 = 3.239720<br>5. C = 24,700.00 / 3.239720 = 7,624.12<br><br><b>Check.</b> Put it back: 7,624.12 × 3.239720 = 24,700.00 at year 1, then 24,700.00 / 1.09 = 22,660.55, plus 7,339.45 = 30,000.00. Correct.<br><br><b>The wrong options.</b> 6,994.60 comes from skipping move 3, that is dividing 22,660.55 by 3.239720 directly, which pretends the payments start at year 1. 5,665.14 is 22,660.55 divided by 4, adding the four payments with no discounting. 10,093.47 comes from ignoring the 8,000 and making the annuity carry the whole 30,000."
+    },
+    {
+      q: "A bond fund pays 700 at the end of each year from year 7 to year 12, and nothing in any other year. A student puts 700, n = 6 and the rate into the present value of an annuity formula and gets a number. Which date does that number belong to?",
+      opts: ["The end of year 6", "Today, year 0", "The end of year 7", "The end of year 12"],
+      correct: 0,
+      tag: "Mixed stream",
+      exp: "<b>The rule.</b> The present value of an annuity formula always returns a value dated one full period before the first payment.<br><br><b>Applied here.</b> The first payment lands at the end of year 7. One period before the end of year 7 is the end of year 6. So the number is a year 6 value. To reach today the student must still divide it by (1+r)^6.<br><br><b>Why the other options are wrong.</b> Today, year 0, is only right when the first payment is at year 1, which is the case learners practice most and the reason this rule gets missed. The end of year 7 is wrong because the formula lands before the first payment, never on it. The end of year 12 is wrong because that would be a future value at the end of the run, which is a different formula, the future value of an annuity.<br><br><b>Count check.</b> Years 7, 8, 9, 10, 11, 12 is six payments, so n = 6 is right. n counts payments. The delay is handled separately by the second discounting, never by changing n."
+    },
+    {
+      q: "An investor is offered 3,500 at the end of year 1 and 2,800 at the end of year 2. From the end of year 3 onward she also receives a yearly payment forever, starting at 1,400 at the end of year 3 and growing by 4 percent each year after that. Her required rate of return is 11 percent. What is the offer worth today?",
+      opts: ["25,425.70", "20,049.52", "21,658.14", "15,755.44"],
+      correct: 2,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Two single cash flows plus one growing perpetuity: PV = CF1 / (r − g), which lands one period before the first payment, then divide by (1+r)^k.<br><br><b>Inputs from the question.</b> Singles: 3,500 at t = 1, 2,800 at t = 2. Growing perpetuity: first payment CF1 = 1,400 at year 3, g = 0.04, r = 0.11. Since r is above g the formula works.<br><br>1. Single at year 1: 3,500 / 1.11 = 3,153.15<br>2. Single at year 2: 2,800 / 1.11² = 2,800 / 1.2321 = 2,272.54<br>3. Growing perpetuity, hop 1: 1,400 / (0.11 − 0.04) = 1,400 / 0.07 = 20,000.00, dated year 2 because the first payment is at year 3.<br>4. Hop 2: 20,000.00 / 1.11² = 20,000.00 / 1.2321 = 16,232.45<br>5. Add: 3,153.15 + 2,272.54 + 16,232.45 = 21,658.14<br><br><b>Check.</b> The growing perpetuity should be the biggest part, since it never stops. It is 16,232.45 of the 21,658.14, about three quarters. That fits.<br><br><b>The wrong options.</b> 25,425.70 leaves the 20,000.00 at year 2 instead of bringing it back, the same stranded value mistake as a delayed annuity. 20,049.52 divides the 20,000.00 by 1.11³, discounting three years when the value already sits at year 2. 15,755.44 uses 1,400 / 0.11 and forgets the growth, which makes a stream whose payments rise every year look too cheap."
+    }
+  ]
+});
+</script>
+</body>
+</html>

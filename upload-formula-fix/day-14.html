@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 14: Mock 4, the full practice run</title>
+<link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+<div class="wrap">
+
+  <a class="home" href="index.html">← All 15 days</a><a class="home" href="formulas.html" style="margin-left:16px">Formula page</a>
+  <div class="crumb">Day 14 · Friday 9 October</div>
+  <h1>Mock 4: the full practice run</h1>
+  <p class="lede">The last full paper before the exam. Whole course, real length, real clock.</p>
+
+  <!-- ============ RULES ============ -->
+  <div class="panel">
+    <h3>How to sit this one</h3>
+    <p class="note">Read this, then start the clock and do not stop it.</p>
+
+    <p class="p"><b>This paper is meant to be hard.</b> It has more questions that need two or three
+      moves, more questions that hand you the answer and ask for the input, and more cases that sit
+      exactly on a border.</p>
+    <p class="p"><b>A lower score here than on Mock 1 is normal, and it does not predict your exam
+      score.</b> The paper got harder, not you. Read the misses, not the percent.</p>
+
+    <table class="dtable">
+      <tr><td class="lab">Questions</td><td>22, all multiple choice</td></tr>
+      <tr><td class="lab">Time</td><td>150 minutes, about 6.8 minutes a question</td></tr>
+      <tr><td class="lab">Allowed</td><td>The formula sheet below, and a scientific calculator</td></tr>
+      <tr><td class="lab">Not allowed</td><td>A financial calculator, or one that can be programmed. Nothing that prices a bond or an annuity for you</td></tr>
+      <tr><td class="lab">During the paper</td><td>Nothing is shown. No score, no answers, no hints, until you submit</td></tr>
+      <tr><td class="lab">Conditions</td><td>Sit it at the same hour of the day as the exam. Phone away, paper and pen out, one sitting</td></tr>
+    </table>
+
+    <div class="rule">Answer every question. Nothing in the course files mentions a penalty for a
+      wrong answer, so a question left blank is simply a lost mark.</div>
+
+    <p class="p">When the clock runs out the paper submits itself. Every miss goes to your error log,
+      so tomorrow you know what to warm up.</p>
+  </div>
+
+  <!-- ============ FORMULA SHEET ============ -->
+  <div class="panel">
+    <h3>Formula sheet</h3>
+    <p class="note">This mirrors the professor's sheet. The rows under "Not printed on the
+      professor's sheet" are pack additions. You do not have to learn any of it by heart. What
+      you have to know is which one applies, and why.</p>
+
+    <div class="datalab">Single cash flow</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Compounding, one amount</td><td>FV<sub>t</sub> = C × (1 + r)<sup>t</sup></td></tr>
+      <tr><td class="lab">Discounting, one amount</td><td>PV = C / (1 + r)<sup>t</sup></td></tr>
+      <tr><td class="lab">The basic PV equation</td><td>PV = FV<sub>t</sub> / (1 + r)<sup>t</sup></td></tr>
+    </table>
+    </div>
+
+    <div class="datalab">Annuity</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Future value of an annuity</td><td>FV<sub>t</sub> = C × {[(1 + r)<sup>t</sup> − 1] / r}</td></tr>
+      <tr><td class="lab">Present value of an annuity</td><td>PV = C × {1 − [1 / (1 + r)<sup>t</sup>]} / r</td></tr>
+    </table>
+    </div>
+    <p class="given">On the real sheet this table sits under the misleading heading "The value of a
+      single cashflow". Trust the row titles inside it: "C per Period" means a repeating payment; "C Invested" or "C to Be Received" means one payment.</p>
+
+    <div class="datalab">Growing annuity</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Present value of a growing annuity</td><td>PV = A(1 + g) × [ (1 − (1 + g)<sup>n</sup> / (1 + r)<sup>n</sup>) / (r − g) ]</td></tr>
+    </table>
+    </div>
+    <p class="given">On the sheet the first payment equals A(1 + g). The pack sometimes writes the
+      same formula as PV = CF<sub>1</sub> × [1 − ((1+g)/(1+r))<sup>n</sup>] / (r − g), where
+      CF<sub>1</sub> is the first payment. Same formula, because CF<sub>1</sub> = A(1 + g).</p>
+
+    <div class="datalab">Perpetuities</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Present value of a perpetuity</td><td>PV = CF / r</td></tr>
+      <tr><td class="lab">Present value of a growing perpetuity</td><td>PV = CF / (r − g), and it needs r &gt; g</td></tr>
+    </table>
+    </div>
+    <p class="given">The top line is next period's cash flow, not the payment made now.</p>
+
+    <div class="datalab">Bond</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Value of a bond</td><td>Bond value = C × [1 − 1/(1 + r)<sup>t</sup>] / r + F / (1 + r)<sup>t</sup></td></tr>
+    </table>
+    </div>
+    <p class="given">C is the coupon paid each period. F is the bond's face value, the same thing
+      the questions call par. The yield on a bond is found by trial and error: try rates until the
+      calculated value matches the given price.</p>
+
+    <div class="datalab">Payoff at maturity</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Senior debt</td><td>Min(V<sub>T</sub>, F<sub>S</sub>)</td></tr>
+      <tr><td class="lab">Junior (subordinated) debt</td><td>0 if V<sub>T</sub> &lt; F<sub>S</sub>, otherwise Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>)</td></tr>
+      <tr><td class="lab">Equity</td><td>Max(V<sub>T</sub> − F<sub>S</sub>, 0)</td></tr>
+    </table>
+    </div>
+    <p class="given">F<sub>S</sub> is the face value of the senior debt. F<sub>J</sub> is the face value
+      of the junior debt. V<sub>T</sub> is the value of the firm's assets at time T.</p>
+    <p class="p">The sheet writes equity as Max(V<sub>T</sub> − F<sub>S</sub>, 0) and the class slides
+      write it as Max(V<sub>T</sub> − F<sub>S</sub> − F<sub>J</sub>, 0). Same rule, two cases.
+      The owners are paid last, so they get what is left after <b>all</b> the debt. The safe test:
+      your three payoffs must add up to exactly V<sub>T</sub>, every time.</p>
+
+    <div class="datalab">Stocks</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Price as all future dividends</td><td>P<sub>0</sub> = D<sub>1</sub>/(1 + R)<sup>1</sup> + D<sub>2</sub>/(1 + R)<sup>2</sup> + D<sub>3</sub>/(1 + R)<sup>3</sup> + …</td></tr>
+      <tr><td class="lab">Constant growth</td><td>P<sub>0</sub> = D<sub>1</sub> / (R − g)</td></tr>
+      <tr><td class="lab">Supernormal growth, the steady tail</td><td>P<sub>t</sub> = D<sub>t</sub> × (1 + g) / (R − g)</td></tr>
+      <tr><td class="lab">Required return</td><td>R = D<sub>1</sub>/P<sub>0</sub> + g</td></tr>
+      <tr><td class="lab">Holding period return</td><td>HPR = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub></td></tr>
+    </table>
+    </div>
+    <p class="given">The rate is written R here. It is the same thing the rest of the sheet calls r.
+      The sheet says HPR = r.</p>
+
+    <div class="datalab">Stream and NPV</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Stream of cash flows</td><td>PV = CF<sub>1</sub>/(1+r)<sup>1</sup> + CF<sub>2</sub>/(1+r)<sup>2</sup> + … + CF<sub>N</sub>/(1+r)<sup>N</sup></td></tr>
+      <tr><td class="lab">Net present value</td><td>NPV = Σ CF<sub>i</sub>/(1+r)<sup>i</sup> − I<sub>0</sub></td></tr>
+    </table>
+    </div>
+    <p class="given">I<sub>0</sub> is the cost you pay at the start. An annuity formula always
+      hands back a value one period before its first payment.</p>
+
+    <div class="datalab">Not printed on the professor's sheet</div>
+    <div class="tscroll">
+    <table class="dtable">
+      <tr><td class="lab">Return on assets</td><td>ROA = net income / total assets</td></tr>
+      <tr><td class="lab">Return on equity</td><td>ROE = net income / equity</td></tr>
+      <tr><td class="lab">Internal rate of return</td><td>The IRR is the discount rate that makes NPV exactly zero</td></tr>
+    </table>
+    </div>
+    <p class="given">Questions in this paper use these three. The exam sheet does not print them,
+      so know them by heart.</p>
+  </div>
+
+  <!-- ============ THE PAPER ============ -->
+  <div class="panel">
+    <h3>Mock 4</h3>
+    <p class="note">Press Start, then work straight through. Nothing is shown until you submit or the
+      clock runs out.</p>
+    <div id="mock"></div>
+  </div>
+
+  <div class="navrow">
+    <a class="navbtn" href="day-13.html">← Day 13: Mock 3</a>
+    <a class="navbtn primary" href="day-15.html">Day 15: Warm-up →</a>
+  </div>
+
+</div>
+
+<script src="assets/study.js"></script>
+<script>
+POF.mock({
+  mount: "mock",
+  day: 14,
+  topic: "Mock 4",
+  minutes: 150,
+  items: [
+
+    /* ---------- 1 ---------- */
+    {
+      q: "A company considers launching a new payment app in a country where rules are being drafted and no prior market data exist. Which decision environment is this?",
+      opts: ["Certainty", "Uncertainty", "Ambiguity"],
+      correct: 2,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>Answer: Ambiguity.</b><br><br><b>The three environments in this course.</b> Certainty: the outcome is known in advance and guaranteed. Uncertainty: the outcome is not known, but the possible outcomes and the chance of each one can be worked out from data or from a model. The course calls that chance a probability. Ambiguity: you cannot even put believable chances on the outcomes.<br><br><b>Read the stem for the clue.</b> Two phrases decide it. The rules are still being written, so the payoff itself is not fixed yet. And there is no earlier market data, so nothing exists to build a chance from.<br><br><b>Why the other two are wrong.</b> Certainty needs a guaranteed payoff, and launching a product where the rules are not even written yet guarantees nothing. Uncertainty needs a usable set of chances. Here there is no history and no model to make one from, so the move that would turn this into uncertainty is exactly the move that is missing.<br><br><b>The habit to carry into the exam.</b> Ask one question of every case: can I write down chances I could stand behind? Yes and they are 100 percent on one outcome is certainty. Yes and they are spread is uncertainty. No is ambiguity."
+    },
+
+    /* ---------- 2 ---------- */
+    {
+      q: "A client will pay you a single amount of 30,000 at the end of year 3. You do not need the money until the end of year 8, and any cash you hold earns 7 percent a year. What is that promise worth at the end of year 8?",
+      opts: ["42,076.55", "51,545.59", "36,751.29", "24,488.94"],
+      correct: 0,
+      tag: "Single cash flow",
+      exp: "<b>Formula.</b> One single cash flow, moved forward in time: FV = CF × (1 + r)<sup>n</sup>. Here n is the number of years between the date the cash arrives and the date you are valuing it at.<br><br><b>Inputs from the stem.</b> CF = 30,000. It arrives at the end of year 3. The target date is the end of year 8. r = 0.07.<br><br>1. Count the waiting years: 8 − 3 = 5. The money sits and earns for 5 years, not 8.<br>2. 1.07<sup>5</sup> = 1.40255173<br>3. FV = 30,000 × 1.40255173 = 42,076.55<br><br><b>Check, the long way round.</b> Bring the 30,000 back to today first: 30,000 / 1.07<sup>3</sup> = 30,000 / 1.225043 = 24,488.94. Now push that forward 8 years: 24,488.94 × 1.07<sup>8</sup> = 24,488.94 × 1.71818618 = 42,076.55. Same number. Discounting and compounding are the same road walked in opposite directions, so the route you pick cannot change the answer.<br><br><b>The wrong options.</b> 51,545.59 is 30,000 × 1.07<sup>8</sup>, which compounds the money from today even though it does not reach you until year 3. That is three years of interest on money you do not have. 36,751.29 is 30,000 × 1.07<sup>3</sup>, compounding by the arrival date instead of by the waiting time. 24,488.94 is the value today, the right first move in the long route but the wrong date to stop at."
+    },
+
+    /* ---------- 3 ---------- */
+    {
+      q: "A bond has a par value of 1,000 and matures at the end of year 5. It pays 40 at the end of each of years 1, 2 and 3, then 90 at the end of years 4 and 5. The 1,000 par value is repaid at the end of year 5 on top of that year's 90. Bonds of this risk yield 7 percent. What is the bond worth today?",
+      opts: ["876.99", "950.79", "1,082.00", "1,237.80"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> The coupons are not equal, so there is no single annuity here. Use the general stream: PV = CF<sub>1</sub>/(1+r)<sup>1</sup> + CF<sub>2</sub>/(1+r)<sup>2</sup> + … A bond is only ever a stream of cash flows priced at the yield.<br><br><b>Inputs from the stem.</b> Cash flows: 40, 40, 40, 90, and then 90 + 1,000 = 1,090 at year 5. r = 0.07.<br><br>1. 40 / 1.07 = 37.38<br>2. 40 / 1.07<sup>2</sup> = 40 / 1.1449 = 34.94<br>3. 40 / 1.07<sup>3</sup> = 40 / 1.225043 = 32.65<br>4. 90 / 1.07<sup>4</sup> = 90 / 1.31079601 = 68.66<br>5. 1,090 / 1.07<sup>5</sup> = 1,090 / 1.40255173 = 777.15<br>6. Add the five: 37.38 + 34.94 + 32.65 + 68.66 + 777.15 = 950.79<br><br><b>Check the direction before you trust the number.</b> The average coupon here is 60 a year on a par value of 1,000, so this bond pays less than the 7 percent the market wants. A bond that pays less than the market demands must sell below par. 950.79 is below 1,000, which is what it had to be.<br><br><b>The wrong options.</b> 876.99 prices five coupons of 40 as one annuity and forgets that the last two coupons step up to 90. 1,082.00 does the mirror error, treating all five coupons as 90. 1,237.80 discounts every coupon correctly but then adds the 1,000 par value with no discounting at all, which adds cash from year 5 to cash from today.<br><br><b>The habit.</b> Before reaching for the annuity formula, check that every payment really is the same size. One step-up anywhere and the formula does not apply to the whole run."
+    },
+
+    /* ---------- 4 ---------- */
+    {
+      q: "A legal settlement pays 6,000 today. It then pays nothing until the end of year 5. From the end of year 5 to the end of year 12 it pays 3,000 at the end of every year. Nothing is paid after that. The required rate of return is 7 percent. What is the settlement worth today?",
+      opts: ["19,666.43", "18,772.36", "13,666.43", "18,334.39"],
+      correct: 0,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> Two pieces. A cash flow already in your hand today, and a delayed annuity: PV = A × [1 − 1/(1+r)<sup>n</sup>] / r, then move that value to today.<br><br><b>Inputs from the stem.</b> 6,000 at time 0. A = 3,000, first payment at the end of year 5, last at the end of year 12. r = 0.07.<br><br>1. Count the payments: 12 − 5 + 1 = 8. Subtract and add one, or you will lose a year.<br>2. 1.07<sup>8</sup> = 1.71818618, so 1 / 1.71818618 = 0.58200915<br>3. Annuity factor: (1 − 0.58200915) / 0.07 = 5.97129851<br>4. 3,000 × 5.97129851 = 17,913.90. This value sits one period before the first payment, so it is a year-4 value, not a year-5 value and not a today value.<br>5. Bring it to today: 1.07<sup>4</sup> = 1.31079601, so 17,913.90 / 1.31079601 = 13,666.43<br>6. Add the cash already in hand: 13,666.43 + 6,000 = 19,666.43<br><br><b>Check.</b> The eight payments total 24,000 of raw cash, arriving between five and twelve years out. 13,666 is about 57 percent of that, which is about right for an average wait of roughly eight and a half years at 7 percent. Adding the 6,000 that needs no discounting at all gives 19,666.<br><br><b>The wrong options.</b> 18,772.36 divides the annuity value by 1.07<sup>5</sup> instead of 1.07<sup>4</sup>, the single most common error on this shape. The formula already stands one year before the first payment, so discounting by the first payment's own year discounts it twice. 18,334.39 uses n = 7, counting the gaps between payments instead of the payments themselves. 13,666.43 is the delayed annuity alone, dropping the 6,000 paid today. Cash at time 0 is never discounted."
+    },
+
+    /* ---------- 5 ---------- */
+    {
+      q: "You choose an auto insurance deductible. The insurer provides claim frequency tables for your driver profile and car model. Which decision environment is this?",
+      opts: ["Certainty", "Uncertainty", "Ambiguity"],
+      correct: 1,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>Answer: Uncertainty.</b><br><br><b>Read the stem for the clue.</b> Claim frequency tables for your profile and your model are a list of chances handed to you. You do not know whether you personally will crash next year, so the outcome is open. But the chance of each outcome is measured and there for you to read.<br><br><b>Why not certainty.</b> Certainty means the outcome itself is fixed and guaranteed. Here the whole point of insurance is that the outcome is not fixed. Knowing the odds is not the same as knowing the result.<br><br><b>Why not ambiguity.</b> Ambiguity is the case where you cannot put believable chances on anything. Here the insurer has already done that work from a large history of similar drivers and similar cars. Data exists, so the case is not ambiguous.<br><br><b>The line to hold.</b> Known outcome is certainty. Unknown outcome with known odds is uncertainty. Unknown outcome with unknowable odds is ambiguity. Insurance lives almost entirely in the middle box, which is exactly why it can be priced."
+    },
+
+    /* ---------- 6 ---------- */
+    {
+      q: "A firm has senior debt with a face value of 70 and junior debt with a face value of 45, both maturing today. The Absolute Priority Rule holds. When the assets are shared out, the junior lender is paid in full and the owners receive nothing at all. What can you say about V(T), the value of the firm's assets today?",
+      opts: ["V(T) is exactly 115", "V(T) is 115 or more, and nothing narrows it further", "V(T) is anywhere between 70 and 115", "V(T) is exactly 45, the junior face value"],
+      correct: 0,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior: Min(V<sub>T</sub>, F<sub>S</sub>). Junior: 0 if V<sub>T</sub> &lt; F<sub>S</sub>, otherwise Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>). Equity: what is left after all the debt, and never below zero.<br><br><b>Inputs from the stem.</b> F<sub>S</sub> = 70. F<sub>J</sub> = 45. F<sub>S</sub> + F<sub>J</sub> = 115. Two facts are given about the outcome, and each one puts a limit on V<sub>T</sub>.<br><br>1. The junior lender is paid in full, so Min(V<sub>T</sub> − 70, 45) = 45. That needs V<sub>T</sub> − 70 to be 45 or more, so <b>V<sub>T</sub> ≥ 115</b>.<br>2. The owners receive nothing, so Max(V<sub>T</sub> − 115, 0) = 0. That needs V<sub>T</sub> − 115 to be zero or below, so <b>V<sub>T</sub> ≤ 115</b>.<br>3. The only number that is both 115 or more and 115 or less is 115 itself. So V<sub>T</sub> = 115 exactly.<br><br><b>Check by paying everyone.</b> At V<sub>T</sub> = 115: senior gets Min(115, 70) = 70. Junior gets Min(115 − 70, 45) = Min(45, 45) = 45. Equity gets Max(115 − 115, 0) = 0. Add them: 70 + 45 + 0 = 115, exactly V<sub>T</sub>. The sum test passes, so the split is right.<br><br><b>Why this is the border case.</b> One cent more and the owners are no longer empty handed. One cent less and the junior lender is no longer paid in full. Every other value of V<sub>T</sub> breaks one of the two facts in the stem.<br><br><b>The wrong options.</b> 115 or more uses only the first fact and ignores that the owners got nothing, which is what fixes the top end. Between 70 and 115 has the junior lender paid something but not in full, so it goes against the stem. Exactly 45 pays the junior lender before the senior one, which is precisely what the Absolute Priority Rule does not allow.<br><br><b>Note on the letters.</b> APR in this course means Absolute Priority Rule. It is the payment order, not an interest rate."
+    },
+
+    /* ---------- 7 ---------- */
+    {
+      q: "A license pays 40,000 at the end of next year. Every later payment is 4.8 percent bigger than the one before it, and the payments never stop. Investors ask for 5 percent on this kind of license. What is the license worth today?",
+      opts: ["800,000", "408,163", "20,000,000", "It has no value, because the growth rate is too close to the required return"],
+      correct: 2,
+      tag: "Perpetuity",
+      exp: "<b>Formula.</b> A payment that starts next year, grows at a fixed rate and never ends is a growing perpetuity: PV = CF<sub>1</sub> / (r − g). It works only while r is above g.<br><br><b>Inputs from the stem.</b> CF<sub>1</sub> = 40,000, the payment at the end of year 1. g = 0.048. r = 0.05.<br><br>1. Test the condition first: r − g = 0.05 − 0.048 = 0.002. That is positive, so the formula is allowed. 0.002 is 0.2 of a percentage point.<br>2. PV = 40,000 / 0.002<br>3. PV = 20,000,000<br><br><b>Check that such a large number makes sense.</b> The payments grow at almost the rate you discount them by. Payment 1 is worth 40,000 / 1.05 = 38,095 today. Payment 2 is 41,920 received a year later, worth 41,920 / 1.05<sup>2</sup> = 38,022 today. Each payment's present value shrinks by only about 0.19 percent. A list of nearly equal amounts that carries on forever adds up to a very large number, so 20 million is not a slip. It is what a tiny gap does.<br><br><b>The point of this question.</b> The value of a growing perpetuity is decided by the <b>gap</b> r − g, not by r and not by g on their own. Move g from 4.8 to 4.9 percent and the value doubles to 40,000,000. That is why the exam cares whether you subtract in the right order.<br><br><b>The wrong options.</b> 800,000 is 40,000 / 0.05, the plain perpetuity, which throws the growth away. 408,163 is 40,000 / 0.098, adding r and g instead of subtracting. The last option is the r ≤ g case used where it does not belong. Here r is above g, by a very small amount, so the formula holds and gives a real answer. The formula fails only when r is equal to or below g."
+    },
+
+    /* ---------- 8 ---------- */
+    {
+      q: "A recycling project costs 60,000 today. It returns 18,000 at the end of each of the next 5 years. At the end of year 5 the firm must also pay 12,000 to clear and close the site. The required rate of return is 11 percent. What is the NPV, and what is the decision?",
+      opts: ["NPV = 6,526.15, accept", "NPV = 18,000.00, accept", "NPV = −595.27, reject", "NPV = −5,473.85, reject"],
+      correct: 2,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> NPV = sum of CF<sub>i</sub>/(1+r)<sup>i</sup> − I<sub>0</sub>. The five inflows are equal, so use the annuity: PV = A × [1 − 1/(1+r)<sup>n</sup>] / r. The closing cost is a single cash flow at year 5 with a minus sign.<br><br><b>Inputs from the stem.</b> I<sub>0</sub> = 60,000. A = 18,000, n = 5. A separate −12,000 at the end of year 5. r = 0.11.<br><br>1. 1.11<sup>5</sup> = 1.68505816, so 1 / 1.68505816 = 0.59345134<br>2. Annuity factor: (1 − 0.59345134) / 0.11 = 3.69589702<br>3. Present value of the inflows: 18,000 × 3.69589702 = 66,526.15<br>4. Present value of the closing cost: 12,000 × 0.59345134 = 7,121.42, and it is money going out, so it counts as −7,121.42<br>5. NPV = 66,526.15 − 7,121.42 − 60,000 = −595.27<br>6. NPV is below zero, so reject.<br><br><b>Check.</b> Without the closing cost the NPV would be +6,526.15. The closing cost is 12,000 but it is five years away, so it only has to beat 6,526.15 in today's money to sink the project. 7,121.42 beats it, and by 595.27. The two readings agree.<br><br><b>What this question is really about.</b> A cost that arrives late is still a cost. It goes into the same sum as the inflows, at its own date, with a minus sign. Nothing special happens to it.<br><br><b>The wrong options.</b> 6,526.15 drops the closing cost entirely and flips the decision. −5,473.85 subtracts the full 12,000 without discounting it, which mixes year-5 money into a today total and makes the damage look bigger than it is. 18,000.00 is 90,000 − 12,000 − 60,000, the raw cash added up with no discounting anywhere, and it makes a losing project look like a winner."
+    },
+
+    /* ---------- 9 ---------- */
+    {
+      q: "An investor evaluates a new token offering in a jurisdiction with unclear rules and no reliable historical data on similar assets. Which decision environment is this?",
+      opts: ["Certainty", "Uncertainty", "Ambiguity"],
+      correct: 2,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>Answer: Ambiguity.</b><br><br><b>Read the stem for the clue.</b> Two things are missing at once. The rules are unclear, so even the legal shape of the payoff is open. And there is no history you can trust on similar assets, so there is nothing to build a set of chances from.<br><br><b>Why not uncertainty.</b> Uncertainty needs chances you could stand behind. A brand new kind of asset in a place with no rules gives you nothing to tie them to. You could make numbers up, but making numbers up is not working them out, and the course splits the two on exactly this line.<br><br><b>Why not certainty.</b> Nothing here is guaranteed by anyone.<br><br><b>Compare this with the index fund case.</b> A broad stock index fund is also risky, and its value can fall hard, yet it is uncertainty and not ambiguity, because a long history and a model give you a set of chances you can use. Risk is not what splits these two boxes. Whether believable chances exist is."
+    },
+
+    /* ---------- 10 ---------- */
+    {
+      q: "A bond has a par value of 1,000 and 3 years left to maturity. It pays a coupon once a year. Investors buying bonds of this risk today ask for 5 percent. The bond trades at 1,054.46. What is its coupon rate?",
+      opts: ["5 percent", "6 percent", "7 percent", "8 percent"],
+      correct: 2,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> Price = C × [1 − 1/(1+r)<sup>n</sup>] / r + Par / (1+r)<sup>n</sup>. Here the price is given and the coupon C is the unknown, so turn the formula around instead of filling it in.<br><br><b>Inputs from the stem.</b> Price = 1,054.46. Par = 1,000. n = 3. r = 0.05. C is what you want.<br><br>1. 1.05<sup>3</sup> = 1.157625, so 1 / 1.157625 = 0.86383760<br>2. Present value of the par repayment: 1,000 × 0.86383760 = 863.84. This part has nothing to do with the coupon, so take it out of the price first.<br>3. What the coupons must be worth today: 1,054.46 − 863.84 = 190.62<br>4. Annuity factor: (1 − 0.86383760) / 0.05 = 2.72324803<br>5. C = 190.62 / 2.72324803 = 70.00<br>6. The coupon rate is applied to the par value, not to the price: 70 / 1,000 = 7 percent.<br><br><b>Check by going forward.</b> 70 × 2.72324803 = 190.63, plus 863.84 = 1,054.47. That is the price in the stem, so 7 percent is right.<br><br><b>The quick read before any arithmetic.</b> The bond trades above par, so it must pay more than the market is asking for. The market asks 5 percent, so the coupon rate has to be above 5 percent. That kills one option before you touch the calculator.<br><br><b>The wrong options.</b> 5 percent is the yield, copied across as if the coupon rate and the yield were the same thing. They are equal only when the bond trades exactly at par, and this one does not. 6 percent gives a price of 1,027.23. 8 percent gives 1,081.70. Both are the right method with the wrong coupon, and both are easy to check by going forward, which is why working backwards and then checking forwards is the safe route on this shape."
+    },
+
+    /* ---------- 11 ---------- */
+    {
+      q: "A savings plan takes one deposit of 7,500 at the end of year 1 and no deposit in any other year. The account pays 5 percent a year and the money stays in it. What is the balance immediately after the year 1 deposit, and what is the balance at the end of year 4?",
+      opts: ["7,500.00 immediately after the deposit, and 8,682.19 at the end of year 4", "7,875.00 immediately after the deposit, and 9,116.30 at the end of year 4", "7,500.00 immediately after the deposit, and 9,116.30 at the end of year 4", "7,142.86 immediately after the deposit, and 8,268.75 at the end of year 4"],
+      correct: 0,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> Future value of an annuity: FV = A × [(1+r)<sup>n</sup> − 1] / r. This plan has one payment, so n = 1. Then a single cash flow moves forward: FV = CF × (1 + r)<sup>n</sup>.<br><br><b>Inputs from the stem.</b> A = 7,500. r = 0.05. The deposit lands at the end of year 1. The second date asked about is the end of year 4.<br><br>1. Annuity factor at n = 1: [(1.05)<sup>1</sup> − 1] / 0.05 = 0.05 / 0.05 = 1<br>2. Balance immediately after the deposit: 7,500 × 1 = 7,500.00. Money deposited at the end of year 1 has not sat in the account for a single day yet, so it has earned nothing.<br>3. From the end of year 1 to the end of year 4 is 3 years: 4 − 1 = 3<br>4. 1.05<sup>3</sup> = 1.157625<br>5. Balance at the end of year 4: 7,500 × 1.157625 = 8,682.19<br><br><b>Check.</b> Three years of 5 percent should add roughly 15 percent plus a little compounding. 8,682.19 / 7,500 = 1.1576, which is 15.76 percent. That fits.<br><br><b>Why this edge case matters.</b> At n = 1 the future value annuity factor is exactly 1, and the present value annuity factor is exactly 1/(1+r). Both formulas turn into the single cash flow case. So a one payment annuity is never a trap in itself. The trap is assuming that any formula with an n in it must add a year of interest somewhere.<br><br><b>The wrong options.</b> 7,875.00 is 7,500 × 1.05, giving the deposit a year of interest it never earned, since end of year 1 payments in this course are made at the end of the period. 9,116.30 is 7,500 × 1.05<sup>4</sup>, counting four years of growth from a deposit that was only in the account for three. 7,142.86 is 7,500 / 1.05, discounting the deposit back to today and then treating today's value as a balance."
+    },
+
+    /* ---------- 12 ---------- */
+    {
+      q: "A share pays a dividend of 2.40 at the end of every year and the dividend never changes. The share trades at 30.00. An investor buys one share at 30.00, receives the 2.40 dividend at the end of the year, and sells the share for 26.00 on that same date. What is the holding period return for that year?",
+      opts: ["8.00 percent", "−5.33 percent", "−13.33 percent", "−6.15 percent"],
+      correct: 1,
+      tag: "Stocks",
+      exp: "<b>Formula.</b> Holding period return: r = (P<sub>1</sub> − P<sub>0</sub> + D<sub>1</sub>) / P<sub>0</sub>. Everything is divided by the price you paid, at the start.<br><br><b>Inputs from the stem.</b> P<sub>0</sub> = 30.00, the price paid. P<sub>1</sub> = 26.00, the price received. D<sub>1</sub> = 2.40, the dividend collected during the year.<br><br>1. Price change: 26.00 − 30.00 = −4.00<br>2. Add the dividend: −4.00 + 2.40 = −1.60<br>3. Divide by the starting price: −1.60 / 30.00 = −0.05333<br>4. The holding period return is −5.33 percent.<br><br><b>Check.</b> The investor put in 30.00 and ended the year holding 26.00 of share plus 2.40 of cash, so 28.40 in total. 28.40 / 30.00 = 0.9467, a loss of 5.33 percent. Same answer from the other direction.<br><br><b>The zero growth piece, and the trap it sets.</b> A fixed dividend that never changes is a plain perpetuity, so the price points to a required return of 2.40 / 30.00 = 8 percent. That 8 percent is what buyers <b>expected</b> when they paid 30.00. The holding period return is what actually <b>happened</b> over the year. The two are different numbers and this question hands you both. Expected return and the return you really get only agree when the price does not move.<br><br><b>The wrong options.</b> 8.00 percent is the dividend yield that the buying price points to, which answers the question the stem did not ask and quietly ignores the 4.00 fall. −13.33 percent is −4.00 / 30.00, the price change alone, dropping the dividend that the formula plainly includes. −6.15 percent is −1.60 / 26.00, dividing by the ending price. The return is always measured against what you put in, so the bottom of the fraction is P<sub>0</sub>."
+    },
+
+    /* ---------- 13 ---------- */
+    {
+      q: "You compare two insured bank CDs with posted annual yields and no early withdrawal option. You will hold the CD to maturity. Which decision environment is this?",
+      opts: ["Certainty", "Uncertainty", "Ambiguity"],
+      correct: 0,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>Answer: Certainty.</b><br><br><b>Read the stem for the clue.</b> Three facts close every gap. The yields are posted, so the amount is known. The deposits are insured, so default is covered. You hold to maturity and there is no early withdrawal option, so no price movement can reach you along the way. Nothing is left to find out.<br><br><b>Why not uncertainty.</b> Uncertainty needs at least one outcome you cannot pin down. Here there is none, once insurance removes default and holding to maturity removes price risk.<br><br><b>Why not ambiguity.</b> Ambiguity needs chances you cannot work out. There is nothing here to put a chance on.<br><br><b>Where the certainty comes from.</b> Deposit insurance is doing the real work here. Without it, a bank deposit is a claim on a bank and carries credit risk, which would move this case to uncertainty. The same product with and without insurance sits in different boxes, which is exactly why the course teaches deposit insurance beside these ideas.<br><br><b>The small print this course still expects you to know.</b> Certainty here means certainty in money terms. What the money will buy still depends on inflation, and inflation risk never disappears. That is a separate topic and it is not what this sorting is asking about."
+    },
+
+    /* ---------- 14 ---------- */
+    {
+      q: "A project returns an equal amount A at the end of each of years 1, 2, 3 and 4, and on top of that a single 15,000 at the end of year 6. Nothing else. At a required rate of return of 10 percent the whole stream is worth exactly 25,000 today. What is A?",
+      opts: ["7,886.77", "5,215.64", "3,154.71", "4,133.22"],
+      correct: 1,
+      tag: "Mixed stream",
+      exp: "<b>Formula.</b> The stream is an annuity plus one single cash flow: 25,000 = A × [1 − 1/(1+r)<sup>n</sup>] / r + 15,000 / (1+r)<sup>6</sup>. The total is given and A is unknown, so peel the known piece off first.<br><br><b>Inputs from the stem.</b> Total PV = 25,000. n = 4 for the annuity. A single 15,000 at year 6. r = 0.10.<br><br>1. Value the piece you already know: 1.10<sup>6</sup> = 1.771561, so 15,000 / 1.771561 = 8,467.11<br>2. Take it out of the total: 25,000 − 8,467.11 = 16,532.89. This is what the four equal payments must be worth today.<br>3. Annuity factor: 1.10<sup>4</sup> = 1.4641, so 1 / 1.4641 = 0.68301346, and (1 − 0.68301346) / 0.10 = 3.16986545<br>4. A = 16,532.89 / 3.16986545 = 5,215.64<br><br><b>Check by rebuilding the stream.</b> 5,215.64 × 3.16986545 = 16,532.89. Add the 8,467.11 from year 6 and you get 25,000.00, the number in the stem. The answer survives being put back in.<br><br><b>What makes a backwards question different.</b> Nothing about the finance changes. What changes is the order of the moves. Value every piece you can work out, subtract those from the total, and only then divide by the factor that belongs to the unknown. Trying to solve for A while the 15,000 is still inside the equation is where these go wrong.<br><br><b>The wrong options.</b> 7,886.77 is 25,000 / 3.16986545, which forgets the 15,000 exists and makes the four payments carry the whole value. 3,154.71 is (25,000 − 15,000) / 3.16986545, subtracting the 15,000 at its full amount instead of at its present value, which takes away 6,532.89 too much. 4,133.22 is 16,532.89 / 4, splitting the value across four years with no discounting at all."
+    },
+
+    /* ---------- 15 ---------- */
+    {
+      q: "A perpetual bond pays 62.50 at the end of every year forever and never repays any principal. It trades today at 1,250. A second bond of exactly the same risk has a par value of 1,000, matures at the end of year 10, and pays a coupon of 62.50 at the end of each year with the 1,000 repaid at the end of year 10. What is the second bond worth today?",
+      opts: ["1,096.52", "1,000.00", "1,250.00", "482.61"],
+      correct: 0,
+      tag: "Bonds",
+      exp: "<b>Formulas.</b> Perpetuity: PV = CF / r, which turns around to r = CF / PV. Coupon bond: Price = C × [1 − 1/(1+r)<sup>n</sup>] / r + Par / (1+r)<sup>n</sup>.<br><br><b>Inputs from the stem.</b> The perpetual bond: CF = 62.50 a year, price 1,250. The second bond: C = 62.50, Par = 1,000, n = 10, same risk so the same required return.<br><br>1. The yield is not given, so find it from the bond that is easiest to turn around. r = 62.50 / 1,250 = 0.05, which is 5 percent.<br>2. Same risk means the same required return, so price the second bond at 5 percent.<br>3. 1.05<sup>10</sup> = 1.62889463, so 1 / 1.62889463 = 0.61391325<br>4. Annuity factor: (1 − 0.61391325) / 0.05 = 7.72173493<br>5. Coupons: 62.50 × 7.72173493 = 482.61<br>6. Par repayment: 1,000 × 0.61391325 = 613.91<br>7. Price = 482.61 + 613.91 = 1,096.52<br><br><b>Check the direction.</b> The coupon rate on the second bond is 62.50 / 1,000 = 6.25 percent, and the market only requires 5 percent. A bond paying more than the market demands must trade above par. 1,096.52 is above 1,000, as it had to be. That is a premium bond.<br><br><b>Why the two prices are so far apart for the same yearly coupon.</b> The perpetual bond pays 62.50 forever and never gives the 1,000 back. The second bond stops after ten payments but hands back 1,000. Neither is better in itself. The market values both at 5 percent and they happen to land at different prices.<br><br><b>The wrong options.</b> 1,000.00 uses 6.25 percent as the required return, which reads the coupon rate as the yield. The coupon rate sets the cash; the yield sets the discounting. 1,250.00 assumes two bonds of the same risk and the same yearly coupon must cost the same, which ignores maturity and the par repayment completely. 482.61 prices the ten coupons and forgets the 1,000 that comes back at the end."
+    },
+
+    /* ---------- 16 ---------- */
+    {
+      q: "Last year a firm reported net income of 63, after paying interest. Its return on assets was 4.5 percent and its return on equity was 18 percent. What were its assets, its equity and its debt at that time?",
+      opts: ["Assets 1,400, equity 350, debt 1,050", "Assets 1,400, equity 1,050, debt 350", "Assets 350, equity 1,400, debt 0", "Assets 1,400, equity 252, debt 1,148"],
+      correct: 0,
+      tag: "Concepts",
+      exp: "<b>Definitions used in this course.</b> ROA = net income / total assets. ROE = net income / equity. The same net income sits on top of both. Only the thing you divide by changes.<br><br><b>Inputs from the stem.</b> Net income = 63. ROA = 0.045. ROE = 0.18. Both ratios are given and the balance sheet is the unknown, so run each meaning backwards.<br><br>1. From ROA: assets = net income / ROA = 63 / 0.045 = 1,400<br>2. From ROE: equity = net income / ROE = 63 / 0.18 = 350<br>3. Assets are financed by debt plus equity, so debt = 1,400 − 350 = 1,050<br><br><b>Check.</b> ROA = 63 / 1,400 = 0.045, which is 4.5 percent. ROE = 63 / 350 = 0.18, which is 18 percent. Both match the stem.<br><br><b>What the gap between the two ratios tells you.</b> ROE is four times ROA here, and that ratio is exactly assets divided by equity: 1,400 / 350 = 4. The firm controls four times as many assets as its owners put in, because three quarters of the funding is borrowed. That is leverage, which just means using borrowed money, and it is the whole reason the two ratios come apart. A firm with no debt has equity equal to assets, and then ROA and ROE are the same number.<br><br><b>The warning that belongs with it.</b> A high ROE is not proof of a better business. Leverage lifts ROE in a good year and drives it down harder in a bad one. ROA is the cleaner read on how well the assets themselves are working.<br><br><b>The wrong options.</b> Assets 1,400 with equity 1,050 swaps debt and equity, which would make ROE 63 / 1,050 = 6 percent, not 18. Assets 350 with equity 1,400 swaps the two ratios and gives a firm whose owners put in more than the firm owns. Equity 252 comes from multiplying 1,400 by 18 percent instead of dividing 63 by it, which treats ROE as a share of assets rather than a return on equity."
+    },
+
+    /* ---------- 17 ---------- */
+    {
+      q: "A corporation weighs acquiring a private target that does not provide audited statements. Key customers may leave, and probabilities cannot be credibly estimated. Which decision environment is this?",
+      opts: ["Certainty", "Uncertainty", "Ambiguity"],
+      correct: 2,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>Answer: Ambiguity.</b><br><br><b>Read the stem for the clue.</b> The target gives no audited statements, so even where it stands today has not been checked by anyone outside. Key customers may leave, so the money coming in later is open. And the stem says outright that the chances cannot be worked out in any believable way, which is the meaning of ambiguity in this course.<br><br><b>Why not uncertainty.</b> Uncertainty needs a set of chances you can stand behind. A private company with no audited accounts, and a small group of customers who might walk away, gives you nothing solid to work from. You cannot honestly say there is a 30 percent chance of losing the top customer here.<br><br><b>Why not certainty.</b> Nothing at all is fixed in this case.<br><br><b>Why the course cares.</b> The tools taught in this course, discounting a stream and taking the positive NPV, quietly assume you can write down the cash flows and a required return. Under ambiguity that input does not exist yet. The practical answer is not a cleverer formula. It is to buy information first, through due diligence, meaning careful checking, and audited accounts. That is what moves a case from ambiguity into uncertainty, where the tools start to work."
+    },
+
+    /* ---------- 18 ---------- */
+    {
+      q: "A firm is financed with senior debt and junior debt, both maturing today. The senior debt has a face value of 200 and pays a coupon rate of 5 percent, so today the firm owes the senior lender 210. The junior debt has a face value of 120 and pays a coupon rate of 12 percent, so today the firm owes the junior lender 134.40. The firm's assets are worth 290 today. The Absolute Priority Rule holds. What does each holder receive, and what does the junior lender earn on the 120 it lent?",
+      opts: ["Senior 210, junior 80, owners 0, and the junior lender loses 33.3 percent on what it lent", "Senior 210, junior 134.40, owners −54.40, and the junior lender earns 12 percent", "Senior 200, junior 90, owners 0, and the junior lender loses 25 percent", "Junior 134.40 first, then senior 155.60, owners 0, and the junior lender earns 12 percent"],
+      correct: 0,
+      tag: "Payoff structure",
+      exp: "<b>Formulas.</b> Senior: Min(V<sub>T</sub>, F<sub>S</sub>). Junior: 0 if V<sub>T</sub> &lt; F<sub>S</sub>, otherwise Min(V<sub>T</sub> − F<sub>S</sub>, F<sub>J</sub>). Equity: what is left after all the debt, never below zero.<br><br><b>Inputs from the stem, and the move most people skip.</b> What matters at maturity is the amount <b>owed</b>, not the amount originally borrowed. The stem has already done that arithmetic: F<sub>S</sub> = 210 and F<sub>J</sub> = 134.40. V<sub>T</sub> = 290.<br><br>1. Find the state before computing anything. Compare V<sub>T</sub> with F<sub>S</sub>: 290 is above 210, so the senior lender is paid in full. Compare V<sub>T</sub> with F<sub>S</sub> + F<sub>J</sub> = 344.40: 290 is below that, so the junior lender cannot be paid in full and the owners get nothing.<br>2. Senior: Min(290, 210) = 210<br>3. What is left for everyone below: 290 − 210 = 80<br>4. Junior: Min(80, 134.40) = 80<br>5. Equity: Max(290 − 344.40, 0) = 0<br>6. The junior lender handed over 120 and gets back 80: 80 / 120 − 1 = −0.3333, a loss of 33.3 percent.<br><br><b>Check.</b> 210 + 80 + 0 = 290, exactly V<sub>T</sub>. Nothing was created and nothing vanished. If your three numbers do not add to V<sub>T</sub>, one of them is wrong.<br><br><b>The lesson in the 12 percent coupon.</b> The junior lender was promised 12 percent and the senior lender only 5 percent. That extra promise is payment for standing second in the line. In this state the promise is not kept, and the junior lender takes the whole loss while the senior lender loses nothing. That is what the higher promised return was for.<br><br><b>The wrong options.</b> Junior 134.40 with owners at −54.40 pays the junior lender in full out of money that is not there and lets equity go negative. Equity stops at zero, always; the shareholders cannot be asked for more. Senior 200 with junior 90 pays the senior lender the face value and forgets the coupon that is also due today. Paying the junior lender first reverses the Absolute Priority Rule, which is the single rule this question is built on."
+    },
+
+    /* ---------- 19 ---------- */
+    {
+      q: "A supply contract runs for 10 years. It pays the first amount at the end of year 1, and every later payment is 6 percent bigger than the one before it. The discount rate is 11 percent. The contract is worth 251,118 today. How big is the first payment?",
+      opts: ["25,111.80", "34,000", "42,640", "12,556"],
+      correct: 1,
+      tag: "Annuity",
+      exp: "<b>Formula.</b> Payments that grow at a fixed rate and then stop are a growing annuity: PV = CF<sub>1</sub> × [1 − ((1+g)/(1+r))<sup>n</sup>] / (r − g). The present value is given here and CF<sub>1</sub> is the unknown, so build the factor first and divide.<br><br><b>Inputs from the stem.</b> PV = 251,118. n = 10. g = 0.06. r = 0.11. It ends after year 10, so it is an annuity and not a perpetuity.<br><br>1. The ratio inside the bracket: 1.06 / 1.11 = 0.95495495<br>2. Raise it to the tenth power: 0.95495495<sup>10</sup> = 0.63070876<br>3. 1 − 0.63070876 = 0.36929124<br>4. The gap: r − g = 0.11 − 0.06 = 0.05<br>5. The growing annuity factor: 0.36929124 / 0.05 = 7.38582475<br>6. CF<sub>1</sub> = 251,118 / 7.38582475 = 34,000<br><br><b>Check by going forward.</b> 34,000 × 7.38582475 = 251,118.04, the value in the stem. The first payment is 34,000, the second is 34,000 × 1.06 = 36,040, and the tenth is 34,000 × 1.06<sup>9</sup> = 57,442.<br><br><b>Why the growing annuity factor is smaller than the gap on its own suggests.</b> With a gap of 5 percentage points, a growing <b>perpetuity</b> would have a factor of 1 / 0.05 = 20. This contract stops after ten years, so its factor is only 7.39. Everything after year 10 is cut off, and with r so close to g that tail was worth most of the value. Ending dates matter more, not less, when growth is close to the discount rate.<br><br><b>The wrong options.</b> 42,640 divides by the plain annuity factor for 10 years at 11 percent, which is 5.8892, treating the payments as if they never grew. 12,556 uses the growing perpetuity, CF<sub>1</sub> = PV × (r − g) = 251,118 × 0.05, which gives the contract an endless tail it does not have. 25,111.80 is 251,118 divided by the 10 years, which discounts nothing and grows nothing."
+    },
+
+    /* ---------- 20 ---------- */
+    {
+      q: "A project costs 12,000 today. It returns the same amount of cash at the end of each of the next 3 years and nothing after that. Its internal rate of return is exactly 15 percent. How much cash does it return each year?",
+      opts: ["4,000.00", "4,600.00", "5,255.72", "5,800.00"],
+      correct: 2,
+      tag: "NPV and IRR",
+      exp: "<b>Formula.</b> The internal rate of return is the discount rate that makes NPV zero. So at 15 percent: 0 = A × [1 − 1/(1+r)<sup>n</sup>] / r − 12,000, which turns into A = 12,000 / annuity factor at 15 percent.<br><br><b>Inputs from the stem.</b> I<sub>0</sub> = 12,000. n = 3. r = 0.15, because that is the IRR and the IRR is the rate to use here.<br><br>1. 1.15<sup>3</sup> = 1.520875<br>2. 1 / 1.520875 = 0.65751617<br>3. Annuity factor: (1 − 0.65751617) / 0.15 = 2.28322512<br>4. A = 12,000 / 2.28322512 = 5,255.72<br><br><b>Check by working out the NPV at 15 percent.</b> 5,255.72 × 2.28322512 = 12,000.00, so NPV = 12,000.00 − 12,000 = 0. A rate that makes NPV zero is the definition of the IRR, so 15 percent really is the IRR of this project.<br><br><b>What this question is testing.</b> The IRR is usually the unknown, and finding it normally means trying rates until one works. Turn the question round and give the IRR, and it becomes an ordinary annuity problem with no searching at all. Seeing that saves several minutes in an exam.<br><br><b>The wrong options.</b> 4,000.00 is 12,000 / 3, which returns the cost with no return at all, so the IRR would be 0 percent. 5,800.00 is 12,000 / 3 + 12,000 × 0.15, paying 15 percent interest on the whole 12,000 every year plus a third of the principal. That overpays, because the amount still owed falls each year. 4,600.00 is 12,000 × 1.15 / 3, adding one single year of interest and then splitting it three ways, which ignores the other two years of waiting."
+    },
+
+    /* ---------- 21 ---------- */
+    {
+      q: "You are offered a note that pays 10 percent unless a benchmark rate rises above a threshold. The bank publishes scenario probabilities from a validated model. Which decision environment is this?",
+      opts: ["Certainty", "Uncertainty", "Ambiguity"],
+      correct: 1,
+      tag: "Concepts",
+      src: "From a course quiz",
+      exp: "<b>Answer: Uncertainty.</b><br><br><b>Read the stem for the clue.</b> The payoff depends on something that has not happened yet, so it is not certain. But the bank publishes the chance of each case, and the model behind those numbers has been checked, so a set of chances you could stand behind does exist.<br><br><b>Why not certainty.</b> The word unless is doing the work. There are at least two outcomes, 10 percent or something else, and which one arrives depends on a rate that can move. A payoff that depends on something else happening is never certain, no matter how likely the good case looks.<br><br><b>Why not ambiguity.</b> This is the pair to watch. A complicated product is not automatically ambiguous. What decides the box is whether believable chances exist. Here they do, published and built from a model, so this is uncertainty. Compare it with the token offering, where no history and unclear rules leave nothing to work from. Same feeling of not knowing, different box.<br><br><b>The exam habit.</b> Do not sort these cases by how risky or how unusual they feel. Sort them by one test: are there chances I could stand behind? That single question separates all three boxes cleanly."
+    },
+
+    /* ---------- 22 ---------- */
+    {
+      q: "Two bonds have a par value of 1,000 and pay a coupon of 60 at the end of every year until they mature, when the 1,000 is repaid. Bond A matures at the end of year 2 and Bond B at the end of year 15. Both trade at exactly 1,000 today. Investors then begin to ask for 8 percent on bonds of this risk. Bond A's new price is 964.33. What is Bond B's new price?",
+      opts: ["964.33", "828.81", "930.83", "513.57"],
+      correct: 1,
+      tag: "Bonds",
+      exp: "<b>Formula.</b> Price = C × [1 − 1/(1+r)<sup>n</sup>] / r + Par / (1+r)<sup>n</sup>.<br><br><b>Inputs from the stem, starting with the one that is hidden.</b> Both bonds trade at exactly 1,000, which is par. A bond sits at par only when its coupon rate equals the required return, so the old required return was 60 / 1,000 = 6 percent. Now investors ask for 8 percent. For Bond B: C = 60, Par = 1,000, n = 15, r = 0.08.<br><br>1. 1.08<sup>15</sup> = 3.17216911<br>2. 1 / 3.17216911 = 0.31524170<br>3. Annuity factor: (1 − 0.31524170) / 0.08 = 8.55947880<br>4. Coupons: 60 × 8.55947880 = 513.57<br>5. Par repayment: 1,000 × 0.31524170 = 315.24<br>6. Price = 513.57 + 315.24 = 828.81<br><br><b>Check the direction.</b> The required return rose, so prices must fall. Both do. The contract cannot change: the bond still pays 60 a year and 1,000 at the end. The only thing that can move to deliver a higher return to a new buyer is the price, and it has to move down.<br><br><b>What the two bonds together show.</b> Bond A falls from 1,000 to 964.33, a drop of 3.6 percent. Bond B falls from 1,000 to 828.81, a drop of 17.1 percent. Same coupon, same par, same 2 point move in the required return, nearly five times the damage. The long bond has thirteen more years of fixed payments locked in at the old rate, and the repayment of the 1,000 is thirteen years further away, so more of its value is exposed to the new rate for longer. Time to maturity is what turns a rate move into a price move.<br><br><b>The wrong options.</b> 964.33 gives Bond B the same price as Bond A, treating the two as the same thing because the coupon and par match. 930.83 discounts the coupons at the new 8 percent but the 1,000 repayment at the old 6 percent, mixing two rates in one price. 513.57 is the coupons alone, leaving out the 1,000 that comes back at the end."
+    }
+
+  ]
+});
+</script>
+</body>
+</html>
